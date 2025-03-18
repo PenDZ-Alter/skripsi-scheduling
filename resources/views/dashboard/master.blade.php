@@ -34,8 +34,6 @@
           }
         }
 
-        console.log(`DEBUG :: ${window.innerWidth}`);
-
         // Panggil saat pertama kali halaman dimuat
         adjustMargin();
 
