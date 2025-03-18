@@ -1,21 +1,19 @@
 @extends('dashboard.master')
 
 @section('content')
-  <!-- Bagian Salam -->
-  <div class="bg-gray-50 p-4 rounded-md mb-4">
-    <h2 class="text-xl font-bold">Salam, Alfariz Muhan Mandega</h2>
-    <p class="text-sm text-gray-600">Info Profil & Email UIN, Klik <a href="#" class="text-blue-600">Di Sini</a></p>
-  </div>
-
   <!-- Grid 2 Kolom -->
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
     <!-- Card Profil -->
     <div class="bg-white p-4 rounded-md shadow">
       <div class="flex items-center space-x-4">
-        <img src="{{ asset('storage/img/Alfariz.png') }}" alt="Foto Profil" class="w-20 h-20 rounded-md">
+        <img src="{{ asset('storage/img/Alfariz.png') }}" alt="Foto Profil" style="height: 120px;" class="w-auto shadow rounded-md">
         <div>
-          <h3 class="text-lg font-bold">Alfariz Muhan Mandega</h3>
-          <p class="text-sm">Mahasiswa Aktif</p>
+          <h3 class="text-xs font-bold">Info Profil & Email UIN, Klik <a href="#" class="text-blue-600"><u>Di SINI</u></a></h3>
+          <p class="text-sm"> - Default password email sesuai siakad</p>
+          <p class="text-sm"> - Ubah password email, klik <a href="#" class="text-blue-600"><u>Di SINI</u></a></p>
+          <p class="text-sm"> - Buka email UIN, klik <a href="#" class="text-blue-600">gmail.com</a></p>
+          <p class="text-sm">  Add account: NIM@student.uin-malang.ac.id</p>
+          <p class="text-sm"> - Untuk aktivasi email UIN, klik <a href="#" class="text-blue-600"><u>Di SINI</u></a></p>
         </div>
       </div>
     </div>
@@ -24,9 +22,9 @@
     <div class="bg-white p-4 rounded-md shadow">
       <h3 class="text-lg font-bold mb-2">Free Access Journal</h3>
       <ul class="space-y-2">
-        <li><a href="#" class="text-blue-600 hover:underline">Link Springer</a></li>
-        <li><a href="#" class="text-blue-600 hover:underline">Emerald Insight</a></li>
-        <li><a href="#" class="text-blue-600 hover:underline">Cambridge Core</a></li>
+        <li><a href="https://link.springer.com/" class="text-blue-600 hover:underline">Free Access Link Springer</a></li>
+        <li><a href="https://www.emerald.com/insight/" class="text-blue-600 hover:underline">Free Access Emerald Insight</a></li>
+        <li><a href="https://www.cambridge.org/core/" class="text-blue-600 hover:underline">Free Access Cambridge Core</a></li>
       </ul>
     </div>
   </div>
