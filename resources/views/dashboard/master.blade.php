@@ -19,7 +19,7 @@
 
     <!-- BAGIAN KANAN: HEADER + MAIN + FOOTER -->
     <!-- flex-1 agar kolom kanan memenuhi sisa ruang -->
-    <div class="flex-1 flex flex-col">
+    <div class="flex-1 flex flex-col ml-64">
       <!-- HEADER -->
       @include('partials.header')
 
