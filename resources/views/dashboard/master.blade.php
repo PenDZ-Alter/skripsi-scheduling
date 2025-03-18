@@ -25,7 +25,7 @@
       <script>
         function adjustMargin() {
           const contentDiv = document.querySelector(".dynamic-margin");
-          if (window.innerWidth >= 1920) {
+          if (window.innerWidth >= 1366) {
             contentDiv.classList.remove("ml-64");
             contentDiv.classList.add("ml-32");
           } else {
