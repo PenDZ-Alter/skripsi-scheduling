@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body class="bg-gray-100 text-gray-800">
+<body style="background-color: #e4e4e7" class=" text-gray-800">
   <!-- Kontainer utama, min-h-screen agar tinggi minimal = tinggi layar -->
   <div class="min-h-screen flex pl-64">
     <!-- SIDEBAR -->
