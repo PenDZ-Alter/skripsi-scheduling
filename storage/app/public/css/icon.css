@@ -1,0 +1,39 @@
+.profile-wrapper {
+    position: relative;
+    width: 140px;
+    height: 160px;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.camera-fix {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 0px;
+    right: -5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.camera-fix:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.camera.fix img {
+    object-fit: fill;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}

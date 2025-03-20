@@ -6,8 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>.:: Sistem Informasi Akademik Universitas</title>
   @vite(['resources/css/app.css', 'resources/js/app.js'])
+  <link href="storage/css/icon.css" rel="stylesheet">
   <link href="storage/img/UIN-2.1.png" rel='shortcut icon'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  {{-- <link href="storage/css/modal.css" rel="stylesheet"> --}}
 </head>
 
 <body style="background-color: #e4e4e7" class=" text-gray-800">
@@ -52,6 +54,7 @@
       @include('partials.footer')
     </div>
   </div>
+  <script type="text/javascript" src="storage/js/function.js"></script>
 </body>
 
 </html>
