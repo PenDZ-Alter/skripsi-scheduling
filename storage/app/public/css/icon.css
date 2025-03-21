@@ -14,12 +14,12 @@
 
 .camera-fix {
     position: absolute;
-    width: 50px;
-    height: 50px;
-    bottom: -10px;
-    right: -10px;
+    width: 40px;
+    height: 40px;
+    bottom: -30px;
+    right: -5px;
     top: 30px;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.4);
     padding: 10px;
     border-radius: 50%;
     cursor: pointer;

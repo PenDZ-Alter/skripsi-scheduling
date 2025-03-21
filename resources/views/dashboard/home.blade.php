@@ -55,22 +55,22 @@
                 </div>
 
                 <!-- Info Email -->
-                <div style="margin-top: 15px; margin-left: 50px">
+                <div style="margin-top: 15px; margin-left: 50px;">
                     <h3 class="text-xs font-bold">Info Profil & Email UIN, Klik
-                        <a href="#" style="font-size:0.90rem;" class="text-blue-600"><u>Di SINI</u></a>
+                        <a href="#" style="font-size:0.90rem; color:#2563EB;"><u>Di SINI</u></a>
                     </h3>
-                    <p style="margin-top:5px" class="text-sm font-semibold"> - Default password email sesuai siakad</p>
-                    <p style="margin-top:5px" class="text-sm font-semibold"> - Ubah password email, klik
-                        <a href="#" class="text-blue-600">Di SINI</a>
+                    <p style="margin-top:5px;" class="text-sm font-semibold"> - Default password email sesuai siakad</p>
+                    <p style="margin-top:5px;" class="text-sm font-semibold"> - Ubah password email, klik
+                        <a href="#" style="color: #2563EB;">Di SINI</a>
                     </p>
-                    <p style="margin-top:5px" class="text-sm font-semibold"> - Buka email UIN, klik
-                        <a href="#" class="text-blue-600">gmail.com</a>
+                    <p style="margin-top:5px;" class="text-sm font-semibold"> - Buka email UIN, klik
+                        <a href="#" style="color:#2563EB;" >gmail.com</a>
                     </p>
-                    <p style="margin-left: 10px" class="text-sm font-semibold"> Add account:
+                    <p style="margin-left: 10px;" class="text-sm font-semibold"> Add account:
                         <i style="margin-right:-1px;">NIM</i>@student.uin-malang.ac.id
                     </p>
-                    <p style="margin-top:5px" class="text-sm font-semibold"> - Untuk aktivasi email UIN, klik
-                        <a href="#" class="text-blue-600">Di SINI</a>
+                    <p style="margin-top:5px;" class="text-sm font-semibold"> - Untuk aktivasi email UIN, klik
+                        <a href="#" style="color:#2563EB;" >Di SINI</a>
                     </p>
                 </div>
             </div>
@@ -81,7 +81,7 @@
                     Journal</h3>
                 <div class="space-y-2">
                     <a href="https://link.springer.com/"
-                        style="display: block; background: linear-gradient(to right, rgba(254, 215, 170, 0.2), #fed7aa); text-align: right; font-size: 0.80rem;"
+                        style="display: block; background: linear-gradient(to right, rgba(254, 215, 170, 0.2), #fed7aa); text-align: right; font-size: 0.80rem"
                         class="px-4 py-4 font-semibold text-gray-700 rounded">
                         Free Access Link Springer <span style="font-size: 1.2rem; font-weight: 700;">&laquo;</span>
                     </a>
@@ -115,14 +115,13 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
         <!-- Card Data Akademik -->
         <div class="bg-white p-4 rounded-md shadow">
-            <h3 style="text-align: center;" class="text-lg font-bold mb-2">Data Akademik</h3>
             <div class="space-y-2">
-                <p><strong>NIM:</strong> 220605110025</p>
-                <p><strong>Status Studi:</strong> Mahasiswa Aktif</p>
-                <p><strong>Jurusan:</strong> S1 Teknik Informatika</p>
-                <p><strong>Akreditasi:</strong> Unggul (040/SK/LAM-INFOKOM/Ak/S/III/2024)</p>
-                <p><strong>Dosen Wali:</strong> Dr. Zainal Abidin M.Kom</p>
-                <p><strong>Semester:</strong> VI (Enam)</p>
+                <p><strong>NIM<span style="margin-left:5rem;">:</span></strong> <span style="margin-left:5px;">220605110025</span></p>
+                <p><strong>Status Studi<span style="margin-left:23px;">:</span></strong> <span style="margin-left:5px;">Mahasiswa Aktif</span></p>
+                <p><strong>Jurusan<span style="margin-left:55px;">:</span></strong> <span style="margin-left:5px;">S1 Teknik Informatika</span></p>
+                <p><strong>Akreditasi<span style="margin-left:37px;">:</span></strong> <span style="margin-left:5px;">Unggul (040/SK/LAM-INFOKOM/Ak/S/III/2024)</span></p>
+                <p><strong>Dosen Wali<span style="margin-left:29px;">:</span></strong> <span style="margin-left:5px;">Dr. Zainal Abidin M.Kom</span></p>
+                <p><strong>Semester<span style="margin-left:44px;">:</span></strong> <span style="margin-left:5px;">(Enam)</span></p>
             </div>
         </div>
 
@@ -156,7 +155,7 @@
                         borderColor: 'rgba(0, 191, 255, 1)',
                         backgroundColor: 'rgba(59, 130, 246, 0.1)',
                         fill: false,
-                        tension: 0.3
+                        tension: 0.5
                     },
                     {
                         label: 'IP Kumulatif',
@@ -164,7 +163,7 @@
                         borderColor: 'rgba(17, 24, 39, 1)',
                         backgroundColor: 'rgba(17, 24, 39, 0.1)',
                         fill: false,
-                        tension: 0.3
+                        tension: 0.5
                     }
                 ]
             },
