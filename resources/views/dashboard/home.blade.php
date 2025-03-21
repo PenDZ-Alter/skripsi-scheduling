@@ -17,12 +17,12 @@
                 <!-- Pembungkus foto dan icon -->
                 <div class="profile-wrapper">
                     <!-- Foto profil -->
-                    <div style="height: 150px; width:150px; margin-top:20px; margin-left-10px;">
-                        <img class="min-w-0.5 min-h-0.5" id="profileImage" src="{{ asset('storage/img/Alfariz.png') }}"
+                    <div style="height: 150px; width:150px; margin-top:10px; margin-left:5px;">
+                        <img class="min-w-1 min-h-0.5" id="profileImage" src="{{ asset('storage/img/Alfariz.png') }}"
                             alt="Foto Profil" class="profile-image">
 
                         <!-- Ikon kamera -->
-                        <div class="camera-fix" onclick="document.getElementById('uploadInput').click();">
+                        <div  class="camera-fix" onclick="document.getElementById('uploadInput').click();">
                             <img src="{{ asset('storage/img/camera-fix.png') }}" alt="Camera Icon">
                         </div>
                     </div>
@@ -55,7 +55,7 @@
                 </div>
 
                 <!-- Info Email -->
-                <div style="margin-top: 15px; margin-left: 40px">
+                <div style="margin-top: 15px; margin-left: 50px">
                     <h3 class="text-xs font-bold">Info Profil & Email UIN, Klik
                         <a href="#" style="font-size:0.90rem;" class="text-blue-600"><u>Di SINI</u></a>
                     </h3>
@@ -115,7 +115,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
         <!-- Card Data Akademik -->
         <div class="bg-white p-4 rounded-md shadow">
-            <h3 class="text-lg font-bold mb-2">Data Akademik</h3>
+            <h3 style="text-align: center;" class="text-lg font-bold mb-2">Data Akademik</h3>
             <div class="space-y-2">
                 <p><strong>NIM:</strong> 220605110025</p>
                 <p><strong>Status Studi:</strong> Mahasiswa Aktif</p>
@@ -129,7 +129,7 @@
         <!-- Card Jadwal Kuliah -->
         <div class="bg-white p-4 rounded-md shadow">
             <h3 class="text-lg font-bold mb-2">Jadwal Kuliahmu Hari Ini</h3>
-            <p class="text-gray-500">Tidak Ada Jadwal Kuliah, saatnya kamu eksplorasi pengalaman baru</p>
+            <i><p class="text-gray-500">Tidak Ada Jadwal Kuliah, saatnya kamu eksplorasi pengalaman baru</p></i>
         </div>
     </div>
 
@@ -153,7 +153,7 @@
                 datasets: [{
                         label: 'IP Semester',
                         data: [3.7, 3.65, 3.85, 3.74, 3.94],
-                        borderColor: 'rgba(59, 130, 246, 1)',
+                        borderColor: 'rgba(0, 191, 255, 1)',
                         backgroundColor: 'rgba(59, 130, 246, 0.1)',
                         fill: false,
                         tension: 0.3
