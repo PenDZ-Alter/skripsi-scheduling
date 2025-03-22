@@ -32,7 +32,7 @@ npm install
 
 ### 3. Configure the Environment
 
-> [!WARNING] 
+> [!IMPORTANT] 
 > Please copy the `.env.example` and paste it to `.env` file first.
 
 - Build the frontend assets.
