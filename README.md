@@ -19,7 +19,7 @@ To run this project, you need to follow these steps:
 ### 1. Clone this repository
 
 ```bash
-git clone https://github.com/yourusername/skripsi-scheduling.git
+git clone https://github.com/PenDZ-Alter/skripsi-scheduling.git
 cd skripsi-scheduling
 ```
 
