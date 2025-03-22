@@ -67,4 +67,5 @@ If you encounter issues during installation—such as Composer failing to instal
 composer install --ignore-platform-req=ext-fileinfo
 ```
 
-*Note: This issue is known to occur on PHP version 8.4.*
+> [!NOTE]
+> This issue is known to occur on PHP version 8.4.
