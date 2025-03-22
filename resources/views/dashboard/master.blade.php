@@ -23,30 +23,12 @@
 
     <!-- BAGIAN KANAN: HEADER + MAIN + FOOTER -->
     <!-- flex-1 agar kolom kanan memenuhi sisa ruang -->
-    <div class="flex-1 flex flex-col ml-32 ml-64 dynamic-margin">
-      <script>
-        function adjustMargin() {
-          const contentDiv = document.querySelector(".dynamic-margin");
-          if (window.innerWidth >= 1400) {
-            contentDiv.classList.remove("ml-64");
-            contentDiv.classList.add("ml-32");
-          } else {
-            contentDiv.classList.remove("ml-32");
-            contentDiv.classList.add("ml-64");
-          }
-        }
-
-        // Panggil saat pertama kali halaman dimuat
-        adjustMargin();
-
-        // Panggil ulang saat ukuran layar berubah
-        window.addEventListener("resize", adjustMargin);
-      </script>
+    <div class="flex-1 flex flex-col sm:ml-64 md:ml-64 lg:ml-32 xl:ml-16 2xl:ml-16">
       <!-- HEADER -->
       @include('partials.header')
 
       <!-- MAIN: flex-1 agar mendorong footer ke bawah jika konten tinggi -->
-      <main class="ml-32 flex-1 p-6">
+      <main class="sm:ml-32 md:ml-32 lg:ml-32 xl:ml-16 2xl:ml-16 flex-1 p-6">
         @yield('content')
       </main>
 
