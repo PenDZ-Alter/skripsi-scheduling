@@ -2,19 +2,19 @@
   <!-- Bagian Logo atau Profil Sidebar -->
   <div class="flex items-center p-4 bg-gradient-to-r from-gray-900 to-gray-800">
     <img src="{{ asset('storage/img/PCFix.png') }}" alt="Logo" class="w-10 h-10 mr-2">
-    <span class="text-white font-bold text-lg">Siakad</span>
-    <span class="text-blue-300 font-semibold text-lg ml-1">UINMALANG</span>
+    <span style="font-weight:700;" class="text-white text-lg">Siakad</span>
+    <span style="letter-spacing: -2px;" class="text-blue-300 font-semibold text-lg ml-1">UINMALANG</span>
   </div>
 
   <!-- Informasi Mahasiswa -->
   <div class="flex items-center gap-3 p-4 bg-gradient-to-r from-gray-900 to-gray-800">
     <!-- Foto Profil -->
-    <img src="{{ asset('storage/img/Alfariz.png') }}" alt="Profile" class="w-20 h-20 rounded-md">
+    <img src="{{ asset('storage/img/Alfariz.png') }}" alt="Profile" style="height:75px; width:50px;" class="w-20 h-20 rounded-md">
     
     <!-- Nama dan NIM -->
-    <div class="flex flex-col">
-      <span class="text-white font-bold text-lg">Alfariz Muhan Mandega</span>
-      <span class="text-blue-300 font-semibold text-sm flex items-center">
+    <div style= "margin-left:5px;" class="flex flex-col">
+      <span style="font-weight:700; letter-spacing:0px; margin-top:-15px; font-size: 0.9rem;" class="text-blue-300 font-bold text-md">ALFARIZ MUHAN MANDEGA</span>
+      <span style="margin-top:5px; font-size: 0.8rem;" class="text-white font-semibold text-sm flex items-center">
         <!-- Ikon Kartu Identitas -->
         <i class="fas fa-address-card mr-2"></i>
         220605110025
@@ -23,7 +23,7 @@
   </div>
 
   <!-- Menu -->
-  <nav class="flex-1 overflow-y-auto pb-4">
+  <nav style="margin-top: 10px;" class="flex-1 overflow-y-auto pb-4">
     <ul>
       <li class="px-4 py-2 hover:bg-indigo-800">
         <span class="text-blue-300 font-semibold text-sm flex items-center">
