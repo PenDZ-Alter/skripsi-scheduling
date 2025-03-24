@@ -6,7 +6,7 @@ function toggleDropdown() {
 }
 
 document.addEventListener("click", function (event) {
-    if (!menu.contains(event.target) && !button.contains(event.target)) {
+    if (!menu.contains(event.target) && (!button || !button.contains(event.target))) {
         menu.classList.add("hidden");
     }
 });
@@ -60,9 +60,11 @@ function downloadGrafikTIPE(tipe) {
                 pdf.save("grafik-ip.pdf");
             }
 
-            // Tampilkan kembali setelah export selesai
-            dropdown.style.display = "block";
+            // Pastikan tombol ditutup kembali
             toggleButton.style.display = "block";
+            menu.style.display = ""; // kembalikan ke default (biar Tailwind 'hidden' bisa kerja)
+            menu.classList.add("hidden"); // sembunyikan dengan Tailwind
+            console.log("Selesai export. Menu tetap disembunyikan.");
 
         }).catch(error => {
             console.error("Gagal mengunduh grafik:", error);
@@ -74,6 +76,11 @@ function downloadGrafikTIPE(tipe) {
         });
     }, 100); // Delay kecil agar DOM sempat update
 }
+
+document.querySelectorAll("#exportMenu a").forEach(item => {
+    item.addEventListener("click", closeDropdownAfterClick);
+});
+
 
 // Event listeners
 document.getElementById("downloadPNG").addEventListener("click", () => downloadGrafikTIPE("png"));
