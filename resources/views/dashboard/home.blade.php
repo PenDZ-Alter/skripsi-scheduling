@@ -106,15 +106,15 @@
     <div id="grafikContainer" class="bg-white p-4 mt-6 rounded-md shadow relative text-center">
         <!-- Tombol Ekspor -->
         <div class="absolute top-2 right-2">
-            <div id="dropdownButton" style="height: 40px; width:40px; cursor: pointer; background-color:azure;"
-                class="rounded flex items-center justify-center shadow hover:bg-gray-300" onclick="toggleDropdown()">
+            <div id="dropdownButton" style="height: 30px; width:35px; cursor: pointer; background-color:azure; color: lightslategrey; font-weight: 900"
+                class="rounded flex items-center justify-center shadow" onclick="toggleDropdown()">
                 ☰
             </div>
             <ul id="exportMenu"
-                class="hidden absolute right-0 mt-1 w-48 bg-white border border-gray-200 rounded shadow-md text-sm z-10">
-                <li><a href="#" id="downloadPNG" class="block px-4 py-2 hover:bg-gray-100">Download PNG</a></li>
-                <li><a href="#" id="downloadJPEG" class="block px-4 py-2 hover:bg-gray-100">Download JPEG</a></li>
-                <li><a href="#" id="downloadPDF" class="block px-4 py-2 hover:bg-gray-100">Download PDF</a></li>
+                style="width:9rem; margin-top:10px; margin-left:-16px; box-shadow: -4px 8px 6px rgba(0, 0, 0, 0.15);" class="hidden absolute  bg-white border border-gray-200 rounded shadow-md text-sm z-10">
+                <li><a style="color:#4B5563; margin-top:5px; font-weight: 600; font-size:0.85rem;" href="#" id="downloadPNG" class="block px-4 py-2">Download PNG</a></li>
+                <li><a style="color:#4B5563; margin-top:5px; font-weight: 600; font-size:0.85rem;" href="#" id="downloadJPEG" class="block px-4 py-2">Download JPEG</a></li>
+                <li><a style="color:#4B5563; margin-top:5px; font-weight: 600; font-size:0.85rem;" href="#" id="downloadPDF" class="block px-4 py-2">Download PDF</a></li>
             </ul>
         </div>
 
