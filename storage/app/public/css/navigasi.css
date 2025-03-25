@@ -1,0 +1,37 @@
+  /* Warna putih untuk pagination */
+  .swiper-pagination-bullet {
+      background-color: white !important;
+      /* Ubah titik pagination menjadi putih */
+      opacity: 0.6;
+      /* Biar lebih soft */
+      width: 20px;
+      height: 5px;
+      border-radius: 10px;
+      transition: all 0.7s ease-out;
+  }
+
+  /* Warna putih untuk pagination yang sedang aktif */
+  .swiper-pagination-bullet-active {
+      background-color: #3F51B5 !important;
+      opacity: 1;
+  }
+
+  .swiper-pagination {
+      bottom: 19px !important;
+      left: 5px !important;
+  }
+
+  .swiper-slider img {
+      height: 100%;
+      width: 100%;
+      cursor: pointer;
+      object-fit: cover;
+  }
+
+  .swiper-wrapper {
+      display: flex;
+      align-items: center;
+      margin-top: 1rem;
+  }
+
+  
