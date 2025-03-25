@@ -106,7 +106,8 @@
         <div class="bg-white p-4 rounded-md shadow-lg flex gap-6"
             style="width: 70rem; height: 25rem; box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.15);">
             <!-- 📊 Grafik Indeks Prestasi -->
-            <div style="height:23rem; width:48rem; background: none !important; box-shadow: none !important;" id="grafikContainer" class="bg-white p-4 rounded-md shadow text-center">
+            <div style="height:23rem; width:48rem; background: none !important; box-shadow: none !important;"
+                id="grafikContainer" class="bg-white p-4 rounded-md shadow text-center">
                 <!-- Tombol Ekspor -->
                 <div style="height:10rem; width:10rem;" class="absolute top-2 right-2">
                     <div id="dropdownButton" class="rounded flex items-center justify-center shadow"
@@ -138,14 +139,30 @@
             <div style="margin-right:1rem !important; width: 20rem; height: 20rem; position: relative;">
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="{{ asset('storage/img/Berita1.jpeg') }}"
-                                class="object-cover rounded-lg shadow-md" /></div>
-                        <div class="swiper-slide"><img src="{{ asset('storage/img/Berita2.png') }}"
-                                class="object-cover rounded-lg shadow-md" /></div>
-                        <div class="swiper-slide"><img src="{{ asset('storage/img/Berita3.png') }}"
-                                class="object-cover rounded-lg shadow-md" /></div>
-                        <div class="swiper-slide"><img src="{{ asset('storage/img/Berita4.jpg') }}"
-                                class="object-cover rounded-lg shadow-md" /></div>
+                        <div class="swiper-slide">
+                            <a href="https://hes.uin-malang.ac.id/wp-content/uploads/2022/12/Sertifikat-dan-SK-BAN-PT-Akreditasi-Prodi-HES-6-Desember-2022-sd-2027.pdf" target="_blank">
+                                <img src="{{ asset('storage/img/Berita1.jpeg') }}"
+                                    class="object-cover rounded-lg shadow-md" />
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://id.quora.com/Apa-penyesalanmu-selama-kuliah" target="_blank">
+                                <img src="{{ asset('storage/img/Berita2.png') }}"
+                                    class="object-cover rounded-lg shadow-md" />
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf04cEpb6v-44beFfiPUwthljHggOcefmBtow0PyJu7uOwd3A/viewform?pli=1" target="_blank">
+                                <img src="{{ asset('storage/img/Berita3.png') }}"
+                                    class="object-cover rounded-lg shadow-md" />
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="https://www.instagram.com/kemendukbangga_bkkbn/" target="_blank">
+                                <img src="{{ asset('storage/img/Berita4.jpg') }}"
+                                    class="object-cover rounded-lg shadow-md" />
+                            </a>
+                        </div>
                     </div>
 
                     <!-- Tombol Navigasi -->
@@ -196,7 +213,7 @@
             kamu lelah, rehat sejenak."</blockquote>
         <span class="text-sm text-gray-500">Positive Quotes</span>
     </div>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
