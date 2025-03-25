@@ -46,12 +46,17 @@ const grafikIP = new Chart(ctx, {
                 max: 4.0,
                 ticks: {
                     stepSize: 0.2
-                }
+                },
+                
             },
             x: {
                 title: {
                     display: true,
                     text: 'Semester (SKS)'
+                },
+                
+                grid: {
+                    display: false
                 }
             }
         }
