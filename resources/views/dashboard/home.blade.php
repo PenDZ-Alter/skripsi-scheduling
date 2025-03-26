@@ -3,10 +3,10 @@
 @section('content')
     <!-- Grid 2 Kolom -->
     <div style="background-color: #FFFFFF; box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.15);"
-        class="p-6 rounded-md relative overflow-hidden">
+        class="p-6 rounded-md relative">
         <!-- Background image -->
-        <div class="absolute inset-0 opacity-10">
-            <img src="{{ asset('storage/img/Background.jpeg') }}" alt="Background" style="height: 250px; opacity: 20%"
+        <div class="absolute inset-0">
+            <img src="{{ asset('storage/img/Background.jpeg') }}" alt="Background" style="height: 100%; opacity: 10%; background-color: grey;"
                 class="w-full h-full object-cover grayscale">
         </div>
 
@@ -104,14 +104,14 @@
 
     <div class="flex justify-center mt-6">
         <div class="bg-white p-4 rounded-md shadow-lg flex gap-6"
-            style="width: 70rem; height: 25rem; box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.15);">
+            style="width: 70rem; height: 25rem; box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.15); background: linear-gradient(to right, #F0FFFF, #FFFFFF);">
             <!-- 📊 Grafik Indeks Prestasi -->
             <div style="height:23rem; width:48rem; background: none !important; box-shadow: none !important;"
                 id="grafikContainer" class="bg-white p-4 rounded-md shadow text-center">
                 <!-- Tombol Ekspor -->
                 <div style="height:10rem; width:10rem;" class="absolute top-2 right-2">
                     <div id="dropdownButton" class="rounded flex items-center justify-center shadow"
-                        style="height: 30px; width:35px; cursor: pointer; background-color:azure; color: lightslategrey; font-weight: 900; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);"
+                        style="height: 30px; width:35px; cursor: pointer; background-color:azure !important; color: lightslategrey; font-weight: 900; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15); border: 2px solid lightgray !important;border-radius: 8px;"
                         onclick="toggleDropdown()">
                         ☰
                     </div>
@@ -218,4 +218,5 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 @endsection
