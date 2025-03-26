@@ -62,3 +62,4 @@ const grafikIP = new Chart(ctx, {
         }
     }
 });
+chartInstance.update()

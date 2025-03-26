@@ -111,7 +111,7 @@
                 <!-- Tombol Ekspor -->
                 <div style="height:10rem; width:10rem;" class="absolute top-2 right-2">
                     <div id="dropdownButton" class="rounded flex items-center justify-center shadow"
-                        style="height: 30px; width:35px; cursor: pointer; background-color:azure; color: lightslategrey; font-weight: 900"
+                        style="height: 30px; width:35px; cursor: pointer; background-color:azure; color: lightslategrey; font-weight: 900; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);"
                         onclick="toggleDropdown()">
                         ☰
                     </div>
