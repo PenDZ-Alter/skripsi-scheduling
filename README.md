@@ -61,11 +61,21 @@ Now, you should be able to access the application at http://127.0.0.1:8000.
 
 ## Troubleshooting
 
+> [!NOTE]
+> This issue is known to occur on PHP version 8.4.
+
 If you encounter issues during installation—such as Composer failing to install packages due to platform requirements—you can try running:
 
 ```bash
 composer install --ignore-platform-req=ext-fileinfo
 ```
 
-> [!NOTE]
-> This issue is known to occur on PHP version 8.4.
+Having problem with compiler and design?
+
+> [!TIP]
+> This is useful to clear cache from bootstrap.
+
+Try this command : 
+```bash
+php artisan clear-compiled
+```
