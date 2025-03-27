@@ -37,7 +37,7 @@ const grafikIP = new Chart(ctx, {
         responsive: true,
         plugins: {
             legend: {
-                position: 'bottom'
+                position: 'bottom',
             },
             tooltip: {
                 callbacks: {
@@ -52,7 +52,7 @@ const grafikIP = new Chart(ctx, {
                 anchor: 'center',
                 color: 'black',
                 font: {
-                    weight: 'bold',
+                    weight: 'bolder',
                     size: 12
                 },
                 formatter: function (value) {
@@ -68,8 +68,10 @@ const grafikIP = new Chart(ctx, {
                 },
                 min: 3.2,
                 max: 4.0,
+                suggestedMin: 6.0,
                 ticks: {
-                    stepSize: 0.2
+                    stepSize: 0.2,
+                    padding: 20
                 },
             },
             x: {
@@ -79,7 +81,7 @@ const grafikIP = new Chart(ctx, {
                 },
                 grid: {
                     display: false
-                }
+                },
             }
         }
     }

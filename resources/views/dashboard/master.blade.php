@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="storage/css/navigasi.css">
+    <link rel="stylesheet" href="storage/css/dropdown.css">
+    <link rel="stylesheet" href="storage/css/linkStyle.css">
+    <link rel="stylesheet" href="storage/css/profileText.css">
 </head>
 
 

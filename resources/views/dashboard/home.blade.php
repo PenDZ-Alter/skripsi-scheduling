@@ -55,23 +55,23 @@
 
                 </div>
 
-                <!-- Info Email -->
-                <div style="margin-top: 15px; margin-left: 50px;">
-                    <h3 style="font-weight: 700; font-size: 1rem;">Info Profil & Email UIN, Klik
-                        <a href="#" style="font-size:0.90rem; color:#2563EB;"><u>Di SINI</u></a>
+                <!-- Info Profile -->
+                <div class="info-profile">
+                    <h3 class="judul-text" >Info Profil & Email UIN, Klik
+                        <a href="#" class="link-profile" ><u>Di SINI</u></a>
                     </h3>
-                    <p style="margin-top:5px;" class="text-sm font-semibold"> - Default password email sesuai siakad</p>
-                    <p style="margin-top:5px;" class="text-sm font-semibold"> - Ubah password email, klik
-                        <a href="#" style="color: #2563EB;">Di SINI</a>
+                    <p class="text-pertama"> - Default password email sesuai siakad</p>
+                    <p class="text-kedua"> - Ubah password email, klik
+                        <a href="#" target="_blank" class="link-ubahPassword">Di SINI</a>
                     </p>
-                    <p style="margin-top:5px;" class="text-sm font-semibold"> - Buka email UIN, klik
-                        <a href="#" style="color:#2563EB;">gmail.com</a>
+                    <p class="text-ketiga"> - Buka email UIN, klik
+                        <a href="#" target="_blank" class="link-Email">gmail.com</a>
                     </p>
-                    <p style="margin-left: 10px;" class="text-sm font-semibold"> Add account:
-                        <i style="margin-right:-1px;">NIM</i>@student.uin-malang.ac.id
+                    <p class="text-keempat"> Add account:
+                        <i class="paragraf-Email">NIM</i>@student.uin-malang.ac.id
                     </p>
-                    <p style="margin-top:5px;" class="text-sm font-semibold"> - Untuk aktivasi email UIN, klik
-                        <a href="#" style="color:#2563EB;">Di SINI</a>
+                    <p class="text-kelima"> - Untuk aktivasi email UIN, klik
+                        <a href="#" target="_blank" class="link-aktivasiEmail">Di SINI</a>
                     </p>
                 </div>
             </div>
@@ -83,18 +83,15 @@
                     Journal</h3>
                 <div class="space-y-2">
                     <a href="https://link.springer.com/"
-                        style="display: block; background: linear-gradient(to right, rgba(254, 215, 170, 0.1), #fed7aa); text-align: right; font-size: 0.80rem; color: #4B5563;"
-                        class="px-4 py-0.5 font-semibold rounded">
+                        class="link-springer">
                         Free Access Link Springer <span style="font-size: 1.2rem; font-weight: 700;">&laquo;</span>
                     </a>
                     <a href="https://www.emerald.com/insight/"
-                        style="display: block; background: linear-gradient(to right, rgba(190, 242, 100, 0.1), #bef264); text-align: right; font-size: 0.80rem; color: #4B5563;"
-                        class="px-4 py-0.5 font-semibold rounded">
+                        class="link-emerald">
                         Free Access Emerald Insight <span style="font-size: 1.2rem; font-weight: 700;">&laquo;</span>
                     </a>
                     <a href="https://www.cambridge.org/core/"
-                        style="display: block; background: linear-gradient(to right, rgba(254, 240, 138, 0.1), #fef08a); text-align: right; font-size: 0.80rem;color: #4B5563;"
-                        class="px-4 py-0.5 font-semibold rounded">
+                        class="link-cambridge">
                         Free Access Cambridge Core <span style="font-size: 1.2rem; font-weight: 700;">&laquo;</span>
                     </a>
                 </div>
@@ -107,11 +104,10 @@
             style="width: 70rem; height: 25rem; box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.15); background: linear-gradient(to right, #F0FFFF, #FFFFFF);">
             <!-- 📊 Grafik Indeks Prestasi -->
             <div style="height:23rem; width:48rem; background: none !important; box-shadow: none !important;"
-                id="grafikContainer" class="bg-white p-4 rounded-md shadow text-center">
+                id="grafikContainer" class="p-4 rounded-md shadow text-center">
                 <!-- Tombol Ekspor -->
                 <div style="height:10rem; width:10rem;" class="absolute top-2 right-2">
-                    <div id="dropdownButton" class="rounded flex items-center justify-center shadow"
-                        style="height: 30px; width:35px; cursor: pointer; background-color:azure !important; color: lightslategrey; font-weight: 900; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15); border: 2px solid lightgray !important;border-radius: 8px;"
+                    <div id="dropdownButton" class="dropdown-menu"
                         onclick="toggleDropdown()">
                         ☰
                     </div>
@@ -140,25 +136,25 @@
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <a href="https://hes.uin-malang.ac.id/wp-content/uploads/2022/12/Sertifikat-dan-SK-BAN-PT-Akreditasi-Prodi-HES-6-Desember-2022-sd-2027.pdf" target="_blank">
+                            <a href="https://hes.uin-malang.ac.id/wp-content/uploads/2022/12/Sertifikat-dan-SK-BAN-PT-Akreditasi-Prodi-HES-6-Desember-2022-sd-2027.pdf" target="_blank" class="Image1">
                                 <img src="{{ asset('storage/img/Berita1.jpeg') }}"
                                     class="object-cover rounded-lg shadow-md" />
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="https://id.quora.com/Apa-penyesalanmu-selama-kuliah" target="_blank">
+                            <a href="https://id.quora.com/Apa-penyesalanmu-selama-kuliah" target="_blank" class="Image2">
                                 <img src="{{ asset('storage/img/Berita2.png') }}"
                                     class="object-cover rounded-lg shadow-md" />
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf04cEpb6v-44beFfiPUwthljHggOcefmBtow0PyJu7uOwd3A/viewform?pli=1" target="_blank">
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf04cEpb6v-44beFfiPUwthljHggOcefmBtow0PyJu7uOwd3A/viewform?pli=1" target="_blank" class="Image3">
                                 <img src="{{ asset('storage/img/Berita3.png') }}"
                                     class="object-cover rounded-lg shadow-md" />
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="https://www.instagram.com/kemendukbangga_bkkbn/" target="_blank">
+                            <a href="https://www.instagram.com/kemendukbangga_bkkbn/" target="_blank" class="Image4">
                                 <img src="{{ asset('storage/img/Berita4.jpg') }}"
                                     class="object-cover rounded-lg shadow-md" />
                             </a>
