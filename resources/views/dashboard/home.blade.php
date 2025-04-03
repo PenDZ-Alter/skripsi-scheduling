@@ -156,6 +156,12 @@
                                     class="object-cover rounded-lg shadow-md" />
                             </a>
                         </div>
+                        <div class="swiper-slide">
+                            <a href="https://www.instagram.com/simfonifmmalang/p/C3PzBgYPnSK/" target="_blank" class="Image5">
+                                <img src="{{ asset('storage/img/Berita5.jpeg') }}"
+                                    class="object-cover rounded-lg shadow-md" />
+                            </a>
+                        </div>
                     </div>
 
                     <!-- Tombol Navigasi -->

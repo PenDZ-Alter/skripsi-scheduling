@@ -139,3 +139,23 @@
   .Image4:hover::after {
       background-color: rgba(0, 0, 0, 0.6);
   }
+
+  .Image5 {
+    position: relative;
+    display: inline-block;
+  }
+
+  .Image5::after {
+    content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0);
+      transition: background-color 0.3s ease;
+  }
+
+  .Image5:hover::after {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
