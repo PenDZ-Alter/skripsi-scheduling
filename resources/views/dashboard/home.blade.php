@@ -2,12 +2,11 @@
 
 @section('content')
     <!-- Grid 2 Kolom -->
-    <div style="background-color: #FFFFFF; box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.15);"
-        class="p-6 rounded-md relative">
+    <div style="background-color: #FFFFFF; box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.15);" class="p-6 rounded-md relative">
         <!-- Background image -->
         <div class="absolute inset-0">
-            <img src="{{ asset('storage/img/Background.jpeg') }}" alt="Background" style="height: 100%; opacity: 10%; background-color: grey;"
-                class="w-full h-full object-cover grayscale">
+            <img src="{{ asset('storage/img/Background.jpeg') }}" alt="Background"
+                style="height: 100%; opacity: 10%; background-color: grey;" class="w-full h-full object-cover grayscale">
         </div>
 
         <!-- Konten -->
@@ -57,8 +56,8 @@
 
                 <!-- Info Profile -->
                 <div class="info-profile">
-                    <h3 class="judul-text" >Info Profil & Email UIN, Klik
-                        <a href="#" class="link-profile" ><u>Di SINI</u></a>
+                    <h3 class="judul-text">Info Profil & Email UIN, Klik
+                        <a href="#" class="link-profile"><u>Di SINI</u></a>
                     </h3>
                     <p class="text-pertama"> - Default password email sesuai siakad</p>
                     <p class="text-kedua"> - Ubah password email, klik
@@ -82,16 +81,13 @@
                     Free Access
                     Journal</h3>
                 <div class="space-y-2">
-                    <a href="https://link.springer.com/"
-                        class="link-springer">
+                    <a href="https://link.springer.com/" class="link-springer">
                         Free Access Link Springer <span style="font-size: 1.2rem; font-weight: 700;">&laquo;</span>
                     </a>
-                    <a href="https://www.emerald.com/insight/"
-                        class="link-emerald">
+                    <a href="https://www.emerald.com/insight/" class="link-emerald">
                         Free Access Emerald Insight <span style="font-size: 1.2rem; font-weight: 700;">&laquo;</span>
                     </a>
-                    <a href="https://www.cambridge.org/core/"
-                        class="link-cambridge">
+                    <a href="https://www.cambridge.org/core/" class="link-cambridge">
                         Free Access Cambridge Core <span style="font-size: 1.2rem; font-weight: 700;">&laquo;</span>
                     </a>
                 </div>
@@ -99,7 +95,7 @@
         </div>
     </div>
 
-    <div class="flex justify-center mt-6">
+    <div style="display:flex;" class="justify-center mt-6">
         <div class="bg-white p-4 rounded-md shadow-lg flex gap-6"
             style="width: 70rem; height: 25rem; box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.15); background: linear-gradient(to right, #F0FFFF, #FFFFFF);">
             <!-- 📊 Grafik Indeks Prestasi -->
@@ -107,8 +103,7 @@
                 id="grafikContainer" class="p-4 rounded-md shadow text-center">
                 <!-- Tombol Ekspor -->
                 <div style="height:10rem; width:10rem;" class="absolute top-2 right-2">
-                    <div id="dropdownButton" class="dropdown-menu"
-                        onclick="toggleDropdown()">
+                    <div id="dropdownButton" class="dropdown-menu" onclick="toggleDropdown()">
                         ☰
                     </div>
                     <ul id="exportMenu"
@@ -136,7 +131,8 @@
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <a href="https://hes.uin-malang.ac.id/wp-content/uploads/2022/12/Sertifikat-dan-SK-BAN-PT-Akreditasi-Prodi-HES-6-Desember-2022-sd-2027.pdf" target="_blank" class="Image1">
+                            <a href="https://hes.uin-malang.ac.id/wp-content/uploads/2022/12/Sertifikat-dan-SK-BAN-PT-Akreditasi-Prodi-HES-6-Desember-2022-sd-2027.pdf"
+                                target="_blank" class="Image1">
                                 <img src="{{ asset('storage/img/Berita1.jpeg') }}"
                                     class="object-cover rounded-lg shadow-md" />
                             </a>
@@ -148,7 +144,8 @@
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf04cEpb6v-44beFfiPUwthljHggOcefmBtow0PyJu7uOwd3A/viewform?pli=1" target="_blank" class="Image3">
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf04cEpb6v-44beFfiPUwthljHggOcefmBtow0PyJu7uOwd3A/viewform?pli=1"
+                                target="_blank" class="Image3">
                                 <img src="{{ asset('storage/img/Berita3.png') }}"
                                     class="object-cover rounded-lg shadow-md" />
                             </a>
@@ -175,22 +172,58 @@
     <!-- Grid 2 Kolom untuk Data Akademik & Jadwal Kuliah -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
         <!-- Card Data Akademik -->
-        <div style="box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.15);" class="bg-white p-4 rounded-md shadow">
-            <div class="space-y-2">
-                <p><strong>NIM<span style="margin-left:5rem;">:</span></strong> <span
-                        style="margin-left:5px;">220605110025</span></p>
-                <p><strong>Status Studi<span style="margin-left:23px;">:</span></strong> <span
-                        style="margin-left:5px;">Mahasiswa Aktif</span></p>
-                <p><strong>Jurusan<span style="margin-left:55px;">:</span></strong> <span style="margin-left:5px;">S1
-                        Teknik
-                        Informatika</span></p>
-                <p><strong>Akreditasi<span style="margin-left:37px;">:</span></strong> <span
-                        style="margin-left:5px;">Unggul
-                        (040/SK/LAM-INFOKOM/Ak/S/III/2024)</span></p>
-                <p><strong>Dosen Wali<span style="margin-left:29px;">:</span></strong> <span style="margin-left:5px;">Dr.
-                        Zainal Abidin M.Kom</span></p>
-                <p><strong>Semester<span style="margin-left:44px;">:</span></strong> <span
-                        style="margin-left:5px;">(Enam)</span></p>
+        <div class="student-info">
+            <div class="info-box">
+                <div class="space-y-2">
+                    <div class="row mb-2">
+                        <div class="col-3 label">
+                            <span class="font-semibold">NIM</span>
+                        </div>
+                        <div class="col-9 value border-bottom">
+                            220605110025
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-3 label">
+                            <span class="font-semibold">Status Studi</span>
+                        </div>
+                        <div class="col-9 value border-bottom d-flex align-items-center">
+                            <span class="status-indicator"></span> <span class="beside-status">Mahasiswa Aktif</span>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-3 label">
+                            <span class="font-semibold">Jurusan</span>
+                        </div>
+                        <div class="col-9 value border-bottom">
+                            S1 TEKNIK INFORMATIKA
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-3 label">
+                            <span class="font-semibold">Akreditasi</span>
+                        </div>
+                        <div class="col-9 value border-bottom">
+                            Unggul (040/SK/LAM-INFOKOM/Ak/S/III/2024)
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-3 label">
+                            <span class="font-semibold">Dosen Wali</span>
+                        </div>
+                        <div class="col-9 value border-bottom">
+                            Dr. Zainal Abidin M.Kom
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3 label">
+                            <span class="font-semibold">Semester</span>
+                        </div>
+                        <div class="col-9 value border-bottom">
+                            VI (Enam)
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 

@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="storage/css/dropdown.css">
     <link rel="stylesheet" href="storage/css/linkStyle.css">
     <link rel="stylesheet" href="storage/css/profileText.css">
+    <link rel="stylesheet" href="storage/css/studentInfo.css">
 </head>
 
 
