@@ -1,3 +1,10 @@
+  .card-Swiper {
+      margin-right: 2rem !important;
+      width: 20rem;
+      height: 20rem;
+      position: relative;
+  }
+
   .swiper-pagination-bullet {
       background-color: white !important;
       opacity: 0.6;
@@ -18,8 +25,8 @@
   }
 
   .swiper-pagination-bullet:hover {
-      background-color: rgba(63, 81, 181, 0.5) !important;
-      opacity: 1;
+      background-color: rgba(63, 81, 181, 0.7) !important;
+      opacity: 1 !important;
   }
 
   .swiper-slider img {
@@ -80,6 +87,11 @@
       background-color: rgba(0, 0, 0, 0.6);
   }
 
+  .Image1-Style {
+      object-fit: cover;
+      border-radius: 0.5rem;
+  }
+
   .Image2 {
       position: relative;
       display: inline-block;
@@ -98,6 +110,11 @@
 
   .Image2:hover::after {
       background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .Image2-Style {
+      object-fit: cover;
+      border-radius: 0.5rem;
   }
 
   .Image3 {
@@ -120,6 +137,11 @@
       background-color: rgba(0, 0, 0, 0.6);
   }
 
+  .Image3-Style {
+      object-fit: cover;
+      border-radius: 0.5rem;
+  }
+
   .Image4 {
       position: relative;
       display: inline-block;
@@ -140,13 +162,18 @@
       background-color: rgba(0, 0, 0, 0.6);
   }
 
+  .Image4-Style {
+      object-fit: cover;
+      border-radius: 0.5rem;
+  }
+
   .Image5 {
-    position: relative;
-    display: inline-block;
+      position: relative;
+      display: inline-block;
   }
 
   .Image5::after {
-    content: "";
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -157,5 +184,10 @@
   }
 
   .Image5:hover::after {
-    background-color: rgba(0, 0, 0, 0.6);
+      background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .Image5-Style {
+      object-fit: cover;
+      border-radius: 0.5rem;
   }

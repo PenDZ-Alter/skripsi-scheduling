@@ -26,19 +26,25 @@
     }
 
     .link-profile:hover{
-        color: rgba(25, 99, 235, 0.5)
+        color: rgba(25, 99, 235, 0.5);
     }
 
     .link-ubahPassword:hover{
-        color: rgba(25, 99, 235, 0.5)
+        color: rgba(25, 99, 235, 0.5);
+        text-decoration: underline;
+        text-decoration-color: rgba(25, 99, 235, 0.5);
     }
 
     .link-Email:hover{
-        color: rgba(25, 99, 235, 0.5)
+        color: rgba(25, 99, 235, 0.5);
+        text-decoration: underline;
+        text-decoration-color: rgba(25, 99, 235, 0.5);
     }
 
     .link-aktivasiEmail:hover{
-        color: rgba(25, 99, 235, 0.5)
+        color: rgba(25, 99, 235, 0.5);
+        text-decoration: underline;
+        text-decoration-color: rgba(25, 99, 235, 0.5);
     }
 
     .text-pertama{

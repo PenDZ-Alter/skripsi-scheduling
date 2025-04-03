@@ -6,18 +6,17 @@
         <!-- Background image -->
         <div class="absolute inset-0">
             <img src="{{ asset('storage/img/Background.jpeg') }}" alt="Background"
-                style="height: 100%; opacity: 10%; background-color: grey;" class="w-full h-full object-cover grayscale">
+                class="grayscale background-Image">
         </div>
 
         <!-- Konten -->
-        <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
+        <div class="grid-cols-1 md:grid-cols-2 content-Card">
             <!-- Kolom Kiri: Info Profil -->
-            <div class="flex items-start space-x-4">
-                <!-- Foto + Icon Kamera -->
+            <div class="space-x-4 card-Profile">
                 <!-- Pembungkus foto dan icon -->
                 <div class="profile-wrapper">
                     <!-- Foto profil -->
-                    <div style="height: 150px; width:150px; margin-top:10px; margin-left:5px;">
+                    <div class="profile-Image-background">
                         <img class="min-w-1 min-h-0.5" id="profileImage" src="{{ asset('storage/img/Alfariz.png') }}"
                             alt="Foto Profil" class="profile-image">
 
@@ -77,89 +76,81 @@
 
             <!-- Kolom Kanan: Free Access Journal -->
             <div>
-                <h3 style="text-align: right; font-size: 1.3rem; font-weight: 350; color: #4B5563;" class="text-right mb-4">
-                    Free Access
-                    Journal</h3>
+                <h3 class="title-Link">Free Access Journal</h3>
                 <div class="space-y-2">
                     <a href="https://link.springer.com/" class="link-springer">
-                        Free Access Link Springer <span style="font-size: 1.2rem; font-weight: 700;">&laquo;</span>
+                        Free Access Link Springer <span class="first-laquo">&laquo;</span>
                     </a>
                     <a href="https://www.emerald.com/insight/" class="link-emerald">
-                        Free Access Emerald Insight <span style="font-size: 1.2rem; font-weight: 700;">&laquo;</span>
+                        Free Access Emerald Insight <span class="second-laquo">&laquo;</span>
                     </a>
                     <a href="https://www.cambridge.org/core/" class="link-cambridge">
-                        Free Access Cambridge Core <span style="font-size: 1.2rem; font-weight: 700;">&laquo;</span>
+                        Free Access Cambridge Core <span class="third-laquo">&laquo;</span>
                     </a>
                 </div>
             </div>
         </div>
     </div>
 
-    <div style="display:flex;" class="justify-center mt-6">
-        <div class="bg-white p-4 rounded-md shadow-lg flex gap-6"
-            style="width: 70rem; height: 25rem; box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.15); background: linear-gradient(to right, #F0FFFF, #FFFFFF);">
+    <div class="Card">
+        <div class="card-Chart">
             <!-- 📊 Grafik Indeks Prestasi -->
-            <div style="height:23rem; width:48rem; background: none !important; box-shadow: none !important;"
-                id="grafikContainer" class="p-4 rounded-md shadow text-center">
+            <div id="grafikContainer" class="chart-IP">
                 <!-- Tombol Ekspor -->
-                <div style="height:10rem; width:10rem;" class="absolute top-2 right-2">
+                <div class="top-2 right-2 dropdown-button">
                     <div id="dropdownButton" class="dropdown-menu" onclick="toggleDropdown()">
                         ☰
                     </div>
-                    <ul id="exportMenu"
-                        class="hidden absolute bg-white border border-gray-200 rounded shadow-md text-sm z-10"
-                        style="width:9rem; margin-top:10px; margin-left:-16px; box-shadow: -4px 8px 6px rgba(0, 0, 0, 0.15);">
-                        <li><a href="#" id="downloadPNG"
-                                class="block px-4 py-2 text-gray-600 font-semibold text-sm">Download PNG</a></li>
-                        <li><a href="#" id="downloadJPEG"
-                                class="block px-4 py-2 text-gray-600 font-semibold text-sm">Download JPEG</a></li>
-                        <li><a href="#" id="downloadPDF"
-                                class="block px-4 py-2 text-gray-600 font-semibold text-sm">Download PDF</a></li>
+                    <ul id="exportMenu" class="hidden export-menu">
+                        <li><a href="#" id="downloadPNG" class="menu-item">Download PNG</a></li>
+                        <li><a href="#" id="downloadJPEG" class="menu-item">Download JPEG</a></li>
+                        <li><a href="#" id="downloadPDF" class="menu-item">Download PDF</a></li>
                     </ul>
                 </div>
 
                 <!-- Judul -->
-                <h3 class="text-lg font-bold mb-2">Grafik Indeks Prestasi</h3>
-                <p class="text-sm text-gray-600 mb-4 font-medium tracking-wide">
-                    220605110025 - <span class="tracking-tight">ALFARIZ MUHAN MANDEGA</span>
+                <h3 class="chart-IP-text">Grafik Indeks Prestasi</h3>
+                <p class="mahasiswa-Information">
+                    220605110025 - <span class="mahasiswa-Name">ALFARIZ MUHAN MANDEGA</span>
                 </p>
                 <canvas id="grafikIP" height="110" width="auto"></canvas>
             </div>
 
             <!-- 🖼️ Area Gambar dengan Swiper -->
-            <div style="margin-right:1rem !important; width: 20rem; height: 20rem; position: relative;">
+            <div class="card-Swiper">
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <a href="https://hes.uin-malang.ac.id/wp-content/uploads/2022/12/Sertifikat-dan-SK-BAN-PT-Akreditasi-Prodi-HES-6-Desember-2022-sd-2027.pdf"
                                 target="_blank" class="Image1">
                                 <img src="{{ asset('storage/img/Berita1.jpeg') }}"
-                                    class="object-cover rounded-lg shadow-md" />
+                                    class="Image1-Style" />
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a href="https://id.quora.com/Apa-penyesalanmu-selama-kuliah" target="_blank" class="Image2">
                                 <img src="{{ asset('storage/img/Berita2.png') }}"
-                                    class="object-cover rounded-lg shadow-md" />
+                                    class="Image2-Style" />
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a href="https://docs.google.com/forms/d/e/1FAIpQLSf04cEpb6v-44beFfiPUwthljHggOcefmBtow0PyJu7uOwd3A/viewform?pli=1"
                                 target="_blank" class="Image3">
                                 <img src="{{ asset('storage/img/Berita3.png') }}"
-                                    class="object-cover rounded-lg shadow-md" />
+                                    class="Image3-Style" />
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a href="https://www.instagram.com/kemendukbangga_bkkbn/" target="_blank" class="Image4">
                                 <img src="{{ asset('storage/img/Berita4.jpg') }}"
-                                    class="object-cover rounded-lg shadow-md" />
+                                    class="Image4-Style" />
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="https://www.instagram.com/simfonifmmalang/p/C3PzBgYPnSK/" target="_blank" class="Image5">
+                            <a href="https://www.instagram.com/simfonifmmalang/p/C3PzBgYPnSK/" target="_blank"
+                                class="Image5">
                                 <img src="{{ asset('storage/img/Berita5.jpeg') }}"
-                                    class="object-cover rounded-lg shadow-md" />
+                                    class="Image5-Style" />
                             </a>
                         </div>
                     </div>
