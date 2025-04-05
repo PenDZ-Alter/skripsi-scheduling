@@ -10,11 +10,14 @@
     <link href="storage/img/UIN-2.1.png" rel='shortcut icon'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="storage/css/header.css">
     <link rel="stylesheet" href="storage/css/navigasi.css">
     <link rel="stylesheet" href="storage/css/dropdown.css">
     <link rel="stylesheet" href="storage/css/linkStyle.css">
     <link rel="stylesheet" href="storage/css/profileText.css">
     <link rel="stylesheet" href="storage/css/studentInfo.css">
+    <link rel="stylesheet" href="storage/css/calendar.css">
+    <link rel="stylesheet" href="storage/css/quotes.css">
 </head>
 
 
@@ -30,7 +33,7 @@
         @include('partials.header')
 
         <!-- MAIN CONTENT -->
-        <main class="p-6">
+        <main class="p-6 pt-20">
             @yield('content')
         </main>
 

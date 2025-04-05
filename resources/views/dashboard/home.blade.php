@@ -225,19 +225,19 @@
         </div>
 
         <!-- Card Jadwal Kuliah -->
-        <div style="box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.15);" class="bg-white p-4 rounded-md shadow">
-            <h3 class="text-lg font-bold mb-2">Jadwal Kuliahmu Hari Ini</h3>
-            <i>
-                <p class="text-gray-500">Tidak Ada Jadwal Kuliah, saatnya kamu eksplorasi pengalaman baru</p>
-            </i>
+        <div class="calendar-card">
+            <h3 class="calendar-title">
+                <i class="fa-regular fa-calendar"></i> Jadwal Kuliahmu Hari Ini
+            </h3>
+            <p class="calendar-description">Tidak Ada Jadwal Kuliah, saatnya kamu eksplorasi pengalaman baru</p>
         </div>
     </div>
 
     <!-- Quotes -->
-    <div style="box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.15);" class="mt-4 bg-white p-4 rounded-md shadow">
-        <blockquote class="italic text-gray-600">"Lelah hadir untuk menjadi pengingat seberapa besar perjuanganmu. Kalau
+    <div class="background-quotes">
+        <blockquote class="quotes-description">"Lelah hadir untuk menjadi pengingat seberapa besar perjuanganmu. Kalau
             kamu lelah, rehat sejenak."</blockquote>
-        <span class="text-sm text-gray-500">Positive Quotes</span>
+        <span class="quotes-end">🌄 Positive Quotes</span>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
