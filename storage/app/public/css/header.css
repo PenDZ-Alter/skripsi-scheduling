@@ -67,10 +67,25 @@
     background-color: rgba(40, 167, 69, 1);
     box-shadow: 1px 1px 8px rgba(40, 167, 69, 0.7);
     border: 2px solid rgba(40, 167, 69, 0.7);
-    animation: pulse 2s infinite;
+    animation: pulsed 2s infinite;
     border-radius: 50%;
     margin-right: -1.6rem;
     margin-top: 0.5rem;
+}
+
+@keyframes pulsed {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
+    }
+    70% {
+        transform: scale(1.2);
+        box-shadow: 0 0 0 10px rgba(40, 167, 69, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+    }
 }
 
 .beside-status-header {
