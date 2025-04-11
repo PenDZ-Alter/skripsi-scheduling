@@ -48,30 +48,9 @@
       </li>
       <li class="px-4 py-2 hover:bg-indigo-800">
         <span class="text-blue-300 font-semibold text-sm flex items-center">
-          <!-- Ikon Rekap Perpustakaan -->
-          <i class="fa-regular fa-address-book mr-2"></i>
-          <a href="#" class="block">Rekap Perpustakaan</a>
-        </span>
-      </li>
-      <li class="px-4 py-2 hover:bg-indigo-800">
-        <span class="text-blue-300 font-semibold text-sm flex items-center">
-          <!-- Ikon Pengajuan Surat -->
-          <i class="fa-regular fa-envelope mr-2"></i>
-          <a href="#" class="block">Pengajuan Surat</a>
-        </span>
-      </li>
-      <li class="px-4 py-2 hover:bg-indigo-800">
-        <span class="text-blue-300 font-semibold text-sm flex items-center">
           <!-- Ikon KHS Hasil Studi -->
           <i class="fa-regular fa-newspaper mr-2"></i>
           <a href="#" class="block">KHS Hasil Studi</a>
-        </span>
-      </li>
-      <li class="px-4 py-2 hover:bg-indigo-800">
-        <span class="text-blue-300 font-semibold text-sm flex items-center">
-          <!-- Ikon Nilai Mahad -->
-          <i class="fa-regular fa-building mr-2"></i>
-          <a href="#" class="block">Nilai Mahad</a>
         </span>
       </li>
       <li class="px-4 py-2 hover:bg-indigo-800">
@@ -107,13 +86,6 @@
           <!-- Ikon Pengajuan Ijazah -->
           <i class="fa-regular fa-file-zipper mr-2"></i>
           <a href="#" class="block">Pengajuan Ijazah / SKPI</a>
-        </span>
-      </li>
-      <li class="px-4 py-2 hover:bg-indigo-800">
-        <span class="text-blue-300 font-semibold text-sm flex items-center">
-          <!-- Ikon Kredit Kegiatan SKKM -->
-          <i class="fas fa-football mr-2"></i>
-          <a href="#" class="block">Kredit Kegiatan SKKM</a>
         </span>
       </li>
       <li class="px-4 py-2 hover:bg-indigo-800">
