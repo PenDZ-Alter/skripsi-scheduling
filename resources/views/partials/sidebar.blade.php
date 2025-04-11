@@ -29,14 +29,14 @@
         <span class="text-blue-300 font-semibold text-sm flex items-center">
           <!-- Ikon Home -->
           <i class="fas fa-house mr-2"></i>
-          <a href="#" class="block">Home</a>
+          <a href="{{ route('home') }}" class="block">Home</a>
         </span>
       </li>
       <li class="px-4 py-2 hover:bg-indigo-800">
         <span class="text-blue-300 font-semibold text-sm flex items-center">
           <!-- Ikon Profil Mahasiswa -->
           <i class="fa-regular fa-address-card mr-2"></i>
-          <a href="#" class="block">Profil Mahasiswa</a>
+          <a href="{{ route('profile') }}" class="block">Profil Mahasiswa</a>
         </span>
       </li>
       <li class="px-4 py-2 hover:bg-indigo-800">

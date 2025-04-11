@@ -1,4 +1,4 @@
-@extends('profile_mahasiswa.masterprofile')
+@extends('dashboard.home')
 
 @section('content')
     <!-- Grid 2 Kolom -->
