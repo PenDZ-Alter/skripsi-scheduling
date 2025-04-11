@@ -1,4 +1,4 @@
-@extends('dashboard.home')
+@extends('dashboard.master')
 
 @section('content')
     <!-- Grid 2 Kolom -->

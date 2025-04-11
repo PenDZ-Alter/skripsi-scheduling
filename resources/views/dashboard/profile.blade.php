@@ -1,4 +1,4 @@
-@extends('profile_mahasiswa.profile')
+@extends('dashboard.master')
 
 @section('content')
     <div class="student-page-card">
