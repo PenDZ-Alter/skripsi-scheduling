@@ -1,8 +1,8 @@
-@extends('dashboard.master')
+@extends('profile_mahasiswa.masterprofile')
 
 @section('content')
     <!-- Grid 2 Kolom -->
-    <div style="background-color: #FFFFFF; box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.15);" class="p-6 rounded-md relative">
+    <div class="profile-card">
         <!-- Background image -->
         <div class="absolute inset-0">
             <img src="{{ asset('storage/img/Background.jpeg') }}" alt="Background"
