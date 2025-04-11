@@ -3,7 +3,7 @@
   <div class="flex items-center p-4 bg-gradient-to-r from-gray-900 to-gray-800">
     <img src="{{ asset('storage/img/PCFix.png') }}" alt="Logo" class="w-10 h-10 mr-2">
     <span style="font-weight:700;" class="text-white text-lg">Siakad</span>
-    <span style="letter-spacing: -2px;" class="text-blue-300 font-semibold text-lg ml-1"><a href="{{ url('/home') }}">UINMALANG</a></span>
+    <span style="letter-spacing: -2px;" class="text-blue-300 font-semibold text-lg ml-1"><a href="{{ route('home') }}">UINMALANG</a></span>
   </div>
 
   <!-- Informasi Mahasiswa -->

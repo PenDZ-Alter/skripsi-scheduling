@@ -7,5 +7,9 @@ Route::get('/', function () {
     return view('dashboard.home');
 });
 
+Route::get('/home', function() {
+    return view('dashboard.home');
+})->name('home');
+
 Route::post('/upload-photo', [ProfileController::class, 'uploadPhoto'])->name('route_upload_photo');
 
