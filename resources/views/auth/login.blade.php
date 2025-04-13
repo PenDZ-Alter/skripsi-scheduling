@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login | VetConnect</title>
+    <title>Login | Skripsi UIN Malang</title>
     <link rel="shortcut icon"
         href="https://cdn.vectorstock.com/i/500p/88/11/horse-dog-cat-animal-logo-template-vector-34498811.jpg"
         type="image/x-icon">
@@ -20,7 +20,7 @@
 
         /* Body & Background */
         body {
-            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVcbNG21L0Q6qTFKzHubaBbYElybEm757Ua8ggOWnW8gbY0CRfyy_sLOUj67W3wOJhrRA&usqp=CAU');
+            background-image: url('https://cdn-web.ruangguru.com/file-uploader/6df54f45-02b4-43c0-8897-87d5ed54e1fd.jpg');
             font-size: 16px;
             color: #333;
             display: flex;
@@ -89,7 +89,7 @@
         .login-btn {
             width: 100%;
             padding: 15px;
-            background-color: #ff8c00;
+            background-color: green;
             color: white;
             font-size: 18px;
             border: none;
@@ -99,7 +99,7 @@
         }
 
         .login-btn:hover {
-            background-color: #ffcc80;
+            background-color: lightgreen;
         }
 
         /* Links */
@@ -110,7 +110,7 @@
         }
 
         .signup-link a {
-            color: #ff8c00;
+            color: green;
             text-decoration: none;
             font-weight: 600;
         }
@@ -142,11 +142,11 @@
             <h2>Masuk ke Akun Anda</h2>
             <form action="proses.php" method="POST">
                 <div class="input-group">
-                    <label for="username">Username</label>
+                    <label for="username">Email</label>
                     <input type="text" id="username" name="username" placeholder="Masukkan Username" required>
                 </div>
                 <div class="input-group">
-                    <label for="password">Kata Sandi</label>
+                    <label for="password">Password</label>
                     <input type="password" id="password" name="password" placeholder="Masukkan Kata Sandi" required>
                 </div>
                 <button type="submit" class="login-btn">Login</button>
@@ -157,7 +157,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 VetConnect. Semua Hak Dilindungi.</p>
+        <p>&copy; 2025 Skripsi-UIN Malang. Semua Hak Dilindungi.</p>
     </footer>
 
 </body>
