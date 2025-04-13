@@ -56,7 +56,7 @@
 <body>
   <div class="register-box">
     <h2>Form Registrasi</h2>
-    <form action="proses_register.php" method="POST">
+    <form action="{{ route('login') }}" method="GET">
       <div class="form-group">
         <label for="name">Nama Lengkap</label>
         <input type="text" id="name" name="name" required />

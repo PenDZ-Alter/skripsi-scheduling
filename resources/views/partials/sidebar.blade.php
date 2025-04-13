@@ -69,27 +69,6 @@
       </li>
       <li class="px-4 py-2 hover:bg-indigo-800">
         <span class="sidebar-content">
-          <!-- Ikon Jadwal Perkuliahan -->
-          <i class="fa-regular fa-calendar icon-style"></i>
-          <a href="#" class="text-style">Jadwal Perkuliahan</a>
-        </span>
-      </li>
-      <li class="px-4 py-2 hover:bg-indigo-800">
-        <span class="sidebar-content">
-          <!-- Ikon Pemrograman KRS -->
-          <i class="fa-regular fa-calendar-plus icon-style"></i>
-          <a href="#" class="text-style">Pemrograman KRS</a>
-        </span>
-      </li>
-      <li class="px-4 py-2 hover:bg-indigo-800">
-        <span class="sidebar-content">
-          <!-- Ikon Pengajuan Ijazah -->
-          <i class="fa-regular fa-file-zipper icon-style"></i>
-          <a href="#" class="text-style">Pengajuan Ijazah / SKPI</a>
-        </span>
-      </li>
-      <li class="px-4 py-2 hover:bg-indigo-800">
-        <span class="sidebar-content">
           <!-- Ikon Skripsi/Tesis/Disertasi -->
           <i class="fas fa-flag-checkered icon-style"></i>
           <a href="#" class="text-style">Skripsi/Tesis/Disertasi</a>
@@ -97,14 +76,6 @@
       </li>
       <li class="px-4 py-2 hover:bg-indigo-800">
         <span class="sidebar-content">
-          <!-- Ikon Daftar Wisuda -->
-          <i class="fas fa-graduation-cap icon-style"></i>
-          <a href="#" class="text-style">Daftar Wisuda / No. Ijazah</a>
-        </span>
-      </li>
-      <li class="px-4 py-2 hover:bg-indigo-800">
-        <span class="sidebar-content">
-          <!-- Ikon Daftar Wisuda -->
           <i class="fas fa-right-from-bracket icon-style"></i>
           <a href="#" class="text-style">Logout</a>
         </span>

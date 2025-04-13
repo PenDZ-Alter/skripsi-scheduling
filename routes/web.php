@@ -6,9 +6,14 @@ use App\Http\Controllers\ProfileController;
 Route::get('/', function () {
     return view('dashboard.home');
 });
+
 Route::get('/login', function () {
     return view('auth.login');
 })->name('login');
+
+Route::get('/register', function () {
+    return view('auth.register');
+})->name('register');
 
 Route::get('/home', function() {
     return view('dashboard.home');
