@@ -17,8 +17,8 @@
                 <div class="profile-wrapper">
                     <!-- Foto profil -->
                     <div class="profile-Image-background">
-                        <img class="min-w-1 min-h-0.5" id="profileImage" src="{{ asset('storage/img/Alfariz.png') }}"
-                            alt="Foto Profil" class="profile-image">
+                        <a href="{{ route('profile') }}" class="profile-Image-background1"><img class="min-w-1 min-h-0.5" id="profileImage" src="{{ asset('storage/img/Alfariz.png') }}"
+                            alt="Foto Profil" class="profile-image"></a>
 
                         <!-- Ikon kamera -->
                         <div class="camera-fix" onclick="document.getElementById('uploadInput').click();">
@@ -56,20 +56,20 @@
                 <!-- Info Profile -->
                 <div class="info-profile">
                     <h3 class="judul-text">Info Profil & Email UIN, Klik
-                        <a href="#" class="link-profile"><u>Di SINI</u></a>
+                        <a href="{{ url('/profileEdit') }}" class="link-profile"><u>Di SINI</u></a>
                     </h3>
                     <p class="text-pertama"> - Default password email sesuai siakad</p>
                     <p class="text-kedua"> - Ubah password email, klik
-                        <a href="#" target="_blank" class="link-ubahPassword">Di SINI</a>
+                        <a href="{{ url('/profileEdit') }}" class="link-ubahPassword">Di SINI</a>
                     </p>
                     <p class="text-ketiga"> - Buka email UIN, klik
-                        <a href="#" target="_blank" class="link-Email">gmail.com</a>
+                        <a href="{{ url('/profileEdit') }}" class="link-Email">gmail.com</a>
                     </p>
                     <p class="text-keempat"> Add account:
                         <i class="paragraf-Email">NIM</i>@student.uin-malang.ac.id
                     </p>
                     <p class="text-kelima"> - Untuk aktivasi email UIN, klik
-                        <a href="#" target="_blank" class="link-aktivasiEmail">Di SINI</a>
+                        <a href="{{ url('/profileEdit') }}" class="link-aktivasiEmail">Di SINI</a>
                     </p>
                 </div>
             </div>
@@ -151,6 +151,13 @@
                                 class="Image5">
                                 <img src="{{ asset('storage/img/Berita5.jpeg') }}"
                                     class="Image5-Style" />
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="storage/img/Berita6.jpg" target="_blank"
+                                class="Image6">
+                                <img src="{{ asset('storage/img/Berita6.jpg') }}"
+                                    class="Image6-Style" />
                             </a>
                         </div>
                     </div>
@@ -235,7 +242,7 @@
 
     <!-- Quotes -->
     <div class="background-quotes">
-        <blockquote class="quotes-description">"Lelah hadir untuk menjadi pengingat seberapa besar perjuanganmu. Kalau
+        <blockquote class="quotes-description">"Lelah hadir untuk menjadi pengingat seberapa besar perjuanganmu terhadap negara. Kalau
             kamu lelah, rehat sejenak."</blockquote>
         <span class="quotes-end">🌄 Positive Quotes</span>
     </div>

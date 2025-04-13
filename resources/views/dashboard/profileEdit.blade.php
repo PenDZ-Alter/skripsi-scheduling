@@ -4,7 +4,7 @@
     <!-- Grid 2 Kolom -->
     <div class="profile-page-card">
         <!-- Konten -->
-        <div class="grid-cols-2 md:grid-cols-4 content-Card-profile">
+        <div class="grid-cols-1 md:grid-cols-4 content-Card-profile">
             <!-- Kolom Kiri: Info Profil -->
             <div class="space-x-4 card-Profile">
                 <!-- Pembungkus foto dan icon -->
@@ -13,10 +13,22 @@
                     <div class="profile-Image-background-page">
                         <img class="min-w-1 min-h-0.5" id="profileImage" src="{{ asset('storage/img/Alfariz.png') }}"
                             alt="Foto Profil" class="profile-image-page">
+
+                        <!-- Ikon kamera -->
+                        <div class="camera-fix-profile" onclick="document.getElementById('uploadInput').click();">
+                            <img src="{{ asset('storage/img/camera-fix.png') }}" alt="Camera Icon">
+                        </div>
                     </div>
+
+
+                    <!-- Input file untuk unggah -->
+                    <form id="uploadForm" enctype="multipart/form-data">
+                        @csrf
+                        <input id="uploadInput" name="photo" type="file" class="hidden" accept="image/*"
+                            onchange="previewAndUploadImage()">
+                    </form>
                 </div>
 
-                <!-- Bagian informasi -->
                 <div class="info-box-profiles">
                     <div class="space-y-2">
                         <div class="row-profile mb-2">
@@ -47,12 +59,12 @@
                             <div class="col-3 label-profile">
                                 <span>Status Studi</span>
                             </div>
-                            <div class="col-9 value border-bottom-indicator">
-                                <span class="status-indicator-profile"></span> <span class="beside-status-profile">Mahasiswa
-                                    Aktif</span>
+                            <div class="col-9 value-profile border-bottom-indicator">
+                                <span class="status-indicator-profile"></span>
+                                <span class="beside-status-profile">Mahasiswa Aktif</span>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row-profile mb-2">
                             <div class="col-3 label-profile">
                                 <span>Semester</span>
                             </div>
@@ -116,7 +128,7 @@
                                 Jawa Timur
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row-profile mb-2">
                             <div class="col-3 label-profile">
                                 <span>Kota Orang Tua</span>
                             </div>
@@ -126,17 +138,18 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <!-- Bagian Tombol Edit -->
                 <div class="bg-btn-profile">
                     <div class="space-y-2">
-                        <a href="{{ url('/profileEdit') }}" class="btn-edit-profile">
-                            <i class="fas fa-pen-to-square" class="btn-pen-edit"></i>
-                            <span class="btn-text-edit">Ubah Profil Saya</span>
+                        <a href="{{ url('/profile') }}" class="btn-edit-profile">
+                            <i class="fas fa-save" class="btn-pen-edit"></i>
+                            <span class="btn-text-edit">Simpan Profil Saya</span>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script type="text/javascript" src="storage/js/profilePage.js"></script>
 @endsection

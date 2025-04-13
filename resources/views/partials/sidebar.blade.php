@@ -1,20 +1,20 @@
 <div class="fixed top-0 left-0 bg-gradient-to-b from-indigo-700 to-indigo-900 w-64 h-screen text-white flex flex-col z-50">
   <!-- Bagian Logo atau Profil Sidebar -->
   <div class="flex items-center p-4 bg-gradient-to-r from-gray-900 to-gray-800">
-    <img src="{{ asset('storage/img/PCFix.png') }}" alt="Logo" class="w-10 h-10 mr-2">
-    <span style="font-weight:700;" class="text-white text-lg">Siakad</span>
-    <span style="letter-spacing: -2px;" class="text-blue-300 font-semibold text-lg ml-1"><a href="{{ route('home') }}">UINMALANG</a></span>
+    <a href="{{ route('home') }}"><i class="fas fa-laptop icon-left"></i></a>
+    <span class="title-left">Siakad</span>
+    <span class="title-right"><a href="{{ route('home') }}">UINMALANG</a></span>
   </div>
 
   <!-- Informasi Mahasiswa -->
   <div class="flex items-center gap-3 p-4 bg-gradient-to-r from-gray-900 to-gray-800">
     <!-- Foto Profil -->
-    <img src="{{ asset('storage/img/Alfariz.png') }}" alt="Profile" style="height:75px; width:50px;" class="w-20 h-20 rounded-md">
+    <a href="{{ route('profile') }}" class="profile1"><img src="{{ asset('storage/img/Alfariz.png') }}" alt="Profile" class="profile-picture"></a>
     
     <!-- Nama dan NIM -->
-    <div style= "margin-left:5px;" class="flex flex-col">
-      <span style="font-weight:700; letter-spacing:0px; margin-top:-15px; font-size: 0.9rem;" class="text-blue-300 font-bold text-md">ALFARIZ MUHAN MANDEGA</span>
-      <span style="margin-top:5px; font-size: 0.8rem;" class="text-white font-semibold text-sm flex items-center">
+    <div style="margin-left:5px;" class="flex flex-col">
+      <span class="name-profile">ALFARIZ MUHAN MANDEGA</span>
+      <span class="iconName-profile">
         <!-- Ikon Kartu Identitas -->
         <i class="fas fa-address-card mr-2"></i>
         220605110025
@@ -26,115 +26,87 @@
   <nav style="margin-top: 10px;" class="flex-1 overflow-y-auto pb-4">
     <ul>
       <li class="px-4 py-2 hover:bg-indigo-800">
-        <span class="text-blue-300 font-semibold text-sm flex items-center">
+        <span class="sidebar-content">
           <!-- Ikon Home -->
-          <i class="fas fa-house mr-2"></i>
-          <a href="{{ route('home') }}" class="block">Home</a>
+          <a href="{{ route('home') }}"><i class="fas fa-house icon-style"></i></a>
+          <a href="{{ route('home') }}" class="text-style">Home</a>
         </span>
       </li>
       <li class="px-4 py-2 hover:bg-indigo-800">
-        <span class="text-blue-300 font-semibold text-sm flex items-center">
+        <span class="sidebar-content">
           <!-- Ikon Profil Mahasiswa -->
-          <i class="fa-regular fa-address-card mr-2"></i>
-          <a href="{{ route('profile') }}" class="block">Profil Mahasiswa</a>
+          <a href="{{ route('profile') }}"><i class="fa-regular fa-address-card icon-style"></i></a>
+          <a href="{{ route('profile') }}" class="text-style">Profil Mahasiswa</a>
         </span>
       </li>
       <li class="px-4 py-2 hover:bg-indigo-800">
-        <span class="text-blue-300 font-semibold text-sm flex items-center">
+        <span class="sidebar-content">
           <!-- Ikon Rekap Pembayaran -->
-          <i class="fa-regular fa-credit-card mr-2"></i>
-          <a href="#" class="block">Rekap Pembayaran</a>
+          <i class="fa-regular fa-credit-card icon-style"></i>
+          <a href="#" class="text-style">Rekap Pembayaran</a>
         </span>
       </li>
       <li class="px-4 py-2 hover:bg-indigo-800">
-        <span class="text-blue-300 font-semibold text-sm flex items-center">
-          <!-- Ikon Rekap Perpustakaan -->
-          <i class="fa-regular fa-address-book mr-2"></i>
-          <a href="#" class="block">Rekap Perpustakaan</a>
-        </span>
-      </li>
-      <li class="px-4 py-2 hover:bg-indigo-800">
-        <span class="text-blue-300 font-semibold text-sm flex items-center">
-          <!-- Ikon Pengajuan Surat -->
-          <i class="fa-regular fa-envelope mr-2"></i>
-          <a href="#" class="block">Pengajuan Surat</a>
-        </span>
-      </li>
-      <li class="px-4 py-2 hover:bg-indigo-800">
-        <span class="text-blue-300 font-semibold text-sm flex items-center">
+        <span class="sidebar-content">
           <!-- Ikon KHS Hasil Studi -->
-          <i class="fa-regular fa-newspaper mr-2"></i>
-          <a href="#" class="block">KHS Hasil Studi</a>
+          <i class="fa-regular fa-newspaper icon-style"></i>
+          <a href="#" class="text-style">KHS Hasil Studi</a>
         </span>
       </li>
       <li class="px-4 py-2 hover:bg-indigo-800">
-        <span class="text-blue-300 font-semibold text-sm flex items-center">
-          <!-- Ikon Nilai Mahad -->
-          <i class="fa-regular fa-building mr-2"></i>
-          <a href="#" class="block">Nilai Mahad</a>
-        </span>
-      </li>
-      <li class="px-4 py-2 hover:bg-indigo-800">
-        <span class="text-blue-300 font-semibold text-sm flex items-center">
+        <span class="sidebar-content">
           <!-- Ikon Statistik Akademisk -->
-          <i class="fas fa-chart-line mr-2"></i>
-          <a href="#" class="block">Statistik Akademik</a>
+          <i class="fas fa-chart-line icon-style"></i>
+          <a href="#" class="text-style">Statistik Akademik</a>
         </span>
       </li>
       <li class="px-4 py-2 hover:bg-indigo-800">
-        <span class="text-blue-300 font-semibold text-sm flex items-center">
+        <span class="sidebar-content">
           <!-- Ikon Transkrip & Riwayat -->
-          <i class="fa-regular fa-file mr-2"></i>
-          <a href="#" class="block">Transkrip & Riwayat</a>
+          <i class="fa-regular fa-file icon-style"></i>
+          <a href="#" class="text-style">Transkrip & Riwayat</a>
         </span>
       </li>
       <li class="px-4 py-2 hover:bg-indigo-800">
-        <span class="text-blue-300 font-semibold text-sm flex items-center">
+        <span class="sidebar-content">
           <!-- Ikon Jadwal Perkuliahan -->
-          <i class="fa-regular fa-calendar mr-2"></i>
-          <a href="#" class="block">Jadwal Perkuliahan</a>
+          <i class="fa-regular fa-calendar icon-style"></i>
+          <a href="#" class="text-style">Jadwal Perkuliahan</a>
         </span>
       </li>
       <li class="px-4 py-2 hover:bg-indigo-800">
-        <span class="text-blue-300 font-semibold text-sm flex items-center">
+        <span class="sidebar-content">
           <!-- Ikon Pemrograman KRS -->
-          <i class="fa-regular fa-calendar-plus mr-2"></i>
-          <a href="#" class="block">Pemrograman KRS</a>
+          <i class="fa-regular fa-calendar-plus icon-style"></i>
+          <a href="#" class="text-style">Pemrograman KRS</a>
         </span>
       </li>
       <li class="px-4 py-2 hover:bg-indigo-800">
-        <span class="text-blue-300 font-semibold text-sm flex items-center">
+        <span class="sidebar-content">
           <!-- Ikon Pengajuan Ijazah -->
-          <i class="fa-regular fa-file-zipper mr-2"></i>
-          <a href="#" class="block">Pengajuan Ijazah / SKPI</a>
+          <i class="fa-regular fa-file-zipper icon-style"></i>
+          <a href="#" class="text-style">Pengajuan Ijazah / SKPI</a>
         </span>
       </li>
       <li class="px-4 py-2 hover:bg-indigo-800">
-        <span class="text-blue-300 font-semibold text-sm flex items-center">
-          <!-- Ikon Kredit Kegiatan SKKM -->
-          <i class="fas fa-football mr-2"></i>
-          <a href="#" class="block">Kredit Kegiatan SKKM</a>
-        </span>
-      </li>
-      <li class="px-4 py-2 hover:bg-indigo-800">
-        <span class="text-blue-300 font-semibold text-sm flex items-center">
+        <span class="sidebar-content">
           <!-- Ikon Skripsi/Tesis/Disertasi -->
-          <i class="fas fa-flag-checkered mr-2"></i>
-          <a href="#" class="block">Skripsi/Tesis/Disertasi</a>
+          <i class="fas fa-flag-checkered icon-style"></i>
+          <a href="#" class="text-style">Skripsi/Tesis/Disertasi</a>
         </span>
       </li>
       <li class="px-4 py-2 hover:bg-indigo-800">
-        <span class="text-blue-300 font-semibold text-sm flex items-center">
+        <span class="sidebar-content">
           <!-- Ikon Daftar Wisuda -->
-          <i class="fas fa-graduation-cap mr-2"></i>
-          <a href="#" class="block">Daftar Wisuda / No. Ijazah</a>
+          <i class="fas fa-graduation-cap icon-style"></i>
+          <a href="#" class="text-style">Daftar Wisuda / No. Ijazah</a>
         </span>
       </li>
       <li class="px-4 py-2 hover:bg-indigo-800">
-        <span class="text-blue-300 font-semibold text-sm flex items-center">
+        <span class="sidebar-content">
           <!-- Ikon Daftar Wisuda -->
-          <i class="fas fa-right-from-bracket mr-2"></i>
-          <a href="#" class="block">Logout</a>
+          <i class="fas fa-right-from-bracket icon-style"></i>
+          <a href="#" class="text-style">Logout</a>
         </span>
       </li>
     </ul>
