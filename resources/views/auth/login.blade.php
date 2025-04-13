@@ -140,7 +140,7 @@
     <section class="login-section">
         <div class="login-container">
             <h2>Masuk ke Akun Anda</h2>
-            <form action="proses.php" method="POST">
+            <form action="{{ route('home') }}" method="GET">
                 <div class="input-group">
                     <label for="username">Email</label>
                     <input type="text" id="username" name="username" placeholder="Masukkan Username" required>
