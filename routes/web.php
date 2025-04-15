@@ -3,17 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 
+
+// Route antar Page
 Route::get('/', function () {
-    return view('dashboard.home');
-});
-
-Route::get('/login', function () {
     return view('auth.login');
-})->name('login');
-
-Route::get('/register', function () {
-    return view('auth.register');
-})->name('register');
+});
 
 Route::get('/home', function() {
     return view('dashboard.home');
@@ -27,5 +21,15 @@ Route::get('/profileEdit', function () {
     return view('dashboard.profileEdit');
 })->name('profileEdit');
 
+Route::get('/login', function () {
+    return view('auth.login');
+})->name('loginpage');
+
+Route::get('/register', function () {
+    return view('auth.register');
+})->name('registerpage');
+
+
+// Route Fungsi Upload Foto
 Route::post('/upload-photo', [ProfileController::class, 'uploadPhoto'])->name('route_upload_photo');
 

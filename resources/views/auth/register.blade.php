@@ -1,80 +1,50 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Form Registrasi</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    .register-box {
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      width: 350px;
-    }
-    .register-box h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .form-group {
-      margin-bottom: 15px;
-    }
-    .form-group label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: bold;
-    }
-    .form-group input {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    .register-btn {
-      width: 100%;
-      padding: 10px;
-      background: #4CAF50;
-      border: none;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    .register-btn:hover {
-      background: #45a049;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="storage/img/UIN-2.1.png" rel='shortcut icon'>
+    <link href="storage/css/register.css" rel="stylesheet">
+    <link href="storage/css/login.css" rel="stylesheet">
+    <title>Registrasi | .:: Siakad Informasi Akademik Universitas</title>
 </head>
+
 <body>
-  <div class="register-box">
-    <h2>Form Registrasi</h2>
-    <form action="{{ route('login') }}" method="GET">
-      <div class="form-group">
-        <label for="name">Nama Lengkap</label>
-        <input type="text" id="name" name="name" required />
+    <div class="title-registerpage">
+        <h2>SISTEM INFORMASI AKADEMIK (SIAKAD)</h2>
+    </div>
+    <div class="register-box">
+        <h2>Form Registrasi</h2>
+        <form action="{{ route('loginpage') }}" method="GET">
+            <div class="form-group">
+                <label for="name">Nama Lengkap</label>
+                <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required />
+            </div>
+            <div class="form-group">
+                <label for="password">Kata Sandi</label>
+                <input type="password" id="password" name="password" required />
+            </div>
+            <button type="submit" class="register-btn">Daftar</button>
+            <p class="signup-link">Sudah punya akun? <a href="{{ route('loginpage') }}">Login Sekarang</a></p>
+        </form>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <div style="color:rgba(255,255,255,0.8) !important;" class="footer-loginpage">
+          <p>Bagian Administrasi Akademik UIN Malang
+              Helpdesk :</p>
+          <p>&copy; bak@uin-malang.ac.id.</p>
       </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required />
-      </div>
-      <div class="form-group">
-        <label for="username">Username</label>
-        <input type="text" id="username" name="username" required />
-      </div>
-      <div class="form-group">
-        <label for="password">Kata Sandi</label>
-        <input type="password" id="password" name="password" required />
-      </div>
-      <button type="submit" class="register-btn">Daftar</button>
-    </form>
-  </div>
+  </footer>
 </body>
+
 </html>

@@ -50,7 +50,7 @@
         <span class="sidebar-content">
           <!-- Ikon KHS Hasil Studi -->
           <i class="fa-regular fa-newspaper icon-style"></i>
-          <a href="#" class="text-style">KHS Hasil Studi</a>
+          <a href="#s" class="text-style">KHS Hasil Studi</a>
         </span>
       </li>
       <li class="px-4 py-2 hover:bg-indigo-800">
@@ -77,7 +77,7 @@
       <li class="px-4 py-2 hover:bg-indigo-800">
         <span class="sidebar-content">
           <i class="fas fa-right-from-bracket icon-style"></i>
-          <a href="#" class="text-style">Logout</a>
+          <a href="{{ route('loginpage') }}" class="text-style">Logout</a>
         </span>
       </li>
     </ul>
