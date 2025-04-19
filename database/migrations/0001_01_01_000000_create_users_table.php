@@ -21,6 +21,8 @@ return new class extends Migration
             $table->enum('jenis_kelamin', ['lk','pr']);
             $table->string('alamat')->nullable(true);
             $table->string('password');
+            $table->string('nama_ortu');
+            $table->string('domisili_ortu');
             $table->rememberToken();
             $table->timestamps();
         });

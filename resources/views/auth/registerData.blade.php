@@ -15,22 +15,31 @@
         <h2>SISTEM INFORMASI AKADEMIK (SIAKAD)</h2>
     </div>
     <div class="register-box">
-        <h2>Form Registrasi</h2>
-        <form action="{{ route('registerDataPage') }}" method="GET">
+        <h2>Form Registrasi Data Lanjutan</h2>
+        <form action="{{ route('handleRegister') }}" method="POST">
+            @csrf
             <div class="form-group">
-                <label for="name">Nama Lengkap</label>
-                <input type="text" id="name" name="name" required />
+                <label for="jenis_kelamin">Jenis Kelamin Anda</label>
+                <input type="text" id="jenis_kelamin" name="jenis_kelamin" required />
             </div>
             <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required />
+                <label for="no_telp">Nomor HP Anda</label>
+                <input type="number" id="no_telp" name="no_telp" required />
             </div>
             <div class="form-group">
-                <label for="password">Kata Sandi</label>
-                <input type="password" id="password" name="password" required />
+                <label for="alamat">Alamat Anda</label>
+                <input type="text" id="alamat" name="alamat" required />
+            </div>
+            <div class="form-group">
+                <label for="nama_ortu">Nama Orang Tua</label>
+                <input type="text" id="nama_ortu" name="nama_ortu" required />
+            </div>
+            <div class="form-group">
+                <label for="domisili_ortu">Domisili Orang Tua</label>
+                <input type="text" id="domisili_ortu" name="domisili_ortu" required />
             </div>
             <button type="submit" class="register-btn">Daftar</button>
-            <p class="signup-link">Sudah punya akun? <a href="{{ route('loginpage') }}">Login Sekarang</a></p>
+            <p class="signup-link">Apakah anda ingin membatalkan? <a href="{{ route('loginpage') }}">Kembali</a></p>
         </form>
     </div>
     <!-- Footer -->
