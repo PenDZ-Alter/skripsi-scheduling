@@ -20,7 +20,11 @@
             @csrf
             <div class="form-group">
                 <label for="jenis_kelamin">Jenis Kelamin Anda</label>
-                <input type="text" id="jenis_kelamin" name="jenis_kelamin" required />
+                <select name="jenis_kelamin" required>
+                    <option value="">-- Pilih Jenis Kelamin --</option>
+                    <option value="lk">Laki-laki</option>
+                    <option value="pr">Perempuan</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="no_telp">Nomor HP Anda</label>
@@ -39,7 +43,7 @@
                 <input type="text" id="domisili_ortu" name="domisili_ortu" required />
             </div>
             <button type="submit" class="register-btn">Daftar</button>
-            <p class="signup-link">Apakah anda ingin membatalkan? <a href="{{ route('loginpage') }}">Kembali</a></p>
+            <p class="signup-link">Apakah anda ingin membatalkan? <a href="{{ route('login') }}">Kembali</a></p>
         </form>
     </div>
     <!-- Footer -->

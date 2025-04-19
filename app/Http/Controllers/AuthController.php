@@ -15,10 +15,25 @@ class AuthController extends Controller
         return view('auth.register');
     }
 
-    public function showRegisterDataPage(Request $request)
+    public function storeInitialRegisterData(Request $request)
+    {
+        // Validasi dulu input awal
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|string|min:6',
+        ]);
+
+        // Simpan data ke session
+        $request->session()->put('register_data', $request->only('name', 'email', 'password'));
+
+        // Redirect ke halaman lanjutan (GET)
+        return redirect()->route('registerDataPage');
+    }
+
+    public function showRegisterDataPage()
     {
         // Simpan data awal ke session
-        $request->session()->put('register_data', $request->only('name', 'email', 'password'));
         return view('auth.register_data');
     }
 

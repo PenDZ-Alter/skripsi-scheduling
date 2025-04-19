@@ -27,7 +27,8 @@ Route::get('/', function () {
 
 // Route Login dan Register
 Route::get('/register', [AuthController::class, 'showRegisterPage'])->name('registerpage');
-Route::post('/register/data', [AuthController::class, 'showRegisterDataPage'])->name('registerDataPage');
+Route::post('/register', [AuthController::class, 'storeInitialRegisterData'])->name('register.storeInitial');
+Route::get('/register/data', [AuthController::class, 'showRegisterDataPage'])->name('registerDataPage');
 Route::post('/register/submit', [AuthController::class, 'handleRegister'])->name('register.submit');
 
 Route::get('/login', [AuthController::class, 'showLoginPage'])->name('login');
