@@ -62,6 +62,14 @@ Now, you should be able to access the application at http://127.0.0.1:8000.
 
 ## Troubleshooting
 
+> [!IMPORTANT]
+> For developers, please, after doing some changes on database (using migration), do this command : 
+
+```bash
+php artisan migrate
+php artisan migrate:refresh
+```
+
 > [!NOTE]
 > This issue is known to occur on PHP version 8.4.
 
@@ -79,4 +87,5 @@ Having problem with compiler and design?
 Try this command : 
 ```bash
 php artisan clear-compiled
+php artisan optimize:clear
 ```
