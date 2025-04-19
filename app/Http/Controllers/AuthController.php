@@ -12,14 +12,14 @@ class AuthController extends Controller
 {
     public function showRegisterPage()
     {
-        return route('registerpage');
+        return view('auth.register'); // View awal input nama, email, password
     }
 
     public function showRegisterDataPage(Request $request)
     {
-        // simpan data awal ke session
+        // Simpan data awal ke session
         $request->session()->put('register_data', $request->only('name', 'email', 'password'));
-        return route('registerDataPage');
+        return view('auth.register_data');
     }
 
     public function handleRegister(Request $request)
@@ -34,7 +34,7 @@ class AuthController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|string|min:6',
-            'no_telp' => 'required',
+            'no_telp' => 'required|string',
             'jenis_kelamin' => 'required|in:lk,pr',
             'alamat' => 'required|string',
             'nama_ortu' => 'required|string',
@@ -49,11 +49,11 @@ class AuthController extends Controller
             'name' => $initialData['name'],
             'email' => $initialData['email'],
             'password' => Hash::make($initialData['password']),
-            'no_telp' => $request->no_telp,
-            'jenis_kelamin' => $request->jenis_kelamin,
-            'alamat' => $request->alamat,
-            'nama_ortu' => $request->nama_ortu,
-            'domisili_ortu' => $request->domisili_ortu,
+            'no_telp' => $request->input('no_telp'),
+            'jenis_kelamin' => $request->input('jenis_kelamin'),
+            'alamat' => $request->input('alamat'),
+            'nama_ortu' => $request->input('nama_ortu'),
+            'domisili_ortu' => $request->input('domisili_ortu'),
         ]);
 
         $request->session()->forget('register_data');
@@ -63,7 +63,7 @@ class AuthController extends Controller
 
     public function showLoginPage()
     {
-        return route('loginpage'); // asumsi lo udah ada file login.blade.php
+        return view('auth.login');
     }
 
     public function handleLogin(Request $request)
@@ -71,7 +71,7 @@ class AuthController extends Controller
         $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
-            return redirect()->route('home'); // ubah sesuai kebutuhan
+            return redirect()->route('home'); // Ganti sesuai route halaman utama lo
         }
 
         return redirect()->back()->with('error', 'Email atau password salah!');

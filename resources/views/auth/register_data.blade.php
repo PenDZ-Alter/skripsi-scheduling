@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="storage/img/UIN-2.1.png" rel='shortcut icon'>
-    <link href="storage/css/register.css" rel="stylesheet">
-    <link href="storage/css/login.css" rel="stylesheet">
+    <link href="../storage/img/UIN-2.1.png" rel='shortcut icon'>
+    <link href="../storage/css/register.css" rel="stylesheet">
+    <link href="../storage/css/login.css" rel="stylesheet">
     <title>Registrasi | .:: Siakad Informasi Akademik Universitas</title>
 </head>
 
@@ -16,7 +16,7 @@
     </div>
     <div class="register-box">
         <h2>Form Registrasi Data Lanjutan</h2>
-        <form action="{{ route('handleRegister') }}" method="POST">
+        <form action="{{ route('register.submit') }}" method="POST">
             @csrf
             <div class="form-group">
                 <label for="jenis_kelamin">Jenis Kelamin Anda</label>

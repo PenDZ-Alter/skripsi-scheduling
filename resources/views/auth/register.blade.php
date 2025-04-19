@@ -16,7 +16,8 @@
     </div>
     <div class="register-box">
         <h2>Form Registrasi</h2>
-        <form action="{{ route('registerDataPage') }}" method="GET">
+        <form action="{{ route('registerDataPage') }}" method="POST">
+            @csrf
             <div class="form-group">
                 <label for="name">Nama Lengkap</label>
                 <input type="text" id="name" name="name" required />

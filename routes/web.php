@@ -22,26 +22,13 @@ Route::get('/profileEdit', function () {
     return view('dashboard.profileEdit');
 })->name('profileEdit');
 
-Route::get('/login', function () {
-    return view('auth.login');
-})->name('loginpage');
-
-Route::get('/register', function () {
-    return view('auth.register');
-})->name('registerpage');
-
-Route::get('/registerData', function () {
-    return view('auth.registerData');
-})->name('registerDataPage');
-
-
 // Route Login dan Register
 Route::get('/register', [AuthController::class, 'showRegisterPage'])->name('registerpage');
-Route::get('/register/data', [AuthController::class, 'showRegisterDataPage'])->name('registerDataPage');
-Route::post('/register/data', [AuthController::class, 'handleRegister'])->name('handleRegister');
+Route::post('/register/data', [AuthController::class, 'showRegisterDataPage'])->name('registerDataPage');
+Route::post('/register/submit', [AuthController::class, 'handleRegister'])->name('register.submit');
 
 Route::get('/login', [AuthController::class, 'showLoginPage'])->name('loginpage');
-Route::post('/login', [AuthController::class, 'handleLogin'])->name('handleLogin');
+Route::post('/login', [AuthController::class, 'handleLogin'])->name('login.submit');
 
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
