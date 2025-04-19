@@ -12,7 +12,7 @@ class AuthController extends Controller
 {
     public function showRegisterPage()
     {
-        return view('auth.register'); // View awal input nama, email, password
+        return view('auth.register');
     }
 
     public function showRegisterDataPage(Request $request)
@@ -58,7 +58,7 @@ class AuthController extends Controller
 
         $request->session()->forget('register_data');
 
-        return redirect()->route('loginpage')->with('success', 'Registrasi berhasil, silakan login!');
+        return redirect()->route('login')->with('success', 'Registrasi berhasil, silakan login!');
     }
 
     public function showLoginPage()
@@ -71,7 +71,7 @@ class AuthController extends Controller
         $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
-            return redirect()->route('home'); // Ganti sesuai route halaman utama lo
+            return redirect()->route('home');
         }
 
         return redirect()->back()->with('error', 'Email atau password salah!');
@@ -80,6 +80,6 @@ class AuthController extends Controller
     public function logout()
     {
         Auth::logout();
-        return redirect()->route('loginpage');
+        return redirect()->route('login');
     }
 }

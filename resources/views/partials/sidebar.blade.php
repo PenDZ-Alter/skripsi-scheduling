@@ -77,7 +77,7 @@
       <li class="px-4 py-2 hover:bg-indigo-800">
         <span class="sidebar-content">
           <i class="fas fa-right-from-bracket icon-style"></i>
-          <a href="{{ route('loginpage') }}" class="text-style">Logout</a>
+          <a href="{{ route('login') }}" class="text-style">Logout</a>
         </span>
       </li>
     </ul>
