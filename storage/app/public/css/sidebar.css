@@ -129,142 +129,182 @@
 
 
 
-    /* Menyesuaikan warna background sidebar */
-    .fixed {
-        background-color: #246b65;
-        /* Hijau gelap ke hijau */
+/* Menyesuaikan warna background sidebar */
+.fixed {
+    background-color: #0a5f59;
+    /* Hijau gelap ke hijau */
+}
+
+/* Warna hover menu */
+.sidebar-content:hover {
+    background-color: #00462a;
+    /* Hijau lebih gelap saat hover */
+}
+
+.text-style:hover {
+    color: white;
+    /* Ubah teks menjadi putih saat hover */
+}
+
+/* Ubah warna teks title */
+.title-left {
+    color: #ffffff;
+    /* Putih */
+}
+
+.title-right {
+    color: #93c5fd;
+    /* Biru muda, sesuaikan dengan warna dari gambar */
+}
+
+.title-right:hover {
+    color: #cbd5e1;
+    /* Ubah menjadi biru lebih terang saat hover */
+}
+
+/* Menyesuaikan ikon */
+.icon-style {
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #cfede0;
+    margin-right: 0.5rem;
+    color: #0a5f59;
+    /* Ubah warna ikon menjadi putih */
+    transition: transform 0.3s ease, color 0.3s ease;
+    /* Smooth transition */
+}
+
+.icon-style2 {
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #cfede0;
+    margin-left: 0.5rem;
+    color: #0a5f59;
+    /* Ubah warna ikon menjadi putih */
+    transition: transform 0.3s ease, color 0.3s ease;
+    /* Smooth transition */
+}
+
+.icon-style:hover {
+    color: #0a5f59;
+    /* Biru terang saat hover */
+    transform: scale(1.1);
+    /* Membesarkan ikon sedikit saat hover */
+}
+
+/* Profil Mahasiswa */
+.profile-picture {
+    height: 60px;
+    /* Sesuaikan ukuran gambar profil */
+    width: 60px;
+    /* Menjadi lebih simetris */
+    border-radius: 50%;
+    /* Membuat gambar profil menjadi bulat */
+    border: 2px solid #93c5fd;
+    /* Tambahkan border biru */
+}
+
+.profil {
+    background-color: #0c756f;
+    margin: 10px;
+    padding: 15px 20px;
+    border-radius: 15px;
+}
+
+.uin {
+    background-color: #0c756f;
+    margin: 10px;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+/* Nama Mahasiswa */
+.name-profile {
+    font-weight: bold;
+    font-size: 1rem;
+    color: white;
+    /* Sesuaikan dengan warna biru */
+}
+
+.iconName-profile {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: white;
+    font-weight: 500;
+}
+
+.uin-teks {
+    /* font-weight: bold; */
+    font-size: 0.7rem;
+    color: white;
+    /* Sesuaikan dengan warna biru */
+}
+
+.uin-copyright {
+    display: flex;
+    align-items: center;
+    font-size: 0.5rem;
+    color: white;
+    font-weight: 500;
+}
+
+/* Efek hover pada profil */
+.profile1:hover::after {
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Mengubah efek gelap pada hover */
+}
+
+/* Menu sidebar */
+.sidebar-content {
+    display: flex;
+    align-items: center;
+    padding: 3px 12px;
+    border-radius: 25px;
+    color: white;
+    background-color: #0c756f;
+    /* Mengubah warna teks menjadi putih */
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0px;
+}
+
+.sidebar-content:hover {
+    color: black;
+    background-color: #ffd682;
+    /* Warna latar belakang lebih gelap saat hover */
+}
+
+/* Mengatur margin untuk masing-masing item menu */
+.sidebar-content a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.sidebar-content a:hover {
+    color: black;
+    /* Biru terang saat hover */
+}
+
+@keyframes diagonal-tilt {
+    0% {
+        transform: rotate3d(2, 2, 0, 0deg);
     }
 
-    /* Warna hover menu */
-    .sidebar-content:hover {
-        background-color: #00462a;
-        /* Hijau lebih gelap saat hover */
+    25% {
+        transform: rotate3d(4, -4, 0, 35deg);
     }
 
-    .text-style:hover {
-        color: white;
-        /* Ubah teks menjadi putih saat hover */
+    50% {
+        transform: rotate3d(2, 2, 0, 35deg);
     }
 
-    /* Ubah warna teks title */
-    .title-left {
-        color: #ffffff;
-        /* Putih */
+    75% {
+        transform: rotate3d(4, -4, 0, 30deg);
     }
 
-    .title-right {
-        color: #93c5fd;
-        /* Biru muda, sesuaikan dengan warna dari gambar */
+    100% {
+        transform: rotate3d(0, 0, 0, 0deg);
     }
-
-    .title-right:hover {
-        color: #cbd5e1;
-        /* Ubah menjadi biru lebih terang saat hover */
-    }
-
-    /* Menyesuaikan ikon */
-    .icon-style {
-        border-radius: 50%;
-        padding: 10px;
-        background-color: white;
-        margin-right: 0.5rem;
-        color: #0a5f59;
-        /* Ubah warna ikon menjadi putih */
-        transition: transform 0.3s ease, color 0.3s ease;
-        /* Smooth transition */
-    }
-
-    .icon-style:hover {
-        color: #0a5f59;
-        /* Biru terang saat hover */
-        transform: scale(1.1);
-        /* Membesarkan ikon sedikit saat hover */
-    }
-
-    /* Profil Mahasiswa */
-    .profile-picture {
-        height: 60px;
-        /* Sesuaikan ukuran gambar profil */
-        width: 60px;
-        /* Menjadi lebih simetris */
-        border-radius: 50%;
-        /* Membuat gambar profil menjadi bulat */
-        border: 2px solid #93c5fd;
-        /* Tambahkan border biru */
-    }
-
-    /* Nama Mahasiswa */
-    .name-profile {
-        font-weight: bold;
-        font-size: 1rem;
-        color: white;
-        /* Sesuaikan dengan warna biru */
-    }
-
-    .iconName-profile {
-        display: flex;
-        align-items: center;
-        font-size: 0.9rem;
-        color: white;
-        font-weight: 500;
-    }
-
-    /* Efek hover pada profil */
-    .profile1:hover::after {
-        background-color: rgba(0, 0, 0, 0.3);
-        /* Mengubah efek gelap pada hover */
-    }
-
-    /* Menu sidebar */
-    .sidebar-content {
-        display: flex;
-        align-items: center;
-        padding: 8px 12px;
-        border-radius: 25px;
-        color: white;
-        background-color: #0c756f;
-        /* Mengubah warna teks menjadi putih */
-        font-size: 1rem;
-        font-weight: 500;
-        margin-top: 10px;
-    }
-
-    .sidebar-content:hover {
-        color: black;
-        background-color: #ffd682;
-        /* Warna latar belakang lebih gelap saat hover */
-    }
-
-    /* Mengatur margin untuk masing-masing item menu */
-    .sidebar-content a {
-        color: #ffffff;
-        text-decoration: none;
-        font-size: 0.95rem;
-    }
-
-    .sidebar-content a:hover {
-        color: black;
-        /* Biru terang saat hover */
-    }
-
-    @keyframes diagonal-tilt {
-        0% {
-            transform: rotate3d(2, 2, 0, 0deg);
-        }
-
-        25% {
-            transform: rotate3d(4, -4, 0, 35deg);
-        }
-
-        50% {
-            transform: rotate3d(2, 2, 0, 35deg);
-        }
-
-        75% {
-            transform: rotate3d(4, -4, 0, 30deg);
-        }
-
-        100% {
-            transform: rotate3d(0, 0, 0, 0deg);
-        }
-    }
+}
