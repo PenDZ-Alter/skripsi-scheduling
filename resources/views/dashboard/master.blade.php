@@ -36,7 +36,7 @@
         @include('partials.header')
 
         <!-- MAIN CONTENT -->
-        <main class="p-6 pt-20">
+        <main class="p-6">
             @yield('content')
         </main>
 
