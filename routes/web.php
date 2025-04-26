@@ -13,6 +13,22 @@ Route::middleware(['auth'])->group(function() {
     Route::get('/profile', function () {
         return view('dashboard.profile');
     })->name('profile');
+
+    Route::get('/pembayaran', function () {
+        return view('dashboard.pembayaran');
+    })->name('pembayaran');
+
+    Route::get('/studi', function () {
+        return view('dashboard.studi');
+    })->name('studi');
+
+    Route::get('/statistik', function () {
+        return view('dashboard.statistik');
+    })->name('statistik');
+
+    Route::get('/skripsi', function () {
+        return view('dashboard.skripsi');
+    })->name('skripsi');
     
     Route::get('/profileEdit', function () {
         return view('dashboard.profileEdit');
