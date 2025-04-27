@@ -9,11 +9,6 @@
         background-color: #f9f9f9;
     }
 
-    .container {
-        display: flex;
-        height: 100vh;
-    }
-
     .menu ul {
         list-style: none;
         padding: 0;
@@ -52,26 +47,6 @@
         padding: 0px;
     }
 
-    .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
-        border-bottom: 2px solid #eee;
-        padding-bottom: 10px;
-    }
-
-    .header h2 {
-        font-size: 28px;
-        font-weight: bold;
-        color: #333;
-    }
-
-    .user-info {
-        font-size: 16px;
-        font-weight: bold;
-        color: #555;
-    }
 
     .user-info span {
         display: block;
@@ -226,16 +201,7 @@
 <div class="container">
     <!-- Main Content -->
     <div class="main-content">
-        <div class="header">
-            <div class="user-info">
-                <span>Alfariz Muhan M</span>
-                <span>220605110001</span>
-            </div>
-            <div>
-                <button class="help-btn">Help</button>
-                <button class="guide-btn">Panduan</button>
-            </div>
-        </div>
+        
         <div class="content">
             <h3>Riwayat Pengajuan Bimbingan</h3>
 
@@ -293,5 +259,48 @@
         </div>
     </div>
 </div>
+
+<script>
+        // Open modal
+        function openModal() {
+            document.getElementById('modal').style.display = 'flex';
+        }
+
+        // Close modal
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        // Simpan data (contoh fungsi)
+        function saveData() {
+            const judul = document.getElementById('judul').value;
+            const deskripsi = document.getElementById('deskripsi').value;
+            const dosen1 = document.getElementById('dosen1').value;
+            const dosen2 = document.getElementById('dosen2').value;
+
+            console.log(`Judul: ${judul}`);
+            console.log(`Deskripsi: ${deskripsi}`);
+            console.log(`Dosen Pembimbing 1: ${dosen1}`);
+            console.log(`Dosen Pembimbing 2: ${dosen2}`);
+
+            // Close modal after save
+            closeModal();
+        }
+
+        // Switch between tabs
+        document.getElementById('tabRiwayat').addEventListener('click', function() {
+            document.getElementById('cardRiwayat').style.display = 'block';
+            document.getElementById('cardProses').style.display = 'none';
+            document.getElementById('tabRiwayat').classList.add('active');
+            document.getElementById('tabProses').classList.remove('active');
+        });
+
+        document.getElementById('tabProses').addEventListener('click', function() {
+            document.getElementById('cardRiwayat').style.display = 'none';
+            document.getElementById('cardProses').style.display = 'block';
+            document.getElementById('tabProses').classList.add('active');
+            document.getElementById('tabRiwayat').classList.remove('active');
+        });
+    </script>
 
 @endsection
