@@ -62,8 +62,9 @@
             </li>
             <li class="px-4 py-1">
                 <span class="sidebar-content">
-                    <i class="fa-regular fa-file icon-style"></i>
-                    <a href="#" class="text-style">Transkrip</a>
+                    <a href="{{ route('transkrip') }}">
+                        <i class="fa-regular fa-file icon-style"></i></a>
+                    <a href="{{ route('transkrip') }}" class="text-style">Transkrip</a>
                 </span>
             </li>
             <li class="px-4 py-2">

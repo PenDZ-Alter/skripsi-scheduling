@@ -26,6 +26,10 @@ Route::middleware(['auth'])->group(function() {
         return view('dashboard.statistik');
     })->name('statistik');
 
+    Route::get('/transkrip', function () {
+        return view('dashboard.transkrip');
+    })->name('transkrip');
+
     Route::get('/skripsi', function () {
         return view('dashboard.skripsi');
     })->name('skripsi');

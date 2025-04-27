@@ -40,14 +40,14 @@
     <table class="w-full border-collapse mb-8">
         <thead>
             <tr>
-                <th class="bg-yellow-500 text-white">No</th>
-                <th class="bg-yellow-500 text-white">NIM</th>
-                <th class="bg-yellow-500 text-white">Nama</th>
-                <th class="bg-yellow-500 text-white">Jurusan</th>
-                <th class="bg-yellow-500 text-white">Tagihan</th>
-                <th class="bg-yellow-500 text-white">Nominal</th>
-                <th class="bg-yellow-500 text-white">Tahun Akademik</th>
-                <th class="bg-yellow-500 text-white">Status</th>
+                <th class="">No</th>
+                <th class="">NIM</th>
+                <th class="">Nama</th>
+                <th class="">Jurusan</th>
+                <th class="">Tagihan</th>
+                <th class="">Nominal</th>
+                <th class="">Tahun Akademik</th>
+                <th class="">Status</th>
             </tr>
         </thead>
         <tbody>
