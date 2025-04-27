@@ -41,17 +41,17 @@
     <table class="w-full border-collapse mb-8">
         <thead>
             <tr>
-                <th class="">No</th>
-                <th class="">Kode Matakuliah</th>
-                <th class="">Nama Matakuliah</th>
-                <th class="">SKS</th>
-                <th class="">Nilai Angka</th>
-                <th class="">Nilai Huruf</th>
-                <th class="">SKS x Nilai Angka</th>
+                <th class="text-center">No</th>
+                <th class="text-center">Kode Matakuliah</th>
+                <th class="text-center">Nama Matakuliah</th>
+                <th class="text-center">SKS</th>
+                <th class="text-center">Nilai Angka</th>
+                <th class="text-center">Nilai Huruf</th>
+                <th class="text-center">SKS x Nilai Angka</th>
             </tr>
         </thead>
         <tbody>
-            <tr class="">
+            <tr class="text-center">
                 <td class="">1</td>
                 <td class="">1565002</td>
                 <td class="">KALKULUS</td>
@@ -60,7 +60,7 @@
                 <td class="">A</td>
                 <td class="text-center">12</td>
             </tr>
-            <tr class="">
+            <tr class="text-center">
                 <td class="">2</td>
                 <td class="">1565002</td>
                 <td class="">KALKULUS</td>
@@ -69,7 +69,7 @@
                 <td class="">A</td>
                 <td class="text-center">12</td>
             </tr>
-            <tr class="">
+            <tr class="text-center">
                 <td class="">3</td>
                 <td class="">1565002</td>
                 <td class="">KALKULUS</td>
@@ -78,7 +78,7 @@
                 <td class="">A</td>
                 <td class="text-center">12</td>
             </tr>
-            <tr class="">
+            <tr class="text-center">
                 <td class="">4</td>
                 <td class="">1565002</td>
                 <td class="">KALKULUS</td>
@@ -87,7 +87,7 @@
                 <td class="">A</td>
                 <td class="text-center">12</td>
             </tr>
-            <tr class="">
+            <tr class="text-center">
                 <td class="">5</td>
                 <td class="">1565002</td>
                 <td class="">KALKULUS</td>
@@ -96,7 +96,7 @@
                 <td class="">A</td>
                 <td class="text-center">12</td>
             </tr>
-            <tr class="">
+            <tr class="text-center">
                 <td class="">6</td>
                 <td class="">1565002</td>
                 <td class="">KALKULUS</td>
@@ -105,7 +105,7 @@
                 <td class="">A</td>
                 <td class="text-center">12</td>
             </tr>
-            <tr class="">
+            <tr class="text-center">
                 <td class="">7</td>
                 <td class="">1565002</td>
                 <td class="">KALKULUS</td>
@@ -114,7 +114,7 @@
                 <td class="">A</td>
                 <td class="text-center">12</td>
             </tr>
-            <tr class="">
+            <tr class="text-center">
                 <td class="">8</td>
                 <td class="">1565002</td>
                 <td class="">KALKULUS</td>
@@ -123,7 +123,7 @@
                 <td class="">A</td>
                 <td class="text-center">12</td>
             </tr>
-            <tr class="">
+            <tr class="text-center">
                 <td class="">9</td>
                 <td class="">1565002</td>
                 <td class="">KALKULUS</td>
@@ -132,7 +132,7 @@
                 <td class="">A</td>
                 <td class="text-center">12</td>
             </tr>
-            <tr class="">
+            <tr class="text-center">
                 <td class="">10</td>
                 <td class="">1565002</td>
                 <td class="">KALKULUS</td>
