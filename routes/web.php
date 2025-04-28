@@ -13,6 +13,26 @@ Route::middleware(['auth'])->group(function() {
     Route::get('/profile', function () {
         return view('dashboard.profile');
     })->name('profile');
+
+    Route::get('/pembayaran', function () {
+        return view('dashboard.pembayaran');
+    })->name('pembayaran');
+
+    Route::get('/studi', function () {
+        return view('dashboard.studi');
+    })->name('studi');
+
+    Route::get('/statistik', function () {
+        return view('dashboard.statistik');
+    })->name('statistik');
+
+    Route::get('/transkrip', function () {
+        return view('dashboard.transkrip');
+    })->name('transkrip');
+
+    Route::get('/skripsi', function () {
+        return view('dashboard.skripsi');
+    })->name('skripsi');
     
     Route::get('/profileEdit', function () {
         return view('dashboard.profileEdit');
@@ -27,7 +47,8 @@ Route::get('/', function () {
 
 // Route Login dan Register
 Route::get('/register', [AuthController::class, 'showRegisterPage'])->name('registerpage');
-Route::post('/register/data', [AuthController::class, 'showRegisterDataPage'])->name('registerDataPage');
+Route::post('/register', [AuthController::class, 'storeInitialRegisterData'])->name('register.storeInitial');
+Route::get('/register/data', [AuthController::class, 'showRegisterDataPage'])->name('registerDataPage');
 Route::post('/register/submit', [AuthController::class, 'handleRegister'])->name('register.submit');
 
 Route::get('/login', [AuthController::class, 'showLoginPage'])->name('login');

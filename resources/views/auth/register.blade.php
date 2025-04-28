@@ -16,7 +16,7 @@
     </div>
     <div class="register-box">
         <h2>Form Registrasi</h2>
-        <form action="{{ route('registerDataPage') }}" method="POST">
+        <form action="{{ route('register.storeInitial') }}" method="POST">
             @csrf
             <div class="form-group">
                 <label for="name">Nama Lengkap</label>
@@ -31,7 +31,7 @@
                 <input type="password" id="password" name="password" required />
             </div>
             <button type="submit" class="register-btn">Daftar</button>
-            <p class="signup-link">Sudah punya akun? <a href="{{ route('loginpage') }}">Login Sekarang</a></p>
+            <p class="signup-link">Sudah punya akun? <a href="{{ route('login') }}">Login Sekarang</a></p>
         </form>
     </div>
     <!-- Footer -->

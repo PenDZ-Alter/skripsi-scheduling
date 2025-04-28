@@ -24,9 +24,9 @@
 </head>
 
 
-<body style="background-color: #e4e4e7" class=" text-gray-800">
+<body style="background-color: #fffcf1" class=" text-gray-800">
     <!-- Wrapper utama dengan padding kiri -->
-    <div class="min-h-screen pl-64 md:pl-64 sm:pl-0 bg-gray-100">
+    <div class="min-h-screen pl-64 md:pl-64 sm:pl-0">
         <!-- SIDEBAR -->
         <aside class="fixed top-0 left-0 w-64 h-full bg-indigo-900 text-white z-50">
             @include('partials.sidebar')
@@ -36,7 +36,7 @@
         @include('partials.header')
 
         <!-- MAIN CONTENT -->
-        <main class="p-6 pt-20">
+        <main class="p-6">
             @yield('content')
         </main>
 
