@@ -21,6 +21,9 @@
     <link rel="stylesheet" href="storage/css/quotes.css">
     <link rel="stylesheet" href="storage/css/profile_page.css">
     <link rel="stylesheet" href="storage/css/headerProfile.css">
+    <link rel="stylesheet" href="storage/css/transkrip_page.css">
+    <link rel="stylesheet" href="storage/css/skripsi_page.css">
+    <link rel="stylesheet" href="storage/css/pembayaran_page.css">
 </head>
 
 
@@ -47,6 +50,7 @@
     <script type="text/javascript" src="storage/js/IconDownload.js"></script>
     <script type="text/javascript" src="storage/js/chart.js"></script>
     <script type="text/javascript" src="storage/js/picture-slider.js"></script>
+    <script type="text/javascript" src="storage/js/skripsi_page.js"></script>
     @stack('scripts')
 </body>
 

@@ -1,19 +1,9 @@
-<!DOCTYPE html>
-<html lang="id">
+@extends('dashboard.masterAuth')
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="../storage/img/UIN-2.1.png" rel='shortcut icon'>
-    <link href="../storage/css/register.css" rel="stylesheet">
-    <link href="../storage/css/login.css" rel="stylesheet">
-    <title>Registrasi | .:: Siakad Informasi Akademik Universitas</title>
-</head>
+@section('title', 'Registrasi')
 
-<body>
-    <div class="title-registerpage">
-        <h2>SISTEM INFORMASI AKADEMIK (SIAKAD)</h2>
-    </div>
+@section('content')
+
     <div class="register-box">
         <h2>Form Registrasi Data Lanjutan</h2>
         <form action="{{ route('register.submit') }}" method="POST">
@@ -46,14 +36,5 @@
             <p class="signup-link">Apakah anda ingin membatalkan? <a href="{{ route('login') }}">Kembali</a></p>
         </form>
     </div>
-    <!-- Footer -->
-    <footer>
-      <div style="color:rgba(255,255,255,0.8) !important;" class="footer-loginpage">
-          <p>Bagian Administrasi Akademik UIN Malang
-              Helpdesk :</p>
-          <p>&copy; bak@uin-malang.ac.id.</p>
-      </div>
-  </footer>
-</body>
 
-</html>
+@endsection
