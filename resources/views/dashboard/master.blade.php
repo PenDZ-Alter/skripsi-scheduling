@@ -24,7 +24,6 @@
     <link rel="stylesheet" href="storage/css/transkrip_page.css">
     <link rel="stylesheet" href="storage/css/skripsi_page.css">
     <link rel="stylesheet" href="storage/css/pembayaran_page.css">
-    <link rel="stylesheet" href="storage/css/footer.css">
 </head>
 
 
