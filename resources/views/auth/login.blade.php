@@ -9,8 +9,8 @@
         <form action="{{ route('login.submit') }}" method="POST">
             @csrf
             <div class="input-group">
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email" placeholder="Masukkan Email" required>
+                <label for="username">Email</label>
+                <input type="text" id="email" name="email" placeholder="Masukkan Username" required>
             </div>
             <div class="input-group">
                 <label for="password">Password</label>
