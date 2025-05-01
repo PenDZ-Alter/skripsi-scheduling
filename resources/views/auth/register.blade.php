@@ -38,6 +38,7 @@
             <div class="input-icon">
                 <i class="fas fa-lock lock-icon"></i>
                 <input type="password" id="password" name="password" placeholder="Masukkan Password Anda" required />
+                <i class="fa fa-eye toggle-eye" onclick="togglePassword()"></i>
             </div>
         </div>
 
