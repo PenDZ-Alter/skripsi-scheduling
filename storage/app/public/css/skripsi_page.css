@@ -1,68 +1,8 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-}
-
-.menu ul {
-    list-style: none;
-    padding: 0;
-}
-
-.menu li a {
-    color: white;
-    text-decoration: none;
-    padding: 12px 20px;
-    display: block;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.menu li a:hover {
-    background-color: #4f5b62;
-}
-
-.menu li a.active {
-    background-color: #ff9b00;
-    color: white;
-}
-
-.footer {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 12px;
-    color: #bbb;
-}
-
 /* Main content styling */
 .main-content {
     flex: 1;
     border-radius: 15px;
     padding: 0px;
-}
-
-
-.user-info span {
-    display: block;
-}
-
-.help-btn,
-.guide-btn {
-    background-color: #ff9b00;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 14px;
-    border-radius: 5px;
-    margin-left: 10px;
-    transition: background-color 0.3s;
-}
-
-.help-btn:hover,
-.guide-btn:hover {
-    background-color: #ff7f00;
 }
 
 .content {
