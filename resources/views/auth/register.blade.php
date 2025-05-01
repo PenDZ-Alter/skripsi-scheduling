@@ -1,4 +1,4 @@
-@extends('dashboard.masterAuth')
+@extends('auth.master')
 
 @section('title', 'Registrasi')
 
