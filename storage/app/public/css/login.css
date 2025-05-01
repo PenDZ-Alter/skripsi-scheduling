@@ -15,6 +15,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
 }
 
 body::before {
@@ -28,6 +29,13 @@ body::before {
     z-index: -1;
 }
 
+.Image-title {
+    width: 80px;
+    display: block;
+    margin: 0 auto 20px auto;
+    margin-top: 5rem;
+}
+
 .title-loginpage {
     font-family: "Georgia", serif !important;
     color: rgba(255, 255, 255, 1);
@@ -38,27 +46,6 @@ body::before {
     margin-bottom: 1.5rem;
     background-color: rgba(255, 255, 255, 0.2);
 }
-
-/* Login Form Section */
-.login-section {
-    width: 100%;
-    max-width: 400px;
-    margin-top: 20px;
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: 'Arial', sans-serif;
-}
-
-.login-container h2 {
-    font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    text-align: center;
-    font-family: 'Arial', sans-serif;
-}
-
 
 .input-group {
     margin-bottom: 20px;
@@ -80,19 +67,55 @@ body::before {
     margin-top: 5px;
 }
 
-.input-group input:focus {
+.input-group input:focus,
+.input-group select:focus {
     outline: none;
-    border-color: #ff8c00;
-    box-shadow: 0 0 5px rgba(255, 140, 0, 0.5);
+    border-color: #00b09b;
+    box-shadow: 0 0 5px rgba(0, 176, 155, 0.5);
+}
+
+.input-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon input {
+    width: 100%;
+    padding: 10px 40px 10px 40px;
+    font-size: 16px;
+    border: 2px solid #00bfa5;
+    border-radius: 6px;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0,191,165,0.5);
+}
+
+.lock-icon {
+    position: absolute;
+    left: 10px;
+    top: 55%;
+    color: #00bfa5;
+    font-size: 18px;
+}
+
+.toggle-eye {
+    position: absolute;
+    right: 10px;
+    top: 55%;
+    color: #00b09b;
+    font-size: 18px;
+    cursor: pointer;
+    transform: translateY(-50%);
 }
 
 /* Button */
 .login-btn {
     width: 100%;
     padding: 15px;
-    background-color: green;
+    background: linear-gradient(to right, #00b09b, #96c93d);
     color: white;
     font-size: 18px;
+    font-weight: bold;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -100,7 +123,7 @@ body::before {
 }
 
 .login-btn:hover {
-    background-color: lightgreen;
+    opacity: 0.7;
 }
 
 /* Links */
@@ -138,4 +161,11 @@ footer {
 .footer-loginpage {
     letter-spacing: 0.5px;
     color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 480px) {
+    .register-box {
+        width: 90%;
+        padding: 20px;
+    }
 }
