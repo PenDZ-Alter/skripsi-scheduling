@@ -1,0 +1,95 @@
+    .profile-card {
+        background-color: #FFFFFF;
+        box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.15);
+        padding: 1.5rem;
+        border-radius: 0.375rem;
+        position: relative;
+    }
+
+    .info-profile {
+        margin-top: 1rem;
+        margin-left: 3.125rem;
+    }
+
+    .judul-text {
+        font-weight: 700;
+        font-size: 1rem;
+    }
+
+    .link-profile {
+        font-size: 0.90rem;
+        color: #2563EB;
+    }
+
+    .link-ubahPassword {
+        color: #2563EB;
+    }
+
+    .link-Email {
+        color: #2563EB;
+    }
+
+    .link-aktivasiEmail {
+        color: #2563EB;
+    }
+
+    .link-profile:hover {
+        color: rgba(25, 99, 235, 0.5);
+    }
+
+    .link-ubahPassword:hover {
+        color: rgba(25, 99, 235, 0.5);
+        text-decoration: underline;
+        text-decoration-color: rgba(25, 99, 235, 0.5);
+    }
+
+    .link-Email:hover {
+        color: rgba(25, 99, 235, 0.5);
+        text-decoration: underline;
+        text-decoration-color: rgba(25, 99, 235, 0.5);
+    }
+
+    .link-aktivasiEmail:hover {
+        color: rgba(25, 99, 235, 0.5);
+        text-decoration: underline;
+        text-decoration-color: rgba(25, 99, 235, 0.5);
+    }
+
+    .text-pertama {
+        margin-top: 3px;
+        font-weight: 600;
+        font-size: 0.875rem;
+        line-height: 1.4rem;
+    }
+
+    .text-kedua {
+        margin-top: 3px;
+        font-weight: 600;
+        font-size: 0.875rem;
+        line-height: 1.4rem;
+    }
+
+    .text-ketiga {
+        margin-top: 3px;
+        font-weight: 600;
+        font-size: 0.875rem;
+        line-height: 1.4rem;
+    }
+
+    .text-keempat {
+        margin-left: 0.625rem;
+        font-weight: 600;
+        font-size: 0.875rem;
+        line-height: 1.4rem;
+    }
+
+    .paragraf-Email {
+        margin-right: -0.10rem;
+    }
+
+    .text-kelima {
+        margin-top: 3px;
+        font-weight: 600;
+        font-size: 0.875rem;
+        line-height: 1.4rem;
+    }
