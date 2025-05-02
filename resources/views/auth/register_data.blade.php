@@ -53,7 +53,7 @@
                 <label for="domisili_ortu">Domisili Orang Tua</label>
                 <div class="input-icon">
                     <i class="fas fa-house-chimney location-icon"></i>
-                    <input type="text" id="domisili_ortu" name="domisili_ortu"  placeholder="Masukkan Alamat Ortu Anda" required autofocus>
+                    <input type="text" id="domisili_ortu" name="domisili_ortu" placeholder="Masukkan Alamat Ortu Anda" required autofocus>
                 </div>
             </div>
             <button type="submit" class="register-btn">Daftar</button>
