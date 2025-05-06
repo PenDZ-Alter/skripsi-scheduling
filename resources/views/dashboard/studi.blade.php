@@ -30,19 +30,20 @@
 
         {{-- <div class="button-group"> --}}
             <button class="btn">
-                <!-- Icon printer pakai SVG biar mirip -->
-                <svg fill="currentColor" viewBox="0 0 16 16">
-                    <path d="M2 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v5h1a1 1 0 0 1 1 1v3h-4v-3H5v3H1v-3a1 1 0 0 1 1-1h1V7z"/>
-                    <path fill-rule="evenodd" d="M5 1a2 2 0 0 0-2 2v2h10V3a2 2 0 0 0-2-2H5z"/>
-                </svg>
+                <i class="fa fa-print"></i>
                 Cetak KHS
             </button><br><br>
         {{-- </div> --}}
     </div><br>
 
+    <!-- Tabs for Riwayat Pengajuan and Proses Bimbingan -->
+    <div class="tabs">
+        <button class="active" id="tabRiwayat"><i class="fa fa-newspaper"></i>&nbsp;Kartu Hasil Studi</button>
+        <button id="tabProses"><i class="fa fa-bar-chart"></i>&nbsp;Rincian Presentase & Nilai</button>
+    </div>
 
     <!-- Tabel KHS Hasil Studi -->
-    <table class="w-full border-collapse mb-8">
+    <table class="w-full border-collapse mb-8"  onclick="openModal()">
         <thead>
             <tr>
                 <th class="text-center">No</th>
