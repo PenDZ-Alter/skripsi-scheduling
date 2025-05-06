@@ -10,7 +10,6 @@
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
 }
 
 /* Modal Styles */
@@ -131,4 +130,14 @@
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
+}
+
+#cardRiw {
+    background-color: #f0f0f0; /* warna abu-abu terang */
+    border: 1px solid #ddd; /* border abu-abu untuk membuatnya lebih jelas */
+    padding: 15px;
+}
+
+.empty-state {
+    color: #999; /* memberi warna teks abu-abu pada status empty */
 }

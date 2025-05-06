@@ -5,29 +5,40 @@
 <div class="container">
     <!-- Main Content -->
     <div class="main-content">
-        
+
         <div class="content">
-            <h3>Riwayat Pengajuan Bimbingan</h3>
+            <a href="{{ asset('storage/files/alur_bimbingan.pdf') }}" class="btn" download>
+                <i class="fa fa-download"></i>
+                Unduh alur Pengajuan, Persetujuan dan Bimbingan
+            </a> <br><br>
 
             <!-- Tabs for Riwayat Pengajuan and Proses Bimbingan -->
             <div class="tabs">
-                <button class="active" id="tabRiwayat">Riwayat Pengajuan Bimbingan</button>
-                <button id="tabProses">Proses Bimbingan</button>
+                <button class="active" id="tabRiwayat"><i class="fa fa-address-book"></i>&nbsp;Riwayat Pengajuan Bimbingan</button>
+                <button id="tabProses"><i class="fa fa-book"></i>&nbsp;Proses Bimbingan</button>
             </div>
 
             <!-- Card for Pengajuan -->
             <div class="card" id="cardRiwayat">
-                <button class="start-btn" onclick="openModal()">Mulai Pengajuan Bimbingan</button>
-                <div class="empty-state">
-                    <i class="fa fa-laptop"></i>
-                    <p>Belum Ada Pengajuan</p>
+                <button class="start-btn" onclick="openModal()">
+                    <i class="fa fa-plus-circle"></i>
+                    Mulai Pengajuan Bimbingan</button>
+                <br><br>
+                <div class="card" id="cardRiw">
+                    <div class="empty-state">
+                        <i class="fa fa-coffee"></i>
+                        &nbsp;Belum Ada Pengajuan
+                    </div>
                 </div>
             </div>
 
             <!-- Card for Proses Bimbingan -->
             <div class="process-card" id="cardProses" style="display:none;">
-                <h4>Proses Bimbingan</h4>
-                <p>Informasi terkait Proses Bimbingan akan ditampilkan di sini.</p>
+                <div class="card">
+                    <div class="empty-state">
+                        <i class="fa fa-coffee"></i>
+                        &nbsp;Anda belum mengajukan bimbingan Skripsi/Tesis/Disertasi atau pengajuan Anda belum disetujui
+                    </div>
             </div>
         </div>
     </div>
