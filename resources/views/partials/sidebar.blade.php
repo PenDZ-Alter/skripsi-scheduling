@@ -49,7 +49,7 @@
                     <a href="{{ route('studi') }}">
                         <i class="fa-regular fa-newspaper icon-style"></i>
                     </a>
-                    <a href="{{ route('studi') }}" class="text-style">Hasil Studi</a>
+                    <a href="{{ route('studi') }}" class="text-style">KHS Hasil Studi</a>
                 </span>
             </li>
             <li style="padding-inline: 24px;" class="py-1">
