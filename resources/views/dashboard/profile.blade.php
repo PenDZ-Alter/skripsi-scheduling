@@ -32,7 +32,7 @@
                                 <span>NIM</span>
                             </div>
                             <div class="col-9 value-profile border-bottom">
-                                220605110025
+                                {{ $user->id }}
                             </div>
                         </div>
                         <div class="row-profile mb-2">
@@ -40,7 +40,7 @@
                                 <span>Nama Mahasiswa</span>
                             </div>
                             <div class="col-9 value-profile border-bottom">
-                                ALFARIZ MUHAN MANDEGA
+                                {{ $user->name }}
                             </div>
                         </div>
                         <div class="row-profile mb-2">
@@ -81,7 +81,7 @@
                                 <span>Email Pribadi</span>
                             </div>
                             <div class="col-9 value-profile border-bottom">
-                                Alfarizgaming100@gmail.com
+                                {{ $user->email }}
                             </div>
                         </div>
                         <div class="row-profile mb-2">
@@ -89,7 +89,7 @@
                                 <span>Asal Kota</span>
                             </div>
                             <div class="col-9 value-profile border-bottom">
-                                KOTA MALANG
+                                {{ $user->alamat }}
                             </div>
                         </div>
                         <div class="row-profile mb-2">
@@ -97,7 +97,7 @@
                                 <span>Nama Orang Tua</span>
                             </div>
                             <div class="col-9 value-profile border-bottom">
-                                Jumbo/Mae
+                                {{ $user->nama_ortu }}
                             </div>
                         </div>
                         <div class="row-profile mb-2">
@@ -105,7 +105,7 @@
                                 <span>Alamat Orang Tua</span>
                             </div>
                             <div class="col-9 value-profile border-bottom">
-                                JALAN KEBANGSAAN TIMUR No 4 Rt 10 Rw 02 Kelurahan Dinoyo, Kecamatan Lowokwaru
+                                {{ $user->domisili_ortu }}
                             </div>
                         </div>
                         <div class="row-profile mb-2">
@@ -121,7 +121,7 @@
                                 <span>Kota Orang Tua</span>
                             </div>
                             <div class="col-9 value-profile border-bottom">
-                                KOTA MALANG
+                                {{ $user->domisili_ortu }}
                             </div>
                         </div>
                     </div>

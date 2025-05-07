@@ -10,9 +10,7 @@ use App\Http\Controllers\AuthController;
 Route::middleware(['auth'])->group(function() {
     Route::get('/home', [HomeController::class, 'index'])->name('home');
     
-    Route::get('/profile', function () {
-        return view('dashboard.profile');
-    })->name('profile');
+    Route::get('/profile', [ProfileController::class, 'showProfile'])->name('profile');
 
     Route::get('/pembayaran', function () {
         return view('dashboard.pembayaran');
