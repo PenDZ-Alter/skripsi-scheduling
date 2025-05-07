@@ -108,14 +108,6 @@
                                 {{ $user->domisili_ortu }}
                             </div>
                         </div>
-                        <div class="row-profile mb-2">
-                            <div class="col-3 label-profile">
-                                <span>Provinsi Orang Tua</span>
-                            </div>
-                            <div class="col-9 value-profile border-bottom">
-                                Jawa Timur
-                            </div>
-                        </div>
                         <div class="row">
                             <div class="col-3 label-profile">
                                 <span>Kota Orang Tua</span>
