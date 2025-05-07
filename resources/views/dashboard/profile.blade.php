@@ -4,7 +4,7 @@
     <!-- Grid 2 Kolom -->
     <div class="profile-page-card">
         <!-- Konten -->
-        <div class="grid-cols-2 md:grid-cols-4 content-Card-profile">
+        <div class="grid-cols-1 md:grid-cols-4 content-Card-profile"> {{-- Ubah jadi sama dengan profileEdit --}}
             <!-- Kolom Kiri: Info Profil -->
             <div class="space-x-4 card-Profile">
                 <!-- Pembungkus foto dan icon -->
@@ -16,105 +16,59 @@
                     </div>
                 </div>
 
-                <!-- Bagian informasi -->
+                <!-- Info Box (Disamakan posisinya) -->
                 <div class="info-box-profiles">
                     <div class="space-y-2">
+                        {{-- Data rows --}}
                         <div class="row-profile mb-2">
-                            <div class="col-3 label-profile">
-                                <span>Angkatan</span>
-                            </div>
-                            <div class="col-9 value-profile border-bottom">
-                                2022
-                            </div>
+                            <div class="col-3 label-profile"><span>Angkatan</span></div>
+                            <div class="col-9 value-profile border-bottom">2022</div>
                         </div>
                         <div class="row-profile mb-2">
-                            <div class="col-3 label-profile">
-                                <span>NIM</span>
-                            </div>
-                            <div class="col-9 value-profile border-bottom">
-                                {{ $user->id }}
-                            </div>
+                            <div class="col-3 label-profile"><span>NIM</span></div>
+                            <div class="col-9 value-profile border-bottom">{{ $user->id }}</div>
                         </div>
                         <div class="row-profile mb-2">
-                            <div class="col-3 label-profile">
-                                <span>Nama Mahasiswa</span>
-                            </div>
-                            <div class="col-9 value-profile border-bottom">
-                                {{ $user->name }}
+                            <div class="col-3 label-profile"><span>Nama Mahasiswa</span></div>
+                            <div class="col-9 value-profile border-bottom">{{ $user->name }}</div>
+                        </div>
+                        <div class="row-profile mb-2">
+                            <div class="col-3 label-profile"><span>Status Studi</span></div>
+                            <div class="col-9 value-profile border-bottom-indicator">
+                                <span class="status-indicator-profile"></span> <span class="beside-status-profile">Mahasiswa Aktif</span>
                             </div>
                         </div>
                         <div class="row-profile mb-2">
-                            <div class="col-3 label-profile">
-                                <span>Status Studi</span>
-                            </div>
-                            <div class="col-9 value border-bottom-indicator">
-                                <span class="status-indicator-profile"></span> <span class="beside-status-profile">Mahasiswa
-                                    Aktif</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-3 label-profile">
-                                <span>Semester</span>
-                            </div>
-                            <div class="col-9 value-profile border-bottom">
-                                VI (Enam)
-                            </div>
+                            <div class="col-3 label-profile"><span>Semester</span></div>
+                            <div class="col-9 value-profile border-bottom">VI (Enam)</div>
                         </div>
                         <div class="row-profile mb-2">
-                            <div class="col-3 label-profile">
-                                <span>Tempat Lahir</span>
-                            </div>
-                            <div class="col-9 value-profile border-bottom">
-                                MALANG
-                            </div>
+                            <div class="col-3 label-profile"><span>Tempat Lahir</span></div>
+                            <div class="col-9 value-profile border-bottom">MALANG</div>
                         </div>
                         <div class="row-profile mb-2">
-                            <div class="col-3 label-profile">
-                                <span>Tanggal Lahir</span>
-                            </div>
-                            <div class="col-9 value-profile border-bottom">
-                                01 Januari 2007
-                            </div>
+                            <div class="col-3 label-profile"><span>Tanggal Lahir</span></div>
+                            <div class="col-9 value-profile border-bottom">01 Januari 2007</div>
                         </div>
                         <div class="row-profile mb-2">
-                            <div class="col-3 label-profile">
-                                <span>Email Pribadi</span>
-                            </div>
-                            <div class="col-9 value-profile border-bottom">
-                                {{ $user->email }}
-                            </div>
+                            <div class="col-3 label-profile"><span>Email Pribadi</span></div>
+                            <div class="col-9 value-profile border-bottom">{{ $user->email }}</div>
                         </div>
                         <div class="row-profile mb-2">
-                            <div class="col-3 label-profile">
-                                <span>Asal Kota</span>
-                            </div>
-                            <div class="col-9 value-profile border-bottom">
-                                {{ $user->alamat }}
-                            </div>
+                            <div class="col-3 label-profile"><span>Asal Kota</span></div>
+                            <div class="col-9 value-profile border-bottom">{{ $user->alamat }}</div>
                         </div>
                         <div class="row-profile mb-2">
-                            <div class="col-3 label-profile">
-                                <span>Nama Orang Tua</span>
-                            </div>
-                            <div class="col-9 value-profile border-bottom">
-                                {{ $user->nama_ortu }}
-                            </div>
+                            <div class="col-3 label-profile"><span>Nama Orang Tua</span></div>
+                            <div class="col-9 value-profile border-bottom">{{ $user->nama_ortu }}</div>
                         </div>
                         <div class="row-profile mb-2">
-                            <div class="col-3 label-profile">
-                                <span>Alamat Orang Tua</span>
-                            </div>
-                            <div class="col-9 value-profile border-bottom">
-                                {{ $user->domisili_ortu }}
-                            </div>
+                            <div class="col-3 label-profile"><span>Alamat Orang Tua</span></div>
+                            <div class="col-9 value-profile border-bottom">{{ $user->domisili_ortu }}</div>
                         </div>
-                        <div class="row">
-                            <div class="col-3 label-profile">
-                                <span>Kota Orang Tua</span>
-                            </div>
-                            <div class="col-9 value-profile border-bottom">
-                                {{ $user->domisili_ortu }}
-                            </div>
+                        <div class="row-profile mb-2">
+                            <div class="col-3 label-profile"><span>Kota Orang Tua</span></div>
+                            <div class="col-9 value-profile border-bottom">{{ $user->domisili_ortu }}</div>
                         </div>
                     </div>
                 </div>

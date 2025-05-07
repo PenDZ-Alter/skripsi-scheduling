@@ -160,6 +160,13 @@
                                     class="Image6-Style" />
                             </a>
                         </div>
+                        <div class="swiper-slide">
+                            <a href="https://library.uin-malang.ac.id/" target="_blank"
+                                class="Image7">
+                                <img src="{{ asset('storage/img/Berita7.jpg') }}"
+                                    class="Image7-Style" />
+                            </a>
+                        </div>
                     </div>
 
                     <!-- Tombol Navigasi -->
