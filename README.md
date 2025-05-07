@@ -66,7 +66,6 @@ Now, you should be able to access the application at http://127.0.0.1:8000.
 > For developers, please, after doing some changes on database (using migration), do this command : 
 
 ```bash
-php artisan migrate
 php artisan migrate:refresh
 ```
 
@@ -79,13 +78,15 @@ If you encounter issues during installation—such as Composer failing to instal
 composer install --ignore-platform-req=ext-fileinfo
 ```
 
-Having problem with compiler and design?
+Having problem with compiler and design bugs?
 
 > [!TIP]
-> This is useful to clear cache from bootstrap.
+> This is useful to clear cache.
 
 Try this command : 
 ```bash
 php artisan clear-compiled
 php artisan optimize:clear
+php artisan route:clear
+php artisan view:clear
 ```

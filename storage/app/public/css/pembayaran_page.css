@@ -1,0 +1,58 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.content {
+    flex-grow: 1;
+    background-color: #fff;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: none;
+    /* Pastikan tabel memiliki latar belakang */
+}
+
+table th,
+table td {
+    vertical-align: middle;
+    /* Meratakan konten secara vertikal */
+    padding: 11px;
+    border-bottom: 1px solid black;
+}
+
+table th {
+    background-color: #f9b42d;
+    /* Warna latar belakang header */
+    color: white;
+    /* Warna teks di header */
+}
+
+table tr:hover {
+    background-color: #ffd682;/* Efek hover pada baris */
+}
+
+.keterangan {
+    padding: 10px 15px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.keterangan h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.keterangan p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+
+

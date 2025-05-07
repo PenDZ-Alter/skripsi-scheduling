@@ -1,47 +1,49 @@
-<!DOCTYPE html>
-<html lang="id">
+@extends('auth.master')
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="storage/img/UIN-2.1.png" rel='shortcut icon'>
-    <link href="storage/css/register.css" rel="stylesheet">
-    <link href="storage/css/login.css" rel="stylesheet">
-    <title>Registrasi | .:: Siakad Informasi Akademik Universitas</title>
-</head>
+@section('title', 'Registrasi')
 
-<body>
-    <div class="title-registerpage">
-        <h2>SISTEM INFORMASI AKADEMIK (SIAKAD)</h2>
+@section('content')
+<div class="register-box">
+    <h2 class="title-register-1">Registrasi</h2>
+    <h2 class="title-register">Langkah 1 dari 2</h2>
+
+    <div class="progress-wrapper">
+        <div class="progress-bar">
+            <div class="step current"></div>
+            <div class="step"></div>
+        </div>
     </div>
-    <div class="register-box">
-        <h2>Form Registrasi</h2>
-        <form action="{{ route('register.storeInitial') }}" method="POST">
-            @csrf
-            <div class="form-group">
-                <label for="name">Nama Lengkap</label>
-                <input type="text" id="name" name="name" required />
-            </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required />
-            </div>
-            <div class="form-group">
-                <label for="password">Kata Sandi</label>
-                <input type="password" id="password" name="password" required />
-            </div>
-            <button type="submit" class="register-btn">Daftar</button>
-            <p class="signup-link">Sudah punya akun? <a href="{{ route('login') }}">Login Sekarang</a></p>
-        </form>
-    </div>
-    <!-- Footer -->
-    <footer>
-      <div style="color:rgba(255,255,255,0.8) !important;" class="footer-loginpage">
-          <p>Bagian Administrasi Akademik UIN Malang
-              Helpdesk :</p>
-          <p>&copy; bak@uin-malang.ac.id.</p>
-      </div>
-  </footer>
-</body>
 
-</html>
+    <form action="{{ route('register.storeInitial') }}" method="POST">
+        @csrf
+
+        <div class="input-group">
+            <label for="name">Nama Lengkap</label>
+            <div class="input-icon">
+                <i class="fas fa-user user-icon"></i>
+                <input type="text" id="name" name="name" placeholder="Masukkan Nama Anda" required autofocus />
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label for="email">Email</label>
+            <div class="input-icon">
+                <i class="fas fa-envelope envelope-icon"></i>
+                <input type="email" id="email" name="email" placeholder="Masukkan Email Anda"  required />
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label for="password">Kata Sandi</label>
+            <div class="input-icon">
+                <i class="fas fa-lock lock-icon"></i>
+                <input type="password" id="password" name="password" placeholder="Masukkan Password Anda" required />
+                <i class="fa fa-eye toggle-eye" onclick="togglePassword()"></i>
+            </div>
+        </div>
+
+        <button type="submit" class="register-btn">Lanjutkan</button>
+        <p class="signup-link">Sudah punya akun? <a href="{{ route('login') }}">Login Sekarang</a></p>
+    </form>
+</div>
+@endsection

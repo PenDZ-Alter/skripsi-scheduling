@@ -1,41 +1,7 @@
 @extends('dashboard.master')
 
 @section('content')
-<style>
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-bottom: 20px;
-        background-color: none;
-        /* Pastikan tabel memiliki latar belakang */
-    }
 
-    table th,
-    table td {
-        vertical-align: middle;
-        /* Meratakan konten secara vertikal */
-        padding: 11px;
-        border-bottom: 1px solid black;
-    }
-
-    table th {
-        background-color: #f9b42d;
-        /* Warna latar belakang header */
-        color: white;
-        /* Warna teks di header */
-    }
-
-    table tr:hover {
-        background-color: #ffd682;
-        /* Efek hover pada baris */
-    }
-
-    .keterangan {
-        padding: 10px 15px;
-        background-color: white;
-        border-radius: 15px;
-    }
-</style>
 <div class="content">
     <!-- Tabel Pembayaran -->
     <table class="w-full border-collapse mb-8">

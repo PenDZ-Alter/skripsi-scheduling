@@ -25,7 +25,7 @@ class User extends Authenticatable
         'no_telp',
         'alamat',
         'nama_ortu',
-        'domilisi_ortu',
+        'domisili_ortu',
         'role',
     ];
 
