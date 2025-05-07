@@ -23,6 +23,8 @@ return new class extends Migration
             $table->string('password');
             $table->string('nama_ortu')->nullable();
             $table->string('domisili_ortu')->nullable();
+            $table->date('tanggal_lahir')->nullable();
+            $table->string('tempat_lahir')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
