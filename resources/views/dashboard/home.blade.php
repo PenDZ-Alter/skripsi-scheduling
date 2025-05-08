@@ -33,24 +33,6 @@
                         <input id="uploadInput" name="photo" type="file" class="hidden" accept="image/*"
                             onchange="previewAndUploadImage()">
                     </form>
-
-                    {{-- <!-- Modal Konfirmasi -->
-                    <div id="confirmModal"
-                        class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 hidden">
-                        <div class="bg-white rounded-lg shadow-lg w-11/12 max-w-md p-6 border-t-4 border-purple-600">
-                            <h2 class="text-xl font-semibold text-gray-800 mb-4">Konfirmasi Foto Profil</h2>
-                            <p class="text-gray-600 mb-6">Apakah Anda yakin ingin memilih gambar ini sebagai foto profil
-                                Anda?</p>
-                            <div class="flex justify-end space-x-3">
-                                <button onclick="cancelImageSelection()"
-                                    class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium px-4 py-2 rounded">Batal</button>
-                                <button onclick="confirmImageSelection()"
-                                    class="bg-purple-600 hover:bg-purple-700 text-white font-medium px-4 py-2 rounded">Ya,
-                                    Pilih</button>
-                            </div>
-                        </div>
-                    </div> --}}
-
                 </div>
 
                 <!-- Info Profile -->
@@ -92,6 +74,7 @@
         </div>
     </div>
 
+    <!-- Grafik IP dan IPK -->
     <div class="Card">
         <div class="card-Chart">
             <!-- 📊 Grafik Indeks Prestasi -->

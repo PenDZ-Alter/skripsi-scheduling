@@ -12,19 +12,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="storage/css/header.css">
     <link rel="stylesheet" href="storage/css/sidebar.css">
-    <link rel="stylesheet" href="storage/css/navigasi.css">
-    <link rel="stylesheet" href="storage/css/dropdown.css">
-    <link rel="stylesheet" href="storage/css/linkStyle.css">
-    <link rel="stylesheet" href="storage/css/profileText.css">
-    <link rel="stylesheet" href="storage/css/studentInfo.css">
-    <link rel="stylesheet" href="storage/css/calendar.css">
-    <link rel="stylesheet" href="storage/css/quotes.css">
+    <link rel="stylesheet" href="storage/css/HomePage.css">
     <link rel="stylesheet" href="storage/css/profile_page.css">
     <link rel="stylesheet" href="storage/css/headerProfile.css">
     <link rel="stylesheet" href="storage/css/transkrip_page.css">
     <link rel="stylesheet" href="storage/css/skripsi_page.css">
     <link rel="stylesheet" href="storage/css/pembayaran_page.css">
-    <link rel="stylesheet" href="storage/css/hasil.css">
+    <link rel="stylesheet" href="storage/css/HasilStudiPage.css">
+    <link rel="stylesheet" href="storage/css/studi_Page.css">
 </head>
 
 
