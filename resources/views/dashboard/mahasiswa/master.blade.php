@@ -10,6 +10,7 @@
     <link href="storage/img/UIN-2.1.png" rel='shortcut icon'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="storage/css/mahasiswa/header.css">
     <link rel="stylesheet" href="storage/css/mahasiswa/sidebar.css">
     <link rel="stylesheet" href="storage/css/mahasiswa/HomePage.css">

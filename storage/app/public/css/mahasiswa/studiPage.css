@@ -1,9 +1,11 @@
+/* File: studiPage.css */
 .khs-container {
     padding-top: 2rem;
 }
 
 .filter-bar {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 1rem;
     margin-bottom: 1.5rem;
@@ -15,9 +17,12 @@
 }
 
 .form-select {
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     border-radius: 0.5rem;
     padding: 0.5rem;
+    border: 1px solid #ccc;
+    background-color: white;
+    font-size: 1rem;
 }
 
 .btn-cetak-khs {
@@ -28,10 +33,12 @@
     border-radius: 0.5rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     cursor: pointer;
+    font-weight: 600;
 }
 
 .tabs {
     display: flex;
+    gap: 0.5rem;
     margin-bottom: 1rem;
 }
 
@@ -39,9 +46,14 @@
     background-color: #e9ecef;
     border: none;
     padding: 0.5rem 1rem;
-    margin-right: 0.5rem;
     cursor: pointer;
     border-radius: 0.5rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.tab-button:hover {
+    background-color: #d6e4ff;
 }
 
 .tab-button.active {
@@ -52,7 +64,6 @@
 .table-khs {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 2rem;
 }
 
 .table-khs th,
@@ -60,4 +71,30 @@
     border: 1px solid #dee2e6;
     padding: 0.75rem;
     text-align: center;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.table-khs tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table-khs tr:hover {
+    background-color: #f1f5f9;
+}
+
+@media (max-width: 768px) {
+    .filter-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tabs {
+        flex-wrap: wrap;
+    }
+
+    .table-khs th, .table-khs td {
+        padding: 0.5rem;
+        font-size: 0.875rem;
+    }
 }
