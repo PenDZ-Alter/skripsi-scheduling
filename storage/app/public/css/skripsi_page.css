@@ -2,7 +2,10 @@
 .main-content {
     flex: 1;
     border-radius: 15px;
-    padding: 0px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 20rem;
 }
 
 .content {

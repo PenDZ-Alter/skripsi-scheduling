@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="storage/css/skripsi_page.css">
     <link rel="stylesheet" href="storage/css/pembayaran_page.css">
     <link rel="stylesheet" href="storage/css/HasilStudiPage.css">
-    <link rel="stylesheet" href="storage/css/studi_Page.css">
+    <link rel="stylesheet" href="storage/css/studiPage.css">
 </head>
 
 

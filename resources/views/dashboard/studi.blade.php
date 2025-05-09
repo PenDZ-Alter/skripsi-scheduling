@@ -1,86 +1,86 @@
 @extends('dashboard.master')
 
 @section('content')
+<div class="khs-container">
+    <div class="filter-bar">
+        <div>
+            <label for="tahun" class="form-label">Tahun</label>
+            <select id="tahun" class="form-select DropdownTahun">
+                <option value="">Pilih Tahun</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="semester" class="form-label">Semester</label>
+            <select id="semester" class="form-select DropdownSemester">
+                <option value="">Pilih Semester</option>
+                <option value="Ganjil 2022">Ganjil 2022</option>
+                <option value="Genap 2022">Genap 2022</option>
+                <option value="Ganjil 2023">Ganjil 2023</option>
+                <option value="Genap 2023">Genap 2023</option>
+                <option value="Ganjil 2024">Ganjil 2024</option>
+                <option value="Genap 2024">Genap 2024</option>
+                <option value="Ganjil 2025">Ganjil 2025</option>
+                <option value="Genap 2025">Genap 2025</option>
+            </select>
+        </div>
+
+        <div>
+            <button class="btn-cetak-khs">
+                <i class="fa fa-print me-2"></i> Cetak KHS
+            </button>
+        </div>
+    </div>
+
     <div class="content">
-        <div class="container d-flex align-items-center gap-3 mb-4">
-            <div>
-                <label for="tahun" class="form-label fw-semibold me-2">Tahun</label>
-                <select id="tahun" class="form-select shadow-sm rounded">
-                    <option value="">Pilih Tahun</option>
-                    <option value="2022">2022</option>
-                    <option value="2023">2023</option>
-                    <option value="2024">2024</option>
-                    <option value="2025">2025</option>
-                </select>
-            </div>
-
-            <div>
-                <label for="semester" class="form-label fw-semibold me-2">Semester</label>
-                <select id="semester" class="form-select shadow-sm rounded">
-                    <option value="">Pilih Semester</option>
-                    <option value="Ganjil 2022">Ganjil 2022</option>
-                    <option value="Genap 2022">Genap 2022</option>
-                    <option value="Ganjil 2023">Ganjil 2023</option>
-                    <option value="Genap 2023">Genap 2023</option>
-                    <option value="Ganjil 2024">Ganjil 2024</option>
-                    <option value="Genap 2024">Genap 2024</option>
-                    <option value="Ganjil 2025">Ganjil 2025</option>
-                    <option value="Genap 2025">Genap 2025</option>
-                </select>
-            </div>
-
-            <div class="mt-4">
-                <button class="btn btn-primary shadow-sm rounded px-4">
-                    <i class="fa fa-print me-2"></i> Cetak KHS
-                </button>
-            </div>
-        </div>
-
-        <!-- Tabs for Riwayat Pengajuan and Proses Bimbingan -->
         <div class="tabs">
-            <button class="active" id="tabRiwayat"><i class="fa fa-newspaper"></i>&nbsp;Kartu Hasil Studi</button>
-            <button id="tabProses"><i class="fa fa-bar-chart"></i>&nbsp;Rincian Presentase & Nilai</button>
+            <button class="tab-button active" id="tabRiwayat"><i class="fa fa-newspaper"></i>&nbsp;Kartu Hasil Studi</button>
+            <button class="tab-button" id="tabProses"><i class="fa fa-bar-chart"></i>&nbsp;Rincian Presentase & Nilai</button>
         </div>
 
-        <!-- Tabel KHS Hasil Studi -->
-        <table class="w-full border-collapse mb-8" onclick="openModal()">
+        <table class="table-khs" onclick="openModal()">
             <thead>
                 <tr>
-                    <th class="text-center">No</th>
-                    <th class="text-center">Kode Matakuliah</th>
-                    <th class="text-center">Nama Matakuliah</th>
-                    <th class="text-center">SKS</th>
-                    <th class="text-center">Nilai Angka</th>
-                    <th class="text-center">Nilai Huruf</th>
-                    <th class="text-center">SKS x Nilai Angka</th>
+                    <th>No</th>
+                    <th>Kode Matakuliah</th>
+                    <th>Nama Matakuliah</th>
+                    <th>SKS</th>
+                    <th>Nilai Angka</th>
+                    <th>Nilai Huruf</th>
+                    <th>SKS x Nilai Angka</th>
                 </tr>
             </thead>
-
             <tbody>
-                <tr class="text-center">
-                    <td class="">1</td>
-                    <td class="">1565002</td>
-                    <td class="">KALKULUS</td>
-                    <td class="">3</td>
-                    <td class="">4</td>
-                    <td class="">A</td>
-                    <td class="text-center">12</td>
+                @for ($i = 1; $i <= 10; $i++)
+                <tr>
+                    <td>{{ $i }}</td>
+                    <td>1565002</td>
+                    <td>KALKULUS</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>A</td>
+                    <td>12</td>
                 </tr>
-                <tr class="text-center">
-                    <td class="">2</td>
-                    <td class="">1565002</td>
-                    <td class="">KALKULUS</td>
-                    <td class="">3</td>
-                    <td class="">4</td>
-                    <td class="">A</td>
-                    <td class="text-center">12</td>
+                @endfor
+                <tr>
+                    <td colspan="4">TOTAL</td>
+                    <td>40</td>
+                    <td></td>
+                    <td>120</td>
                 </tr>
-                <tr class="text-center">
-                    <td class="">3</td>
-                    <td class="">1565002</td>
-                    <td class="">KALKULUS</td>
-                    <td class="">3</td>
-                    <td class="">4</td>
+                <tr>
+                    <td colspan="5">IPK = (SKS x Nilai Angka) / Jumlah SKS</td>
+                    <td colspan="2">4.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+@endsection
                     <td class="">A</td>
                     <td class="text-center">12</td>
                 </tr>

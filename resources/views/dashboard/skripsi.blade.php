@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container">
+<div>
     <!-- Main Content -->
     <div class="main-content">
 
