@@ -65,8 +65,19 @@ Now, you should be able to access the application at http://127.0.0.1:8000.
 > [!IMPORTANT]
 > For developers, please, after doing some changes on database (using migration), do this command : 
 
+> [!CAUTION]
+> All this command is removing your data entry on database (including each tables).
+> If you want to use this, make sure to backup your data first.
+
 ```bash
 php artisan migrate:refresh
+```
+
+Having problem with migrating database?
+Try this command : 
+```bash
+php artisan migrate:reset
+php artisan migrate:fresh
 ```
 
 > [!NOTE]
