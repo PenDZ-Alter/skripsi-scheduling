@@ -6,7 +6,7 @@
     <!-- Main Content -->
     <div class="main-content">
 
-        <div class="content">
+        <div class="content fade-in-up">
             <a href="{{ asset('storage/files/alur_bimbingan.pdf') }}" class="btn" download>
                 <i class="fa fa-download"></i>
                 Unduh alur Pengajuan, Persetujuan dan Bimbingan
@@ -46,7 +46,7 @@
 
 <!-- Modal for Pengajuan Skripsi -->
 <div class="modal" id="modal">
-    <div class="modal-content">
+    <div class="modal-content fade-in-up">
         <h3>Pengajuan Skripsi/Tesis/Disertasi</h3>
         <label for="judul">Judul Tugas Akhir</label>
         <input type="text" id="judul" placeholder="Tulis dengan huruf kapital">

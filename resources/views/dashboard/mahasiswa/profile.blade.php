@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- Grid 2 Kolom -->
-    <div class="profile-page-card">
+    <div class="profile-page-card fade-in-up">
         <!-- Konten -->
         <div class="grid-cols-1 md:grid-cols-4 content-Card-profile"> {{-- Ubah jadi sama dengan profileEdit --}}
             <!-- Kolom Kiri: Info Profil -->

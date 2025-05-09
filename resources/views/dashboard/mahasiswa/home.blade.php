@@ -1,12 +1,24 @@
 @extends('dashboard.mahasiswa.master')
 
 @section('content')
+    <!-- Greet Card -->
+    <div class="greeting-card fade-in-up">
+        <h2>Hai, Alfariz 👋</h2>
+        <p><i>Semangat menuntaskan semester ini, semoga IPK-nya naik terus ya!</i></p>
+        <br>
+        <h2>Nih Akses gampang buat kamu explore!</h2>
+        <div class="quick-access">
+            <a href="{{ route('mhs.studi') }}" class="quick-btn">📝 KRS</a>
+            <a href="{{ route('mhs.transkrip') }}" class="quick-btn">📄 Transkrip</a>
+            <a href="{{ route('mhs.skripsi') }}" class="quick-btn">📅 Jadwal</a>
+        </div>
+    </div>
+
     <!-- Grid 2 Kolom -->
-    <div class="profile-card">
+    <div class="profile-card fade-in-up">
         <!-- Background image -->
         <div class="absolute inset-0">
-            <img src="{{ asset('storage/img/Background.jpeg') }}" alt="Background"
-                class="grayscale background-Image">
+            <img src="{{ asset('storage/img/Background.jpeg') }}" alt="Background" class="grayscale background-Image">
         </div>
 
         <!-- Konten -->
@@ -17,8 +29,9 @@
                 <div class="profile-wrapper">
                     <!-- Foto profil -->
                     <div class="profile-Image-background">
-                        <a href="{{ route('mhs.profile') }}" class="profile-Image-background1"><img class="min-w-1 min-h-0.5" id="profileImage" src="{{ asset('storage/img/Alfariz.png') }}"
-                            alt="Foto Profil" class="profile-image"></a>
+                        <a href="{{ route('mhs.profile') }}" class="profile-Image-background1"><img
+                                class="min-w-1 min-h-0.5" id="profileImage" src="{{ asset('storage/img/Alfariz.png') }}"
+                                alt="Foto Profil" class="profile-image"></a>
 
                         <!-- Ikon kamera -->
                         <div class="camera-fix" onclick="document.getElementById('uploadInput').click();">
@@ -76,7 +89,7 @@
 
     <!-- Grafik IP dan IPK -->
     <div class="Card">
-        <div class="card-Chart">
+        <div class="card-Chart fade-in-up">
             <!-- 📊 Grafik Indeks Prestasi -->
             <div id="grafikContainer" class="chart-IP">
                 <!-- Tombol Ekspor -->
@@ -84,7 +97,7 @@
                     <div id="dropdownButton" class="dropdown-menu" onclick="toggleDropdown()">
                         ☰
                     </div>
-                    <ul id="exportMenu" class="hidden export-menu">
+                    <ul id="exportMenu" class="hidden export-menu fade-in-up">
                         <li><a href="#" id="downloadPNG" class="menu-item">Download PNG</a></li>
                         <li><a href="#" id="downloadJPEG" class="menu-item">Download JPEG</a></li>
                         <li><a href="#" id="downloadPDF" class="menu-item">Download PDF</a></li>
@@ -106,48 +119,39 @@
                         <div class="swiper-slide">
                             <a href="https://hes.uin-malang.ac.id/wp-content/uploads/2022/12/Sertifikat-dan-SK-BAN-PT-Akreditasi-Prodi-HES-6-Desember-2022-sd-2027.pdf"
                                 target="_blank" class="Image1">
-                                <img src="{{ asset('storage/img/Berita1.jpeg') }}"
-                                    class="Image1-Style" />
+                                <img src="{{ asset('storage/img/Berita1.jpeg') }}" class="Image1-Style" />
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a href="https://id.quora.com/Apa-penyesalanmu-selama-kuliah" target="_blank" class="Image2">
-                                <img src="{{ asset('storage/img/Berita2.png') }}"
-                                    class="Image2-Style" />
+                                <img src="{{ asset('storage/img/Berita2.png') }}" class="Image2-Style" />
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a href="https://docs.google.com/forms/d/e/1FAIpQLSf04cEpb6v-44beFfiPUwthljHggOcefmBtow0PyJu7uOwd3A/viewform?pli=1"
                                 target="_blank" class="Image3">
-                                <img src="{{ asset('storage/img/Berita3.png') }}"
-                                    class="Image3-Style" />
+                                <img src="{{ asset('storage/img/Berita3.png') }}" class="Image3-Style" />
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a href="https://www.instagram.com/kemendukbangga_bkkbn/" target="_blank" class="Image4">
-                                <img src="{{ asset('storage/img/Berita4.jpg') }}"
-                                    class="Image4-Style" />
+                                <img src="{{ asset('storage/img/Berita4.jpg') }}" class="Image4-Style" />
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a href="https://www.instagram.com/simfonifmmalang/p/C3PzBgYPnSK/" target="_blank"
                                 class="Image5">
-                                <img src="{{ asset('storage/img/Berita5.jpeg') }}"
-                                    class="Image5-Style" />
+                                <img src="{{ asset('storage/img/Berita5.jpeg') }}" class="Image5-Style" />
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="storage/img/Berita6.jpg" target="_blank"
-                                class="Image6">
-                                <img src="{{ asset('storage/img/Berita6.jpg') }}"
-                                    class="Image6-Style" />
+                            <a href="storage/img/Berita6.jpg" target="_blank" class="Image6">
+                                <img src="{{ asset('storage/img/Berita6.jpg') }}" class="Image6-Style" />
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a href="https://library.uin-malang.ac.id/" target="_blank"
-                                class="Image7">
-                                <img src="{{ asset('storage/img/Berita7.jpg') }}"
-                                    class="Image7-Style" />
+                            <a href="https://library.uin-malang.ac.id/" target="_blank" class="Image7">
+                                <img src="{{ asset('storage/img/Berita7.jpg') }}" class="Image7-Style" />
                             </a>
                         </div>
                     </div>
@@ -166,7 +170,7 @@
     <!-- Grid 2 Kolom untuk Data Akademik & Jadwal Kuliah -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
         <!-- Card Data Akademik -->
-        <div class="student-info">
+        <div class="student-info fade-in-up">
             <div class="info-box">
                 <div class="space-y-2">
                     <div class="row mb-2">
@@ -222,17 +226,19 @@
         </div>
 
         <!-- Card Jadwal Kuliah -->
-        <div class="calendar-card">
+        <div class="calendar-card fade-in-up">
             <h3 class="calendar-title">
                 <i class="fa-regular fa-calendar"></i> Jadwal Kuliahmu Hari Ini
             </h3>
             <p class="calendar-description">Tidak Ada Jadwal Kuliah, saatnya kamu eksplorasi pengalaman baru</p>
+
         </div>
     </div>
 
     <!-- Quotes -->
-    <div class="background-quotes">
-        <blockquote class="quotes-description">"Lelah hadir untuk menjadi pengingat seberapa besar perjuanganmu terhadap negara. Kalau
+    <div class="background-quotes fade-in-up">
+        <blockquote class="quotes-description">"Lelah hadir untuk menjadi pengingat seberapa besar perjuanganmu terhadap
+            negara. Kalau
             kamu lelah, rehat sejenak."</blockquote>
         <span class="quotes-end">🌄 Positive Quotes</span>
     </div>
