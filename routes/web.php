@@ -13,27 +13,27 @@ Route::middleware(['auth'])->group(function() {
     Route::get('/profile', [ProfileController::class, 'showProfile'])->name('profile');
 
     Route::get('/pembayaran', function () {
-        return view('dashboard.pembayaran');
+        return view('dashboard.mahasiswa.pembayaran');
     })->name('pembayaran');
 
     Route::get('/studi', function () {
-        return view('dashboard.studi');
+        return view('dashboard.mahasiswa.studi');
     })->name('studi');
 
     Route::get('/statistik', function () {
-        return view('dashboard.statistik');
+        return view('dashboard.mahasiswa.statistik');
     })->name('statistik');
 
     Route::get('/transkrip', function () {
-        return view('dashboard.transkrip');
+        return view('dashboard.mahasiswa.transkrip');
     })->name('transkrip');
 
     Route::get('/skripsi', function () {
-        return view('dashboard.skripsi');
+        return view('dashboard.mahasiswa.skripsi');
     })->name('skripsi');
     
     Route::get('/profileEdit', function () {
-        return view('dashboard.profileEdit');
+        return view('dashboard.mahasiswa.profileEdit');
     })->name('profileEdit');
     
     Route::post('/upload-photo', [ProfileController::class, 'uploadPhoto'])->name('route_upload_photo');
