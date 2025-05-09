@@ -19,7 +19,7 @@
 
     @yield('content')
 
-    @include('partials.footerAuth')
+    @include('auth.footer')
 
     <script type="text/javascript" src="storage/js/toggle-login.js"></script>
     @stack('scripts')
