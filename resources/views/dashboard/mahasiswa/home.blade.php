@@ -17,7 +17,7 @@
                 <div class="profile-wrapper">
                     <!-- Foto profil -->
                     <div class="profile-Image-background">
-                        <a href="{{ route('profile') }}" class="profile-Image-background1"><img class="min-w-1 min-h-0.5" id="profileImage" src="{{ asset('storage/img/Alfariz.png') }}"
+                        <a href="{{ route('mhs.profile') }}" class="profile-Image-background1"><img class="min-w-1 min-h-0.5" id="profileImage" src="{{ asset('storage/img/Alfariz.png') }}"
                             alt="Foto Profil" class="profile-image"></a>
 
                         <!-- Ikon kamera -->
