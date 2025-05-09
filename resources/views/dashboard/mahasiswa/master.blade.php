@@ -29,11 +29,11 @@
     <div class="min-h-screen pl-64 md:pl-64 sm:pl-0">
         <!-- SIDEBAR -->
         <aside class="fixed top-0 left-0 w-64 h-full bg-indigo-900 text-white z-50">
-            @include('partials.sidebar')
+            @include('dashboard.mahasiswa.partials.sidebar')
         </aside>
 
         <!-- HEADER -->
-        @include('partials.header')
+        @include('dashboard.mahasiswa.partials.header')
 
         <!-- MAIN CONTENT -->
         <main class="p-6">
@@ -41,7 +41,7 @@
         </main>
 
         <!-- FOOTER -->
-        @include('partials.footer')
+        @include('dashboard.mahasiswa.partials.footer')
     </div>
     <script type="text/javascript" src="storage/js/function.js"></script>
     <script type="text/javascript" src="storage/js/IconDownload.js"></script>
