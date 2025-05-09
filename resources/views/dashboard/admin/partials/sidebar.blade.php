@@ -22,57 +22,34 @@
         <ul>
             <li style="padding-inline: 24px;" class="py-1">
                 <span class="sidebar-content">
-                    <a href="{{ route('home') }}">
+                    <a href="">
                         <i class="fas fa-house icon-style"></i>
                     </a>
-                    <a href="{{ route('home') }}" class="text-style">Home</a>
+                    <a href="" class="text-style">Home</a>
                 </span>
             </li>
             <li style="padding-inline: 24px;" class="py-1">
                 <span class="sidebar-content">
-                    <a href="{{ route('profile') }}">
+                    <a href="">
                         <i class="fa-regular fa-address-card icon-style"></i>
                     </a>
-                    <a href="{{ route('profile') }}" class="text-style">Profil Mahasiswa</a>
+                    <a href="" class="text-style">Profil Mahasiswa</a>
                 </span>
             </li>
             <li style="padding-inline: 24px;" class="py-1">
                 <span class="sidebar-content">
-                    <a href="{{ route('pembayaran') }}">
-                        <i class="fa-regular fa-credit-card icon-style"></i>
+                    <a href="">
+                        <i class="fa-regular fa-address-card icon-style"></i>
                     </a>
-                    <a href="{{ route('pembayaran') }}" class="text-style">Pembayaran</a>
+                    <a href="" class="text-style">Jadwal Sidang</a>
                 </span>
             </li>
             <li style="padding-inline: 24px;" class="py-1">
                 <span class="sidebar-content">
-                    <a href="{{ route('studi') }}">
-                        <i class="fa-regular fa-newspaper icon-style"></i>
+                    <a href="">
+                        <i class="fa-regular fa-address-card icon-style"></i>
                     </a>
-                    <a href="{{ route('studi') }}" class="text-style">KHS Hasil Studi</a>
-                </span>
-            </li>
-            <li style="padding-inline: 24px;" class="py-1">
-                <span class="sidebar-content">
-                    <a href="{{ route('statistik') }}">
-                        <i class="fas fa-chart-line icon-style"></i>
-                    </a>
-                    <a href="{{ route('statistik') }}" class="text-style">Statistik</a>
-                </span>
-            </li>
-            <li style="padding-inline: 24px;" class="py-1">
-                <span class="sidebar-content">
-                    <a href="{{ route('transkrip') }}">
-                        <i class="fa-regular fa-file icon-style"></i></a>
-                    <a href="{{ route('transkrip') }}" class="text-style">Transkrip</a>
-                </span>
-            </li>
-            <li style="padding-inline: 24px;" class="py-1">
-                <span class="sidebar-content">
-                    <a href="{{ route('skripsi') }}">
-                        <i class="fas fa-flag-checkered icon-style"></i>
-                    </a>
-                    <a href="{{ route('skripsi') }}" class="text-style">Skripsi</a>
+                    <a href="" class="text-style">Verifikasi Mahasiswa</a>
                 </span>
             </li>
         </ul>
