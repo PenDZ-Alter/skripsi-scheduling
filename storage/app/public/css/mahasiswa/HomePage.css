@@ -283,6 +283,7 @@
 }
 
 .chart-IP {
+    position: relative;
     height: 23rem;
     width: 48rem;
     background: none !important;
@@ -293,8 +294,8 @@
 }
 
 .dropdown-button {
-    height: 10rem;
-    width: 10rem;
+    padding-top:1rem !important;
+    width: 43rem;
     position: absolute;
 }
 
