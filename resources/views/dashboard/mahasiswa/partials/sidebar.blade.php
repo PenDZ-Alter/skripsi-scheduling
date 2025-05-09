@@ -1,9 +1,9 @@
 <div class="fixed top-0 left-0 w-64 h-screen text-white flex flex-col z-50">
     <!-- Bagian Logo atau Profil Sidebar -->
     <div class="flex items-center p-4 bg-gradient-to-r">
-        <a href="{{ route('home') }}"><i class="fas fa-laptop icon-left"></i></a>
+        <a href="{{ route('mhs.home') }}"><i class="fas fa-laptop icon-left"></i></a>
         <span class="title-left">Skripsi</span>
-        <span class="title-right"><a href="{{ route('home') }}">UINMALANG</a></span>
+        <span class="title-right"><a href="{{ route('mhs.home') }}">UINMALANG</a></span>
     </div>
 
     <!-- Informasi Mahasiswa -->
@@ -22,57 +22,57 @@
         <ul>
             <li style="padding-inline: 24px;" class="py-1">
                 <span class="sidebar-content">
-                    <a href="{{ route('home') }}">
+                    <a href="{{ route('mhs.home') }}">
                         <i class="fas fa-house icon-style"></i>
                     </a>
-                    <a href="{{ route('home') }}" class="text-style">Home</a>
+                    <a href="{{ route('mhs.home') }}" class="text-style">Home</a>
                 </span>
             </li>
             <li style="padding-inline: 24px;" class="py-1">
                 <span class="sidebar-content">
-                    <a href="{{ route('profile') }}">
+                    <a href="{{ route('mhs.profile') }}">
                         <i class="fa-regular fa-address-card icon-style"></i>
                     </a>
-                    <a href="{{ route('profile') }}" class="text-style">Profil Mahasiswa</a>
+                    <a href="{{ route('mhs.profile') }}" class="text-style">Profil Mahasiswa</a>
                 </span>
             </li>
             <li style="padding-inline: 24px;" class="py-1">
                 <span class="sidebar-content">
-                    <a href="{{ route('pembayaran') }}">
+                    <a href="{{ route('mhs.pembayaran') }}">
                         <i class="fa-regular fa-credit-card icon-style"></i>
                     </a>
-                    <a href="{{ route('pembayaran') }}" class="text-style">Pembayaran</a>
+                    <a href="{{ route('mhs.pembayaran') }}" class="text-style">Pembayaran</a>
                 </span>
             </li>
             <li style="padding-inline: 24px;" class="py-1">
                 <span class="sidebar-content">
-                    <a href="{{ route('studi') }}">
+                    <a href="{{ route('mhs.studi') }}">
                         <i class="fa-regular fa-newspaper icon-style"></i>
                     </a>
-                    <a href="{{ route('studi') }}" class="text-style">KHS Hasil Studi</a>
+                    <a href="{{ route('mhs.studi') }}" class="text-style">KHS Hasil Studi</a>
                 </span>
             </li>
             <li style="padding-inline: 24px;" class="py-1">
                 <span class="sidebar-content">
-                    <a href="{{ route('statistik') }}">
+                    <a href="{{ route('mhs.statistik') }}">
                         <i class="fas fa-chart-line icon-style"></i>
                     </a>
-                    <a href="{{ route('statistik') }}" class="text-style">Statistik</a>
+                    <a href="{{ route('mhs.statistik') }}" class="text-style">Statistik</a>
                 </span>
             </li>
             <li style="padding-inline: 24px;" class="py-1">
                 <span class="sidebar-content">
-                    <a href="{{ route('transkrip') }}">
+                    <a href="{{ route('mhs.transkrip') }}">
                         <i class="fa-regular fa-file icon-style"></i></a>
-                    <a href="{{ route('transkrip') }}" class="text-style">Transkrip</a>
+                    <a href="{{ route('mhs.transkrip') }}" class="text-style">Transkrip</a>
                 </span>
             </li>
             <li style="padding-inline: 24px;" class="py-1">
                 <span class="sidebar-content">
-                    <a href="{{ route('skripsi') }}">
+                    <a href="{{ route('mhs.skripsi') }}">
                         <i class="fas fa-flag-checkered icon-style"></i>
                     </a>
-                    <a href="{{ route('skripsi') }}" class="text-style">Skripsi</a>
+                    <a href="{{ route('mhs.skripsi') }}" class="text-style">Skripsi</a>
                 </span>
             </li>
         </ul>

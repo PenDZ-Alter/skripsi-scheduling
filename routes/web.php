@@ -8,33 +8,33 @@ use App\Http\Controllers\AuthController;
 
 // Route antar Page
 Route::middleware(['auth'])->group(function() {
-    Route::get('/home', [HomeController::class, 'index'])->name('home');
+    Route::get('/home', [HomeController::class, 'index'])->name('mhs.home');
     
-    Route::get('/profile', [ProfileController::class, 'showProfile'])->name('profile');
+    Route::get('/profile', [ProfileController::class, 'showProfile'])->name('mhs.profile');
 
     Route::get('/pembayaran', function () {
         return view('dashboard.mahasiswa.pembayaran');
-    })->name('pembayaran');
+    })->name('mhs.pembayaran');
 
     Route::get('/studi', function () {
         return view('dashboard.mahasiswa.studi');
-    })->name('studi');
+    })->name('mhs.studi');
 
     Route::get('/statistik', function () {
         return view('dashboard.mahasiswa.statistik');
-    })->name('statistik');
+    })->name('mhs.statistik');
 
     Route::get('/transkrip', function () {
         return view('dashboard.mahasiswa.transkrip');
-    })->name('transkrip');
+    })->name('mhs.transkrip');
 
     Route::get('/skripsi', function () {
         return view('dashboard.mahasiswa.skripsi');
-    })->name('skripsi');
+    })->name('mhs.skripsi');
     
     Route::get('/profileEdit', function () {
         return view('dashboard.mahasiswa.profileEdit');
-    })->name('profileEdit');
+    })->name('mhs.profileEdit');
     
     Route::post('/upload-photo', [ProfileController::class, 'uploadPhoto'])->name('route_upload_photo');
 });
