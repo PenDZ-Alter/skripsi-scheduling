@@ -54,5 +54,6 @@ Route::post('/login/submit', [AuthController::class, 'handleLogin'])->name('logi
 
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
+Route::get('/forgotPassword', [AuthController::class, 'showForgotPassword'])->name('forgotPasswordPage');
 // Route Fungsi Upload Foto
 

@@ -92,6 +92,25 @@ class AuthController extends Controller
         return redirect()->back()->with('error', 'Email atau password salah!');
     }
 
+    public function showForgotPassword()
+    {
+        return view('auth.forgotPassword');
+    }
+
+
+    public function handleForgotPassword(Request  $request)
+    {
+        $credentials = $request->only('email', 'password');
+
+        // Validasi dulu input awal
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|string|min:6',
+        ]);
+
+    }
+
     public function logout()
     {
         Auth::logout();
