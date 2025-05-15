@@ -17,6 +17,55 @@
         <h2>SISTEM INFORMASI AKADEMIK (SIAKAD)</h2>
     </div>
 
+    <div class="title-info" data-bs-toggle="modal" data-bs-target="#infoModal" style="cursor: pointer;">
+        <i class="fas fa-info-circle me-2"></i>
+        <p>Informasi Mahasiswa</p>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content glass-modal">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title d-flex align-items-center gap-2" id="infoModalLabel">
+                        <i class="fas fa-info-circle text-primary"></i>
+                        Informasi Mahasiswa
+                    </h5>
+                </div>
+
+                <div class="modal-body">
+                    <div class="info-section mb-4">
+                        <h6 class="section-title">Info Mahasiswa</h6>
+                        <ul class="section-list">
+                            <li>Kode akses Siakad & Hotspot menggunakan akses terakhir login. Disarankan mengganti tiap
+                                semester.</li>
+                            <li>Fasilitas hanya aktif saat status aktif/herregistrasi.</li>
+                            <li>Wisuda per periode (kuota 800). Mahasiswa yudisium wajib daftar wisuda online.</li>
+                            <li>Pembayaran akademik melalui Bank Mandiri, BSI, BRI, BTN, BTNS, dan BNI.</li>
+                        </ul>
+                    </div>
+                    <div class="info-section">
+                        <h6 class="section-title">Layanan Baru</h6>
+                        <ul class="section-list">
+                            <li>Aktivasi Email UIN untuk Dosen & Mahasiswa via laman utama Siakad.</li>
+                            <li>Surat Akademik: <a href="https://akademik.uin-malang.ac.id"
+                                    target="_blank">akademik.uin-malang.ac.id</a></li>
+                            <li>Keuangan Mahasiswa: <a href="https://studentfinance.uin-malang.ac.id"
+                                    target="_blank">studentfinance.uin-malang.ac.id</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="modal-footer border-0 justify-content-end">
+                    <button type="button" class="btn btn-light btn-tutup" data-bs-dismiss="modal">
+                        Tutup
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     @yield('content')
 
     @include('auth.footer')

@@ -29,6 +29,88 @@ body::before {
     z-index: -1;
 }
 
+/* Modal */
+.glass-modal {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Header */
+.modal-header {
+    padding: 1rem 1.5rem;
+}
+
+.modal-title {
+    font-weight: 600;
+    color: #1f2d3d;
+    text-align: center;
+    font-size: 130%;
+}
+
+/* Close button */
+.btn-close-dark {
+    filter: invert(25%);
+}
+
+/* Body */
+.modal-body {
+    padding: 1.25rem 1.5rem;
+}
+
+.info-section {
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #34495e;
+}
+
+.section-list {
+    padding-left: 1.2rem;
+    list-style-type: disc;
+    font-size: 0.92rem;
+    color: #2c3e50;
+}
+
+.section-list li {
+    margin-bottom: 0.5rem;
+}
+
+.section-list a {
+    color: #0d6efd;
+    text-decoration: none;
+}
+
+.section-list a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.modal-footer {
+    padding: 1rem 1.5rem;
+}
+
+.btn-tutup {
+    padding: 0.4rem 1.2rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.btn-tutup:hover {
+    background-color: #f8f9fa;
+    border-color: #ced4da;
+}
+
+
 .Image-title {
     width: 80px;
     display: block;
@@ -41,14 +123,14 @@ body::before {
     color: rgba(255, 255, 255, 1);
     font-size: 115%;
     display: flex;
-    align-items: center; 
-    gap: 1rem; 
+    align-items: center;
+    gap: 1rem;
     margin-bottom: 2.5rem;
     cursor: pointer;
 }
 
 .title-info p {
-    margin: 0; 
+    margin: 0;
     letter-spacing: 5px;
     line-height: 1.5;
 }
@@ -67,8 +149,6 @@ body::before {
     margin-bottom: 1.5rem;
     background-color: rgba(255, 255, 255, 0.2);
 }
-
-
 
 .input-group {
     margin-bottom: 20px;
@@ -111,7 +191,7 @@ body::before {
     border: 2px solid #00bfa5;
     border-radius: 6px;
     outline: none;
-    box-shadow: 0 0 5px rgba(0,191,165,0.5);
+    box-shadow: 0 0 5px rgba(0, 191, 165, 0.5);
 }
 
 .lock-icon {
