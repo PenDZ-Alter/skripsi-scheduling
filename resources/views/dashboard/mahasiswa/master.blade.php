@@ -47,6 +47,7 @@
     <script type="text/javascript" src="storage/js/chart.js"></script>
     <script type="text/javascript" src="storage/js/picture-slider.js"></script>
     <script type="text/javascript" src="storage/js/skripsi_page.js"></script>
+    <script type="text/javascript" src="storage/js/transkrip_page.js"></script>
     @stack('scripts')
 </body>
 

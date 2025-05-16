@@ -25,16 +25,16 @@ function saveData() {
 }
 
 // Switch between tabs
-document.getElementById('tabRiwayat').addEventListener('click', function() {
-    document.getElementById('cardRiwayat').style.display = 'block';
-    document.getElementById('cardProses').style.display = 'none';
-    document.getElementById('tabRiwayat').classList.add('active');
-    document.getElementById('tabProses').classList.remove('active');
+document.getElementById('tabTranskrip').addEventListener('click', function() {
+    document.getElementById('cardTranskrip').classList.add('active');
+    document.getElementById('cardRiwayat').classList.remove('active');
+    this.classList.add('active');
+    document.getElementById('tabRiwayatKHS').classList.remove('active');
 });
 
-document.getElementById('tabProses').addEventListener('click', function() {
-    document.getElementById('cardRiwayat').style.display = 'none';
-    document.getElementById('cardProses').style.display = 'block';
-    document.getElementById('tabProses').classList.add('active');
-    document.getElementById('tabRiwayat').classList.remove('active');
+document.getElementById('tabRiwayatKHS').addEventListener('click', function() {
+    document.getElementById('cardTranskrip').classList.remove('active');
+    document.getElementById('cardRiwayat').classList.add('active');
+    this.classList.add('active');
+    document.getElementById('tabTranskrip').classList.remove('active');
 });

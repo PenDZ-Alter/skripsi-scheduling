@@ -1,58 +1,138 @@
-
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: rgba(244, 244, 244, 1);
 }
 
 .content {
     flex-grow: 1;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     padding: 20px;
+    box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.15) !important;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
-    background-color: none;
+    font-size: 80%;
+
     /* Pastikan tabel memiliki latar belakang */
 }
 
-table th,
-table td {
+table thead th {
+    background-color: rgba(0, 139, 139, 1);
+    /* contoh: oranye */
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+}
+
+table tbody tr {
+    padding-right: 1rem !important;
+    background-image: linear-gradient(to right, rgba(240, 255, 255, 1), rgba(255,255,255,1));
+}
+
+table td,
+table th {
+    padding: 12px 16px;
+    text-align: left;
     vertical-align: middle;
-    /* Meratakan konten secara vertikal */
-    padding: 11px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgba(204, 204, 204, 1);
 }
 
 table th {
-    background-color: #f9b42d;
+    background-color: rgba(255, 214, 130, 1);
     /* Warna latar belakang header */
-    color: white;
+    color: rgb(255, 255, 255);
     /* Warna teks di header */
+    font-size: 14px;
 }
 
-table tr:hover {
-    background-color: #ffd682;/* Efek hover pada baris */
+table tbody tr:hover {
+    background-image: linear-gradient(to right, #E0FFFF, #F5F5F5);
+    /* Efek hover pada baris */
 }
 
-.keterangan {
-    padding: 10px 15px;
-    background-color: white;
-    border-radius: 15px;
+.content-second {
+    background-image: linear-gradient(to right, rgba(173, 216, 230, 1), rgba(240, 255, 255, 1));
+    padding-top: 1rem;
+    margin-top: 1.5rem;
+    border-radius: 8px;
+    height: max-content;
+    box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.15) !important;
 }
 
-.keterangan h3 {
-    font-size: 18px;
+.content-header {
+    font-weight: lighter !important;
+    font-size: 17px;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+}
+
+.section-content {
+    padding-left: 4.5rem;
+    padding-bottom: 1.5rem;
+    list-style-type: disc;
+    font-size: 13px;
     font-weight: bold;
-    margin-bottom: 10px;
+    color:rgba(44, 62, 80, 1);
 }
 
-.keterangan p {
-    font-size: 16px;
-    margin-bottom: 10px;
+.section-content li {
+    margin-bottom: 0.3rem;
 }
 
+.content-third {
+    background-image: linear-gradient(to right, rgba(238, 232, 170, 1), rgba(250, 250, 210, 1));
+    padding-top: 1rem;
+    margin-top: 1.5rem;
+    border-radius: 8px;
+    height: max-content;
+    box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.15) !important;
+}
 
+.content-header-two {
+    font-weight: lighter !important;
+    font-size: 17px;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+}
 
+.bank, .id {
+    font-weight: bolder;
+}
+
+.section-content-two {
+    padding-left: 4.5rem;
+    padding-bottom: 1.5rem;
+    list-style-type: decimal;
+    font-size: 13px;
+    font-weight: bold;
+    color: rgba(133, 100, 4, 1);
+}
+
+.section-content-two li {
+    margin-bottom: 0.3rem;
+}
+
+.section-content-two .link {
+    color: rgba(0, 123, 255, 1);
+}
+
+.section-content-two .link:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    color: rgba(0, 123, 255, 0.6);
+}
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
