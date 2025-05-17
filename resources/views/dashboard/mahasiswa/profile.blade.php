@@ -4,7 +4,13 @@
     <!-- Grid 2 Kolom -->
     <div class="profile-page-card fade-in-up">
         <!-- Konten -->
-        <div class="grid-cols-1 md:grid-cols-4 content-Card-profile"> {{-- Ubah jadi sama dengan profileEdit --}}
+        <div class="tabs">
+            <button class="active" id="tabTranskrip"><i class="fa fa-address-card"></i>&nbsp;Profile Mahasiswa</button>
+            <button id="tabRiwayatKHS"><i class="fas fa-user-circle"></i>&nbsp;Profile Singkat Mahasiswa</button>
+        </div>
+
+        <!-- Tabel Transkrip -->
+        <div class="tab-content active" id="cardTranskrip">
             <!-- Kolom Kiri: Info Profil -->
             <div class="space-x-4 card-Profile">
                 <!-- Pembungkus foto dan icon -->
@@ -35,7 +41,8 @@
                         <div class="row-profile mb-2">
                             <div class="col-3 label-profile"><span>Status Studi</span></div>
                             <div class="col-9 value-profile border-bottom-indicator">
-                                <span class="status-indicator-profile"></span> <span class="beside-status-profile">Mahasiswa Aktif</span>
+                                <span class="status-indicator-profile"></span> <span class="beside-status-profile">Mahasiswa
+                                    Aktif</span>
                             </div>
                         </div>
                         <div class="row-profile mb-2">
@@ -83,6 +90,23 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="tab-content-two zoom-in" id="cardRiwayat" style="display: none">
+            <h3 class="Card-ShortProfile-Header">Profile Singkat Anda</h3>
+            <ul class="Card-ShortProfile-Content">
+                <li>Nama Panggilan : <span class="id">{{ $user->name }}</span></li>
+                <li>Nama Lengkap Non Gelar : <span class="id">{{ $user->name }}</span></li>
+                <li>Program Studi : <span class="id">Teknik Informatika</span></li>
+                <li>Nama Orang Tua : <span class="id">{{ $user->nama_ortu }}</span></li>
+                <li>Email : <span class="id">{{ $user->email }}</span></li>
+                <li>Status Email : <span class="status-indicator-profile"></span> <span class="beside-status-profile">Email
+                        Aktif</span></li>
+            </ul>
+            <p class="Card-ShortProfile-Footer">
+                Pertanyaan lainnya bisa diajukan di website
+                <a href="https://saintek.uin-malang.ac.id/helpdesk-saintek/" target="_blank">Helpdesk Saintek UIN Malang</a>
+            </p>
         </div>
     </div>
 @endsection

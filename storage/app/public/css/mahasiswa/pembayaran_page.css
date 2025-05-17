@@ -74,7 +74,7 @@ table tbody tr:hover {
     list-style-type: disc;
     font-size: 13px;
     font-weight: bold;
-    color:rgba(44, 62, 80, 1);
+    color: rgb(70, 130, 180);
 }
 
 .section-content li {

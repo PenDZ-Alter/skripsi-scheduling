@@ -1,7 +1,7 @@
 @extends('dashboard.mahasiswa.master')
 
 @section('content')
-    <div class="content">
+    <div class="content fade-in-up">
 
         <div class="tabs">
             <button class="active" id="tabTranskrip"><i class="fa fa-list"></i>&nbsp;Transkrip Nilai Sementara</button>
@@ -122,7 +122,7 @@
                         <td rowspan="1">120</td>
                     </tr>
                     <tr class="konten2">
-                        <td colspan="5">IPK (Indeks Prestasi Kumulatif) = (SKS x Nilai Angka) / Jumlah
+                        <td colspan="5" class="footer-konten">IPK (Indeks Prestasi Kumulatif) = (SKS x Nilai Angka) / Jumlah
                             SKS</td>
                         <td colspan="2">4.00</td>
                     </tr>
@@ -130,7 +130,7 @@
             </table>
         </div>
 
-        <div class="tab-content" id="cardRiwayat" style="display: none">
+        <div class="tab-content-two zoom-in" id="cardRiwayat" style="display: none">
             <table class="w-full border-collapse mb-8 table text-center mx-auto">
                 <thead>
                     <tr>

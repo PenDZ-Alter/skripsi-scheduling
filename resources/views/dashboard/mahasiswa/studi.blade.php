@@ -1,11 +1,11 @@
 @extends('dashboard.mahasiswa.master')
 @section('content')
-<div>
-    <div style="padding-top: 2rem !important;" class="container d-flex align-items-center gap-3 mb-4">
+<div class="content">
+    <div style="padding-top: 2rem !important; padding-bottom:1.5rem !important;" class="container d-flex align-items-center gap-3 mb-4">
         <div>
             <label for="tahun" class="form-label fw-semibold me-2">Tahun</label>
             <select id="tahun" class="form-select shadow-sm rounded DropdownTahun">
-                <option value="">Pilih Tahun</option>
+                <option style="font-size:14px !important;" value="">Pilih Tahun</option>
                 <option value="2022">2022</option>
                 <option value="2023">2023</option>
                 <option value="2024">2024</option>
@@ -34,11 +34,10 @@
             </button>
         </div>
     </div>
-    <div class="content">
-
+    <div class="content-studi">
         <div class="tabs">
-            <button class="active" id="tabTranskrip"><i class="fa fa-list"></i>&nbsp;Transkrip Nilai Sementara</button>
-            <button id="tabRiwayatKHS"><i class="fas fa-chart-line"></i>&nbsp;Riwayat KHS</button>
+            <button class="active" id="tabTranskrip"><i class="fas fa-newspaper"></i>&nbsp;Kartu Hasil Studi</button>
+            <button id="tabRiwayatKHS"><i class="fas fa-chart-line"></i>&nbsp;Rincian Presentase & Nilai</button>
         </div>
 
         <!-- Tabel Transkrip -->
@@ -155,7 +154,7 @@
                         <td rowspan="1">120</td>
                     </tr>
                     <tr class="konten2">
-                        <td colspan="5">IPK (Indeks Prestasi Kumulatif) = (SKS x Nilai Angka) / Jumlah
+                        <td colspan="5" class="footer-konten">IPK (Indeks Prestasi Kumulatif) = (SKS x Nilai Angka) / Jumlah
                             SKS</td>
                         <td colspan="2">4.00</td>
                     </tr>

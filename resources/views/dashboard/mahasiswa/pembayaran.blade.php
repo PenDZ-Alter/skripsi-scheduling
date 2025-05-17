@@ -108,7 +108,7 @@
             <li>Pembayaran dinyatakan sukses bila status bayar menjadi centang hijau. Simpan baik-baik bukti pembayaran Anda.</li>
             <li>Bagi mahasiswa pascaasarjana, tagihan wisuda muncul setelah mendaftar wisuda online dan diklik lulus skripsi oleh jurusan.</li>
             <li>Rekapan di atas tidak dapat menggantikan slip bayar yang hilang. Layanan konsultasi hubungi Bagian Keuangan Rektorat lt.2</li>
-            <li>Pertanyaan, konsultasi UKT serta proses SKBT (Surat Keterangan Bebas Tanggungan) melalui email <a href="https://studentfinance.uin-malang.ac.id/" ><span class="link">studentfinance@uin-malang.ac.id</span></a></li>
+            <li>Pertanyaan, konsultasi UKT serta proses SKBT (Surat Keterangan Bebas Tanggungan) melalui email <a href="https://studentfinance.uin-malang.ac.id/" target="_blank" ><span class="link">studentfinance@uin-malang.ac.id</span></a></li>
         </ul>
     </div>
 @endsection

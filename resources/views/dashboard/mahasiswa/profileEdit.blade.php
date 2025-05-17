@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- Grid 2 Kolom -->
-    <div class="profile-page-card fade-in-up">
+    <div class="profile-page-card-edit fade-in-up">
         <!-- Konten -->
         <div class="grid-cols-1 md:grid-cols-4 content-Card-profile">
             <!-- Kolom Kiri: Info Profil -->
@@ -140,9 +140,9 @@
                 </div>
                 
                 <!-- Bagian Tombol Edit -->
-                <div class="bg-btn-profile">
+                <div class="bg-btn-profile-edit">
                     <div class="space-y-2">
-                        <a href="{{ url('/profile') }}" class="btn-edit-profile">
+                        <a href="{{ url('/profile') }}" class="btn-edit-profile-page">
                             <i class="fas fa-save" class="btn-pen-edit"></i>
                             <span class="btn-text-edit">Simpan Profil Saya</span>
                         </a>
