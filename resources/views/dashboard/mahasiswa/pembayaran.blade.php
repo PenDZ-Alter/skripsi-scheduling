@@ -7,7 +7,7 @@
             <thead>
                 <tr>
                     <th class="text-left px-4 py-2">No</th>
-                    <th class="text-left px-4 py-2">No. tes/NIM</th>
+                    <th class="text-left px-4 py-2">No. Tes/NIM</th>
                     <th class="text-left px-4 py-2">Nama</th>
                     <th class="text-left px-4 py-2">Jurusan</th>
                     <th class="text-left px-4 py-2">Tagihan</th>
