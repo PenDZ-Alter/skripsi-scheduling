@@ -1,9 +1,25 @@
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #FFFF;
+    box-shadow: 3px 8px 6px 3px rgba(0, 0, 0, 0.15) !important;
+}
+
+.content-transkrip {
+    padding: 20px;
+    border-radius: 10px;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
     background-color: none;
     /* Pastikan tabel memiliki latar belakang */
+}
+
+table th {
+    padding-bottom: 10px ;
 }
 
 table th,

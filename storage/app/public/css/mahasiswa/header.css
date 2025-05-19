@@ -1,27 +1,37 @@
-.header {
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Bikin wrapper layout pakai flex column */
+.web-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Main konten fleksibel ngisi ruang */
+.main-content {
+    flex: 1;
+}
+
+.header-mahasiswa {
     position: sticky;
     top: 0;
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
     z-index: 40;
     padding: 1rem 2rem;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     border-bottom: 1px solid rgb(207, 199, 199);
+
+    /* Ini yang bikin blur background konten di belakang header */
+    background-color: rgba(209, 191, 163, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
-.header-blur-layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #fffcf1;
-    filter: blur(5px);
-    z-index: 1;
-}
-
-.header-content {
+.header-content-mahasiswa {
     position: relative;
     z-index: 2;
     display: flex;
@@ -30,24 +40,24 @@
     height: 100%;
 }
 
-.header-left {
+.header-left-mahasiswa {
     display: flex;
     align-items: center;
     gap: 0.25rem; 
 }
 
-.greeting {
+.greeting-mahasiswa {
     font-size: 1.3rem;
     color: black;
-    font-weight: 500;
     letter-spacing: 2px;
     margin: 0;
+    font-weight: bolder;
 }
 
-.user-name {
+.user-name-mahasiswa {
     font-size: 0.9rem;
     color: black;
-    font-weight: 500;
+    font-weight: bold;
     position: relative;
     top: 3px;
     left: 3px;
@@ -55,17 +65,17 @@
     margin: 0;
 }
 
-.header-right {
+.header-right-mahasiswa {
     display: flex;
     align-items: center;
     gap: 1rem;
-    border: 1px solid rgb(207, 199, 199); /* Warna dan ketebalan bingkai */
-    padding: 0px 20px 5px 20px;       /* Jarak isi dari bingkai */
-    border-radius: 100px;      /* Sudut melengkung, opsional */
-    background-color: white; /* Latar belakang ringan, opsional */
+    border: 1px solid rgb(207, 199, 199);
+    padding: 0px 20px 5px 20px;      
+    border-radius: 100px;      
+    background-color: white; 
 }
 
-.status-indicator-header {
+.status-indicator-header-mahasiswa {
     display: inline-block;
     width: 0.75rem;
     height: 0.75rem;
@@ -93,7 +103,7 @@
     }
 }
 
-.beside-status-header {
+.beside-status-header-mahasiswa {
     width: 25%;
     margin-left: 1.2rem;
     margin-top: 0.4rem;
@@ -103,4 +113,34 @@
     font-weight: 600;
     letter-spacing: 0.5px;
     color: #0c756f;
+}
+
+.footer-mahasiswa {
+    position: sticky;
+    bottom: 0;
+    z-index: 40;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(209, 191, 163, 0.6); /* semi-transparent untuk blur */
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer-mahasiswa .container {
+    background-color: transparent !important;
+    box-shadow: none;
+}
+
+.footer-text-mahasiswa {
+    margin-bottom: 0.5rem;
+}
+
+.underline {
+    color: rgba(0, 105, 148, 1);
+    text-decoration: none;
+}
+
+.underline:hover {
+    color: rgba(0, 105, 148, 0.8);
+    text-decoration: underline;
 }

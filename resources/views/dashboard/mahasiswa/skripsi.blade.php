@@ -4,16 +4,16 @@
 
 <div>
     <!-- Main Content -->
-    <div class="main-content">
-
-        <div class="content fade-in-up">
-            <a href="{{ asset('storage/files/alur_bimbingan.pdf') }}" class="btn" download>
+    <div class="main-content fade-in-up">
+        <div class="header-file">
+            <a href="{{ asset('storage/files/alur_bimbingan.pdf') }}" class="btn-informasi-skripsi">
                 <i class="fa fa-download"></i>
                 Unduh alur Pengajuan, Persetujuan dan Bimbingan
             </a> <br><br>
-
+        </div>
+        <div class="content">
             <!-- Tabs for Riwayat Pengajuan and Proses Bimbingan -->
-            <div class="tabs">
+            <div class="tabs-skripsi">
                 <button class="active" id="tabRiwayat"><i class="fa fa-address-book"></i>&nbsp;Riwayat Pengajuan Bimbingan</button>
                 <button id="tabProses"><i class="fa fa-book"></i>&nbsp;Proses Bimbingan</button>
             </div>
@@ -24,7 +24,7 @@
                     <i class="fa fa-plus-circle"></i>
                     Mulai Pengajuan Bimbingan</button>
                 <br><br>
-                <div class="card" id="cardRiw">
+                <div class="card card-state" id="cardRiw">
                     <div class="empty-state">
                         <i class="fa fa-coffee"></i>
                         &nbsp;Belum Ada Pengajuan
@@ -33,7 +33,7 @@
             </div>
 
             <!-- Card for Proses Bimbingan -->
-            <div class="process-card" id="cardProses" style="display:none;">
+            <div class="process-card card-state" id="cardProses" style="display:none;">
                 <div class="card">
                     <div class="empty-state">
                         <i class="fa fa-coffee"></i>
@@ -42,6 +42,7 @@
             </div>
         </div>
     </div>
+    <div style="padding-bottom: 2rem;"></div>
 </div>
 
 <!-- Modal for Pengajuan Skripsi -->

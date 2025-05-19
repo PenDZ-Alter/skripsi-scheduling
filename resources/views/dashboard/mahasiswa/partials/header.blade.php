@@ -1,14 +1,13 @@
-<header class="header">
-    <div class="header-blur-layer"></div>
-    <div class="header-content">
-        <div class="header-left">
-            <h1 class="greeting">Salam,</h1>
-            <p class="user-name">ALFARIZ MUHAN MANDEGA</p> 
+<header class="header-mahasiswa">
+    <div class="header-content-mahasiswa">
+        <div class="header-left-mahasiswa">
+            <h1 class="greeting-mahasiswa">Salam,</h1>
+            <p class="user-name-mahasiswa">ALFARIZ MUHAN MANDEGA</p>
         </div>
 
-        <div class="header-right">
-            <span class="status-indicator-header"></span>
-            <span class="beside-status-header">Mahasiswa Aktif</span>
+        <div class="header-right-mahasiswa">
+            <span class="status-indicator-header-mahasiswa"></span>
+            <span class="beside-status-header-mahasiswa">Mahasiswa Aktif</span>
         </div>
     </div>
 </header>

@@ -138,7 +138,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Bagian Tombol Edit -->
                 <div class="bg-btn-profile-edit">
                     <div class="space-y-2">
@@ -150,6 +150,9 @@
                 </div>
             </div>
         </div>
+
+    </div>
+    <div style="padding-bottom: 3rem;">
     </div>
     <script type="text/javascript" src="storage/js/profilePage.js"></script>
 @endsection

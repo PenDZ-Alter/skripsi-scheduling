@@ -8,10 +8,23 @@
     padding-bottom: 20rem;
 }
 
-.content-studi {
+.header-file {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: transparent !important;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+}
+
+.content {
     padding: 20px;
     background-color: white;
     border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Modal Styles */
@@ -104,14 +117,30 @@
     background-color: #0056b3;
 }
 
+.btn-informasi-skripsi {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    box-shadow: 3px 6px 6px 3px rgba(0, 0, 0, 0.2) !important;
+}
+
 /* Tabs Styling */
-.tabs {
+.tabs-skripsi {
     display: flex;
     margin-bottom: 20px;
     border-bottom: 2px solid #dee2e6;
 }
 
-.tabs button {
+.tabs-skripsi button {
     background-color: transparent;
     border: none;
     padding: 10px;
@@ -120,7 +149,7 @@
     color: #007bff;
 }
 
-.tabs button.active {
+.tabs-skripsi button.active {
     font-weight: bold;
     border-bottom: 2px solid #007bff;
 }
@@ -132,14 +161,30 @@
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transform: scale(0.8);
+    animation: zoomIn 0.6s ease-out forwards;
+}
+
+.process-card.active {
+    opacity: 1;
+    visibility: visible;
 }
 
 #cardRiw {
-    background-color: #f0f0f0; /* warna abu-abu terang */
-    border: 1px solid #ddd; /* border abu-abu untuk membuatnya lebih jelas */
+    background-color: #f0f0f0;
+    /* warna abu-abu terang */
+    border: 1px solid #ddd;
+    /* border abu-abu untuk membuatnya lebih jelas */
     padding: 15px;
 }
 
 .empty-state {
-    color: #999; /* memberi warna teks abu-abu pada status empty */
+    color: #999;
+    /* memberi warna teks abu-abu pada status empty */
+}
+
+.card-state {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }

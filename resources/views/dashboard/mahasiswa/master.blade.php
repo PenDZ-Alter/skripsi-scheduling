@@ -23,11 +23,11 @@
 </head>
 
 
-<body style="background-color: #fffcf1" class=" text-gray-800">
+<body class="text-gray-800">
     <!-- Wrapper utama dengan padding kiri -->
-    <div class="min-h-screen pl-64 md:pl-64 sm:pl-0">
+    <div class="min-h-screen pl-64 md:pl-64 sm:pl-0 web-wrapper">
         <!-- SIDEBAR -->
-        <aside class="fixed top-0 left-0 w-64 h-full bg-indigo-900 text-white z-50">
+        <aside class="fixed top-0 left-0 w-64 h-full">
             @include('dashboard.mahasiswa.partials.sidebar')
         </aside>
 
@@ -35,7 +35,7 @@
         @include('dashboard.mahasiswa.partials.header')
 
         <!-- MAIN CONTENT -->
-        <main class="p-6">
+        <main style="background-color: rgba(255, 252, 245, 1) !important;" class="p-6">
             @yield('content')
         </main>
 
@@ -48,6 +48,7 @@
     <script type="text/javascript" src="storage/js/picture-slider.js"></script>
     <script type="text/javascript" src="storage/js/skripsi_page.js"></script>
     <script type="text/javascript" src="storage/js/transkrip_page.js"></script>
+    <script type="text/javascript" src="storage/js/studi_page.js"></script>
     @stack('scripts')
 </body>
 
