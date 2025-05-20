@@ -39,6 +39,10 @@ Route::middleware(['auth'])->group(function() {
     Route::post('/upload-photo', [ProfileController::class, 'uploadPhoto'])->name('route_upload_photo');
 });
 
+Route::get('/admin', function () {
+    return view('dashboard.admin.home');
+})->name('adm.home');
+
 Route::get('/', function () {
     return view('auth.login');
 });
@@ -55,5 +59,3 @@ Route::post('/login/submit', [AuthController::class, 'handleLogin'])->name('logi
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('/forgotPassword', [AuthController::class, 'showForgotPassword'])->name('forgotPasswordPage');
-// Route Fungsi Upload Foto
-

@@ -1,9 +1,9 @@
 <div class="fixed top-0 left-0 w-64 h-screen text-white flex flex-col z-50">
     <!-- Bagian Logo atau Profil Sidebar -->
     <div class="flex items-center p-4 bg-gradient-to-r">
-        <a href="{{ route('home') }}"><i class="fas fa-laptop icon-left"></i></a>
+        <a href="{{ route('adm.home') }}"><i class="fas fa-laptop icon-left"></i></a>
         <span class="title-left">Skripsi</span>
-        <span class="title-right"><a href="{{ route('home') }}">UINMALANG</a></span>
+        <span class="title-right"><a href="{{ route('adm.home') }}">UINMALANG</a></span>
     </div>
 
     <!-- Informasi Mahasiswa -->
