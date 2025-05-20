@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="storage/css/mahasiswa/pembayaran_page.css">
     <link rel="stylesheet" href="storage/css/mahasiswa/HasilStudiPage.css">
     <link rel="stylesheet" href="storage/css/mahasiswa/studiPage.css">
+    <link rel="stylesheet" href="storage/css/mahasiswa/statistikPage.css">
 </head>
 
 

@@ -153,7 +153,7 @@
                             <td colspan="4" class="footer-konten" rowspan="1">TOTAL</td>
                             <td rowspan="1">40</td>
                             <td></td>
-                            <td rowspan="1">120</td>
+                            <td rowspan="1">96</td>
                         </tr>
                         <tr class="konten2">
                             <td colspan="5" class="footer-konten">IPK (Indeks Prestasi Kumulatif) = (SKS x Nilai
