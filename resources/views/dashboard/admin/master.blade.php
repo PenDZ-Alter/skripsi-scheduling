@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="storage/css/admin/header.css">
     <link rel="stylesheet" href="storage/css/admin/sidebar.css">
     <link rel="stylesheet" href="storage/css/admin/HomePage.css">
+    <link rel="stylesheet" href="storage/css/admin/profile.css">
 </head>
 
 

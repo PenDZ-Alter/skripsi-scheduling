@@ -25,7 +25,7 @@
                     <a href="">
                         <i class="fas fa-house icon-style"></i>
                     </a>
-                    <a href="" class="text-style">Home</a>
+                    <a href="{{ route('adm.home') }}" class="text-style">Home</a>
                 </span>
             </li>
             <li style="padding-inline: 24px;" class="py-1">
@@ -33,7 +33,7 @@
                     <a href="">
                         <i class="fa-regular fa-address-card icon-style"></i>
                     </a>
-                    <a href="" class="text-style">Profil Mahasiswa</a>
+                    <a href="{{ route('adm.profile') }}" class="text-style">Profil Mahasiswa</a>
                 </span>
             </li>
             <li style="padding-inline: 24px;" class="py-1">

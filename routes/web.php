@@ -43,6 +43,10 @@ Route::get('/admin', function () {
     return view('dashboard.admin.home');
 })->name('adm.home');
 
+Route::get('/adminprofil', function () {
+    return view('dashboard.admin.profile');
+})->name('adm.profile');
+
 Route::get('/', function () {
     return view('auth.login');
 });
