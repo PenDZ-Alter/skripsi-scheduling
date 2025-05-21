@@ -33,7 +33,8 @@ npm install
 ### 3. Configure the Environment
 
 > [!IMPORTANT] 
-> Please copy the `.env.example` and paste it to `.env` file first.
+> **For Developers**, Please copy the `.env.example` and paste and rename it to `.env` file first.
+> For Users, you can rename it directly from `.env.example` to `.env`
 
 - Build the frontend assets.
 
@@ -63,7 +64,7 @@ Now, you should be able to access the application at http://127.0.0.1:8000.
 ## Troubleshooting
 
 > [!IMPORTANT]
-> For developers, please, after doing some changes on database (using migration), do this command : 
+> **For developers**, please, after doing some changes on database (using migration), do this command : 
 ```bash
 php artisan migrate
 ```
@@ -75,6 +76,12 @@ Try this command :
 > All this command is removing your data entry on database (including each tables).
 > If you want to use this, make sure to backup your data first.
 
+You can try this command first : 
+```bash
+php artisan migrate:refresh
+```
+
+or, if it didn't work for you, try this command instead : 
 ```bash
 php artisan migrate:reset
 php artisan migrate:fresh
