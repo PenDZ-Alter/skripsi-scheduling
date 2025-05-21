@@ -61,6 +61,18 @@ php artisan serve
 
 Now, you should be able to access the application at http://127.0.0.1:8000.
 
+### 5. **(OPTIONAL)** Seeding the database
+
+To seed the available seeders, you can try this command : 
+```bash
+php artisan db:seed
+```
+
+Or, if you want to seed specific database, you can try this command (for example) : 
+```bash
+php artisan db:seed --class=UserSeeder
+```
+
 ## Troubleshooting
 
 > [!IMPORTANT]
