@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="storage/css/admin/header.css">
     <link rel="stylesheet" href="storage/css/admin/sidebar.css">
+    <link rel="stylesheet" href="storage/css/admin/jadwal.css">
     <link rel="stylesheet" href="storage/css/admin/HomePage.css">
     <link rel="stylesheet" href="storage/css/admin/profile.css">
 </head>
