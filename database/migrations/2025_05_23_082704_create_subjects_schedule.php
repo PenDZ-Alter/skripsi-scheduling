@@ -15,8 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('dosen');
             $table->string('nama_matkul');
-            $table->date('tanggal');
-            $table->time('waktu');
+            $table->datetime('jadwal');
             $table->string('kelas');
             $table->timestamps();
 
