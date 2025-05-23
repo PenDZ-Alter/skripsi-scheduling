@@ -44,7 +44,7 @@
                                 <span>NIM</span>
                             </div>
                             <div class="col-9 value-profile border-bottom">
-                                220605110025
+                                220605110131
                             </div>
                         </div>
                         <div class="row-profile mb-2">
