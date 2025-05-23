@@ -11,21 +11,22 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('skripsis', function (Blueprint $table) {
+        Schema::create('skripsis', function (Blueprint $table): void {
             $table->id();
             $table->unsignedBigInteger('user_id'); // mahasiswa yang punya skripsi
             $table->unsignedBigInteger('ruang_sidang');
+            $table->unsignedBigInteger('dosen_pembimbing_1');
+            $table->unsignedBigInteger('dosen_pembimbing_2');
             $table->string('judul');
-            $table->string('dosen_pembimbing_1');
-            $table->string('dosen_pembimbing_2');
-            $table->string('dosen_pembimbing_3');
-            $table->date('jadwal_sidang')->nullable();
-            $table->enum('status', ['belum_sidang', 'lulus', 'revisi'])->default('belum_sidang');
+            $table->datetime('jadwal_sidang');
+            $table->enum('status', ['unverified', 'belum_sidang', 'lulus', 'revisi'])->default('unverified');
             $table->timestamps();
     
             // Relasi ke tabel users
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('ruang_sidang')->references('id')->on('ruang_sidangs')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('ruang_sidang')->references('id')->on('ruang_sidangs')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('dosen_pembimbing_1')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('dosen_pembimbing_2')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

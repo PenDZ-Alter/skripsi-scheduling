@@ -19,7 +19,7 @@
             <tbody>
                 <tr class="hover:bg-gray-100">
                     <td class="text-left px-4 py-2">1</td>
-                    <td class="text-left px-4 py-2">220605110001</td>
+                    <td class="text-left px-4 py-2">220605110131</td>
                     <td class="text-left px-4 py-2">ALFARIZ MUHAN MANDEGA</td>
                     <td class="text-left px-4 py-2">TEKNIK INFORMATIKA</td>
                     <td class="text-left px-4 py-2">SPP</td>
@@ -29,7 +29,7 @@
                 </tr>
                 <tr class="hover:bg-gray-100">
                     <td class="text-left px-4 py-2">2</td>
-                    <td class="text-left px-4 py-2">220605110001</td>
+                    <td class="text-left px-4 py-2">220605110131</td>
                     <td class="text-left px-4 py-2">ALFARIZ MUHAN MANDEGA</td>
                     <td class="text-left px-4 py-2">TEKNIK INFORMATIKA</td>
                     <td class="text-left px-4 py-2">SPP</td>
@@ -39,7 +39,7 @@
                 </tr>
                 <tr class="hover:bg-gray-100">
                     <td class="text-left px-4 py-2">3</td>
-                    <td class="text-left px-4 py-2">220605110001</td>
+                    <td class="text-left px-4 py-2">220605110131</td>
                     <td class="text-left px-4 py-2">ALFARIZ MUHAN MANDEGA</td>
                     <td class="text-left px-4 py-2">TEKNIK INFORMATIKA</td>
                     <td class="text-left px-4 py-2">SPP</td>
@@ -49,7 +49,7 @@
                 </tr>
                 <tr class="hover:bg-gray-100">
                     <td class="text-left px-4 py-2">4</td>
-                    <td class="text-left px-4 py-2">220605110001</td>
+                    <td class="text-left px-4 py-2">220605110131</td>
                     <td class="text-left px-4 py-2">ALFARIZ MUHAN MANDEGA</td>
                     <td class="text-left px-4 py-2">TEKNIK INFORMATIKA</td>
                     <td class="text-left px-4 py-2">SPP</td>
@@ -59,7 +59,7 @@
                 </tr>
                 <tr class="hover:bg-gray-100">
                     <td class="text-left px-4 py-2">5</td>
-                    <td class="text-left px-4 py-2">220605110001</td>
+                    <td class="text-left px-4 py-2">220605110131</td>
                     <td class="text-left px-4 py-2">ALFARIZ MUHAN MANDEGA</td>
                     <td class="text-left px-4 py-2">TEKNIK INFORMATIKA</td>
                     <td class="text-left px-4 py-2">SPP</td>
@@ -69,7 +69,7 @@
                 </tr>
                 <tr class="hover:bg-gray-100">
                     <td class="text-left px-4 py-2">6</td>
-                    <td class="text-left px-4 py-2">220605110001</td>
+                    <td class="text-left px-4 py-2">220605110131</td>
                     <td class="text-left px-4 py-2">ALFARIZ MUHAN MANDEGA</td>
                     <td class="text-left px-4 py-2">TEKNIK INFORMATIKA</td>
                     <td class="text-left px-4 py-2">SPP</td>
@@ -79,7 +79,7 @@
                 </tr>
                 <tr class="hover:bg-gray-100">
                     <td class="text-left px-4 py-2">7</td>
-                    <td class="text-left px-4 py-2">220605110001</td>
+                    <td class="text-left px-4 py-2">220605110131</td>
                     <td class="text-left px-4 py-2">ALFARIZ MUHAN MANDEGA</td>
                     <td class="text-left px-4 py-2">TEKNIK INFORMATIKA</td>
                     <td class="text-left px-4 py-2">SPP</td>

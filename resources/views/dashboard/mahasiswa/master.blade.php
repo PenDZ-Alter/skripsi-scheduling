@@ -50,6 +50,7 @@
     <script type="text/javascript" src="storage/js/skripsi_page.js"></script>
     <script type="text/javascript" src="storage/js/transkrip_page.js"></script>
     <script type="text/javascript" src="storage/js/studi_page.js"></script>
+    <script type="text/javascript" src="storage/js/statistik_page.js"></script>
     @stack('scripts')
 </body>
 

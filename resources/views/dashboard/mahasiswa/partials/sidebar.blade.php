@@ -10,7 +10,7 @@
     <span class="profil flex items-center justify-between">
         <div class="flex flex-col">
             <div class="name-profile">ALFARIZ MUHAN M</div>
-            <div class="iconName-profile">220605110001</div>
+            <div class="iconName-profile">220605110131</div>
         </div>
         <!-- Ikon di sebelah kanan -->
         <a href="{{ route('login') }}">
@@ -73,6 +73,14 @@
                         <i class="fas fa-flag-checkered icon-style"></i>
                     </a>
                     <a href="{{ route('mhs.skripsi') }}" class="text-style">Skripsi</a>
+                </span>
+            </li>
+            <li style="padding-inline: 24px;" class="py-1">
+                <span class="sidebar-content">
+                    <a href="{{ route('adm.home') }}">
+                        <i class="fas fa-person icon-style"></i>
+                    </a>
+                    <a href="{{ route('adm.home') }}" class="text-style">Test Admin</a>
                 </span>
             </li>
         </ul>

@@ -47,6 +47,10 @@ Route::get('/adminprofil', function () {
     return view('dashboard.admin.profile');
 })->name('adm.profile');
 
+Route::get('/admin/jadwal', function () {
+    return view('dashboard.admin.jadwal');
+})->name('adm.jadwal');
+
 Route::get('/', function () {
     return view('auth.login');
 });
