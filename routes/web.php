@@ -46,8 +46,7 @@ Route::get('/admin', function () {
 Route::get('/adminprofil', function () {
     return view('dashboard.admin.profile');
 })->name('adm.profile');
-
-Route::get('/jadwal', function () {
+Route::get('/admin/jadwal', function () {
     return view('dashboard.admin.jadwal');
 })->name('adm.jadwal');
 

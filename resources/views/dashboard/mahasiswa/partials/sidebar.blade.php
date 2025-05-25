@@ -75,6 +75,14 @@
                     <a href="{{ route('mhs.skripsi') }}" class="text-style">Skripsi</a>
                 </span>
             </li>
+            <li style="padding-inline: 24px;" class="py-1">
+                <span class="sidebar-content">
+                    <a href="{{ route('adm.home') }}">
+                        <i class="fas fa-person icon-style"></i>
+                    </a>
+                    <a href="{{ route('adm.home') }}" class="text-style">Test Admin</a>
+                </span>
+            </li>
         </ul>
         <!-- UIN -->
         <div class="uin flex flex-col items-start">
