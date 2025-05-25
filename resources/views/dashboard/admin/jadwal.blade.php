@@ -45,13 +45,12 @@
         <div class="bg-white rounded-lg shadow mt-3">
             <div class="max-h-[700px] overflow-y-auto">
                 <table class="w-full border-collapse">
-                    <thead class="bg-gray-50 border-t border-b border-gray-300 h-24 sticky top-0 z-10">
-                        <tr class="bg-gray-50 border-t border-b border-gray-300 h-24">
+                    <thead class="bg-gray-50 border-t border-b border-gray-300 h-10 sticky top-0 z-10">
+                        <tr class="bg-gray-50 border-t border-b border-gray-300 h-10">
                             <th class="text-center px-4 py-2">No</th>
                             <th class="text-center px-4 py-2">Nama Mhs</th>
                             <th class="text-center px-4 py-0.5">NIM</th>
                             <th class="text-center px-4 py-2">Judul</th>
-                            <th class="text-center px-4 py-2">Ketua Penguji</th>
                             <th class="text-center px-4 py-2">Anggota Penguji I</th>
                             <th class="text-center px-4 py-2">Anggota Penguji II</th>
                             <th class="text-center px-4 py-2">Hari</th>
@@ -69,7 +68,6 @@
                             <td class="text-left px-4 py-2 border-b whitespace-nowrap">Andi Wijaya</td>
                             <td class="text-center px-4 py-2 border-b">18081010001</td>
                             <td class="text-left px-4 py-2 border-b whitespace-nowrap">Sistem Rekomendasi Pemilihan Jurusan</td>
-                            <td class="text-left px-4 py-2 border-b whitespace-nowrap">Dr. Ahmad Fauzi, M.Kom.</td>
                             <td class="text-left px-4 py-2 border-b whitespace-nowrap">Dr. Siti Rahayu, M.Kom.</td>
                             <td class="text-left px-4 py-2 border-b whitespace-nowrap">Dr. Rina Dewi, M.Kom.</td>
                             <td class="text-left px-4 py-2 border-b whitespace-nowrap">Rabu</td>
@@ -77,13 +75,29 @@
                             <td class="text-center px-4 py-2 border-b whitespace-nowrap">09:00 - 11:00 WIB</td>
                             <td class="text-center px-4 py-2 border-b whitespace-nowrap">R. Sidang 1</td>
                             <td class="text-center px-4 py-2 border-b">
-                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                <span class="status-label status-terjadwal px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800 hidden">
                                     Terjadwal
                                 </span>
+                                <span class="status-label status-pending px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">
+                                    Pending
+                                </span>
+                                <span class="status-label status-selesai px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800 hidden">
+                                    Selesai
+                                </span>
                             </td>
-                            <td class="text-left px-4 py-2 border-b">
-                                <button class="text-blue-600 hover:text-blue-900 mr-3"><i class="bi bi-pencil-square"></i></button>
-                                <button class="text-red-600 hover:text-red-900"><i class="bi bi-trash"></i></button>
+                            <td class="text-left px-4 py-2 border-b whitespace-nowrap">
+                                <a href="#" onclick="showStatus(this, 'pending')">
+                                    <i class="fas fa-clock icon-box hover:bg-orange-300"></i>
+                                </a>
+                                <a href="#" onclick="showStatus(this, 'terjadwal')">
+                                    <i class="fas fa-check-circle icon-box hover:bg-green-300"></i>
+                                </a>
+                                <a href="#" onclick="showStatus(this, 'selesai')">
+                                    <i class="fas fa-check icon-box hover:bg-blue-400"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fas fa-pencil icon-box hover:bg-gray-400"></i>
+                                </a>
                             </td>
                         </tr>
 
@@ -93,7 +107,6 @@
                             <td class="text-left px-4 py-0.5 border-b whitespace-nowrap">Budi Santoso</td>
                             <td class="text-center px-4 py-0.5 border-b">18081010002</td>
                             <td class="text-left px-4 py-2 border-b whitespace-nowrap">Analisis Sentimen Media Sosial</td>
-                            <td class="text-left px-4 py-2 border-b whitespace-nowrap">Dr. Rina Dewi, M.Kom.</td>
                             <td class="text-left px-4 py-2 border-b whitespace-nowrap">Dr. Joko Prasetyo, M.Kom.</td>
                             <td class="text-left px-4 py-2 border-b whitespace-nowrap">Prof. Dr. Bambang Sutrisno</td>
                             <td class="text-left px-4 py-2 border-b whitespace-nowrap">Jum'at</td>
@@ -101,13 +114,29 @@
                             <td class="text-center px-4 py-2 border-b whitespace-nowrap">13:00 - 15:00 WIB</td>
                             <td class="text-center px-4 py-2 border-b whitespace-nowrap">R. Sidang 2</td>
                             <td class="text-center px-4 py-2 border-b">
-                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">
+                                <span class="status-label status-terjadwal px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800 hidden">
+                                    Terjadwal
+                                </span>
+                                <span class="status-label status-pending px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">
                                     Pending
                                 </span>
+                                <span class="status-label status-selesai px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800 hidden">
+                                    Selesai
+                                </span>
                             </td>
-                            <td class="text-left px-4 py-2 border-b">
-                                <button class="text-blue-600 hover:text-blue-900 mr-3"><i class="bi bi-pencil-square"></i></button>
-                                <button class="text-red-600 hover:text-red-900"><i class="bi bi-trash"></i></button>
+                            <td class="text-left px-4 py-2 border-b whitespace-nowrap">
+                                <a href="#" onclick="showStatus(this, 'pending')">
+                                    <i class="fas fa-clock icon-box hover:bg-orange-300"></i>
+                                </a>
+                                <a href="#" onclick="showStatus(this, 'terjadwal')">
+                                    <i class="fas fa-check-circle icon-box hover:bg-green-300"></i>
+                                </a>
+                                <a href="#" onclick="showStatus(this, 'selesai')">
+                                    <i class="fas fa-check icon-box hover:bg-blue-400"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fas fa-pencil icon-box hover:bg-gray-400"></i>
+                                </a>
                             </td>
                         </tr>
 
@@ -117,7 +146,6 @@
                             <td class="text-left px-4 py-0.5 border-b whitespace-nowrap">Citra Dewi</td>
                             <td class="text-center px-4 py-0.5 border-b">19082010001</td>
                             <td class="text-left px-4 py-2 border-b whitespace-nowrap">Optimasi Algoritma dengan ML</td>
-                            <td class="text-left px-4 py-2 border-b whitespace-nowrap">Prof. Dr. Bambang Sutrisno</td>
                             <td class="text-left px-4 py-2 border-b whitespace-nowrap">Dr. Ani Wijaya, M.Kom.</td>
                             <td class="text-left px-4 py-2 border-b whitespace-nowrap">Dr. Ahmad Fauzi, M.Kom.</td>
                             <td class="text-left px-4 py-2 border-b whitespace-nowrap">Kamis</td>
@@ -125,13 +153,29 @@
                             <td class="text-center px-4 py-2 border-b whitespace-nowrap">10:00 - 12:00 WIB</td>
                             <td class="text-center px-4 py-2 border-b whitespace-nowrap">R. Sidang 3</td>
                             <td class="text-center px-4 py-2 border-b">
-                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">
+                                <span class="status-label status-terjadwal px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800 hidden">
+                                    Terjadwal
+                                </span>
+                                <span class="status-label status-pending px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">
+                                    Pending
+                                </span>
+                                <span class="status-label status-selesai px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800 hidden">
                                     Selesai
                                 </span>
                             </td>
-                            <td class="text-left px-4 py-2 border-b">
-                                <button class="text-blue-600 hover:text-blue-900 mr-3"><i class="bi bi-pencil-square"></i></button>
-                                <button class="text-red-600 hover:text-red-900"><i class="bi bi-trash"></i></button>
+                            <td class="text-left px-4 py-2 border-b whitespace-nowrap">
+                                <a href="#" onclick="showStatus(this, 'pending')">
+                                    <i class="fas fa-clock icon-box hover:bg-orange-300"></i>
+                                </a>
+                                <a href="#" onclick="showStatus(this, 'terjadwal')">
+                                    <i class="fas fa-check-circle icon-box hover:bg-green-300"></i>
+                                </a>
+                                <a href="#" onclick="showStatus(this, 'selesai')">
+                                    <i class="fas fa-check icon-box hover:bg-blue-400"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fas fa-pencil icon-box hover:bg-gray-400"></i>
+                                </a>
                             </td>
                         </tr>
                     </tbody>
@@ -186,4 +230,20 @@
         </div>
     </main>
 </div>
+<script>
+function showStatus(button, statusToShow) {
+    const td = button.closest('td').previousElementSibling;
+    const allStatus = td.querySelectorAll('.status-label');
+
+    allStatus.forEach(span => {
+        span.classList.add('hidden'); // sembunyikan semua
+    });
+
+    const target = td.querySelector(`.status-${statusToShow}`);
+    if (target) {
+        target.classList.remove('hidden'); // tampilkan yang sesuai
+    }
+}
+</script>
+
 @endsection

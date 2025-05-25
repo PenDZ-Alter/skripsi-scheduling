@@ -9,7 +9,7 @@ use App\Http\Controllers\AuthController;
 // Route antar Page
 Route::middleware(['auth'])->group(function() {
     Route::get('/home', [HomeController::class, 'index'])->name('mhs.home');
-    
+
     Route::get('/profile', [ProfileController::class, 'showProfile'])->name('mhs.profile');
 
     Route::get('/pembayaran', function () {
@@ -31,11 +31,11 @@ Route::middleware(['auth'])->group(function() {
     Route::get('/skripsi', function () {
         return view('dashboard.mahasiswa.skripsi');
     })->name('mhs.skripsi');
-    
+
     Route::get('/profileEdit', function () {
         return view('dashboard.mahasiswa.profileEdit');
     })->name('mhs.profileEdit');
-    
+
     Route::post('/upload-photo', [ProfileController::class, 'uploadPhoto'])->name('route_upload_photo');
 });
 
@@ -46,6 +46,10 @@ Route::get('/admin', function () {
 Route::get('/adminprofil', function () {
     return view('dashboard.admin.profile');
 })->name('adm.profile');
+
+Route::get('/jadwal', function () {
+    return view('dashboard.admin.jadwal');
+})->name('adm.jadwal');
 
 Route::get('/', function () {
     return view('auth.login');

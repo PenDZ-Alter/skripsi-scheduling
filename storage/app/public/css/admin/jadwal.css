@@ -27,3 +27,16 @@ table thead th {
     overflow-y: auto;
     border: 1px solid #ddd;
 }
+
+.icon-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;         /* ukuran kotak */
+    height: 32px;
+    /* background-color: blue;  warna kotak */
+    color: #333;         /* warna ikon */
+    border-radius: 4px;  /* bikin kotak melengkung, bisa ubah jadi 0 */
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* opsional: bayangan */
+}

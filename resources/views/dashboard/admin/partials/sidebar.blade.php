@@ -39,15 +39,15 @@
             <li style="padding-inline: 24px;" class="py-1">
                 <span class="sidebar-content">
                     <a href="">
-                        <i class="fa-regular fa-address-card icon-style"></i>
+                        <i class="fa-regular fa-calendar icon-style"></i>
                     </a>
-                    <a href="" class="text-style">Jadwal Sidang</a>
+                    <a href="{{ route('adm.jadwal') }}" class="text-style">Jadwal Sidang</a>
                 </span>
             </li>
             <li style="padding-inline: 24px;" class="py-1">
                 <span class="sidebar-content">
                     <a href="">
-                        <i class="fa-regular fa-address-card icon-style"></i>
+                        <i class="fa-regular fa-check-circle icon-style"></i>
                     </a>
                     <a href="" class="text-style">Verifikasi Mahasiswa</a>
                 </span>
