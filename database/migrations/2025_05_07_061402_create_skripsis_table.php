@@ -18,7 +18,8 @@ return new class extends Migration
             $table->unsignedBigInteger('dosen_pembimbing_1');
             $table->unsignedBigInteger('dosen_pembimbing_2');
             $table->string('judul');
-            $table->datetime('jadwal_sidang');
+            $table->datetime('jadwal_mulai');
+            $table->datetime('jadwal_selesai');
             $table->enum('status', ['unverified', 'belum_sidang', 'lulus', 'revisi'])->default('unverified');
             $table->timestamps();
     
