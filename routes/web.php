@@ -42,11 +42,11 @@ Route::middleware(['auth'])->group(function () {
 });
 
 Route::middleware([AdminMiddleware::class])->group(function () {
-    Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('adm.home');
-    Route::get('/admin/skripsi/{id}/edit', [AdminController::class, 'edit']);
-    Route::put('/admin/skripsi/{id}', [AdminController::class, 'update']);
+    Route::get('/admin', [AdminController::class, 'index'])->name('adm.home');
+    Route::get('/admin/skripsi/{id}/edit', [AdminController::class, 'edit'])->name('adm.skripsi.edit');
+    Route::put('/admin/skripsi/{id}', [AdminController::class, 'update'])->name('adm.skripsi.update');
 
-    Route::get('/adminprofil', function () {
+    Route::get('/admin/profile', function () {
         return view('dashboard.admin.profile');
     })->name('adm.profile');
 

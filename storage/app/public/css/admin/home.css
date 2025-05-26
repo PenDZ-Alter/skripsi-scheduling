@@ -1,124 +1,129 @@
-/* Global Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #fef8e4;
-    margin: 0;
-    padding: 0;
-}
+/* Tambahan styling agar layout mirip gambar */
 
-/* Container for the entire dashboard */
 .container {
+    padding: 20px;
     display: flex;
     flex-direction: column;
+    gap: 20px;
+}
+
+/* Layout atas jadi 2 kolom */
+.top-section {
+    display: flex;
+    gap: 20px;
+}
+
+/* Dashboard wrap */
+.dashboard-wrapper {
+    background-color: #fff;
     padding: 20px;
+    border-radius: 12px;
+    flex: 1;
 }
 
 /* Dashboard Grid */
 .dashboard {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-    margin-bottom: 30px;
+    gap: 20px;
 }
 
+/* Box styling seperti sebelumnya */
 .box {
-    height: 200px;
+    height: 150px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: white;
     transition: all 0.3s ease;
     padding: 10px;
+    text-align: center;
 }
 
-.green {
-    background-color: #4CAF50;
-}
+.green { background-color: #a3e635; color: #000; }
+.red { background-color: #dc2626; }
+.yellow { background-color: #facc15; color: #000; }
+.blue { background-color: #3b82f6; }
 
-.red {
-    background-color: #f44336;
-}
-
-.yellow {
-    background-color: #ffeb3b;
-    color: #333;
-}
-
-.blue {
-    background-color: #2196F3;
-}
-
-/* Icon styling */
 .box i {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 10px;
-}
-
-/* Hover effect for boxes */
-.box:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Menu Section */
 .menu {
     background-color: #fff;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 12px;
+    width: 300px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
 }
 
 .menu h3 {
+    text-align: center;
     font-size: 1.5rem;
     margin-bottom: 20px;
-    color: #333;
 }
+
 
 .menu-item {
-    background-color: #000;
+    background-color: #326d68; /* warna hijau gelap lembut */
     color: white;
-    padding: 12px;
-    margin-bottom: 10px;
-    text-align: center;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    padding: 10px 15px;
+    border-radius: 25px;
+    margin-bottom: 15px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-}
-
-/* Styling for the icons in the menu */
-.menu-item i {
-    margin-right: 10px;
-    font-size: 1.3rem;
+    gap: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
 }
 
 .menu-item:hover {
-    background-color: #444;
+    background-color: #417b74; /* sedikit lebih terang saat hover */
 }
 
-/* Quotes Section */
+/* Avatar bulat kiri */
+.avatar {
+    background-color: #d5f5e3; /* hijau muda pastel */
+    color: #2c3e50;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+/* Teks label */
+.menu-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+}
+
+
+/* Quotes */
 .quotes {
     background-color: #fff;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    text-align: center;
+    font-style: italic;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .quotes h3 {
     font-size: 1.5rem;
+    margin-bottom: 10px;
     color: #333;
-    margin-bottom: 15px;
 }
 
 .quotes p {
-    font-size: 1.2rem;
-    color: #555;
-    font-style: italic;
+    color: #444;
+    font-size: 1.1rem;
 }

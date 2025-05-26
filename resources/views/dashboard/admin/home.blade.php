@@ -3,52 +3,62 @@
 @section('content')
 
 <div class="container">
-    <!-- Dashboard Section -->
-    <div class="dashboard">
-        <div class="box green">
-            <i class="fas fa-check-circle"></i>
-            <h3>1200 Mahasiswa Aktif</h3>
+    <!-- Wrapper Dashboard + Menu -->
+    <div class="top-section">
+        <!-- Dashboard Section -->
+        <div class="dashboard-wrapper">
+            <div class="dashboard">
+                <div class="box green">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>1200 Mahasiswa Aktif</h3>
+                </div>
+                <div class="box red">
+                    <i class="fas fa-minus-circle"></i>
+                    <h3>54 Mahasiswa Non-Aktif</h3>
+                </div>
+                <div class="box yellow">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <h3>200 Mahasiswa Cuti</h3>
+                </div>
+                <div class="box blue">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>438 Mahasiswa Lulus</h3>
+                </div>
+            </div>
         </div>
-        <div class="box red">
-            <i class="fas fa-times-circle"></i>
-            <h3>54 Mahasiswa Non-Aktif</h3>
-        </div>
-        <div class="box yellow">
-            <i class="fas fa-arrow-left"></i>
-            <h3>200 Mahasiswa Cuti</h3>
-        </div>
-        <div class="box blue">
-            <i class="fas fa-graduation-cap"></i>
-            <h3>438 Mahasiswa Lulus</h3>
-        </div>
-    </div>
 
-    <!-- Menu Section -->
-    <div class="menu">
-        <h3>MENU</h3>
-        <div class="menu-item">
-            <i class="fas fa-user"></i> Profile 1
-        </div>
-        <div class="menu-item">
-            <i class="fas fa-user"></i> Profile 2
-        </div>
-        <div class="menu-item">
-            <i class="fas fa-user"></i> Profile 3
-        </div>
-        <div class="menu-item">
-            <i class="fas fa-user"></i> Profile 4
-        </div>
-        <div class="menu-item">
-            <i class="fas fa-user"></i> Profile 5
+        <!-- Menu Section -->
+        <div class="menu">
+            <h3>MENU</h3>
+            <div class="menu-item">
+                <div class="avatar"><i class="fas fa-user"></i></div>
+                <div class="menu-label"></div>
+            </div>
+            <div class="menu-item">
+                <div class="avatar"><i class="fas fa-user"></i></div>
+                <div class="menu-label"></div>
+            </div>
+            <div class="menu-item">
+                <div class="avatar"><i class="fas fa-user"></i></div>
+                <div class="menu-label"></div>
+            </div>
+            <div class="menu-item">
+                <div class="avatar"><i class="fas fa-user"></i></div>
+                <div class="menu-label"></div>
+            </div>
+            <div class="menu-item">
+                <div class="avatar"><i class="fas fa-user"></i></div>
+                <div class="menu-label"></div>
+            </div>
         </div>
     </div>
 
     <!-- Quotes Section -->
     <div class="quotes">
         <h3>Quotes</h3>
-        <p>Orang yang hebat adalah mereka yang bersyukur, mengucapkan terima kasih, dan melihat kebaikan dalam orang lain, bukan fokus pada kesalahan mereka.</p>
+        <p>Orang yang hebat adalah mereka yang bersyukur, mengucapkan terima kasih,<br>
+           dan melihat kebaikan dalam orang lain, bukan fokus pada kesalahan mereka.</p>
     </div>
-
 </div>
 
 @endsection
