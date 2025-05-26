@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="storage/css/admin/jadwal.css">
     <link rel="stylesheet" href="storage/css/admin/HomePage.css">
     <link rel="stylesheet" href="storage/css/admin/profile.css">
+    <link rel="stylesheet" href="storage/css/admin/home.css">
 </head>
 
 
