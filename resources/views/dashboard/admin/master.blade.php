@@ -11,12 +11,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../storage/css/admin/header.css">
-    <link rel="stylesheet" href="../storage/css/admin/sidebar.css">
-    <link rel="stylesheet" href="../storage/css/admin/jadwal.css">
-    <link rel="stylesheet" href="../storage/css/admin/HomePage.css">
-    <link rel="stylesheet" href="../storage/css/admin/profile.css">
-    <link rel="stylesheet" href="../storage/css/admin/home.css">
+    <link rel="stylesheet" href="../storage/css/admin/header-admin.css">
+    <link rel="stylesheet" href="../storage/css/admin/sidebar-admin.css">
+    <link rel="stylesheet" href="../storage/css/admin/jadwal-admin.css">
+    <link rel="stylesheet" href="../storage/css/admin/profile-admin.css">
+    <link rel="stylesheet" href="../storage/css/admin/home-admin.css">
+    <link rel="stylesheet" href="../storage/css/admin/footer-admin.css">
 </head>
 
 

@@ -1,0 +1,29 @@
+.footer {
+    position: sticky;
+    bottom: 0;
+    z-index: 40;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(209, 191, 163, 0.6); /* semi-transparent untuk blur */
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer .container {
+    background-color: transparent !important;
+    box-shadow: none;
+}
+
+.footer-text {
+    margin-bottom: 0.5rem;
+}
+
+.underline {
+    color: rgba(0, 105, 148, 1);
+    text-decoration: none;
+}
+
+.underline:hover {
+    color: rgba(0, 105, 148, 0.8);
+    text-decoration: underline;
+}

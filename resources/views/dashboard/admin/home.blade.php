@@ -52,5 +52,8 @@
             <p>Orang yang hebat adalah mereka yang bersyukur, mengucapkan terima kasih,<br>
                 dan melihat kebaikan dalam orang lain, bukan fokus pada kesalahan mereka.</p>
         </div>
+
+        <div style="margin-bottom: 10rem;">
+        </div>
     </div>
 @endsection

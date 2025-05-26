@@ -10,6 +10,10 @@
     /* Hijau lebih gelap saat hover */
 }
 
+.text-style-sidang {
+    margin-left: 0.2rem !important;
+}
+
 .text-style:hover {
     color: white;
     /* Ubah teks menjadi putih saat hover */
@@ -179,4 +183,8 @@
     100% {
         transform: rotate3d(0, 0, 0, 0deg);
     }
+}
+
+.title-sidebar {
+    margin-left: 0.3rem !important;
 }
