@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('nama_ruang');
             $table->integer('nomor_ruang');
-            $table->timestamps();
         });
     }
 
