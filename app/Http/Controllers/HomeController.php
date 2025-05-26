@@ -16,10 +16,14 @@ class HomeController extends Controller
         switch ($user->role) {
             case 'admin':
                 return redirect()->route('adm.home');
-            case 'dosen':
+            case 'mahasiswa':
                 return redirect()->route('mhs.home');
             default:
                 abort(403, 'Role tidak dikenali.');
         }
+    }
+
+    public function userView() {
+        return view('dashboard.mahasiswa.home');
     }
 }
