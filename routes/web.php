@@ -10,7 +10,7 @@ use App\Http\Middleware\AdminMiddleware;
 
 // Route antar Page
 Route::middleware(['auth'])->group(function () {
-    Route::get('/home', [HomeController::class, 'userView'])->name('mhs.home');
+    Route::get('/home', [HomeController::class, 'index'])->name('mhs.home');
 
     Route::get('/profile', [ProfileController::class, 'showProfile'])->name('mhs.profile');
 
