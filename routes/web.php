@@ -1,13 +1,15 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AuthController;
+use App\Http\Middleware\AdminMiddleware;
 
 
 // Route antar Page
-Route::middleware(['auth'])->group(function() {
+Route::middleware(['auth'])->group(function () {
     Route::get('/home', [HomeController::class, 'index'])->name('mhs.home');
 
     Route::get('/profile', [ProfileController::class, 'showProfile'])->name('mhs.profile');
@@ -39,16 +41,19 @@ Route::middleware(['auth'])->group(function() {
     Route::post('/upload-photo', [ProfileController::class, 'uploadPhoto'])->name('route_upload_photo');
 });
 
-Route::get('/admin', function () {
-    return view('dashboard.admin.home');
-})->name('adm.home');
+Route::middleware([AdminMiddleware::class])->group(function () {
+    Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('adm.home');
+    Route::get('/admin/skripsi/{id}/edit', [AdminController::class, 'edit']);
+    Route::put('/admin/skripsi/{id}', [AdminController::class, 'update']);
 
-Route::get('/adminprofil', function () {
-    return view('dashboard.admin.profile');
-})->name('adm.profile');
-Route::get('/admin/jadwal', function () {
-    return view('dashboard.admin.jadwal');
-})->name('adm.jadwal');
+    Route::get('/adminprofil', function () {
+        return view('dashboard.admin.profile');
+    })->name('adm.profile');
+
+    Route::get('/admin/jadwal', function () {
+        return view('dashboard.admin.jadwal');
+    })->name('adm.jadwal');
+});
 
 Route::get('/', function () {
     return view('auth.login');
