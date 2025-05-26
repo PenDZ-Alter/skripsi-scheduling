@@ -1,42 +1,58 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AuthController;
+use App\Http\Middleware\AdminMiddleware;
 
 
 // Route antar Page
-Route::middleware(['auth'])->group(function() {
-    Route::get('/home', [HomeController::class, 'index'])->name('home');
-    
-    Route::get('/profile', [ProfileController::class, 'showProfile'])->name('profile');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/home', [HomeController::class, 'index'])->name('mhs.home');
+
+    Route::get('/profile', [ProfileController::class, 'showProfile'])->name('mhs.profile');
 
     Route::get('/pembayaran', function () {
-        return view('dashboard.pembayaran');
-    })->name('pembayaran');
+        return view('dashboard.mahasiswa.pembayaran');
+    })->name('mhs.pembayaran');
 
     Route::get('/studi', function () {
-        return view('dashboard.studi');
-    })->name('studi');
+        return view('dashboard.mahasiswa.studi');
+    })->name('mhs.studi');
 
     Route::get('/statistik', function () {
-        return view('dashboard.statistik');
-    })->name('statistik');
+        return view('dashboard.mahasiswa.statistik');
+    })->name('mhs.statistik');
 
     Route::get('/transkrip', function () {
-        return view('dashboard.transkrip');
-    })->name('transkrip');
+        return view('dashboard.mahasiswa.transkrip');
+    })->name('mhs.transkrip');
 
     Route::get('/skripsi', function () {
-        return view('dashboard.skripsi');
-    })->name('skripsi');
-    
+        return view('dashboard.mahasiswa.skripsi');
+    })->name('mhs.skripsi');
+
     Route::get('/profileEdit', function () {
-        return view('dashboard.profileEdit');
-    })->name('profileEdit');
-    
+        return view('dashboard.mahasiswa.profileEdit');
+    })->name('mhs.profileEdit');
+
     Route::post('/upload-photo', [ProfileController::class, 'uploadPhoto'])->name('route_upload_photo');
+});
+
+Route::middleware([AdminMiddleware::class])->group(function () {
+    Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('adm.home');
+    Route::get('/admin/skripsi/{id}/edit', [AdminController::class, 'edit']);
+    Route::put('/admin/skripsi/{id}', [AdminController::class, 'update']);
+
+    Route::get('/adminprofil', function () {
+        return view('dashboard.admin.profile');
+    })->name('adm.profile');
+
+    Route::get('/admin/jadwal', function () {
+        return view('dashboard.admin.jadwal');
+    })->name('adm.jadwal');
 });
 
 Route::get('/', function () {
@@ -54,5 +70,4 @@ Route::post('/login/submit', [AuthController::class, 'handleLogin'])->name('logi
 
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-// Route Fungsi Upload Foto
-
+Route::get('/forgotPassword', [AuthController::class, 'showForgotPassword'])->name('forgotPasswordPage');

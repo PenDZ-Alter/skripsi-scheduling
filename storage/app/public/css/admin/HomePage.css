@@ -1,0 +1,719 @@
+Bagian Profile
+
+.profile-card {
+    background-color: #FFFFFF;
+    box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.15);
+    padding: 1.5rem;
+    border-radius: 0.375rem;
+    position: relative;
+}
+
+.info-profile {
+    margin-top: 1rem;
+    margin-left: 3.125rem;
+}
+
+.judul-text {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.link-profile {
+    font-size: 0.90rem;
+    color: #2563EB;
+}
+
+.link-ubahPassword {
+    color: #2563EB;
+}
+
+.link-Email {
+    color: #2563EB;
+}
+
+.link-aktivasiEmail {
+    color: #2563EB;
+}
+
+.link-profile:hover {
+    color: rgba(25, 99, 235, 0.5);
+}
+
+.link-ubahPassword:hover {
+    color: rgba(25, 99, 235, 0.5);
+    text-decoration: underline;
+    text-decoration-color: rgba(25, 99, 235, 0.5);
+}
+
+.link-Email:hover {
+    color: rgba(25, 99, 235, 0.5);
+    text-decoration: underline;
+    text-decoration-color: rgba(25, 99, 235, 0.5);
+}
+
+.link-aktivasiEmail:hover {
+    color: rgba(25, 99, 235, 0.5);
+    text-decoration: underline;
+    text-decoration-color: rgba(25, 99, 235, 0.5);
+}
+
+.text-pertama {
+    margin-top: 3px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.4rem;
+}
+
+.text-kedua {
+    margin-top: 3px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.4rem;
+}
+
+.text-ketiga {
+    margin-top: 3px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.4rem;
+}
+
+.text-keempat {
+    margin-left: 0.625rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.4rem;
+}
+
+.paragraf-Email {
+    margin-right: -0.10rem;
+}
+
+.text-kelima {
+    margin-top: 3px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.4rem;
+}
+
+/* Link Style */
+
+.title-Link {
+    text-align: right;
+    font-size: 1.3rem;
+    font-weight: 350;
+    color: rgba(75, 85, 99, 1);
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+.link-springer {
+    display: block;
+    background: linear-gradient(to right, rgba(254, 215, 170, 0.1), #fed7aa);
+    color: #4B5563;
+    text-align: right;
+    font-size: 0.80rem;
+    font-weight: 500;
+    padding-inline: 16px;
+    padding-block: 0.3px;
+    border-radius: 0.25rem;
+}
+
+.link-emerald {
+    display: block;
+    background: linear-gradient(to right, rgba(190, 242, 100, 0.1), #bef264);
+    color: #4B5563;
+    text-align: right;
+    font-size: 0.80rem;
+    font-weight: 500;
+    padding-inline: 16px;
+    padding-block: 0.3px;
+    border-radius: 0.25rem;
+}
+
+.link-cambridge {
+    display: block;
+    background: linear-gradient(to right, rgba(254, 240, 138, 0.1), #fef08a);
+    color: #4B5563;
+    text-align: right;
+    font-size: 0.80rem;
+    font-weight: 500;
+    padding-inline: 16px;
+    padding-block: 0.3px;
+    border-radius: 0.25rem;
+}
+
+.link-springer:hover {
+    color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.link-emerald:hover {
+    color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.link-cambridge:hover {
+    color: rgba(0, 0, 0, 0.4) !important;
+}
+
+.first-laquo {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.second-laquo {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.third-laquo {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* Icon Camera Picture Profile */
+
+.background-Image {
+    width: 100%;
+    height: 100%;
+    opacity: 10%;
+    object-fit: cover;
+    background-color: grey;
+}
+
+.content-Card {
+    position: relative;
+    z-index: 10;
+    display: grid;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.card-Profile {
+    align-items: flex-start;
+    display: flex;
+}
+
+.profile-Image-background {
+    height: 150px;
+    width: 150px;
+    margin-top: 10px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.profile-Image-background1 {
+    display: inline-block;
+    position: relative;
+}
+
+.profile-Image-background1::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
+}
+
+.profile-Image-background1:hover::after {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.profile-wrapper {
+    position: relative;
+    width: 140px;
+    height: 160px;
+}
+
+.camera-fix {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    bottom: -30px;
+    right: -5px;
+    top: 30px;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 1s;
+}
+
+.camera-fix:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.camera.fix img {
+    object-fit: fill;
+
+}
+
+.hidden {
+    display: none;
+}
+
+/* Dropdown Grafik IP dan IPK */
+
+.Card {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.card-Chart {
+    width: 70rem;
+    height: 25rem;
+    box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(to right, #F0FFFF, #FFFFFF);
+    border-radius: 6px;
+    display: flex;
+    gap: 1.5rem;
+    border-radius: 0.375rem;
+    padding: 1rem;
+}
+
+.chart-IP {
+    height: 23rem;
+    width: 48rem;
+    background: none !important;
+    box-shadow: none !important;
+    padding: 1rem;
+    border-radius: 0.375rem;
+    text-align: center;
+}
+
+.dropdown-button {
+    height: 10rem;
+    width: 10rem;
+    position: absolute;
+}
+
+.dropdown-menu {
+    height: 30px;
+    width: 35px;
+    cursor: pointer;
+    background-color: azure !important;
+    color: lightslategrey;
+    font-weight: 900;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+    border: 2px solid lightgray !important;
+    border-radius: 8px;
+}
+
+.dropdown-menu:hover {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    opacity: 0.8 !important;
+}
+
+.export-menu {
+    position: absolute;
+    background-color: white;
+    border: 1px solid rgba(75, 85, 99, 1);
+    border-radius: 0.375rem;
+    box-shadow: -4px 8px 6px rgba(0, 0, 0, 0.15);
+    width: 9rem;
+    margin-top: 10px;
+    margin-left: -16px;
+    z-index: 10;
+    font-size: 0.875rem;
+}
+
+.menu-item {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: rgba(75, 85, 99, 1);
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.menu-item:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.chart-IP-text {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.mahasiswa-Information {
+    font-size: 0.875rem;
+    color: rgba(75, 85, 99, 1);
+    margin-bottom: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+}
+
+.mahasiswa-Name {
+    letter-spacing: -0.01rem;
+}
+
+/* Navigasi Grafik IP dan IPK */
+
+.card-Swiper {
+    margin-right: 2rem !important;
+    width: 20rem;
+    height: 20rem;
+    position: relative;
+}
+
+.swiper-pagination-bullet {
+    background-color: white !important;
+    opacity: 0.6;
+    width: 20px;
+    height: 5px;
+    border-radius: 10px;
+    transition: all 0.7s ease-out;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #3F51B5 !important;
+    opacity: 1;
+}
+
+.swiper-pagination {
+    bottom: 19px !important;
+    left: 5px !important;
+}
+
+.swiper-pagination-bullet:hover {
+    background-color: rgba(63, 81, 181, 0.7) !important;
+    opacity: 1 !important;
+}
+
+.swiper-slider img {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.swiper-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    width: 30px !important;
+    height: 30px !important;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 24px !important;
+    font-weight: bolder;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0.8;
+}
+
+.Image1 {
+    position: relative;
+    display: inline-block;
+}
+
+.Image1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
+}
+
+.Image1:hover::after {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.Image1-Style {
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.Image2 {
+    position: relative;
+    display: inline-block;
+}
+
+.Image2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
+}
+
+.Image2:hover::after {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.Image2-Style {
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.Image3 {
+    position: relative;
+    display: inline-block;
+}
+
+.Image3::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
+}
+
+.Image3:hover::after {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.Image3-Style {
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.Image4 {
+    position: relative;
+    display: inline-block;
+}
+
+.Image4::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
+}
+
+.Image4:hover::after {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.Image4-Style {
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.Image5 {
+    position: relative;
+    display: inline-block;
+}
+
+.Image5::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
+}
+
+.Image5:hover::after {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.Image5-Style {
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.Image6 {
+    position: relative;
+    display: inline-block;
+}
+
+.Image6::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
+}
+
+.Image6:hover::after {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.Image7-Style {
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.Image7::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
+}
+
+.Image7:hover::after {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.Image7-Style {
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+/* Student Information */
+
+.student-info {
+    width: 100%;
+    padding-right: 0;
+}
+
+.info-box {
+    box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(to right, rgba(255, 255, 250, 0.7), #FFFFFF);
+    padding: 1rem;
+    border-radius: 0.375rem;
+}
+
+.status-indicator {
+    display: inline-block;
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: rgba(40, 167, 69, 1);
+    border: 2px solid rgba(40, 167, 69, 1);
+    box-shadow: 1px 1px 4px rgba(40, 167, 69, 0.7);
+    animation: pulse 3s infinite;
+    border-radius: 50%;
+    margin-right: 0.7rem;
+}
+
+.beside-status {
+    margin-left: -7px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.label {
+    width: 25%;
+    min-width: 120px;
+    margin-left: 1.5rem;
+    font-size: 90%;
+    font-weight: 600;
+}
+
+.value {
+    flex-grow: 1;
+    font-size: 89%;
+    font-weight: 500;
+    padding-left: 1rem;
+    padding-bottom: 3px;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #ddd;
+}
+
+@media (max-width: 576px) {
+
+    .label,
+    .value {
+        width: 100%;
+    }
+}
+
+/* Calendar Kuliah */
+
+.calendar-card {
+    background-color: rgba(255, 255, 255, 1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.15);
+    width: 34.5rem;
+}
+
+.calendar-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.calendar-title i {
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
+.calendar-description {
+    color: gray;
+    font-size: 0.85rem;
+}
+
+/* Quotes */
+
+.background-quotes {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.15) !important;
+}
+
+.quotes-description {
+    margin-left: 2rem;
+    margin-top: 0.2rem;
+    font-style: italic;
+    color: rgba(0, 0, 0, 1);
+    font-weight: 500;
+    font-size: 90%;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace !important;
+}
+
+.quotes-end {
+    margin-left: 2rem;
+    margin-top: 1rem !important;
+    font-size: small;
+    color: rgba(108, 117, 125, 1);
+    font-weight: lighter !important;
+}

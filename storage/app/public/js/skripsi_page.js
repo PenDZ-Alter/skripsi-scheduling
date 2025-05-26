@@ -1,5 +1,5 @@
- // Open modal
- function openModal() {
+// Open modal
+function openModal() {
     document.getElementById('modal').style.display = 'flex';
 }
 

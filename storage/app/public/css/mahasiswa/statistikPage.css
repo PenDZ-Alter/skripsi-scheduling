@@ -1,0 +1,204 @@
+/* Style Chart Pie */
+.card-Chart-Pie {
+    background-color: rgba(255, 255, 255, 1) !important;
+    color: #000 !important;
+    border-radius: 8px;
+    flex-grow: 1;
+    padding: 10px;
+    box-shadow: 3px 8px 6px 3px rgba(0, 0, 0, 0.15) !important;
+    width: max-content;
+    height: max-content;
+    align-items: center !important;
+    margin-left: 25rem;
+    margin-bottom: 3rem;
+}
+
+/* Style Emoji Section */
+.card-Emoji-header {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 1.5rem !important;
+    justify-content: flex-start;
+}
+
+.emoji-section {
+    margin-top: 40px;
+    background-color: #ffffff;
+    box-shadow: 3px 8px 6px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: -0.5rem;
+    max-width: 1050px;
+    margin: 40px auto;
+}
+
+.emoji-card-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.card-Emoji {
+    border: 2px solid #189ab4;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    width: 400px;
+    box-shadow: 3px 8px 6px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+}
+
+.emoji {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.angka {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.keterangan {
+    font-size: 16px;
+    color: #444;
+}
+
+/* Style Chart Bar */
+.chart-card {
+    width: 93%;
+    margin: 40px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    padding: 20px;
+    background-color: #ffffff !important;
+    color: #000 !important;
+}
+
+.card-body {
+    background-color: #ffffff !important;
+    color: #000 !important;
+}
+
+.card-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-text {
+    text-align: center;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+/* Dropdown button */
+.dropdown-button-statistik-chart {
+    height: 11rem;
+    width: 11rem;
+    position: absolute;
+    margin-left: 1rem !important;
+    margin-top: 1.5rem;
+}
+
+.dropdown-button-statistik-bar {
+    height: 11rem;
+    width: 11rem;
+    position: absolute;
+    margin-left: 1.25rem;
+    margin-top: 1rem;
+}
+
+.dropdown-menu-statistik-chart {
+    height: 30px;
+    width: 35px;
+    cursor: pointer;
+    background-color: azure !important;
+    color: lightslategrey;
+    font-weight: 900;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+    border: 2px solid lightgray !important;
+    border-radius: 8px;
+    text-align: center;
+    margin-left: 1rem;
+}
+
+.dropdown-menu-statistik-bar {
+    height: 30px;
+    width: 35px;
+    cursor: pointer;
+    background-color: azure !important;
+    color: lightslategrey;
+    font-weight: 900;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+    border: 2px solid lightgray !important;
+    border-radius: 8px;
+    text-align: center;
+    margin-left: -0.5rem !important;
+}
+
+.dropdown-menu-statistik-chart:hover {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    opacity: 0.8 !important;
+}
+
+.dropdown-menu-statistik-bar:hover {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    opacity: 0.8 !important;
+}
+
+.export-menu-statistik-chart {
+    position: absolute;
+    top: 30px;
+    left: -50px;
+    background-color: white;
+    border: 1px solid #ccc;
+    list-style: none;
+    padding: 10px;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+    border-radius: 8px;
+}
+
+.export-menu-statistik-bar {
+    position: absolute;
+    top: 30px;
+    left: -70px;
+    background-color: white;
+    border: 1px solid #ccc;
+    list-style: none;
+    padding: 10px;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+    border-radius: 8px;
+}
+
+.menu-item-statistik-chart {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: rgba(75, 85, 99, 1);
+    font-weight: 600;
+    font-size: 0.875rem;
+    border-radius: 4px;
+}
+
+.menu-item-statistik-chart:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-item-statistik-bar {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: rgba(75, 85, 99, 1);
+    font-weight: 600;
+    font-size: 0.875rem;
+    border-radius: 4px;
+}
+
+.menu-item-statistik-bar:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}

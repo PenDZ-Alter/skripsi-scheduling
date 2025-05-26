@@ -1,0 +1,146 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Bikin wrapper layout pakai flex column */
+.web-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Main konten fleksibel ngisi ruang */
+.main-content {
+    flex: 1;
+}
+
+.header-mahasiswa {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    padding: 1rem 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-bottom: 1px solid rgb(207, 199, 199);
+
+    /* Ini yang bikin blur background konten di belakang header */
+    background-color: rgba(209, 191, 163, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.header-content-mahasiswa {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.header-left-mahasiswa {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem; 
+}
+
+.greeting-mahasiswa {
+    font-size: 1.3rem;
+    color: black;
+    letter-spacing: 2px;
+    margin: 0;
+    font-weight: bolder;
+}
+
+.user-name-mahasiswa {
+    font-size: 0.9rem;
+    color: black;
+    font-weight: 300;
+    position: relative;
+    top: 3px;
+    left: 3px;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.header-right-mahasiswa {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid rgb(207, 199, 199);
+    padding: 0px 20px 5px 20px;      
+    border-radius: 100px;      
+    background-color: white; 
+}
+
+.status-indicator-header-mahasiswa {
+    display: inline-block;
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: rgba(40, 167, 69, 1);
+    box-shadow: 1px 1px 8px rgba(40, 167, 69, 0.7);
+    border: 2px solid rgba(40, 167, 69, 0.7);
+    animation: pulsed 2s infinite;
+    border-radius: 50%;
+    margin-right: -1.6rem;
+    margin-top: 0.5rem;
+}
+
+@keyframes pulsed {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
+    }
+    70% {
+        transform: scale(1.2);
+        box-shadow: 0 0 0 10px rgba(40, 167, 69, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+    }
+}
+
+.beside-status-header-mahasiswa {
+    width: 25%;
+    margin-left: 1.2rem;
+    margin-top: 0.4rem;
+    margin-right: -0.6rem;
+    min-width: 120px;
+    font-size: 80%;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #0c756f;
+}
+
+.footer-mahasiswa {
+    position: sticky;
+    bottom: 0;
+    z-index: 40;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(209, 191, 163, 0.6); /* semi-transparent untuk blur */
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer-mahasiswa .container {
+    background-color: transparent !important;
+    box-shadow: none;
+}
+
+.footer-text-mahasiswa {
+    margin-bottom: 0.5rem;
+}
+
+.underline {
+    color: rgba(0, 105, 148, 1);
+    text-decoration: none;
+}
+
+.underline:hover {
+    color: rgba(0, 105, 148, 0.8);
+    text-decoration: underline;
+}
