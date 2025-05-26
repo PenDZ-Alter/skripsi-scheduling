@@ -68,9 +68,8 @@
     margin-bottom: 20px;
 }
 
-
 .menu-item {
-    background-color: #326d68; /* warna hijau gelap lembut */
+    background-color: #326d68;
     color: white;
     padding: 10px 15px;
     border-radius: 25px;
@@ -83,12 +82,11 @@
 }
 
 .menu-item:hover {
-    background-color: #417b74; /* sedikit lebih terang saat hover */
+    background-color: #417b74;
 }
 
-/* Avatar bulat kiri */
 .avatar {
-    background-color: #d5f5e3; /* hijau muda pastel */
+    background-color: #d5f5e3;
     color: #2c3e50;
     border-radius: 50%;
     width: 40px;
@@ -97,6 +95,13 @@
     justify-content: center;
     align-items: center;
     font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.menu-text {
+    font-size: 1rem;
+    color: white;
+    white-space: nowrap;
 }
 
 /* Teks label */
