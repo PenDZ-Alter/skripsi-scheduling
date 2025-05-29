@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('subjects_schedule', function (Blueprint $table) {
+        Schema::create('subjects_schedules', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('dosen');
             $table->string('nama_matkul');
