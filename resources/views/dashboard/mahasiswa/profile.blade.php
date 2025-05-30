@@ -75,10 +75,6 @@
                                 <div class="col-3 label-profile"><span>Alamat Orang Tua</span></div>
                                 <div class="col-9 value-profile border-bottom">{{ $user->domisili_ortu }}</div>
                             </div>
-                            <div class="row-profile mb-2">
-                                <div class="col-3 label-profile"><span>Kota Orang Tua</span></div>
-                                <div class="col-9 value-profile border-bottom">{{ $user->domisili_ortu }}</div>
-                            </div>
                         </div>
                     </div>
 
