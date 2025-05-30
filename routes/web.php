@@ -30,9 +30,7 @@ Route::middleware(['auth'])->group(function () {
         return view('dashboard.mahasiswa.transkrip');
     })->name('mhs.transkrip');
 
-    Route::get('/skripsi', function () {
-        return view('dashboard.mahasiswa.skripsi');
-    })->name('mhs.skripsi');
+    Route::get('/skripsi', [HomeController::class, 'showSkripsi'])->name('mhs.skripsi');
 
     Route::get('/profileEdit', function () {
         return view('dashboard.mahasiswa.profileEdit');

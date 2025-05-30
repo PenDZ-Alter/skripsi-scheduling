@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -22,5 +23,15 @@ class HomeController extends Controller
         } else {
             return abort(403, "Role is unknown!");
         }
+    }
+
+    public function showSkripsi() {
+        $dosen = User::where('role', 'dosen')->get();
+
+        if (!$dosen) {
+            return redirect()->route('mhs.home');
+        }
+
+        return view('dashboard.mahasiswa.skripsi', compact('dosen'));
     }
 }

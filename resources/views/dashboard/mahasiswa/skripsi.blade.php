@@ -1,7 +1,6 @@
 @extends('dashboard.mahasiswa.master')
 
 @section('content')
-
 <div>
     <!-- Main Content -->
     <div class="main-content fade-in-up">
@@ -56,17 +55,19 @@
         <input type="text" id="deskripsi" placeholder="Deskripsi tugas akhir">
 
         <label for="dosen1">Dosen Pembimbing 1</label>
-        <select id="dosen1">
-            <option value="">Pilih Pembimbing 1</option>
-            <option value="dosen1">Dosen 1</option>
-            <option value="dosen2">Dosen 2</option>
+        <select id="dosen1" name="dosen1">
+            <option value="" disabled>Pilih Pembimbing 1</option>
+            @foreach ($dosen as $da)
+                <option value="{{ $da['id'] }}">{{ $da['name'] }}</option>
+            @endforeach
         </select>
 
         <label for="dosen2">Dosen Pembimbing 2</label>
-        <select id="dosen2">
-            <option value="">Pilih Pembimbing 2</option>
-            <option value="dosen1">Dosen 1</option>
-            <option value="dosen2">Dosen 2</option>
+        <select id="dosen2" name="dosen2">
+            <option value="" disabled>Pilih Pembimbing 2</option>
+            @foreach ($dosen as $db)
+                <option value="{{ $db['id'] }}">{{ $db['name'] }}</option>
+            @endforeach
         </select>
 
         <div>
