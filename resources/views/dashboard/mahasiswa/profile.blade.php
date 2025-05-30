@@ -53,11 +53,11 @@
                             </div>
                             <div class="row-profile mb-2">
                                 <div class="col-3 label-profile"><span>Tempat Lahir</span></div>
-                                <div class="col-9 value-profile border-bottom">MALANG</div>
+                                <div class="col-9 value-profile border-bottom">{{ $user->tempat_lahir }}</div>
                             </div>
                             <div class="row-profile mb-2">
                                 <div class="col-3 label-profile"><span>Tanggal Lahir</span></div>
-                                <div class="col-9 value-profile border-bottom">01 Januari 2007</div>
+                                <div class="col-9 value-profile border-bottom">{{ $user->tanggal_lahir }}</div>
                             </div>
                             <div class="row-profile mb-2">
                                 <div class="col-3 label-profile"><span>Email Pribadi</span></div>
