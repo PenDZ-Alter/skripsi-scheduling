@@ -2,7 +2,7 @@
     <div class="header-content-mahasiswa">
         <div class="header-left-mahasiswa">
             <h1 class="greeting-mahasiswa">Salam,</h1>
-            <p class="user-name-mahasiswa">ALFARIZ MUHAN MANDEGA</p>
+            <p class="user-name-mahasiswa">{{ $user['name'] }}</p>
         </div>
 
         <div class="header-right-mahasiswa">

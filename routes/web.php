@@ -14,21 +14,13 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/profile', [ProfileController::class, 'showProfile'])->name('mhs.profile');
 
-    Route::get('/pembayaran', function () {
-        return view('dashboard.mahasiswa.pembayaran');
-    })->name('mhs.pembayaran');
+    Route::get('/pembayaran', [HomeController::class, 'showPembayaran'])->name('mhs.pembayaran');
 
-    Route::get('/studi', function () {
-        return view('dashboard.mahasiswa.studi');
-    })->name('mhs.studi');
+    Route::get('/studi', [HomeController::class, 'showStudi'])->name('mhs.studi');
 
-    Route::get('/statistik', function () {
-        return view('dashboard.mahasiswa.statistik');
-    })->name('mhs.statistik');
+    Route::get('/statistik', [HomeController::class, 'showStatistik'])->name('mhs.statistik');
 
-    Route::get('/transkrip', function () {
-        return view('dashboard.mahasiswa.transkrip');
-    })->name('mhs.transkrip');
+    Route::get('/transkrip', [HomeController::class, 'showTranskrip'])->name('mhs.transkrip');
 
     Route::get('/skripsi', [HomeController::class, 'showSkripsi'])->name('mhs.skripsi');
 

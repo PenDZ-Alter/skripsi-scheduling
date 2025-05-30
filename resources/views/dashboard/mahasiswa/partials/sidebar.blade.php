@@ -9,8 +9,8 @@
     <!-- Informasi Mahasiswa -->
     <span class="profil flex items-center justify-between">
         <div class="flex flex-col">
-            <div class="name-profile">ALFARIZ MUHAN M</div>
-            <div class="iconName-profile">220605110131</div>
+            <div class="name-profile">{{ $user['name'] }}</div>
+            <div class="iconName-profile">{{ $user['id'] }}</div>
         </div>
         <!-- Ikon di sebelah kanan -->
         <a href="{{ route('login') }}">

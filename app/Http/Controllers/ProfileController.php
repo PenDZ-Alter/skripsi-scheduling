@@ -20,7 +20,7 @@ class ProfileController extends Controller
 
     public function showProfile()
     {
-        $user = Auth::user();
+        $user = auth()->user();
         return view('dashboard.mahasiswa.profile', compact('user'));
     }
 

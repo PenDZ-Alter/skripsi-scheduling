@@ -3,7 +3,7 @@
     <div class="header-content-profilepage">
         <div class="header-left-profilepage">
             <h1 class="greeting-profilepage">Salam,</h1>
-            <p class="user-name-profilepage">GLBK</p> 
+            <p class="user-name-profilepage">{{ $user['name'] }}</p> 
         </div>
 
         <div class="header-right-profilepage">

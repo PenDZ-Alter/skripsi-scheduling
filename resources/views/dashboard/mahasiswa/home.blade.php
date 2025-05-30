@@ -3,7 +3,7 @@
 @section('content')
 <!-- Greet Card -->
 <div class="greeting-card fade-in-up">
-    <h2>Hai, Alfariz 👋</h2>
+    <h2>Hai, {{ $user['name'] }} 👋</h2>
     <p><i>Semangat menuntaskan semester ini, semoga IPK-nya naik terus ya!</i></p>
     <br>
     <h2>Nih Akses gampang buat kamu explore!</h2>
@@ -107,7 +107,7 @@
             <!-- Judul -->
             <h3 class="chart-IP-text">Grafik Indeks Prestasi</h3>
             <p class="mahasiswa-Information">
-                220605110025 - <span class="mahasiswa-Name">ALFARIZ MUHAN MANDEGA</span>
+                220605110025 - <span class="mahasiswa-Name">{{ $user['name'] }}</span>
             </p>
             <canvas id="grafikIP" height="110" width="auto"></canvas>
         </div>
@@ -178,7 +178,7 @@
                         <span class="font-semibold">NIM</span>
                     </div>
                     <div class="col-9 value border-bottom">
-                        220605110025
+                        {{ $user['id'] }}
                     </div>
                 </div>
                 <div class="row mb-2">
