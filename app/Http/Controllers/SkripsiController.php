@@ -42,7 +42,7 @@ class SkripsiController extends Controller
 
     private function isTimeConflict($dosenId, $jadwalMulai, $jadwalSelesai)
     {
-        return DB::table('subjects_schedule')
+        return DB::table('subjects_schedules')
             ->where('dosen', $dosenId)
             ->where(function ($query) use ($jadwalMulai, $jadwalSelesai) {
                 $query->whereBetween('jadwal_mulai', [$jadwalMulai, $jadwalSelesai])
