@@ -54,5 +54,4 @@ class SkripsiController extends Controller
             })
             ->exists();
     }
-
 }
