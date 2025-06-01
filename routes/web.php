@@ -24,9 +24,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/skripsi', [HomeController::class, 'showSkripsi'])->name('mhs.skripsi');
 
-    Route::get('/profileEdit', function () {
-        return view('dashboard.mahasiswa.profileEdit');
-    })->name('mhs.profileEdit');
+    Route::get('/profileEdit', [HomeController::class, 'showProfileEdit'])->name('mhs.profileEdit');
 
     Route::post('/upload-photo', [ProfileController::class, 'uploadPhoto'])->name('route_upload_photo');
 });

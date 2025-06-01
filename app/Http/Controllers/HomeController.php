@@ -59,4 +59,10 @@ class HomeController extends Controller
 
         return view('dashboard.mahasiswa.pembayaran', compact('user'));
     }
+
+    public function showProfileEdit() {
+        $user = auth()->user();
+
+        return view('dashboard.mahasiswa.profileEdit', compact('user'));
+    }
 }

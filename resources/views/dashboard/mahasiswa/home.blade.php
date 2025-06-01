@@ -107,7 +107,7 @@
             <!-- Judul -->
             <h3 class="chart-IP-text">Grafik Indeks Prestasi</h3>
             <p class="mahasiswa-Information">
-                220605110025 - <span class="mahasiswa-Name">{{ $user['name'] }}</span>
+                {{ $user['id'] }} - <span class="mahasiswa-Name">{{ $user['name'] }}</span>
             </p>
             <canvas id="grafikIP" height="110" width="auto"></canvas>
         </div>
