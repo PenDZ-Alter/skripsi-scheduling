@@ -34,17 +34,17 @@
     color: black;
     letter-spacing: 2px;
     margin: 0;
-    font-weight: bolder;
+    font-weight: 400;
 }
 
 .user-name {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     color: black;
-    font-weight: 300;
+    font-weight: bold;
     position: relative;
-    top: 3px;
+    top: 2px;
     left: 3px;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     margin: 0;
 }
 

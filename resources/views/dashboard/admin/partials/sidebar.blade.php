@@ -9,8 +9,8 @@
     <!-- Informasi Mahasiswa -->
     <span class="profil flex items-center justify-between">
         <div class="flex flex-col">
-            <div class="name-profile">Nia Kurniasari</div>
-            <div class="iconName-profile">911</div>
+            <div class="name-profile">{{ $adminData->name }}</div>
+            <div class="iconName-profile">{{ $adminData->id }}</div>
         </div>
         <!-- Ikon di sebelah kanan -->
         <a href="{{ route('login') }}">

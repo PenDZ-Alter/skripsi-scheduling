@@ -11,7 +11,9 @@ use Carbon\Carbon;
 class AdminController extends Controller
 {
     public function index() {
-        return view("dashboard.admin.home");
+        $totalmahasiswa = User::where('role', 'mahasiswa')->count();
+
+        return view("dashboard.admin.home", compact('totalmahasiswa'));
     }
 
     public function edit($id)
