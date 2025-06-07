@@ -46,11 +46,11 @@
             </div>
         </div>
 
-        <!-- Quotes Section -->
-        <div class="quotes">
-            <h3>Quotes</h3>
-            <p>Orang yang hebat adalah mereka yang bersyukur, mengucapkan terima kasih,<br>
-                dan melihat kebaikan dalam orang lain, bukan fokus pada kesalahan mereka.</p>
+        <!-- Quotes -->
+        <div class="background-quotes fade-in-up">
+            <blockquote class="quotes-description">"Orang yang hebat adalah mereka yang bersyukur, mengucapkan terima kasih,
+                dan melihat kebaikan dalam orang lain, bukan fokus pada kesalahan mereka."</blockquote>
+            <span class="quotes-end">🌄 Positive Quotes</span>
         </div>
 
         <div style="margin-bottom: 10rem;">

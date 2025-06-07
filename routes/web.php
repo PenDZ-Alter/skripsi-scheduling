@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AuthController;
 use App\Http\Middleware\AdminMiddleware;
+use App\Http\Controllers\MahasiswaController;
 
 
 // Route antar Page
@@ -34,9 +35,7 @@ Route::middleware([AdminMiddleware::class])->group(function () {
     Route::get('/admin/skripsi/{id}/edit', [AdminController::class, 'edit'])->name('adm.skripsi.edit');
     Route::put('/admin/skripsi/{id}', [AdminController::class, 'update'])->name('adm.skripsi.update');
 
-    Route::get('/admin/profile', function () {
-        return view('dashboard.admin.profile');
-    })->name('adm.profile');
+    Route::get('/admin/profile', [MahasiswaController::class, 'showStudentData'])->name('adm.profile');
 
     Route::get('/admin/jadwal', function () {
         return view('dashboard.admin.jadwal');

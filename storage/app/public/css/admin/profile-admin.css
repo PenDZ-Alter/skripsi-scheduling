@@ -1,43 +1,48 @@
-/* Card section */
+/* Buat kontainer scroll horizontal */
+.horizontal-card-scroll {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 2rem;
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
+}
+
+/* Card-nya tetep seperti sebelumnya */
 .profile-page-card {
-    background: linear-gradient(to bottom, #f9fafb, #ffffff); /* Gradasi lembut */
-    width: 100%;
-    max-width: 20rem;
+    background: linear-gradient(to bottom, #f9fafb, rgba(255,255,255,1));
+    flex: 0 0 auto;
+    width: 20rem;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
     border-radius: 0.75rem;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     height: auto;
-    margin: 0 4rem 1.5rem 1rem;
+    scroll-snap-align: start;
     border: 1px solid #e5e7eb;
 }
 
-/* Hover effect */
+/* Hover effect & isi card */
 .profile-page-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
     cursor: pointer;
 }
-
-/* Tambahan: styling teks di dalam card */
 .profile-page-card h5.card-title {
-    color: #1f2937; /* abu gelap */
+    color: #1f2937;
     font-weight: 600;
     font-size: 1.25rem;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
 }
-
 .profile-page-card p.card-text {
-    color: #4b5563; /* abu-abu netral */
+    color: #4b5563;
     font-size: 0.95rem;
     line-height: 1.4;
 }
-
-/* Gambar di dalam card */
 .profile-page-card .card-img-top {
     border-radius: 0.5rem;
     object-fit: cover;
-    height: 200px;
+    height: 250px;
     width: 100%;
 }
