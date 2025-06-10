@@ -28,6 +28,7 @@
                     <!-- Modern Modal -->
                     <div class="modal fade" id="modalMhs{{ $mhs->id }}" tabindex="-1"
                         aria-labelledby="modalMhsLabel{{ $mhs->id }}" aria-hidden="true">
+                        <div class="modal-overlay"></div> 
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
@@ -40,7 +41,7 @@
                                         <img src="{{ asset('storage/img/UserImage.png') }}" alt="Foto Mahasiswa"
                                             class="profile-avatar">
                                         <h4 class="profile-name">{{ $mhs->name }}</h4>
-                                        <span class="profile-badge">Student</span>
+                                        <span class="profile-badge action-badge">Student</span>
                                     </div>
 
                                     <!-- Info Cards -->
