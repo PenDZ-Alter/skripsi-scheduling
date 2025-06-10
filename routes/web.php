@@ -37,6 +37,9 @@ Route::middleware([AdminMiddleware::class])->group(function () {
 
     Route::get('/admin/profile', [MahasiswaController::class, 'showStudentData'])->name('adm.profile');
 
+    Route::get('/admin/mahasiswa/{id}/edit', [MahasiswaController::class, 'edit'])->name('mahasiswa.edit');
+    Route::delete('/admin/mahasiswa/{id}', [MahasiswaController::class, 'destroy'])->name('mahasiswa.destroy');
+
     Route::get('/admin/jadwal', function () {
         return view('dashboard.admin.jadwal');
     })->name('adm.jadwal');

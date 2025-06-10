@@ -44,6 +44,7 @@
     <script type="text/javascript" src="../storage/js/chart.js"></script>
     <script type="text/javascript" src="../storage/js/picture-slider.js"></script>
     <script type="text/javascript" src="../storage/js/skripsi_page.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     @stack('scripts')
 </body>
 
