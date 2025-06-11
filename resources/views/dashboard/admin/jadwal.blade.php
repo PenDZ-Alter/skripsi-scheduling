@@ -30,9 +30,12 @@
                     <button class="btn btn-filter">
                         <i class="fas fa-filter"></i> Filter
                     </button>
-                    <button onclick="openModalTambah()" class="btn-primary">
-                        + Tambah Data
-                    </button>
+                    <div class="demo-container">
+                        <button class="btn-add" onclick="openModal()">
+                            <span>📅</span>
+                            Tambah Jadwal Sidang
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -159,36 +162,116 @@
         </div>
     </div>
 
-    <!-- MODAL TAMBAH DATA -->
-    <div id="modalTambah" class="modal-skripsi hidden">
+    <!-- Modal -->
+    <div class="modal-overlay-skripsi" id="modalOverlay-skripsi">
         <div class="modal-container">
-            <div class="modal-header">
-                <h2>Tambah Data Sidang</h2>
-                <button onclick="closeModalTambah()" class="close-btn">&times;</button>
+            <div class="modal-header-skripsi">
+                <h2 class="modal-title-skripsi">
+                    <span>📝</span>
+                    Tambah Jadwal Sidang
+                </h2>
+                <button class="close-btn" onclick="closeModal()">×</button>
             </div>
-            <div class="modal-body">
-                <form id="formTambahData" onsubmit="submitTambah(event)">
-                    <div class="form-grid">
-                        <input type="text" name="nama_mhs" placeholder="Nama Mahasiswa" required>
-                        <input type="text" name="nim" placeholder="NIM" required>
-                        <input type="text" name="judul" placeholder="Judul" required>
-                        <input type="text" name="penguji1" placeholder="Anggota Penguji I" required>
-                        <input type="text" name="penguji2" placeholder="Anggota Penguji II" required>
-                        <input type="text" name="hari" placeholder="Hari" required>
-                        <input type="date" name="tanggal" required>
-                        <input type="text" name="waktu" placeholder="Waktu (Contoh: 09:00 - 11:00 WIB)" required>
-                        <input type="text" name="tempat" placeholder="Tempat" required>
-                        <select name="status" required>
-                            <option value="pending">Pending</option>
-                            <option value="terjadwal">Terjadwal</option>
-                            <option value="selesai">Selesai</option>
-                        </select>
+            
+            <div class="modal-body-skripsi">
+                <form id="scheduleForm" onsubmit="handleSubmit(event)">
+                    <!-- Student Information Section -->
+                    <div class="form-section">
+                        <div class="section-card">
+                            <h3 class="section-title">
+                                <span>👤</span>
+                                Informasi Mahasiswa
+                            </h3>
+                            <div class="form-grid">
+                                <div class="form-field">
+                                    <label class="form-label">Nama Mahasiswa</label>
+                                    <input type="text" class="form-input" name="nama_mhs" placeholder="Masukkan nama lengkap" required>
+                                </div>
+                                <div class="form-field">
+                                    <label class="form-label">NIM</label>
+                                    <input type="text" class="form-input" name="nim" placeholder="Nomor Induk Mahasiswa" required>
+                                </div>
+                                <div class="form-field full-width">
+                                    <label class="form-label">Judul Skripsi</label>
+                                    <input type="text" class="form-input" name="judul" placeholder="Judul lengkap skripsi" required>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" onclick="closeModalTambah()" class="btn-secondary">Batal</button>
-                        <button type="submit" class="btn-save">Simpan</button>
+
+                    <!-- Supervisor Information Section -->
+                    <div class="form-section">
+                        <div class="section-card">
+                            <h3 class="section-title">
+                                <span>👨‍🏫</span>
+                                Dosen Pembimbing
+                            </h3>
+                            <div class="form-grid">
+                                <div class="form-field">
+                                    <label class="form-label">Pembimbing 1</label>
+                                    <input type="text" class="form-input" name="pembimbing1" placeholder="Nama dosen pembimbing 1" required>
+                                </div>
+                                <div class="form-field">
+                                    <label class="form-label">Pembimbing 2</label>
+                                    <input type="text" class="form-input" name="pembimbing2" placeholder="Nama dosen pembimbing 2" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Schedule Information Section -->
+                    <div class="form-section">
+                        <div class="section-card">
+                            <h3 class="section-title">
+                                <span>📅</span>
+                                Jadwal Sidang
+                            </h3>
+                            <div class="form-grid">
+                                <div class="form-field">
+                                    <label class="form-label">Tanggal</label>
+                                    <input type="date" class="form-input" name="tanggal" required>
+                                </div>
+                                <div class="form-field">
+                                    <label class="form-label">Waktu</label>
+                                    <input type="text" class="form-input" name="waktu" placeholder="09:00 - 11:00 WIB" required>
+                                </div>
+                                <div class="form-field full-width">
+                                    <label class="form-label">Tempat</label>
+                                    <input type="text" class="form-input" name="tempat" placeholder="Ruang sidang / lokasi" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Status Section -->
+                    <div class="form-section">
+                        <div class="section-card">
+                            <h3 class="section-title">
+                                <span>📊</span>
+                                Status Sidang
+                            </h3>
+                            <div class="status-options">
+                                <div class="status-option">
+                                    <input type="radio" id="pending" name="status" value="pending" checked>
+                                    <label for="pending">⏳ Pending</label>
+                                </div>
+                                <div class="status-option">
+                                    <input type="radio" id="scheduled" name="status" value="terjadwal">
+                                    <label for="scheduled">📋 Terjadwal</label>
+                                </div>
+                                <div class="status-option">
+                                    <input type="radio" id="completed" name="status" value="selesai">
+                                    <label for="completed">✅ Selesai</label>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </form>
+            </div>
+
+            <div class="modal-footer-skripsi">
+                <button type="button" class="btn-cancel-skripsi" onclick="closeModal()">Batal</button>
+                <button type="submit" class="btn-save-skripsi" form="scheduleForm">Simpan Jadwal</button>
             </div>
         </div>
     </div>
@@ -212,27 +295,66 @@
     </script>
 
     <script>
-        function openModalTambah() {
-            document.getElementById('modalTambah').classList.remove('hidden');
+        function openModal() {
+            const modal = document.getElementById('modalOverlay-skripsi');
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
         }
 
-        function closeModalTambah() {
-            document.getElementById('modalTambah').classList.add('hidden');
+        function closeModal() {
+            const modal = document.getElementById('modalOverlay-skripsi');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            
+            // Reset form
+            document.getElementById('scheduleForm').reset();
+            document.getElementById('pending').checked = true;
         }
 
-        function submitTambah(e) {
-            e.preventDefault();
-
-            const form = document.getElementById('formTambahData');
-            const data = Object.fromEntries(new FormData(form).entries());
-
-            console.log("Data yang dikirim:", data);
-
-            // TODO: Tambahkan kode untuk menyimpan data ke server, atau tambahkan langsung ke tabel jika client-side only
-
-            closeModalTambah();
-            form.reset();
-            alert("Data berhasil ditambahkan (simulasi)");
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData.entries());
+            
+            // Simple validation feedback
+            const saveBtn = document.querySelector('.btn-save');
+            const originalText = saveBtn.textContent;
+            
+            saveBtn.textContent = 'Menyimpan...';
+            saveBtn.disabled = true;
+            
+            // Simulate save process
+            setTimeout(() => {
+                saveBtn.textContent = '✓ Tersimpan!';
+                saveBtn.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
+                
+                setTimeout(() => {
+                    console.log('Data saved:', data);
+                    alert('Jadwal sidang berhasil disimpan!');
+                    closeModal();
+                    
+                    // Reset button
+                    saveBtn.textContent = originalText;
+                    saveBtn.disabled = false;
+                    saveBtn.style.background = '';
+                }, 1000);
+            }, 800);
         }
+
+        // Close modal when clicking outside
+        document.getElementById('modalOverlay-skripsi').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
     </script>
 @endsection
