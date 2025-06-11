@@ -1,5 +1,7 @@
 @extends('auth.master')
+
 @section('title', 'Login')
+
 @section('content')
 
     <div class="register-box">

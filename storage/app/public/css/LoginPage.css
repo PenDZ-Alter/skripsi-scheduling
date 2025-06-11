@@ -29,87 +29,246 @@ body::before {
     z-index: -1;
 }
 
-/* Modal */
-.glass-modal {
-    background: rgba(255, 255, 255, 0.65);
-    backdrop-filter: blur(10px);
-    border-radius: 1rem;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+/* Modal Master*/
+.title-registerpage {
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
-/* Header */
+.title-registerpage h2 {
+    color: white;
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+}
+
+.title-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    max-width: 300px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.title-info:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.title-info i {
+    color: #4CAF50;
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+.title-info p {
+    margin: 0;
+    color: white;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Enhanced Glass Modal */
+.glass-modal {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(25px);
+    border-radius: 24px;
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3),
+        0 1px 0 rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.glass-modal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+}
+
+/* Modal Header */
 .modal-header {
-    padding: 1rem 1.5rem;
+    padding: 2rem 2rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(139, 195, 74, 0.05));
 }
 
 .modal-title {
-    font-weight: 600;
-    color: #1f2d3d;
-    text-align: center;
-    font-size: 130%;
+    font-weight: 700;
+    color: white;
+    font-size: 1.4rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    justify-content: center;
+    width: 100%;
 }
 
-/* Close button */
-.btn-close-dark {
-    filter: invert(25%);
+.modal-title i {
+    color: #4CAF50;
+    font-size: 1.3rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
-/* Body */
+/* Modal Body */
 .modal-body {
-    padding: 1.25rem 1.5rem;
+    padding: 1.5rem 2rem;
+    color: white;
 }
 
 .info-section {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.info-section:last-child {
+    margin-bottom: 0;
 }
 
 .section-title {
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 0.75rem;
-    color: #34495e;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #4CAF50;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.section-title::before {
+    content: '●';
+    color: #8BC34A;
+    font-size: 0.8rem;
 }
 
 .section-list {
-    padding-left: 1.2rem;
-    list-style-type: disc;
-    font-size: 0.92rem;
-    color: #2c3e50;
+    padding-left: 0;
+    list-style: none;
 }
 
 .section-list li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.section-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #4CAF50;
+    font-weight: bold;
+    font-size: 1.1rem;
 }
 
 .section-list a {
-    color: #0d6efd;
+    color: #81C784;
     text-decoration: none;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 6px;
+    background: rgba(129, 199, 132, 0.1);
+    transition: all 0.3s ease;
 }
 
 .section-list a:hover {
-    text-decoration: underline;
+    color: white;
+    background: rgba(76, 175, 80, 0.3);
+    text-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
 }
 
-/* Footer */
+/* Modal Footer */
 .modal-footer {
-    padding: 1rem 1.5rem;
+    padding: 1rem 2rem 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    justify-content: center;
 }
 
 .btn-tutup {
-    padding: 0.4rem 1.2rem;
-    border-radius: 0.5rem;
-    font-weight: 500;
-    font-size: 0.9rem;
-    background-color: rgba(255, 255, 255, 0.85);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
     cursor: pointer;
-    margin-left: 22rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
 }
 
 .btn-tutup:hover {
-    background-color: rgba(248, 249, 250, 0.5);
-    border-color: #ced4da;
+    background: rgba(244, 67, 54, 0.2);
+    border-color: rgba(244, 67, 54, 0.3);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(244, 67, 54, 0.2);
+}
+
+.btn-tutup:active {
+    transform: translateY(0);
+}
+
+/* Modal backdrop enhancement */
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .modal-dialog {
+        margin: 1rem;
+    }
+
+    .modal-body,
+    .modal-header,
+    .modal-footer {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .title-registerpage h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Animation for modal appearance */
+.modal.fade .modal-dialog {
+    transform: translate(0, -50px) scale(0.95);
+    transition: transform 0.3s ease-out;
+}
+
+.modal.show .modal-dialog {
+    transform: translate(0, 0) scale(1);
+}
+
+.fa-times {
+    margin-right: 7px;
 }
 
 
