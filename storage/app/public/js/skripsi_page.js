@@ -1,15 +1,15 @@
 // Open modal
-function openModal() {
+function openModalSkripsi() {
     document.getElementById('modal').style.display = 'flex';
 }
 
 // Close modal
-function closeModal() {
+function closeModalSkripsi() {
     document.getElementById('modal').style.display = 'none';
 }
 
 // Simpan data (contoh fungsi)
-function saveData() {
+function saveDataSkripsi() {
     const judul = document.getElementById('judul').value;
     const deskripsi = document.getElementById('deskripsi').value;
     const dosen1 = document.getElementById('dosen1').value;

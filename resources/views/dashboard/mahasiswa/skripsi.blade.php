@@ -20,7 +20,7 @@
 
                 <!-- Card for Pengajuan -->
                 <div class="card" id="cardRiwayat">
-                    <button class="start-btn" onclick="openModal()">
+                    <button class="start-btn" onclick="openModalSkripsi()">
                         <i class="fa fa-plus-circle"></i>
                         Mulai Pengajuan Bimbingan</button>
                     <br><br>
@@ -107,11 +107,11 @@
                     </div>
 
                     <div class="button-group">
-                        <button type="button" class="btn btn-cancel" onclick="closeModal()">
+                        <button type="button" class="btn btn-cancel" onclick="closeModalSkripsi()">
                             <i class="fas fa-trash"></i>
                             Cancel
                         </button>
-                        <button type="button" class="btn btn-save" onclick="saveData()">
+                        <button type="button" class="btn btn-save" onclick="saveDataSkripsi()">
                             <i class="fas fa-save"></i>
                             Save
                         </button>

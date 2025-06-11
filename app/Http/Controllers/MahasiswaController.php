@@ -19,8 +19,8 @@ class MahasiswaController extends Controller
 
     public function edit($id)
     {
-        $mahasiswa = User::findOrFail($id);
-        return view('dashboard.admin.edit-profile', compact('mahasiswa'));
+        $mahasiswaEdit = User::findOrFail($id);
+        return view('dashboard.admin.profile', compact('mahasiswaEdit'));
     }
 
     public function destroy($id)

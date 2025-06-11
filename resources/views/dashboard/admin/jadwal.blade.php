@@ -30,13 +30,13 @@
                     <button class="btn btn-filter">
                         <i class="fas fa-filter"></i> Filter
                     </button>
-                    <button class="btn btn-add">
-                        <i class="fas fa-plus"></i> Tambah Jadwal
+                    <button onclick="openModalTambah()" class="btn-primary">
+                        + Tambah Data
                     </button>
                 </div>
             </div>
         </div>
-        
+
         <!-- Jadwal Table -->
         <div class="table-card">
             <div class="max-h-[700px] overflow-y-auto">
@@ -58,132 +58,45 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- Row 1 -->
-                        <tr class="hover:bg-gray-100">
-                            <td class="text-center px-4 py-2 border-b">1</td>
-                            <td class="text-left px-4 py-2 border-b whitespace-nowrap">Andi Wijaya</td>
-                            <td class="text-center px-4 py-2 border-b">18081010001</td>
-                            <td class="text-left px-4 py-2 border-b whitespace-nowrap">Sistem Rekomendasi Pemilihan Jurusan
-                            </td>
-                            <td class="text-left px-4 py-2 border-b whitespace-nowrap">Dr. Siti Rahayu, M.Kom.</td>
-                            <td class="text-left px-4 py-2 border-b whitespace-nowrap">Dr. Rina Dewi, M.Kom.</td>
-                            <td class="text-left px-4 py-2 border-b whitespace-nowrap">Rabu</td>
-                            <td class="text-center px-4 py-2 border-b whitespace-nowrap">15 Jun 2023</td>
-                            <td class="text-center px-4 py-2 border-b whitespace-nowrap">09:00 - 11:00 WIB</td>
-                            <td class="text-center px-4 py-2 border-b whitespace-nowrap">R. Sidang 1</td>
-                            <td class="text-center px-4 py-2 border-b">
-                                <span
-                                    class="status-label status-terjadwal px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800 hidden">
-                                    Terjadwal
-                                </span>
-                                <span
-                                    class="status-label status-pending px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">
-                                    Pending
-                                </span>
-                                <span
-                                    class="status-label status-selesai px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800 hidden">
-                                    Selesai
-                                </span>
-                            </td>
-                            <td class="text-left px-4 py-2 border-b whitespace-nowrap">
-                                <a href="#" onclick="showStatus(this, 'pending')">
-                                    <i class="fas fa-clock icon-box hover:bg-orange-300"></i>
-                                </a>
-                                <a href="#" onclick="showStatus(this, 'terjadwal')">
-                                    <i class="fas fa-check-circle icon-box hover:bg-green-300"></i>
-                                </a>
-                                <a href="#" onclick="showStatus(this, 'selesai')">
-                                    <i class="fas fa-check icon-box hover:bg-blue-400"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fas fa-pencil icon-box hover:bg-gray-400"></i>
-                                </a>
-                            </td>
-                        </tr>
-
-                        <!-- Row 2 -->
-                        <tr class="hover:bg-gray-100">
-                            <td class="text-center px-4 py-2 border-b">2</td>
-                            <td class="text-left px-4 py-0.5 border-b whitespace-nowrap">Budi Santoso</td>
-                            <td class="text-center px-4 py-0.5 border-b">18081010002</td>
-                            <td class="text-left px-4 py-2 border-b whitespace-nowrap">Analisis Sentimen Media Sosial</td>
-                            <td class="text-left px-4 py-2 border-b whitespace-nowrap">Dr. Joko Prasetyo, M.Kom.</td>
-                            <td class="text-left px-4 py-2 border-b whitespace-nowrap">Prof. Dr. Bambang Sutrisno</td>
-                            <td class="text-left px-4 py-2 border-b whitespace-nowrap">Jum'at</td>
-                            <td class="text-center px-4 py-2 border-b whitespace-nowrap">16 Jun 2023</td>
-                            <td class="text-center px-4 py-2 border-b whitespace-nowrap">13:00 - 15:00 WIB</td>
-                            <td class="text-center px-4 py-2 border-b whitespace-nowrap">R. Sidang 2</td>
-                            <td class="text-center px-4 py-2 border-b">
-                                <span
-                                    class="status-label status-terjadwal px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800 hidden">
-                                    Terjadwal
-                                </span>
-                                <span
-                                    class="status-label status-pending px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">
-                                    Pending
-                                </span>
-                                <span
-                                    class="status-label status-selesai px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800 hidden">
-                                    Selesai
-                                </span>
-                            </td>
-                            <td class="text-left px-4 py-2 border-b whitespace-nowrap">
-                                <a href="#" onclick="showStatus(this, 'pending')">
-                                    <i class="fas fa-clock icon-box hover:bg-orange-300"></i>
-                                </a>
-                                <a href="#" onclick="showStatus(this, 'terjadwal')">
-                                    <i class="fas fa-check-circle icon-box hover:bg-green-300"></i>
-                                </a>
-                                <a href="#" onclick="showStatus(this, 'selesai')">
-                                    <i class="fas fa-check icon-box hover:bg-blue-400"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fas fa-pencil icon-box hover:bg-gray-400"></i>
-                                </a>
-                            </td>
-                        </tr>
-
-                        <!-- Row 3 -->
-                        <tr class="hover:bg-gray-100">
-                            <td class="text-center px-4 py-2 border-b">3</td>
-                            <td class="text-left px-4 py-0.5 border-b whitespace-nowrap">Citra Dewi</td>
-                            <td class="text-center px-4 py-0.5 border-b">19082010001</td>
-                            <td class="text-left px-4 py-2 border-b whitespace-nowrap">Optimasi Algoritma dengan ML</td>
-                            <td class="text-left px-4 py-2 border-b whitespace-nowrap">Dr. Ani Wijaya, M.Kom.</td>
-                            <td class="text-left px-4 py-2 border-b whitespace-nowrap">Dr. Ahmad Fauzi, M.Kom.</td>
-                            <td class="text-left px-4 py-2 border-b whitespace-nowrap">Kamis</td>
-                            <td class="text-center px-4 py-2 border-b whitespace-nowrap">17 Jun 2023</td>
-                            <td class="text-center px-4 py-2 border-b whitespace-nowrap">10:00 - 12:00 WIB</td>
-                            <td class="text-center px-4 py-2 border-b whitespace-nowrap">R. Sidang 3</td>
-                            <td class="text-center px-4 py-2 border-b">
-                                <span
-                                    class="status-label status-terjadwal px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800 hidden">
-                                    Terjadwal
-                                </span>
-                                <span
-                                    class="status-label status-pending px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">
-                                    Pending
-                                </span>
-                                <span
-                                    class="status-label status-selesai px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800 hidden">
-                                    Selesai
-                                </span>
-                            </td>
-                            <td class="text-left px-4 py-2 border-b whitespace-nowrap">
-                                <a href="#" onclick="showStatus(this, 'pending')">
-                                    <i class="fas fa-clock icon-box hover:bg-orange-300"></i>
-                                </a>
-                                <a href="#" onclick="showStatus(this, 'terjadwal')">
-                                    <i class="fas fa-check-circle icon-box hover:bg-green-300"></i>
-                                </a>
-                                <a href="#" onclick="showStatus(this, 'selesai')">
-                                    <i class="fas fa-check icon-box hover:bg-blue-400"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fas fa-pencil icon-box hover:bg-gray-400"></i>
-                                </a>
-                            </td>
-                        </tr>
+                        @foreach ($mahasiswa as $index => $mhs)
+                            @php
+                                // Random dua dosen yang berbeda
+                                $dosen_pengujis = $dosen->random(2);
+                            @endphp
+                            <tr class="hover:bg-gray-100">
+                                <td class="text-center px-4 py-2 border-b">{{ $index + 1 }}</td>
+                                <td class="text-left px-4 py-2 border-b whitespace-nowrap">{{ $mhs->name }}</td>
+                                <td class="text-center px-4 py-2 border-b">{{ $mhs->id }}</td>
+                                <td class="text-left px-4 py-2 border-b whitespace-nowrap">Judul Dummy {{ $index + 1 }}
+                                </td>
+                                <td class="text-left px-4 py-2 border-b whitespace-nowrap">{{ $dosen_pengujis[0]->name }}
+                                </td>
+                                <td class="text-left px-4 py-2 border-b whitespace-nowrap">{{ $dosen_pengujis[1]->name }}
+                                </td>
+                                <td class="text-left px-4 py-2 border-b whitespace-nowrap">Hari Dummy</td>
+                                <td class="text-center px-4 py-2 border-b whitespace-nowrap">Tanggal Dummy</td>
+                                <td class="text-center px-4 py-2 border-b whitespace-nowrap">Waktu Dummy</td>
+                                <td class="text-center px-4 py-2 border-b whitespace-nowrap">Tempat Dummy</td>
+                                <td class="text-center px-4 py-2 border-b">
+                                    <span
+                                        class="status-label status-pending px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">Pending</span>
+                                </td>
+                                <td class="text-left px-4 py-2 border-b whitespace-nowrap">
+                                    <a href="#" onclick="showStatus(this, 'pending')">
+                                        <i class="fas fa-clock icon-box hover:bg-orange-300"></i>
+                                    </a>
+                                    <a href="#" onclick="showStatus(this, 'terjadwal')">
+                                        <i class="fas fa-check-circle icon-box hover:bg-green-300"></i>
+                                    </a>
+                                    <a href="#" onclick="showStatus(this, 'selesai')">
+                                        <i class="fas fa-check icon-box hover:bg-blue-400"></i>
+                                    </a>
+                                    <button type="button" class="icon-button" onclick="openModalEdit()">
+                                        <i class="fas fa-pencil icon-box hover:bg-gray-400"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
@@ -246,6 +159,40 @@
         </div>
     </div>
 
+    <!-- MODAL TAMBAH DATA -->
+    <div id="modalTambah" class="modal-skripsi hidden">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2>Tambah Data Sidang</h2>
+                <button onclick="closeModalTambah()" class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="formTambahData" onsubmit="submitTambah(event)">
+                    <div class="form-grid">
+                        <input type="text" name="nama_mhs" placeholder="Nama Mahasiswa" required>
+                        <input type="text" name="nim" placeholder="NIM" required>
+                        <input type="text" name="judul" placeholder="Judul" required>
+                        <input type="text" name="penguji1" placeholder="Anggota Penguji I" required>
+                        <input type="text" name="penguji2" placeholder="Anggota Penguji II" required>
+                        <input type="text" name="hari" placeholder="Hari" required>
+                        <input type="date" name="tanggal" required>
+                        <input type="text" name="waktu" placeholder="Waktu (Contoh: 09:00 - 11:00 WIB)" required>
+                        <input type="text" name="tempat" placeholder="Tempat" required>
+                        <select name="status" required>
+                            <option value="pending">Pending</option>
+                            <option value="terjadwal">Terjadwal</option>
+                            <option value="selesai">Selesai</option>
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" onclick="closeModalTambah()" class="btn-secondary">Batal</button>
+                        <button type="submit" class="btn-save">Simpan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <div style="margin-bottom: 10rem;">
     </div>
     <script>
@@ -261,6 +208,31 @@
             if (target) {
                 target.classList.remove('hidden'); // tampilkan yang sesuai
             }
+        }
+    </script>
+
+    <script>
+        function openModalTambah() {
+            document.getElementById('modalTambah').classList.remove('hidden');
+        }
+
+        function closeModalTambah() {
+            document.getElementById('modalTambah').classList.add('hidden');
+        }
+
+        function submitTambah(e) {
+            e.preventDefault();
+
+            const form = document.getElementById('formTambahData');
+            const data = Object.fromEntries(new FormData(form).entries());
+
+            console.log("Data yang dikirim:", data);
+
+            // TODO: Tambahkan kode untuk menyimpan data ke server, atau tambahkan langsung ke tabel jika client-side only
+
+            closeModalTambah();
+            form.reset();
+            alert("Data berhasil ditambahkan (simulasi)");
         }
     </script>
 @endsection
