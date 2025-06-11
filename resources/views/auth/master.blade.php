@@ -23,7 +23,7 @@
     </div>
 
     <!-- Enhanced Modal -->
-    <div style="display: none;"class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+    <div style="display: none;" class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content glass-modal">
                 <div class="modal-header border-0">
@@ -35,7 +35,7 @@
 
                 <div class="modal-body">
                     <div class="info-section">
-                        <h6 class="section-title">Info Mahasiswa</h6>
+                        <h6 class="section-title">📚 Info Mahasiswa</h6>
                         <ul class="section-list">
                             <li>Kode akses Siakad & Hotspot menggunakan akses terakhir login. Disarankan mengganti tiap semester.</li>
                             <li>Fasilitas hanya aktif saat status aktif/herregistrasi.</li>
@@ -45,7 +45,7 @@
                     </div>
                     
                     <div class="info-section">
-                        <h6 class="section-title">Layanan Baru</h6>
+                        <h6 class="section-title">🚀 Layanan Baru</h6>
                         <ul class="section-list">
                             <li>Aktivasi Email UIN untuk Dosen & Mahasiswa via laman utama Siakad.</li>
                             <li>Surat Akademik: <a href="https://akademik.uin-malang.ac.id" target="_blank">akademik.uin-malang.ac.id</a></li>
