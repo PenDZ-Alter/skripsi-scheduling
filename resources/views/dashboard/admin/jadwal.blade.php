@@ -94,7 +94,13 @@
                                     <a href="#" onclick="showStatus(this, 'selesai')">
                                         <i class="fas fa-check icon-box hover:bg-blue-400"></i>
                                     </a>
-                                    <button type="button" class="icon-button" onclick="openModalEdit()">
+                                    <button type="button" class="icon-button" onclick="populateAndOpenEditModal(this)"
+                                        data-nama="{{ $mhs->name }}" data-nim="{{ $mhs->id }}"
+                                        data-judul="Judul Dummy {{ $index + 1 }}"
+                                        data-penguji1="{{ $dosen_pengujis[0]->name }}"
+                                        data-penguji2="{{ $dosen_pengujis[1]->name }}" data-tanggal="2025-01-01"
+                                        {{-- Ganti dengan data asli kalau udah --}} data-waktu="09:00 - 11:00 WIB" data-tempat="Ruang Dummy"
+                                        data-status="pending">
                                         <i class="fas fa-pencil icon-box hover:bg-gray-400"></i>
                                     </button>
                                 </td>
@@ -162,7 +168,7 @@
         </div>
     </div>
 
-    <!-- Modal -->
+    <!-- Modal Tambah -->
     <div class="modal-overlay-skripsi" id="modalOverlay-skripsi">
         <div class="modal-container">
             <div class="modal-header-skripsi">
@@ -172,7 +178,7 @@
                 </h2>
                 <button class="close-btn" onclick="closeModal()">×</button>
             </div>
-            
+
             <div class="modal-body-skripsi">
                 <form id="scheduleForm" onsubmit="handleSubmit(event)">
                     <!-- Student Information Section -->
@@ -185,15 +191,18 @@
                             <div class="form-grid">
                                 <div class="form-field">
                                     <label class="form-label">Nama Mahasiswa</label>
-                                    <input type="text" class="form-input" name="nama_mhs" placeholder="Masukkan nama lengkap" required>
+                                    <input type="text" class="form-input" name="nama_mhsTambah"
+                                        placeholder="Masukkan nama lengkap" required>
                                 </div>
                                 <div class="form-field">
                                     <label class="form-label">NIM</label>
-                                    <input type="text" class="form-input" name="nim" placeholder="Nomor Induk Mahasiswa" required>
+                                    <input type="text" class="form-input" name="nimTambah"
+                                        placeholder="Nomor Induk Mahasiswa" required>
                                 </div>
                                 <div class="form-field full-width">
                                     <label class="form-label">Judul Skripsi</label>
-                                    <input type="text" class="form-input" name="judul" placeholder="Judul lengkap skripsi" required>
+                                    <input type="text" class="form-input" name="judulTambah"
+                                        placeholder="Judul lengkap skripsi" required>
                                 </div>
                             </div>
                         </div>
@@ -209,11 +218,13 @@
                             <div class="form-grid">
                                 <div class="form-field">
                                     <label class="form-label">Pembimbing 1</label>
-                                    <input type="text" class="form-input" name="pembimbing1" placeholder="Nama dosen pembimbing 1" required>
+                                    <input type="text" class="form-input" name="pembimbingTambah"
+                                        placeholder="Nama dosen pembimbing 1" required>
                                 </div>
                                 <div class="form-field">
                                     <label class="form-label">Pembimbing 2</label>
-                                    <input type="text" class="form-input" name="pembimbing2" placeholder="Nama dosen pembimbing 2" required>
+                                    <input type="text" class="form-input" name="pembimbingTambah"
+                                        placeholder="Nama dosen pembimbing 2" required>
                                 </div>
                             </div>
                         </div>
@@ -229,15 +240,133 @@
                             <div class="form-grid">
                                 <div class="form-field">
                                     <label class="form-label">Tanggal</label>
-                                    <input type="date" class="form-input" name="tanggal" required>
+                                    <input type="date" class="form-input" name="tanggalTambah" required>
                                 </div>
                                 <div class="form-field">
                                     <label class="form-label">Waktu</label>
-                                    <input type="text" class="form-input" name="waktu" placeholder="09:00 - 11:00 WIB" required>
+                                    <input type="text" class="form-input" name="waktuTambah"
+                                        placeholder="09:00 - 11:00 WIB" required>
                                 </div>
                                 <div class="form-field full-width">
                                     <label class="form-label">Tempat</label>
-                                    <input type="text" class="form-input" name="tempat" placeholder="Ruang sidang / lokasi" required>
+                                    <input type="text" class="form-input" name="tempatTambah"
+                                        placeholder="Ruang sidang / lokasi" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Status Section -->
+                    <div class="form-section">
+                        <div class="section-card">
+                            <h3 class="section-title">
+                                <span>📊</span>
+                                Status Sidang
+                            </h3>
+                            <div class="status-options">
+                                <div class="status-option">
+                                    <input type="radio" id="pending" name="status" value="pendingTambah" checked>
+                                    <label for="pending">⏳ Pending</label>
+                                </div>
+                                <div class="status-option">
+                                    <input type="radio" id="scheduled" name="status" value="terjadwalTambah">
+                                    <label for="scheduled">📋 Terjadwal</label>
+                                </div>
+                                <div class="status-option">
+                                    <input type="radio" id="completed" name="status" value="selesaiTambah">
+                                    <label for="completed">✅ Selesai</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal-footer-skripsi">
+                <button type="button" class="btn-cancel-skripsi" onclick="closeModal()">Batal</button>
+                <button type="submit" class="btn-save-skripsi" form="scheduleForm">Simpan Jadwal</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Edit -->
+    <div class="modal-overlay-skripsi" id="modalOverlayEdit">
+        <div class="modal-container">
+            <div class="modal-header-skripsi">
+                <h2 class="modal-title-skripsi">
+                    <span>📝</span>
+                    Edit Jadwal Sidang
+                </h2>
+                <button class="close-btn" onclick="closeModalEdit()">×</button>
+            </div>
+
+            <div class="modal-body-skripsi">
+                <form id="scheduleForm" onsubmit="handleSubmitEdit(event)">
+                    <!-- Student Information Section -->
+                    <div class="form-section">
+                        <div class="section-card">
+                            <h3 class="section-title">
+                                <span>👤</span>
+                                Informasi Mahasiswa
+                            </h3>
+                            <div class="form-grid">
+                                <div class="form-field">
+                                    <label class="form-label">Nama Mahasiswa</label>
+                                    <input type="text" class="form-input" name="nama_mhs" id="nama_mhs" required>
+                                </div>
+                                <div class="form-field">
+                                    <label class="form-label">NIM</label>
+                                    <input type="text" class="form-input" name="nim" id="nim" required>
+                                </div>
+                                <div class="form-field full-width">
+                                    <label class="form-label">Judul Skripsi</label>
+                                    <input type="text" class="form-input" name="judul" id="judul" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Supervisor Information Section -->
+                    <div class="form-section">
+                        <div class="section-card">
+                            <h3 class="section-title">
+                                <span>👨‍🏫</span>
+                                Dosen Pembimbing
+                            </h3>
+                            <div class="form-grid">
+                                <div class="form-field">
+                                    <label class="form-label">Pembimbing 1</label>
+                                    <input type="text" class="form-input" name="pembimbing1" id="pembimbing1"
+                                        required>
+                                </div>
+                                <div class="form-field">
+                                    <label class="form-label">Pembimbing 2</label>
+                                    <input type="text" class="form-input" name="pembimbing2" id="pembimbing2"
+                                        required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Schedule Information Section -->
+                    <div class="form-section">
+                        <div class="section-card">
+                            <h3 class="section-title">
+                                <span>📅</span>
+                                Jadwal Sidang
+                            </h3>
+                            <div class="form-grid">
+                                <div class="form-field">
+                                    <label class="form-label">Tanggal</label>
+                                    <input type="date" class="form-input" name="tanggal" id="tanggal" required>
+                                </div>
+                                <div class="form-field">
+                                    <label class="form-label">Waktu</label>
+                                    <input type="text" class="form-input" name="waktu" id="waktu" required>
+                                </div>
+                                <div class="form-field full-width">
+                                    <label class="form-label">Tempat</label>
+                                    <input type="text" class="form-input" name="tempat" id="tempat" required>
                                 </div>
                             </div>
                         </div>
@@ -270,7 +399,7 @@
             </div>
 
             <div class="modal-footer-skripsi">
-                <button type="button" class="btn-cancel-skripsi" onclick="closeModal()">Batal</button>
+                <button type="button" class="btn-cancel-skripsi" onclick="closeModalEdit()">Batal</button>
                 <button type="submit" class="btn-save-skripsi" form="scheduleForm">Simpan Jadwal</button>
             </div>
         </div>
@@ -305,7 +434,7 @@
             const modal = document.getElementById('modalOverlay-skripsi');
             modal.classList.remove('active');
             document.body.style.overflow = 'auto';
-            
+
             // Reset form
             document.getElementById('scheduleForm').reset();
             document.getElementById('pending').checked = true;
@@ -313,28 +442,28 @@
 
         function handleSubmit(event) {
             event.preventDefault();
-            
+
             // Get form data
             const formData = new FormData(event.target);
             const data = Object.fromEntries(formData.entries());
-            
+
             // Simple validation feedback
             const saveBtn = document.querySelector('.btn-save');
             const originalText = saveBtn.textContent;
-            
+
             saveBtn.textContent = 'Menyimpan...';
             saveBtn.disabled = true;
-            
+
             // Simulate save process
             setTimeout(() => {
                 saveBtn.textContent = '✓ Tersimpan!';
                 saveBtn.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
-                
+
                 setTimeout(() => {
                     console.log('Data saved:', data);
                     alert('Jadwal sidang berhasil disimpan!');
                     closeModal();
-                    
+
                     // Reset button
                     saveBtn.textContent = originalText;
                     saveBtn.disabled = false;
@@ -354,6 +483,102 @@
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
                 closeModal();
+            }
+        });
+    </script>
+
+    <script>
+        function populateAndOpenEditModal(button) {
+            // Ambil semua data dari atribut tombol
+            const nama = button.getAttribute('data-nama');
+            const nim = button.getAttribute('data-nim');
+            const judul = button.getAttribute('data-judul');
+            const penguji1 = button.getAttribute('data-penguji1');
+            const penguji2 = button.getAttribute('data-penguji2');
+            const tanggal = button.getAttribute('data-tanggal');
+            const waktu = button.getAttribute('data-waktu');
+            const tempat = button.getAttribute('data-tempat');
+            const status = button.getAttribute('data-status');
+
+            // Isi form input di modal
+            document.querySelector('[name="nama_mhs"]').value = nama;
+            document.querySelector('[name="nim"]').value = nim;
+            document.querySelector('[name="judul"]').value = judul;
+            document.querySelector('[name="pembimbing1"]').value = penguji1;
+            document.querySelector('[name="pembimbing2"]').value = penguji2;
+            document.querySelector('[name="tanggal"]').value = tanggal;
+            document.querySelector('[name="waktu"]').value = waktu;
+            document.querySelector('[name="tempat"]').value = tempat;
+
+            console.log(document.querySelector('[name="nama_mhs"]'))
+            // Atur radio button status
+            document.querySelectorAll('input[name="status"]').forEach(radio => {
+                radio.checked = (radio.value === status);
+            });
+
+            // Terakhir: Tampilkan modal
+            openModalEdit();
+        }
+
+        function openModalEdit() {
+            const modal = document.getElementById('modalOverlayEdit');
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModalEdit() {
+            const modal = document.getElementById('modalOverlayEdit');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+
+            // Reset form
+            document.getElementById('scheduleForm').reset();
+            document.getElementById('pending').checked = true;
+        }
+
+        function handleSubmitEdit(event) {
+            event.preventDefault();
+
+            // Get form data
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData.entries());
+
+            // Simple validation feedback
+            const saveBtn = document.querySelector('.btn-save');
+            const originalText = saveBtn.textContent;
+
+            saveBtn.textContent = 'Menyimpan...';
+            saveBtn.disabled = true;
+
+            // Simulate save process
+            setTimeout(() => {
+                saveBtn.textContent = '✓ Tersimpan!';
+                saveBtn.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
+
+                setTimeout(() => {
+                    console.log('Data saved:', data);
+                    alert('Jadwal sidang berhasil disimpan!');
+                    closeModal();
+
+                    // Reset button
+                    saveBtn.textContent = originalText;
+                    saveBtn.disabled = false;
+                    saveBtn.style.background = '';
+                }, 1000);
+            }, 800);
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('modalOverlayEdit').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModalEdit();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModalEdit();
             }
         });
     </script>
