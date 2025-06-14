@@ -1,34 +1,33 @@
 <?php
 
-use App\Http\Controllers\AdminController;
-use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\AuthController;
+
 use App\Http\Middleware\AdminMiddleware;
+
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\SkripsiController;
 
-
 // Route antar Page
 Route::middleware(['auth'])->group(function () {
-    Route::get('/home', [HomeController::class, 'index'])->name('mhs.home');
+    Route::get('/home', [MahasiswaController::class, 'index'])->name('mhs.home');
 
-    Route::get('/profile', [ProfileController::class, 'showProfile'])->name('mhs.profile');
+    Route::get('/profile', [MahasiswaController::class, 'showProfile'])->name('mhs.profile');
 
-    Route::get('/pembayaran', [HomeController::class, 'showPembayaran'])->name('mhs.pembayaran');
+    Route::get('/pembayaran', [MahasiswaController::class, 'showPembayaran'])->name('mhs.pembayaran');
 
-    Route::get('/studi', [HomeController::class, 'showStudi'])->name('mhs.studi');
+    Route::get('/studi', [MahasiswaController::class, 'showStudi'])->name('mhs.studi');
 
-    Route::get('/statistik', [HomeController::class, 'showStatistik'])->name('mhs.statistik');
+    Route::get('/statistik', [MahasiswaController::class, 'showStatistik'])->name('mhs.statistik');
 
-    Route::get('/transkrip', [HomeController::class, 'showTranskrip'])->name('mhs.transkrip');
+    Route::get('/transkrip', [MahasiswaController::class, 'showTranskrip'])->name('mhs.transkrip');
 
-    Route::get('/skripsi', [HomeController::class, 'showSkripsi'])->name('mhs.skripsi');
+    Route::get('/skripsi', [MahasiswaController::class, 'showSkripsi'])->name('mhs.skripsi');
 
-    Route::get('/profileEdit', [HomeController::class, 'showProfileEdit'])->name('mhs.profileEdit');
+    Route::get('/profileEdit', [MahasiswaController::class, 'showProfileEdit'])->name('mhs.profileEdit');
 
-    Route::post('/upload-photo', [ProfileController::class, 'uploadPhoto'])->name('route_upload_photo');
+    Route::post('/upload-photo', [MahasiswaController::class, 'uploadPhoto'])->name('route_upload_photo');
 
     Route::post('/skripsi/store', [SkripsiController::class, 'store'])->name('skripsi.store');
 });
@@ -49,6 +48,8 @@ Route::middleware([AdminMiddleware::class])->group(function () {
 Route::get('/', function () {
     return view('auth.login');
 });
+
+Route::get('/auth/check', [AuthController::class, 'userPageHandler'])->name('auth.home');
 
 // Route Login dan Register
 Route::get('/register', [AuthController::class, 'showRegisterPage'])->name('registerpage');
