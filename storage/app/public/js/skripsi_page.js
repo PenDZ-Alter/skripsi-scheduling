@@ -54,14 +54,14 @@ function saveDataSkripsi() {
 }
 
 // Switch between tabs
-document.getElementById('tabRiwayat').addEventListener('click', function () {
+document.getElementById('tabRiwayat').addEventListener('click', function() {
     document.getElementById('cardRiwayat').style.display = 'block';
     document.getElementById('cardProses').style.display = 'none';
     document.getElementById('tabRiwayat').classList.add('active');
     document.getElementById('tabProses').classList.remove('active');
 });
 
-document.getElementById('tabProses').addEventListener('click', function () {
+document.getElementById('tabProses').addEventListener('click', function() {
     document.getElementById('cardRiwayat').style.display = 'none';
     document.getElementById('cardProses').style.display = 'block';
     document.getElementById('tabProses').classList.add('active');

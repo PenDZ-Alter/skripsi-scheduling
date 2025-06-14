@@ -49,7 +49,7 @@
         <!-- Modal for Pengajuan Skripsi -->
         <div class="modal" id="modal">
             <div class="modal-content fade-in-up">
-                <button class="close-icon" onclick="closeModalSkripsi()" aria-label="Close modal">
+                <button class="close-icon" onclick="closeModal()" aria-label="Close modal">
                     ✕
                 </button>
                 <h3>Pengajuan Skripsi/Tesis/Disertasi</h3>
