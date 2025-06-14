@@ -11,7 +11,7 @@ class MahasiswaController extends Controller
     public function showStudentData()
     {
         // Ambil data user yang lagi login
-         $mahasiswa = User::where('role', 'mahasiswa')->get();
+        $mahasiswa = User::where('role', 'mahasiswa')->get();
 
         // Kirim ke view
         return view('dashboard.admin.profile', compact('mahasiswa'));

@@ -37,6 +37,9 @@ function saveDataSkripsi() {
     // Tutup modal
     closeModalSkripsi();
 
+    // Submit form
+    document.getElementById("formSkripsi").submit();
+
     // Reset form (optional)
     document.getElementById("judul").value = "";
     document.getElementById("deskripsi").value = "";
@@ -48,9 +51,6 @@ function saveDataSkripsi() {
     Array.from(dosen2Select.options).forEach(opt => opt.disabled = false);
 
     // ⚠️ Deskripsi hanya digunakan untuk UI, tidak dikirim ke backend
-
-    // Submit form
-    document.getElementById("formSkripsi").submit();
 }
 
 // Switch between tabs

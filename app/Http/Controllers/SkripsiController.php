@@ -13,7 +13,7 @@ class SkripsiController extends Controller
 {
     public function store(Request $request)
     {
-        dd($request->all());
+        // dd($request->all());
         
         $validated = $request->validate([
             'user_id' => 'required|exists:users,id',
@@ -34,7 +34,7 @@ class SkripsiController extends Controller
             $this->isTimeConflict($validated['dosen_pembimbing_1'], $mulai, $selesai) ||
             $this->isTimeConflict($validated['dosen_pembimbing_2'], $mulai, $selesai)
         ) {
-            return back()->withErrors(['jadwal_mulai' => 'Jadwal bentrok dengan jadwal kuliah dosen.']);
+            return back()->withErrors(['message' => 'Jadwal bentrok dengan jadwal kuliah dosen.']);
         }
 
         $ruangAcak = RuangSidang::inRandomOrder()->first();
@@ -49,17 +49,50 @@ class SkripsiController extends Controller
             ]);
         } catch (\Exception $e) {
             logger('❌ Gagal insert skripsi:', ['error' => $e->getMessage()]);
-            print_r($e);
+            dd($e);
             return back()->withErrors(['internal' => 'Gagal menyimpan data.']);
         }
 
         return redirect()->back()->with('success', 'Skripsi berhasil didaftarkan dan menunggu verifikasi.');
     }
 
+    public function edit($id)
+    {
+        $skripsi = Skripsi::with(['mahasiswa', 'pembimbing1', 'pembimbing2', 'ruang'])->findOrFail($id);
+        return view('admin.skripsi.edit', compact('skripsi'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $skripsi = Skripsi::findOrFail($id);
+
+        $validated = $request->validate([
+            'jadwal_mulai' => 'required|date',
+            'jadwal_selesai' => 'required|date|after:jadwal_mulai',
+        ]);
+
+        $mulai = Carbon::parse($validated['jadwal_mulai']);
+        $selesai = Carbon::parse($validated['jadwal_selesai']);
+
+        if (
+            $this->isTimeConflict($skripsi->dosen_pembimbing_1, $mulai, $selesai) ||
+            $this->isTimeConflict($skripsi->dosen_pembimbing_2, $mulai, $selesai)
+        ) {
+            return back()->withErrors(['jadwal_mulai' => 'Jadwal bentrok dengan jadwal kuliah dosen.']);
+        }
+
+        $skripsi->update([
+            'jadwal_mulai' => $mulai,
+            'jadwal_selesai' => $selesai,
+            'status' => 'belum_sidang' // Admin udah fix-in, berarti oke lanjut sidang
+        ]);
+
+        return redirect()->route('admin.skripsi.edit', $skripsi->id)->with('success', 'Jadwal berhasil diperbarui.');
+    }
 
     private function isTimeConflict($dosenId, $jadwalMulai, $jadwalSelesai)
     {
-        return DB::table('subjects_schedules')
+        return DB::table('subjects_schedule')
             ->where('dosen', $dosenId)
             ->where(function ($query) use ($jadwalMulai, $jadwalSelesai) {
                 $query->whereBetween('jadwal_mulai', [$jadwalMulai, $jadwalSelesai])
