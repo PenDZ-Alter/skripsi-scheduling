@@ -32,7 +32,7 @@
                 </button>
                 <div class="demo-container">
                     <button class="btn-add" onclick="openModal()">
-                        <span>📅</span>
+                        <span>➕</span>
                         Tambah Jadwal Sidang
                     </button>
                 </div>
@@ -40,67 +40,65 @@
         </div>
     </div>
 
-        <!-- Jadwal Table -->
-        <div class="table-card">
-            <div class="max-h-[700px] overflow-y-auto">
-                <table class="w-full border-collapse">
-                    <thead class="bg-gray-50 border-t border-b border-gray-300 h-10 sticky top-0 z-10">
-                        <tr class="bg-gray-50 border-t border-b border-gray-300 h-10">
-                            <th class="text-center px-4 py-2">No</th>
-                            <th class="text-center px-4 py-2">Nama Mhs</th>
-                            <th class="text-center px-4 py-0.5">NIM</th>
-                            <th class="text-center px-4 py-2">Judul</th>
-                            <th class="text-center px-4 py-2">Anggota Penguji I</th>
-                            <th class="text-center px-4 py-2">Anggota Penguji II</th>
-                            <th class="text-center px-4 py-2">Hari</th>
-                            <th class="text-center px-4 py-2">Tanggal</th>
-                            <th class="text-center px-4 py-2">Waktu</th>
-                            <th class="text-center px-4 py-2">Tempat</th>
-                            <th class="text-center px-4 py-2">Status</th>
-                            <th class="text-center px-4 py-2">Aksi</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($mahasiswa as $index => $mhs)
-                            @php
-                                // Random dua dosen yang berbeda
-                                $dosen_pengujis = $dosen->random(2);
-                            @endphp
-                            <tr class="hover:bg-gray-100">
-                                <td class="text-center px-4 py-2 border-b">{{ $index + 1 }}</td>
-                                <td class="text-left px-4 py-2 border-b whitespace-nowrap">{{ $mhs->name }}</td>
-                                <td class="text-center px-4 py-2 border-b">{{ $mhs->id }}</td>
-                                <td class="text-left px-4 py-2 border-b whitespace-nowrap">Judul Dummy {{ $index + 1 }}
-                                </td>
-                                <td class="text-left px-4 py-2 border-b whitespace-nowrap">{{ $dosen_pengujis[0]->name }}
-                                </td>
-                                <td class="text-left px-4 py-2 border-b whitespace-nowrap">{{ $dosen_pengujis[1]->name }}
-                                </td>
-                                <td class="text-left px-4 py-2 border-b whitespace-nowrap">Hari Dummy</td>
-                                <td class="text-center px-4 py-2 border-b whitespace-nowrap">Tanggal Dummy</td>
-                                <td class="text-center px-4 py-2 border-b whitespace-nowrap">Waktu Dummy</td>
-                                <td class="text-center px-4 py-2 border-b whitespace-nowrap">Tempat Dummy</td>
-                                <td class="text-center px-4 py-2 border-b">
-                                    <span
-                                        class="status-label status-pending px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">Pending</span>
-                                </td>
-                                <td class="text-left px-4 py-2 border-b whitespace-nowrap">
-                                    
-                                    <button type="button" class="icon-button" onclick="populateAndOpenEditModal(this)"
-                                        data-nama="{{ $mhs->name }}" data-nim="{{ $mhs->id }}"
-                                        data-judul="Judul Dummy {{ $index + 1 }}"
-                                        data-penguji1="{{ $dosen_pengujis[0]->name }}"
-                                        data-penguji2="{{ $dosen_pengujis[1]->name }}" data-tanggal="2025-01-01"
-                                        {{-- Ganti dengan data asli kalau udah --}} data-waktu="09:00 - 11:00 WIB" data-tempat="Ruang Dummy"
-                                        data-status="pending">
-                                        <i class="fas fa-pencil icon-box hover:bg-gray-400"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-            </div>
+    <!-- Jadwal Table -->
+    <div class="table-card">
+        <div class="max-h-[700px] overflow-y-auto">
+            <table class="w-full border-collapse">
+                <thead class="bg-gray-50 border-t border-b border-gray-300 h-10 sticky top-0 z-10">
+                    <tr class="bg-gray-50 border-t border-b border-gray-300 h-10">
+                        <th class="text-center px-4 py-2">No</th>
+                        <th class="text-center px-4 py-2">Nama Mhs</th>
+                        <th class="text-center px-4 py-0.5">NIM</th>
+                        <th class="text-center px-4 py-2">Judul</th>
+                        <th class="text-center px-4 py-2">Anggota Penguji I</th>
+                        <th class="text-center px-4 py-2">Anggota Penguji II</th>
+                        <th class="text-center px-4 py-2">Hari</th>
+                        <th class="text-center px-4 py-2">Tanggal</th>
+                        <th class="text-center px-4 py-2">Waktu</th>
+                        <th class="text-center px-4 py-2">Tempat</th>
+                        <th class="text-center px-4 py-2">Status</th>
+                        <th class="text-center px-4 py-2">Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($mahasiswa as $index => $mhs)
+                                        @php
+                                            // Random dua dosen yang berbeda
+                                            $dosen_pengujis = $dosen->random(2);
+                                        @endphp
+                                        <tr class="hover:bg-gray-100">
+                                            <td class="text-center px-4 py-2 border-b">{{ $index + 1 }}</td>
+                                            <td class="text-left px-4 py-2 border-b whitespace-nowrap">{{ $mhs->name }}</td>
+                                            <td class="text-center px-4 py-2 border-b">{{ $mhs->id }}</td>
+                                            <td class="text-left px-4 py-2 border-b whitespace-nowrap">Judul Dummy {{ $index + 1 }}
+                                            </td>
+                                            <td class="text-left px-4 py-2 border-b whitespace-nowrap">{{ $dosen_pengujis[0]->name }}
+                                            </td>
+                                            <td class="text-left px-4 py-2 border-b whitespace-nowrap">{{ $dosen_pengujis[1]->name }}
+                                            </td>
+                                            <td class="text-left px-4 py-2 border-b whitespace-nowrap">Hari Dummy</td>
+                                            <td class="text-center px-4 py-2 border-b whitespace-nowrap">Tanggal Dummy</td>
+                                            <td class="text-center px-4 py-2 border-b whitespace-nowrap">Waktu Dummy</td>
+                                            <td class="text-center px-4 py-2 border-b whitespace-nowrap">Tempat Dummy</td>
+                                            <td class="text-center px-4 py-2 border-b">
+                                                <span
+                                                    class="status-label status-pending px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">Pending</span>
+                                            </td>
+                                            <td class="text-left px-4 py-2 border-b whitespace-nowrap">
+                                                <button type="button" class="icon-button" onclick="populateAndOpenEditModal(this)"
+                                                    data-nama="{{ $mhs->name }}" data-nim="{{ $mhs->id }}"
+                                                    data-judul="Judul Dummy {{ $index + 1 }}" data-penguji1="{{ $dosen_pengujis[0]->name }}"
+                                                    data-penguji2="{{ $dosen_pengujis[1]->name }}" data-tanggal="2025-01-01" {{-- Ganti
+                                                    dengan data asli kalau udah --}} data-waktu="09:00 - 11:00 WIB"
+                                                    data-tempat="Ruang Dummy" data-status="pending">
+                                                    <i class="fas fa-pencil icon-box hover:bg-gray-400"></i>
+                                                </button>
+                                            </td>
+                                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
 
         <!-- Pagination -->
         <div class="px-4 py-3 items-center justify-between border-t border-gray-200 sm:px-6 hidden">
