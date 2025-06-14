@@ -85,15 +85,7 @@
                                         class="status-label status-pending px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">Pending</span>
                                 </td>
                                 <td class="text-left px-4 py-2 border-b whitespace-nowrap">
-                                    <a href="#" onclick="showStatus(this, 'pending')">
-                                        <i class="fas fa-clock icon-box hover:bg-orange-300"></i>
-                                    </a>
-                                    <a href="#" onclick="showStatus(this, 'terjadwal')">
-                                        <i class="fas fa-check-circle icon-box hover:bg-green-300"></i>
-                                    </a>
-                                    <a href="#" onclick="showStatus(this, 'selesai')">
-                                        <i class="fas fa-check icon-box hover:bg-blue-400"></i>
-                                    </a>
+                                    
                                     <button type="button" class="icon-button" onclick="populateAndOpenEditModal(this)"
                                         data-nama="{{ $mhs->name }}" data-nim="{{ $mhs->id }}"
                                         data-judul="Judul Dummy {{ $index + 1 }}"
