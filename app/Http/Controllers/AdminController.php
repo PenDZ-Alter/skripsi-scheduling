@@ -87,4 +87,20 @@ class AdminController extends Controller
 
         return view('dashboard.admin.jadwal', compact('mahasiswa', 'dosen'));
     }
+
+    public function updateStatus(Request $request, $id)
+{
+    $skripsi = Skripsi::findOrFail($id);
+
+    // Validasi jika status tidak valid
+    $validStatuses = ['pending', 'terjadwal', 'selesai'];
+    if (!in_array($request->status, $validStatuses)) {
+        return response()->json(['error' => 'Invalid status'], 400);
+    }
+
+    // Update status di database
+    $skripsi->update(['status' => $request->status]);
+
+    return response()->json(['success' => 'Status updated successfully.']);
+}
 }
