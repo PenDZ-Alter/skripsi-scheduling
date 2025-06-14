@@ -6,25 +6,30 @@ use App\Models\Skripsi;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
+use App\Models\RuangSidang;
+use DateTime;
 
 class SkripsiController extends Controller
 {
     public function store(Request $request)
     {
+        dd($request->all());
+        
         $validated = $request->validate([
             'user_id' => 'required|exists:users,id',
             'judul' => 'required|string',
             'dosen_pembimbing_1' => 'required|exists:users,id',
-            'dosen_pembimbing_2' => 'required|exists:users,id',
-            'ruang_sidang' => 'required|exists:ruang_sidangs,id',
-            'jadwal_mulai' => 'required|date',
-            'jadwal_selesai' => 'required|date|after:jadwal_mulai',
+            'dosen_pembimbing_2' => 'required|exists:users,id'
         ]);
+        
+        logger('📤 Request data:', $validated);
 
-        $mulai = Carbon::parse($validated['jadwal_mulai']);
-        $selesai = Carbon::parse($validated['jadwal_selesai']);
+        $daysAhead = rand(2, 4); // antara 2 s.d. 4 hari ke depan
+        $startHour = rand(8, 14); // jam antara 08:00 - 14:00
 
-        // Cek bentrok dengan jadwal dosen pembimbing 1 & 2
+        $mulai = Carbon::now()->addDays($daysAhead)->setHour($startHour)->setMinute(0)->setSecond(0);
+        $selesai = (clone $mulai)->addHour();
+
         if (
             $this->isTimeConflict($validated['dosen_pembimbing_1'], $mulai, $selesai) ||
             $this->isTimeConflict($validated['dosen_pembimbing_2'], $mulai, $selesai)
@@ -32,13 +37,25 @@ class SkripsiController extends Controller
             return back()->withErrors(['jadwal_mulai' => 'Jadwal bentrok dengan jadwal kuliah dosen.']);
         }
 
-        Skripsi::create([
-            ...$validated,
-            'status' => 'unverified',
-        ]);
+        $ruangAcak = RuangSidang::inRandomOrder()->first();
+
+        try {
+            Skripsi::create([
+                ...$validated,
+                'ruang_sidang' => $ruangAcak->id,
+                'jadwal_mulai' => $mulai,
+                'jadwal_selesai' => $selesai,
+                'status' => 'unverified'
+            ]);
+        } catch (\Exception $e) {
+            logger('❌ Gagal insert skripsi:', ['error' => $e->getMessage()]);
+            print_r($e);
+            return back()->withErrors(['internal' => 'Gagal menyimpan data.']);
+        }
 
         return redirect()->back()->with('success', 'Skripsi berhasil didaftarkan dan menunggu verifikasi.');
     }
+
 
     private function isTimeConflict($dosenId, $jadwalMulai, $jadwalSelesai)
     {

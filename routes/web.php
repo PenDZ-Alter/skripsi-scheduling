@@ -7,6 +7,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AuthController;
 use App\Http\Middleware\AdminMiddleware;
 use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\SkripsiController;
 
 
 // Route antar Page
@@ -28,6 +29,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profileEdit', [HomeController::class, 'showProfileEdit'])->name('mhs.profileEdit');
 
     Route::post('/upload-photo', [ProfileController::class, 'uploadPhoto'])->name('route_upload_photo');
+
+    Route::post('/skripsi/store', [SkripsiController::class, 'store'])->name('skripsi.store');
 });
 
 Route::middleware([AdminMiddleware::class])->group(function () {
@@ -40,8 +43,7 @@ Route::middleware([AdminMiddleware::class])->group(function () {
     Route::get('/admin/mahasiswa/{id}/edit', [MahasiswaController::class, 'edit'])->name('mahasiswa.edit');
     Route::delete('/admin/mahasiswa/{id}', [MahasiswaController::class, 'destroy'])->name('mahasiswa.destroy');
 
-    Route::get('/admun/jadwal', [AdminController::class, 'ShowJadwal'])->name('adm.jadwal');
-
+    Route::get('/admin/jadwal', [AdminController::class, 'ShowJadwal'])->name('adm.jadwal');
 });
 
 Route::get('/', function () {

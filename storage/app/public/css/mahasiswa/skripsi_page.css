@@ -385,3 +385,13 @@
 .card-state {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
+.filled-state h4 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.filled-state p {
+    margin: 0.2rem 0;
+    color: #444;
+}

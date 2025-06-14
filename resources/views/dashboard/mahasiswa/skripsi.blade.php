@@ -54,14 +54,16 @@
                 </button>
                 <h3>Pengajuan Skripsi/Tesis/Disertasi</h3>
                 <p class="subtitle">Lengkapi formulir untuk mengajukan proposal penelitian Anda</p>
-                <form>
+                <form id="formSkripsi" action="{{ route('skripsi.store') }}" method="POST">
+                    @csrf
+                    <input type="hidden" name="user_id" value="{{ auth()->id() }}">
                     <div class="form-group">
                         <label for="judul">
                             <span class="label-icon">📋</span>
                             Judul Tugas Akhir
                         </label>
                         <div class="input-wrapper">
-                            <input type="text" id="judul" placeholder="Masukkan judul dengan huruf kapital">
+                            <input type="text" id="judul" name="judul" placeholder="Masukkan judul dengan huruf kapital" required>
                         </div>
                     </div>
 
@@ -71,8 +73,7 @@
                             Deskripsi Tugas Akhir
                         </label>
                         <div class="input-wrapper">
-                            <input type="text" id="deskripsi"
-                                placeholder="Berikan gambaran singkat tentang penelitian Anda">
+                            <input type="text" id="deskripsi" placeholder="Berikan gambaran singkat tentang penelitian Anda">
                         </div>
                     </div>
 
@@ -82,7 +83,7 @@
                             Dosen Pembimbing 1
                         </label>
                         <div class="input-wrapper">
-                            <select id="dosen1" name="dosen1">
+                            <select id="dosen1" name="dosen_pembimbing_1" required>
                                 <option value="" disabled selected>Pilih Pembimbing Utama</option>
                                 @foreach ($dosen as $da)
                                     <option value="{{ $da['id'] }}">{{ $da['name'] }}</option>
@@ -97,7 +98,7 @@
                             Dosen Pembimbing 2
                         </label>
                         <div class="input-wrapper">
-                            <select id="dosen2" name="dosen2">
+                            <select id="dosen2" name="dosen_pembimbing_2" required>
                                 <option value="" disabled selected>Pilih Pembimbing Kedua</option>
                                 @foreach ($dosen as $db)
                                     <option value="{{ $db['id'] }}">{{ $db['name'] }}</option>
