@@ -13,15 +13,15 @@
                     </div>
                     <div class="box red">
                         <i class="fas fa-minus-circle"></i>
-                        <h3><span style="font-weight: bold;">{{ $hasil = ($totalmahasiswa >= 7) ? $totalmahasiswa * 4 : $totalmahasiswa * 1; }}</span> Mahasiswa Non-Aktif</h3>
+                        <h3><span style="font-weight: bold;">{{ $hasil = ($totalmahasiswa >= 7) ? $totalmahasiswa * 4 : $totalmahasiswa * 1 }}</span> Mahasiswa Non-Aktif</h3>
                     </div>
                     <div class="box yellow">
                         <i class="fas fa-sign-out-alt"></i>
-                        <h3><span style="font-weight: bold;">{{ $hasil = ($totalmahasiswa >= 1) ? $totalmahasiswa/$totalmahasiswa: $totalmahasiswa; }}</span> Mahasiswa Cuti</h3>
+                        <h3><span style="font-weight: bold;">{{ $hasil = ($totalmahasiswa >= 1) ? $totalmahasiswa/$totalmahasiswa: $totalmahasiswa }}</span> Mahasiswa Cuti</h3>
                     </div>
                     <div class="box blue">
                         <i class="fas fa-graduation-cap"></i>
-                        <h3><span style="font-weight: bold;">{{ $hasil = ($totalmahasiswa >= 1) ? $totalmahasiswa * 100 : $totalmahasiswa * 50; }}</span> Mahasiswa Lulus</h3>
+                        <h3><span style="font-weight: bold;">{{ $hasil = ($totalmahasiswa >= 1) ? $totalmahasiswa * 100 : $totalmahasiswa * 50 }}</span> Mahasiswa Lulus</h3>
                     </div>
                 </div>
             </div>
