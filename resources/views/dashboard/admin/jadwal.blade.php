@@ -252,20 +252,21 @@
                                 <span>📊</span>
                                 Status Sidang
                             </h3>
-                            <div class="status-options">
+                            <div class="status-options" id="status-options-1">
                                 <div class="status-option">
-                                    <input type="radio" id="pending" name="status" value="pendingTambah" checked>
-                                    <label for="pending">⏳ Pending</label>
+                                    <input type="radio" id="pending-1" name="status-1" value="pending" onclick="syncStatus('pending')">
+                                    <label for="pending-1" class="status-label">⏳ Pending</label>
                                 </div>
                                 <div class="status-option">
-                                    <input type="radio" id="scheduled" name="status" value="terjadwalTambah">
-                                    <label for="scheduled">📋 Terjadwal</label>
+                                    <input type="radio" id="scheduled-1" name="status-1" value="terjadwal" onclick="syncStatus('terjadwal')">
+                                    <label for="scheduled-1" class="status-label">📋 Terjadwal</label>
                                 </div>
                                 <div class="status-option">
-                                    <input type="radio" id="completed" name="status" value="selesaiTambah">
-                                    <label for="completed">✅ Selesai</label>
+                                    <input type="radio" id="completed-1" name="status-1" value="selesai" onclick="syncStatus('selesai')">
+                                    <label for="completed-1" class="status-label">✅ Selesai</label>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </form>
@@ -362,18 +363,18 @@
                     </div>
 
                     <!-- Status Section -->
-                    <div class="status-options">
+                    <div class="status-options" id="status-options-1">
                         <div class="status-option">
-                            <input type="radio" id="pending" name="status" value="pending">
-                            <label for="pending" class="status-label">⏳ Pending</label>
+                            <input type="radio" id="pending-1" name="status-1" value="pending" onclick="syncStatus('pending')">
+                            <label for="pending-1" class="status-label">⏳ Pending</label>
                         </div>
                         <div class="status-option">
-                            <input type="radio" id="scheduled" name="status" value="terjadwal">
-                            <label for="scheduled" class="status-label">📋 Terjadwal</label>
+                            <input type="radio" id="scheduled-1" name="status-1" value="terjadwal" onclick="syncStatus('terjadwal')">
+                            <label for="scheduled-1" class="status-label">📋 Terjadwal</label>
                         </div>
                         <div class="status-option">
-                            <input type="radio" id="completed" name="status" value="selesai">
-                            <label for="completed" class="status-label">✅ Selesai</label>
+                            <input type="radio" id="completed-1" name="status-1" value="selesai" onclick="syncStatus('selesai')">
+                            <label for="completed-1" class="status-label">✅ Selesai</label>
                         </div>
                     </div>
                 </form>
@@ -389,6 +390,47 @@
     <div style="margin-bottom: 10rem;">
     </div>
     <script>
+        function syncStatus(status) {
+    // Mapping status ke id radio group kedua
+    const map = {
+        'pending': 'pending-2',
+        'terjadwal': 'scheduled-2',
+        'selesai': 'completed-2'
+    };
+
+    // Cek dan set radio kedua
+    const radio2 = document.getElementById(map[status]);
+    if (radio2) radio2.checked = true;
+
+    // Ubah warna label aktif (untuk kedua grup)
+    updateLabelHighlight('status-options-1', status);
+    updateLabelHighlight('status-options-2', status);
+}
+
+function updateLabelHighlight(containerId, status) {
+    const container = document.getElementById(containerId);
+    const labels = container.querySelectorAll('.status-label');
+
+    // Reset semua label
+    labels.forEach(label => {
+        label.style.backgroundColor = '';
+        label.style.color = '';
+        label.style.fontWeight = '';
+        label.style.padding = '';
+        label.style.borderRadius = '';
+    });
+
+    // Tambah style ke label yang cocok
+    const targetLabel = container.querySelector(`input[value="${status}"], input[value="${status}Tambah"]`);
+    if (targetLabel) {
+        const label = container.querySelector(`label[for="${targetLabel.id}"]`);
+        if (label) {
+            label.style.backgroundColor = '#4CAF50';
+            label.style.color = 'white';
+            label.style.fontWeight = 'bold';''
+        }
+    }
+}
         function showStatus(button, statusToShow) {
             const td = button.closest('td').previousElementSibling;
             const allStatus = td.querySelectorAll('.status-label');
