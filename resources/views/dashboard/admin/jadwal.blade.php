@@ -80,6 +80,7 @@
                             <td class="text-left px-4 py-2 border-b whitespace-nowrap">
 
                                 <button type="button" class="icon-button" onclick="populateAndOpenEditModal(this)"
+                                    data-id="{{ $mhs->id }}"
                                     data-nama="{{ $mhs->mahasiswa->name }}" data-nim="{{ $mhs->mahasiswa->id }}"
                                     data-judul="{{ $mhs->judul }}" data-penguji1="{{ $mhs->pembimbing1->name }}" data-penguji1-id="{{ $mhs->pembimbing1->id }}"
                                     data-penguji2="{{ $mhs->pembimbing2->name }}" data-penguji2-id="{{ $mhs->pembimbing2->id }}" data-jadwal-mulai="{{ $mhs->jadwal_mulai }}" {{-- Ganti
@@ -88,14 +89,14 @@
                                     <i class="fas fa-pencil icon-box hover:bg-gray-400"></i>
                                 </button>
                                 <!-- Modal Edit -->
-                                <div class="modal-overlay-skripsi" id="modalOverlayEdit">
+                                <div class="modal-overlay-skripsi" id="modalOverlayEdit{{ $mhs->id }}">
                                     <div class="modal-container">
                                         <div class="modal-header-skripsi">
                                             <h2 class="modal-title-skripsi">
                                                 <span>📝</span>
                                                 Edit Jadwal Sidang
                                             </h2>
-                                            <button class="close-btn" onclick="closeModalEdit()">×</button>
+                                            <button class="close-btn" onclick="closeModalEdit({{ $mhs->id }})">×</button>
                                         </div>
 
                                         <div class="modal-body-skripsi">
@@ -220,7 +221,7 @@
 
                                         <div class="modal-footer-skripsi">
                                             <button type="button" class="btn-cancel-skripsi"
-                                                onclick="closeModalEdit()">Batal</button>
+                                                onclick="closeModalEdit($mhs->id)">Batal</button>
                                             <button type="submit" class="btn-save-skripsi" form="scheduleForm">Simpan
                                                 Jadwal</button>
                                         </div>
@@ -581,6 +582,7 @@
 <script>
     function populateAndOpenEditModal(button) {
         // Ambil semua data dari atribut tombol
+        const id = button.getAttribute('data-id');
         const nama = button.getAttribute('data-nama');
         const nim = button.getAttribute('data-nim');
         const judul = button.getAttribute('data-judul');
@@ -614,17 +616,17 @@
         });
 
         // Terakhir: Tampilkan modal
-        openModalEdit();
+        openModalEdit(id);
     }
 
-    function openModalEdit() {
-        const modal = document.getElementById('modalOverlayEdit');
+    function openModalEdit(id_data) {
+        const modal = document.getElementById(`modalOverlayEdit${id_data}`);
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
     }
 
-    function closeModalEdit() {
-        const modal = document.getElementById('modalOverlayEdit');
+    function closeModalEdit(id_data) {
+        const modal = document.getElementById(`modalOverlayEdit${id_data}`);
         modal.classList.remove('active');
         document.body.style.overflow = 'auto';
 
