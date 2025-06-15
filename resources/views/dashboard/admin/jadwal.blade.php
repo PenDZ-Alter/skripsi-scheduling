@@ -83,7 +83,7 @@
                                         </div>
 
                                         <div class="modal-body-skripsi">
-                                            <form id="scheduleForm" method="POST"
+                                            <form id="scheduleForm{{ $mhs->id }}" method="POST"
                                                 action="{{ route('skripsi.update', $mhs->id) }}">
                                                 @csrf
 
@@ -158,12 +158,12 @@
                                                         <div class="form-grid">
                                                             <div class="form-field">
                                                                 <label class="form-label">Jadwal Mulai</label>
-                                                                <input type="datetime" class="form-input" name="jadwal_mulai"
+                                                                <input type="datetime-local" class="form-input" name="jadwal_mulai"
                                                                     id="tanggal" required>
                                                             </div>
                                                             <div class="form-field">
                                                                 <label class="form-label">Jadwal Selesai</label>
-                                                                <input type="datetime" class="form-input" name="jadwal_selesai"
+                                                                <input type="datetime-local" class="form-input" name="jadwal_selesai"
                                                                     id="waktu" required>
                                                             </div>
                                                             <div class="form-field full-width">
@@ -182,21 +182,21 @@
                                                 </div>
 
                                                 <!-- Status Section -->
-                                                <div class="status-options" id="status-options-2">
+                                                <div class="status-options" id="status-options-{{ $mhs->id }}">
                                                     <div class="status-option">
-                                                        <input type="radio" id="pending-2" name="status" value="pending"
-                                                            onclick="syncStatus('pending')">
-                                                        <label for="pending-2" class="status-label">⏳ Pending</label>
+                                                        <input type="radio" id="pending-{{ $mhs->id }}" name="status" value="pending"
+                                                            onclick="syncStatus('{{ $mhs->id }}', 'pending')">
+                                                        <label for="pending-{{ $mhs->id }}" class="status-label">⏳ Pending</label>
                                                     </div>
                                                     <div class="status-option">
-                                                        <input type="radio" id="scheduled-2" name="status"
-                                                            value="terjadwal" onclick="syncStatus('terjadwal')">
-                                                        <label for="scheduled-2" class="status-label">📋 Terjadwal</label>
+                                                        <input type="radio" id="scheduled-{{ $mhs->id }}" name="status"
+                                                            value="terjadwal" onclick="syncStatus('{{ $mhs->id }}','terjadwal')">
+                                                        <label for="scheduled-{{ $mhs->id }}" class="status-label">📋 Terjadwal</label>
                                                     </div>
                                                     <div class="status-option">
-                                                        <input type="radio" id="completed-2" name="status" value="selesai"
-                                                            onclick="syncStatus('selesai')">
-                                                        <label for="completed-2" class="status-label">✅ Selesai</label>
+                                                        <input type="radio" id="completed-{{ $mhs->id }}" name="status" value="selesai"
+                                                            onclick="syncStatus('{{ $mhs->id }}', 'selesai')">
+                                                        <label for="completed-{{ $mhs->id }}" class="status-label">✅ Selesai</label>
                                                     </div>
                                                 </div>
                                             </form>
@@ -205,7 +205,7 @@
                                         <div class="modal-footer-skripsi">
                                             <button type="button" class="btn-cancel-skripsi"
                                                 onclick="closeModalEdit($mhs->id)">Batal</button>
-                                            <button type="submit" class="btn-save-skripsi" form="scheduleForm">Simpan
+                                            <button type="submit" class="btn-save-skripsi" form="scheduleForm{{ $mhs->id }}">Simpan
                                                 Jadwal</button>
                                         </div>
                                     </div>
@@ -287,7 +287,7 @@
         </div>
 
         <div class="modal-body-skripsi">
-            <form id="scheduleForm" method="POST" action="{{ route('adm.jadwal') }}">
+            <form id="scheduleForm{{ $mhs->id }}" method="POST" action="{{ route('adm.jadwal') }}">
                 <!-- Student Information Section -->
                 <div class="form-section">
                     <div class="section-card">
@@ -375,21 +375,21 @@
                             <span>📊</span>
                             Status Sidang
                         </h3>
-                        <div class="status-options" id="status-options-1">
+                        <div class="status-options" id="status-options-def">
                             <div class="status-option">
-                                <input type="radio" id="pending-1" name="status-1" value="pending"
-                                    onclick="syncStatus('pending')">
-                                <label for="pending-1" class="status-label">⏳ Pending</label>
+                                <input type="radio" id="pending-def" name="status-def" value="pending"
+                                    onclick="syncStatus('def', 'pending')">
+                                <label for="pending-def" class="status-label">⏳ Pending</label>
                             </div>
                             <div class="status-option">
-                                <input type="radio" id="scheduled-1" name="status-1" value="terjadwal"
-                                    onclick="syncStatus('terjadwal')">
-                                <label for="scheduled-1" class="status-label">📋 Terjadwal</label>
+                                <input type="radio" id="scheduled-def" name="status-def" value="terjadwal"
+                                    onclick="syncStatus('def', 'terjadwal')">
+                                <label for="scheduled-def" class="status-label">📋 Terjadwal</label>
                             </div>
                             <div class="status-option">
-                                <input type="radio" id="completed-1" name="status-1" value="selesai"
-                                    onclick="syncStatus('selesai')">
-                                <label for="completed-1" class="status-label">✅ Selesai</label>
+                                <input type="radio" id="completed-def" name="status-def" value="selesai"
+                                    onclick="syncStatus('def', 'selesai')">
+                                <label for="completed-def" class="status-label">✅ Selesai</label>
                             </div>
                         </div>
                     </div>
@@ -414,12 +414,12 @@
         document.getElementById('nimTambah').value = selectedId;
     }
 
-    function syncStatus(status) {
+    function syncStatus(id, status) {
         // Mapping status ke id radio group kedua
         const map = {
-            'pending': 'pending-2',
-            'terjadwal': 'scheduled-2',
-            'selesai': 'completed-2'
+            'pending': `pending-${id}`,
+            'terjadwal': `scheduled-${id}`,
+            'selesai': `completed-${id}`
         };
 
         // Cek dan set radio kedua
@@ -427,8 +427,7 @@
         if (radio2) radio2.checked = true;
 
         // Ubah warna label aktif (untuk kedua grup)
-        updateLabelHighlight('status-options-1', status);
-        updateLabelHighlight('status-options-2', status);
+        updateLabelHighlight(`status-options-${id}`, status);
     }
 
     function updateLabelHighlight(containerId, status) {
@@ -563,8 +562,10 @@
 
 <script>
     function populateAndOpenEditModal(button) {
-        // Ambil semua data dari atribut tombol
         const id = button.getAttribute('data-id');
+        const modal = document.getElementById(`modalOverlayEdit${id}`);
+        
+        // Ambil semua data dari atribut tombol
         const nama = button.getAttribute('data-nama');
         const nim = button.getAttribute('data-nim');
         const judul = button.getAttribute('data-judul');
@@ -579,21 +580,21 @@
         const status = button.getAttribute('data-status');
 
         // Isi form input di modal
-        document.querySelector('[name="nama_mhs"]').value = nama;
-        document.querySelector('[name="nim"]').value = nim;
-        document.querySelector('[name="judul"]').value = judul;
-        document.querySelector('[name="pembimbing1"]').value = penguji1;
-        document.querySelector('[name="pembimbing2"]').value = penguji2;
-        document.querySelector('[name="jadwal_mulai"]').value = jadwal_mulai;
-        document.querySelector('[name="jadwal_selesai"]').value = jadwal_selesai;
-        document.querySelector('[name="ruang_sidang"]').value = tempat;
-        document.querySelector('#def_p1').value = penguji1_id;
-        document.querySelector('#def_p2').value = penguji2_id;
-        document.querySelector('#def_tempat').value = tempat_id;
+        modal.querySelector('[name="nama_mhs"]').value = nama;
+        modal.querySelector('[name="nim"]').value = nim;
+        modal.querySelector('[name="judul"]').value = judul;
+        modal.querySelector('[name="pembimbing1"]').value = penguji1;
+        modal.querySelector('[name="pembimbing2"]').value = penguji2;
+        modal.querySelector('[name="jadwal_mulai"]').value = jadwal_mulai;
+        modal.querySelector('[name="jadwal_selesai"]').value = jadwal_selesai;
+        modal.querySelector('[name="ruang_sidang"]').value = tempat;
+        modal.querySelector('#def_p1').value = penguji1_id;
+        modal.querySelector('#def_p2').value = penguji2_id;
+        modal.querySelector('#def_tempat').value = tempat_id;
 
-        console.log(document.querySelector('[name="nama_mhs"]'))
+        console.log(modal.querySelector('[name="nama_mhs"]'))
         // Atur radio button status
-        document.querySelectorAll('input[name="status"]').forEach(radio => {
+        modal.querySelectorAll('input[name="status"]').forEach(radio => {
             radio.checked = (radio.value === status);
         });
 
