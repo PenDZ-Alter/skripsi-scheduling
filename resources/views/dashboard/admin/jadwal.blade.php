@@ -363,18 +363,18 @@
                     </div>
 
                     <!-- Status Section -->
-                    <div class="status-options" id="status-options-1">
+                    <div class="status-options" id="status-options-2">
                         <div class="status-option">
-                            <input type="radio" id="pending-1" name="status-1" value="pending" onclick="syncStatus('pending')">
-                            <label for="pending-1" class="status-label">⏳ Pending</label>
+                            <input type="radio" id="pending-2" name="status-2" value="pending" onclick="syncStatus('pending')">
+                            <label for="pending-2" class="status-label">⏳ Pending</label>
                         </div>
                         <div class="status-option">
-                            <input type="radio" id="scheduled-1" name="status-1" value="terjadwal" onclick="syncStatus('terjadwal')">
-                            <label for="scheduled-1" class="status-label">📋 Terjadwal</label>
+                            <input type="radio" id="scheduled-2" name="status-2" value="terjadwal" onclick="syncStatus('terjadwal')">
+                            <label for="scheduled-2" class="status-label">📋 Terjadwal</label>
                         </div>
                         <div class="status-option">
-                            <input type="radio" id="completed-1" name="status-1" value="selesai" onclick="syncStatus('selesai')">
-                            <label for="completed-1" class="status-label">✅ Selesai</label>
+                            <input type="radio" id="completed-2" name="status-2" value="selesai" onclick="syncStatus('selesai')">
+                            <label for="completed-2" class="status-label">✅ Selesai</label>
                         </div>
                     </div>
                 </form>
