@@ -7,7 +7,6 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Models\RuangSidang;
-use DateTime;
 
 class SkripsiController extends Controller
 {
@@ -45,7 +44,7 @@ class SkripsiController extends Controller
                 'ruang_sidang' => $ruangAcak->id,
                 'jadwal_mulai' => $mulai,
                 'jadwal_selesai' => $selesai,
-                'status' => 'unverified'
+                'status' => 'pending'
             ]);
         } catch (\Exception $e) {
             logger('❌ Gagal insert skripsi:', ['error' => $e->getMessage()]);
@@ -92,7 +91,7 @@ class SkripsiController extends Controller
 
     private function isTimeConflict($dosenId, $jadwalMulai, $jadwalSelesai)
     {
-        return DB::table('subjects_schedule')
+        return DB::table('subjects_schedules')
             ->where('dosen', $dosenId)
             ->where(function ($query) use ($jadwalMulai, $jadwalSelesai) {
                 $query->whereBetween('jadwal_mulai', [$jadwalMulai, $jadwalSelesai])

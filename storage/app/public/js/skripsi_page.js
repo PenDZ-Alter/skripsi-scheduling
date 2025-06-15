@@ -41,14 +41,14 @@ function saveDataSkripsi() {
     document.getElementById("formSkripsi").submit();
 
     // Reset form (optional)
-    document.getElementById("judul").value = "";
-    document.getElementById("deskripsi").value = "";
-    dosen1Select.selectedIndex = 0;
-    dosen2Select.selectedIndex = 0;
+    // document.getElementById("judul").value = "";
+    // document.getElementById("deskripsi").value = "";
+    // dosen1Select.selectedIndex = 0;
+    // dosen2Select.selectedIndex = 0;
 
-    // Reset disabled state
-    Array.from(dosen1Select.options).forEach(opt => opt.disabled = false);
-    Array.from(dosen2Select.options).forEach(opt => opt.disabled = false);
+    // // Reset disabled state
+    // Array.from(dosen1Select.options).forEach(opt => opt.disabled = false);
+    // Array.from(dosen2Select.options).forEach(opt => opt.disabled = false);
 
     // ⚠️ Deskripsi hanya digunakan untuk UI, tidak dikirim ke backend
 }

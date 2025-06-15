@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('judul');
             $table->datetime('jadwal_mulai');
             $table->datetime('jadwal_selesai');
-            $table->enum('status', ['unverified', 'belum_sidang', 'lulus', 'revisi'])->default('unverified');
+            $table->enum('status', ['pending', 'terjadwal', 'selesai'])->default('pending');
             $table->timestamps();
     
             // Relasi ke tabel users
