@@ -8,6 +8,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\SkripsiController;
+use App\Models\Skripsi;
 
 // Route antar Page
 Route::middleware(['auth'])->group(function () {
@@ -47,8 +48,8 @@ Route::middleware([AdminMiddleware::class])->prefix('admin')->group(function () 
 
     // Jadwal
     Route::get('/jadwal', [AdminController::class, 'ShowJadwal'])->name('adm.jadwal');
+    Route::post('/jadwal', [SkripsiController::class, 'show'])->name('adm.jadwal');
 });
-
 
 Route::get('/', function () {
     return view('auth.login');

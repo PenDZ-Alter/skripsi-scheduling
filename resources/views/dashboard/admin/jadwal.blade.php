@@ -169,7 +169,7 @@
             </div>
 
             <div class="modal-body-skripsi">
-                <form id="scheduleForm" onsubmit="handleSubmit(event)">
+                <form id="scheduleForm" method="POST" action="{{ route('adm.jadwal') }}">
                     <!-- Student Information Section -->
                     <div class="form-section">
                         <div class="section-card">
@@ -180,13 +180,16 @@
                             <div class="form-grid">
                                 <div class="form-field">
                                     <label class="form-label">Nama Mahasiswa</label>
-                                    <input type="text" class="form-input" name="nama_mhsTambah"
-                                        placeholder="Masukkan nama lengkap" required>
+                                    <select name="user_id" id="user_id" class="form-control" required onchange="tampilkanID()">
+                                        <option value="" disabled selected>Pilih Mahasiswa</option>
+                                        @foreach($mahasiswa as $mhs)
+                                            <option value="{{ $mhs->id }}">{{ $mhs->name }} ({{ $mhs->nim }})</option>
+                                        @endforeach
+                                    </select>
                                 </div>
                                 <div class="form-field">
                                     <label class="form-label">NIM</label>
-                                    <input type="text" class="form-input" name="nimTambah"
-                                        placeholder="Nomor Induk Mahasiswa" required>
+                                    <input type="text" class="form-input" name="nimTambah" id="nimTambah" placeholder="Nomor Induk Mahasiswa" required readonly>
                                 </div>
                                 <div class="form-field full-width">
                                     <label class="form-label">Judul Skripsi</label>
@@ -302,11 +305,11 @@
                             <div class="form-grid">
                                 <div class="form-field">
                                     <label class="form-label">Nama Mahasiswa</label>
-                                    <input type="text" class="form-input" name="nama_mhs" id="nama_mhs" required>
+                                    <input type="text" class="form-input" name="nama_mhs" id="nama_mhs" required readonly>
                                 </div>
                                 <div class="form-field">
                                     <label class="form-label">NIM</label>
-                                    <input type="text" class="form-input" name="nim" id="nim" required>
+                                    <input type="text" class="form-input" name="nim" id="nim" required readonly>
                                 </div>
                                 <div class="form-field full-width">
                                     <label class="form-label">Judul Skripsi</label>
@@ -390,6 +393,13 @@
     <div style="margin-bottom: 10rem;">
     </div>
     <script>
+        function tampilkanID() {
+        const select = document.getElementById('user_id');
+        const selectedId = select.value;
+
+        document.getElementById('nimTambah').value = selectedId;
+    }
+
         function syncStatus(status) {
     // Mapping status ke id radio group kedua
     const map = {

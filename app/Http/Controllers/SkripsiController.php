@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Skripsi;
+use App\Models\User;
 use App\Models\SubjectsSchedule;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
@@ -11,9 +12,17 @@ use App\Models\RuangSidang;
 
 class SkripsiController extends Controller
 {
+    public function show()
+        {
+            $mahasiswa = User::where('role', 'mahasiswa')->get();
+            $dosen = User::where('role', 'dosen')->get();
+            $ruangs = RuangSidang::all();
+
+            return view('dashboard.admin.jadwal', compact('mahasiswa', 'dosen', 'ruangs'));
+        }
+
     public function store(Request $request)
     {
-        // dd($request->all());
 
         $validated = $request->validate([
             'user_id' => 'required|exists:users,id',
