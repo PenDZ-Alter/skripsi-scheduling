@@ -38,7 +38,7 @@ Route::middleware([AdminMiddleware::class])->prefix('admin')->group(function () 
 
     // Skripsi Routes
     Route::get('/skripsi/{id}/edit', [SkripsiController::class, 'edit'])->name('skripsi.edit');
-    Route::put('/skripsi/{id}', [SkripsiController::class, 'update'])->name('skripsi.update');
+    Route::post('/skripsi/{id}', [SkripsiController::class, 'update'])->name('skripsi.update');
     Route::delete('/skripsi/{id}', [SkripsiController::class, 'destroy'])->name('skripsi.destroy');
 
     // Mahasiswa Routes

@@ -98,6 +98,8 @@ class SkripsiController extends Controller
     {
         $skripsi = Skripsi::findOrFail($id);
 
+        // dd($skripsi);
+
         $validated = $request->validate([
             'jadwal_mulai' => 'required|date',
             'jadwal_selesai' => 'required|date|after:jadwal_mulai',
@@ -120,12 +122,19 @@ class SkripsiController extends Controller
             return back()->withErrors(['jadwal_mulai' => 'Jadwal bentrok dengan jadwal dosen.'])->withInput();
         }
 
-        $skripsi->update([
-            'jadwal_mulai' => $mulai,
-            'jadwal_selesai' => $selesai,
-            'ruang_sidang' => $validated['ruang_sidang'],
-            'status' => $validated['status']
-        ]);
+        try {
+            $skripsi->update([
+                'jadwal_mulai' => $mulai,
+                'jadwal_selesai' => $selesai,
+                'ruang_sidang' => $validated['ruang_sidang'],
+                'status' => $validated['status']
+            ]);
+        } catch (\Exception $e) {
+            dd($e);
+            logger('❌ Gagal update skripsi:', ['error' => $e->getMessage()]);
+            return back()->withErrors(['internal' => 'Gagal memperbarui data.']);
+        }
+
 
         return redirect()->route('admin.skripsi.index')->with('success', 'Data skripsi berhasil diperbarui.');
     }
