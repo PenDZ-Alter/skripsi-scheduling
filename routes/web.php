@@ -32,18 +32,23 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/skripsi/store', [SkripsiController::class, 'store'])->name('skripsi.store');
 });
 
-Route::middleware([AdminMiddleware::class])->group(function () {
-    Route::get('/admin', [AdminController::class, 'index'])->name('adm.home');
-    Route::get('/admin/skripsi/{id}/edit', [AdminController::class, 'edit'])->name('adm.skripsi.edit');
-    Route::put('/admin/skripsi/{id}', [AdminController::class, 'update'])->name('adm.skripsi.update');
+Route::middleware([AdminMiddleware::class])->prefix('admin')->group(function () {
+    Route::get('/', [AdminController::class, 'index'])->name('adm.home');
 
-    Route::get('/admin/profile', [MahasiswaController::class, 'showStudentData'])->name('adm.profile');
+    // Skripsi Routes
+    Route::get('/skripsi/{id}/edit', [SkripsiController::class, 'edit'])->name('skripsi.edit');
+    Route::put('/skripsi/{id}', [SkripsiController::class, 'update'])->name('skripsi.update');
+    Route::delete('/skripsi/{id}', [SkripsiController::class, 'destroy'])->name('skripsi.destroy');
 
-    Route::get('/admin/mahasiswa/{id}/edit', [MahasiswaController::class, 'edit'])->name('mahasiswa.edit');
-    Route::delete('/admin/mahasiswa/{id}', [MahasiswaController::class, 'destroy'])->name('mahasiswa.destroy');
+    // Mahasiswa Routes
+    Route::get('/profile', [MahasiswaController::class, 'showStudentData'])->name('adm.profile');
+    Route::get('/mahasiswa/{id}/edit', [MahasiswaController::class, 'edit'])->name('mahasiswa.edit');
+    Route::delete('/mahasiswa/{id}', [MahasiswaController::class, 'destroy'])->name('mahasiswa.destroy');
 
-    Route::get('/admin/jadwal', [AdminController::class, 'ShowJadwal'])->name('adm.jadwal');
+    // Jadwal
+    Route::get('/jadwal', [AdminController::class, 'ShowJadwal'])->name('adm.jadwal');
 });
+
 
 Route::get('/', function () {
     return view('auth.login');
