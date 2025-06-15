@@ -532,9 +532,9 @@ table thead th {
 }
 
 .status-option input[type="radio"] {
-    position: absolute;
-    opacity: 0;
+  display: none;
 }
+
 
 .status-option label {
     display: block;
@@ -572,17 +572,37 @@ table thead th {
     left: 100%;
 }
 
-.status-option input[type="radio"]:checked+label {
+.status-label {
+  padding: 12px 20px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.status-label.active-status {
+  background-color: #667eea;
+  color: white;
+  border-color: #667eea;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* .status-option input[type="radio"]:checked+label {
     border-color: #667eea;
     background: #667eea;
     color: white;
     transform: translateY(-1px);
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-}
+}  */
 
-.status-option input[type="radio"]:checked+label::before {
+/* .status-option input[type="radio"]:checked+label::before {
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-}
+} */
 
 /* Modal Footer */
 .modal-footer-skripsi {

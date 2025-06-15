@@ -36,7 +36,9 @@ class AdminController extends Controller
     {
         $skripsis = Skripsi::with(['ruang'])->get();
         $ruangSidangList = RuangSidang::all();
+        $mahasiswa = User::where('role', 'mahasiswa')->get();
+        $dosen = User::where('role', 'dosen')->get();
 
-        return view('dashboard.admin.jadwal', compact('skripsis', 'ruangSidangList'));
+        return view('dashboard.admin.jadwal', compact('skripsis', 'ruangSidangList', 'mahasiswa','dosen'));
     }
 }

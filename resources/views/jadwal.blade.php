@@ -1,6 +1,7 @@
 @extends('dashboard.admin.master')
 
 @section('content')
+    <!-- Main Content -->
     <div class="flex-1 overflow-auto">
         <!-- Header + Filter Wrapper -->
         <div class="sidang-card">
@@ -51,8 +52,9 @@
                             <th class="text-center px-4 py-2">Judul</th>
                             <th class="text-center px-4 py-2">Anggota Penguji I</th>
                             <th class="text-center px-4 py-2">Anggota Penguji II</th>
-                            <th class="text-center px-4 py-2">Jadwal Mulai</th>
-                            <th class="text-center px-4 py-2">Jadwal Selesai</th>
+                            <th class="text-center px-4 py-2">Hari</th>
+                            <th class="text-center px-4 py-2">Tanggal</th>
+                            <th class="text-center px-4 py-2">Waktu</th>
                             <th class="text-center px-4 py-2">Tempat</th>
                             <th class="text-center px-4 py-2">Status</th>
                             <th class="text-center px-4 py-2">Aksi</th>
@@ -74,15 +76,16 @@
                                 </td>
                                 <td class="text-left px-4 py-2 border-b whitespace-nowrap">{{ $dosen_pengujis[1]->name }}
                                 </td>
-                                <td class="text-left px-4 py-2 border-b whitespace-nowrap">Jadwal Mulai Dummy</td>
-                                <td class="text-center px-4 py-2 border-b whitespace-nowrap">Jadwal Selesai Dummy</td>
+                                <td class="text-left px-4 py-2 border-b whitespace-nowrap">Hari Dummy</td>
+                                <td class="text-center px-4 py-2 border-b whitespace-nowrap">Tanggal Dummy</td>
+                                <td class="text-center px-4 py-2 border-b whitespace-nowrap">Waktu Dummy</td>
                                 <td class="text-center px-4 py-2 border-b whitespace-nowrap">Tempat Dummy</td>
                                 <td class="text-center px-4 py-2 border-b">
                                     <span
                                         class="status-label status-pending px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">Pending</span>
                                 </td>
                                 <td class="text-left px-4 py-2 border-b whitespace-nowrap">
-
+                                    
                                     <button type="button" class="icon-button" onclick="populateAndOpenEditModal(this)"
                                         data-nama="{{ $mhs->name }}" data-nim="{{ $mhs->id }}"
                                         data-judul="Judul Dummy {{ $index + 1 }}"
@@ -362,18 +365,26 @@
                     </div>
 
                     <!-- Status Section -->
-                    <div class="status-options">
-                        <div class="status-option">
-                            <input type="radio" id="pending" name="status" value="pending">
-                            <label for="pending" class="status-label">⏳ Pending</label>
-                        </div>
-                        <div class="status-option">
-                            <input type="radio" id="scheduled" name="status" value="terjadwal">
-                            <label for="scheduled" class="status-label">📋 Terjadwal</label>
-                        </div>
-                        <div class="status-option">
-                            <input type="radio" id="completed" name="status" value="selesai">
-                            <label for="completed" class="status-label">✅ Selesai</label>
+                    <div class="form-section">
+                        <div class="section-card">
+                            <h3 class="section-title">
+                                <span>📊</span>
+                                Status Sidang
+                            </h3>
+                            <div class="status-options">
+                                <div class="status-option">
+                                    <input type="radio" id="pending" name="status" value="pending">
+                                    <label for="pending">⏳ Pending</label>
+                                </div>
+                                <div class="status-option">
+                                    <input type="radio" id="scheduled" name="status" value="terjadwal" checked>
+                                    <label for="scheduled">📋 Terjadwal</label>
+                                </div>
+                                <div class="status-option">
+                                    <input type="radio" id="completed" name="status" value="selesai">
+                                    <label for="completed">✅ Selesai</label>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </form>
@@ -402,33 +413,6 @@
                 target.classList.remove('hidden'); // tampilkan yang sesuai
             }
         }
-
-        document.addEventListener("DOMContentLoaded", function() {
-            const radios = document.querySelectorAll('input[name="status"]');
-
-            function activateLabel(radio) {
-                document.querySelectorAll(".status-label").forEach(label => {
-                    label.classList.remove("active-status");
-                });
-
-                const label = document.querySelector(`label[for="${radio.id}"]`);
-                if (label) {
-                    label.classList.add("active-status");
-                }
-            }
-
-            radios.forEach(radio => {
-                radio.addEventListener("change", function() {
-                    activateLabel(this);
-                });
-            });
-
-            // Jalankan sekali saat load halaman (kalau ada yang udah checked)
-            const checked = document.querySelector('input[name="status"]:checked');
-            if (checked) {
-                activateLabel(checked);
-            }
-        });
     </script>
 
     <script>

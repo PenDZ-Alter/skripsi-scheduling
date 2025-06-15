@@ -40,7 +40,7 @@
         @include('dashboard.admin.partials.footer')
     </div>
     <script type="text/javascript" src="../storage/js/function.js"></script>
-    <script type="text/javascript" src="../storage/js/IconDownload.js"></script>
+    {{-- <script type="text/javascript" src="../storage/js/IconDownload.js"></script> --}}
     <script type="text/javascript" src="../storage/js/chart.js"></script>
     <script type="text/javascript" src="../storage/js/picture-slider.js"></script>
     <script type="text/javascript" src="../storage/js/skripsi_page.js"></script>
