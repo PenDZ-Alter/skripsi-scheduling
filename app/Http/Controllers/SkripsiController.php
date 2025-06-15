@@ -69,6 +69,7 @@ class SkripsiController extends Controller
                 'jadwal_selesai' => $selesai,
                 'status' => 'pending'
             ]);
+
         } catch (\Exception $e) {
             logger('❌ Gagal insert skripsi:', ['error' => $e->getMessage()]);
             dd($e);
@@ -89,9 +90,12 @@ class SkripsiController extends Controller
     {
         $skripsi = Skripsi::findOrFail($id);
 
-        // dd($skripsi);
+        // dd($request->all());
 
         $validated = $request->validate([
+            'judul' => 'required|string',
+            'pembimbing1' => 'required|exists:users,id',
+            'pembimbing2' => 'required|exists:users,id',
             'jadwal_mulai' => 'required|date',
             'jadwal_selesai' => 'required|date|after:jadwal_mulai',
             'ruang_sidang' => 'required|exists:ruang_sidangs,id',
@@ -115,6 +119,9 @@ class SkripsiController extends Controller
 
         try {
             $skripsi->update([
+                'judul' => $validated['judul'],
+                'dosen_pembimbing_1' => $validated['pembimbing1'],
+                'dosen_pembimbing_2' => $validated['pembimbing2'],
                 'jadwal_mulai' => $mulai,
                 'jadwal_selesai' => $selesai,
                 'ruang_sidang' => $validated['ruang_sidang'],
@@ -127,7 +134,7 @@ class SkripsiController extends Controller
         }
 
 
-        return redirect()->route('admin.skripsi.index')->with('success', 'Data skripsi berhasil diperbarui.');
+        return redirect()->route('adm.jadwal')->with('success', 'Data skripsi berhasil diperbarui.');
     }
 
     private function isTimeConflict($dosenId, $hari, $jamMulai, $jamSelesai)
