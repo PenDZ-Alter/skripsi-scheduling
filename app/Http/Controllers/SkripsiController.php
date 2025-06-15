@@ -12,15 +12,6 @@ use App\Models\RuangSidang;
 
 class SkripsiController extends Controller
 {
-    public function show()
-        {
-            $mahasiswa = User::where('role', 'mahasiswa')->get();
-            $dosen = User::where('role', 'dosen')->get();
-            $ruangs = RuangSidang::all();
-
-            return view('dashboard.admin.jadwal', compact('mahasiswa', 'dosen', 'ruangs'));
-        }
-
     public function store(Request $request)
     {
 

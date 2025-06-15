@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Skripsi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
@@ -40,12 +41,13 @@ class MahasiswaController extends Controller
     public function showSkripsi() {
         $dosen = User::where('role', 'dosen')->get();
         $user = auth()->user();
+        $skripsi = Skripsi::where('user_id', $user->id)->first();
 
         if (!$dosen) {
             return redirect()->route('mhs.home');
         }
 
-        return view('dashboard.mahasiswa.skripsi', compact('dosen', 'user'));
+        return view('dashboard.mahasiswa.skripsi', compact('dosen', 'user', 'skripsi'));
     }
     
     public function showStatistik() {
