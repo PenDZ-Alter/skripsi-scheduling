@@ -75,16 +75,16 @@
                             <td class="text-center px-4 py-2 border-b whitespace-nowrap">{{ $mhs->ruang->nama_ruang }}</td>
                             <td class="text-center px-4 py-2 border-b">
                                 <span
-                                    class="status-label status-pending px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">Pending</span>
+                                    class="status-label status-pending px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">{{ $mhs->status}}</span>
                             </td>
                             <td class="text-left px-4 py-2 border-b whitespace-nowrap">
 
                                 <button type="button" class="icon-button" onclick="populateAndOpenEditModal(this)"
                                     data-nama="{{ $mhs->mahasiswa->name }}" data-nim="{{ $mhs->mahasiswa->id }}"
-                                    data-judul="{{ $mhs->judul }}" data-penguji1="{{ $mhs->pembimbing1->name }}"
-                                    data-penguji2="{{ $mhs->pembimbing2->name }}" data-tanggal="2025-01-01" {{-- Ganti
-                                    dengan data asli kalau udah --}} data-waktu="09:00 - 11:00 WIB"
-                                    data-tempat="{{ $mhs->ruang->nama_ruang }}" data-status="{{ $mhs->status }}">
+                                    data-judul="{{ $mhs->judul }}" data-penguji1="{{ $mhs->pembimbing1->name }}" data-penguji1-id="{{ $mhs->pembimbing1->id }}"
+                                    data-penguji2="{{ $mhs->pembimbing2->name }}" data-penguji2-id="{{ $mhs->pembimbing2->id }}" data-jadwal-mulai="{{ $mhs->jadwal_mulai }}" {{-- Ganti
+                                    dengan data asli kalau udah --}} data-jadwal-selesai="{{ $mhs->jadwal_selesai }}"
+                                    data-tempat="{{ $mhs->ruang->nama_ruang }}" data-tempat-id="{{ $mhs->ruang->id }}" data-status="{{ $mhs->status }}">
                                     <i class="fas fa-pencil icon-box hover:bg-gray-400"></i>
                                 </button>
                                 <!-- Modal Edit -->
@@ -114,12 +114,12 @@
                                                             <div class="form-field">
                                                                 <label class="form-label">Nama Mahasiswa</label>
                                                                 <input type="text" class="form-input" name="nama_mhs"
-                                                                    id="nama_mhs" required readonly>
+                                                                    id="nama_mhs" readonly disabled>
                                                             </div>
                                                             <div class="form-field">
                                                                 <label class="form-label">NIM</label>
                                                                 <input type="text" class="form-input" name="nim" id="nim"
-                                                                    required readonly>
+                                                                    readonly disabled>
                                                             </div>
                                                             <div class="form-field full-width">
                                                                 <label class="form-label">Judul Skripsi</label>
@@ -140,13 +140,25 @@
                                                         <div class="form-grid">
                                                             <div class="form-field">
                                                                 <label class="form-label">Pembimbing 1</label>
-                                                                <input type="text" class="form-input" name="pembimbing1"
-                                                                    id="pembimbing1" required>
+                                                                {{-- <input type="text" class="form-input" name="pembimbing1"
+                                                                    id="pembimbing1" required> --}}
+                                                                <select class="form-input" name="pembimbing1">
+                                                                    <option id="def_p1">{{ $mhs->pembimbing1->name }}</option>
+                                                                    @foreach ($dosen as $dosen1)
+                                                                        <option value="{{ $dosen1->id }}">{{ $dosen1->name }}</option>
+                                                                    @endforeach
+                                                                </select>
                                                             </div>
                                                             <div class="form-field">
                                                                 <label class="form-label">Pembimbing 2</label>
-                                                                <input type="text" class="form-input" name="pembimbing2"
-                                                                    id="pembimbing2" required>
+                                                                {{-- <input type="text" class="form-input" name="pembimbing2"
+                                                                    id="pembimbing2" required> --}}
+                                                                <select class="form-input" name="pembimbing2">
+                                                                    <option id="def_p2">{{ $mhs->pembimbing2->name }}</option>
+                                                                    @foreach ($dosen as $dosen2)
+                                                                        <option value="{{ $dosen2->id }}">{{ $dosen2->name }}</option>
+                                                                    @endforeach
+                                                                </select>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -161,19 +173,25 @@
                                                         </h3>
                                                         <div class="form-grid">
                                                             <div class="form-field">
-                                                                <label class="form-label">Tanggal</label>
-                                                                <input type="date" class="form-input" name="tanggal"
+                                                                <label class="form-label">Jadwal Mulai</label>
+                                                                <input type="datetime" class="form-input" name="jadwal_mulai"
                                                                     id="tanggal" required>
                                                             </div>
                                                             <div class="form-field">
-                                                                <label class="form-label">Waktu</label>
-                                                                <input type="text" class="form-input" name="waktu"
+                                                                <label class="form-label">Jadwal Selesai</label>
+                                                                <input type="datetime" class="form-input" name="jadwal_selesai"
                                                                     id="waktu" required>
                                                             </div>
                                                             <div class="form-field full-width">
                                                                 <label class="form-label">Tempat</label>
-                                                                <input type="text" class="form-input" name="tempat"
-                                                                    id="tempat" required>
+                                                                {{-- <input type="text" class="form-input" name="ruang_sidang"
+                                                                    id="tempat" required> --}}
+                                                                <select class="form-input" name="ruang_sidang">
+                                                                    <option id="def_tempat">{{ $mhs->ruang->nama_ruang }}</option>
+                                                                @foreach ($ruangSidangList as $ruang)
+                                                                    <option value="{{ $ruang->id }}">{{ $ruang->nama_ruang }}</option>
+                                                                @endforeach
+                                                                </select>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -567,10 +585,13 @@
         const nim = button.getAttribute('data-nim');
         const judul = button.getAttribute('data-judul');
         const penguji1 = button.getAttribute('data-penguji1');
+        const penguji1_id = button.getAttribute('data-penguji1-id');
         const penguji2 = button.getAttribute('data-penguji2');
-        const tanggal = button.getAttribute('data-tanggal');
-        const waktu = button.getAttribute('data-waktu');
+        const penguji2_id = button.getAttribute('data-penguji2-id');
+        const jadwal_mulai = button.getAttribute('data-jadwal-mulai');
+        const jadwal_selesai = button.getAttribute('data-jadwal-selesai');
         const tempat = button.getAttribute('data-tempat');
+        const tempat_id = button.getAttribute('data-tempat-id');
         const status = button.getAttribute('data-status');
 
         // Isi form input di modal
@@ -579,9 +600,12 @@
         document.querySelector('[name="judul"]').value = judul;
         document.querySelector('[name="pembimbing1"]').value = penguji1;
         document.querySelector('[name="pembimbing2"]').value = penguji2;
-        document.querySelector('[name="tanggal"]').value = tanggal;
-        document.querySelector('[name="waktu"]').value = waktu;
-        document.querySelector('[name="tempat"]').value = tempat;
+        document.querySelector('[name="jadwal_mulai"]').value = jadwal_mulai;
+        document.querySelector('[name="jadwal_selesai"]').value = jadwal_selesai;
+        document.querySelector('[name="ruang_sidang"]').value = tempat;
+        document.querySelector('#def_p1').value = penguji1_id;
+        document.querySelector('#def_p2').value = penguji2_id;
+        document.querySelector('#def_tempat').value = tempat_id;
 
         console.log(document.querySelector('[name="nama_mhs"]'))
         // Atur radio button status
