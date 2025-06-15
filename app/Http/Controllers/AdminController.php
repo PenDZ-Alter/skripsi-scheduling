@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\RuangSidang;
 use App\Models\Skripsi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -33,9 +34,9 @@ class AdminController extends Controller
 
     public function ShowJadwal()
     {
-        $mahasiswa = User::where('role', 'mahasiswa')->get();
-        $dosen = User::where('role', 'dosen')->get();
+        $skripsis = Skripsi::with(['ruang'])->get();
+        $ruangSidangList = RuangSidang::all();
 
-        return view('dashboard.admin.jadwal', compact('mahasiswa', 'dosen'));
+        return view('dashboard.admin.jadwal', compact('skripsis', 'ruangSidangList'));
     }
 }

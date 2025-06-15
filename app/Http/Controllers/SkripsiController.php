@@ -81,7 +81,8 @@ class SkripsiController extends Controller
     public function edit($id)
     {
         $skripsi = Skripsi::with(['mahasiswa', 'pembimbing1', 'pembimbing2', 'ruang'])->findOrFail($id);
-        return view('admin.skripsi.edit', compact('skripsi'));
+        $ruang_sidang = RuangSidang::all();
+        return view('skripsi.edit', compact('skripsi', 'ruang_sidang'));
     }
 
     public function update(Request $request, $id)
@@ -91,25 +92,33 @@ class SkripsiController extends Controller
         $validated = $request->validate([
             'jadwal_mulai' => 'required|date',
             'jadwal_selesai' => 'required|date|after:jadwal_mulai',
+            'ruang_sidang' => 'required|exists:ruang_sidangs,id',
+            'status' => 'required|in:pending,terjadwal,selesai'
         ]);
 
         $mulai = Carbon::parse($validated['jadwal_mulai']);
         $selesai = Carbon::parse($validated['jadwal_selesai']);
 
-        if (
-            $this->isTimeConflict($skripsi->dosen_pembimbing_1, $mulai, $selesai) ||
-            $this->isTimeConflict($skripsi->dosen_pembimbing_2, $mulai, $selesai)
-        ) {
-            return back()->withErrors(['jadwal_mulai' => 'Jadwal bentrok dengan jadwal kuliah dosen.']);
+        $hari = $this->mapHari($mulai);
+        $jamMulai = $mulai->format('H:i:s');
+        $jamSelesai = $selesai->format('H:i:s');
+
+        // Cek bentrok dosen
+        $isConflict1 = $this->isTimeConflict($skripsi->dosen_pembimbing_1, $hari, $jamMulai, $jamSelesai);
+        $isConflict2 = $this->isTimeConflict($skripsi->dosen_pembimbing_2, $hari, $jamMulai, $jamSelesai);
+
+        if ($isConflict1 || $isConflict2) {
+            return back()->withErrors(['jadwal_mulai' => 'Jadwal bentrok dengan jadwal dosen.'])->withInput();
         }
 
         $skripsi->update([
             'jadwal_mulai' => $mulai,
             'jadwal_selesai' => $selesai,
-            'status' => 'belum_sidang' // Admin udah fix-in, berarti oke lanjut sidang
+            'ruang_sidang' => $validated['ruang_sidang'],
+            'status' => $validated['status']
         ]);
 
-        return redirect()->route('admin.skripsi.edit', $skripsi->id)->with('success', 'Jadwal berhasil diperbarui.');
+        return redirect()->route('admin.skripsi.index')->with('success', 'Data skripsi berhasil diperbarui.');
     }
 
     private function isTimeConflict($dosenId, $hari, $jamMulai, $jamSelesai)

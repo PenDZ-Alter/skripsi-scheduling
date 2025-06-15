@@ -24,23 +24,43 @@ class Skripsi extends Model
     ];
 
 
-    public function mahasiswa(): BelongsTo
+    // public function mahasiswa(): BelongsTo
+    // {
+    //     return $this->belongsTo(User::class, 'user_id');
+    // }
+
+    // public function ruang(): BelongsTo
+    // {
+    //     return $this->belongsTo(RuangSidang::class, 'ruang_sidang');
+    // }
+
+    // public function pembimbing1(): BelongsTo
+    // {
+    //     return $this->belongsTo(User::class, 'dosen_pembimbing_1');
+    // }
+
+    // public function pembimbing2(): BelongsTo
+    // {
+    //     return $this->belongsTo(User::class, 'dosen_pembimbing_2');
+    // }
+
+    public function mahasiswa()
     {
         return $this->belongsTo(User::class, 'user_id');
     }
 
-    public function ruang(): BelongsTo
-    {
-        return $this->belongsTo(RuangSidang::class, 'ruang_sidang');
-    }
-
-    public function pembimbing1(): BelongsTo
+    public function pembimbing1()
     {
         return $this->belongsTo(User::class, 'dosen_pembimbing_1');
     }
 
-    public function pembimbing2(): BelongsTo
+    public function pembimbing2()
     {
         return $this->belongsTo(User::class, 'dosen_pembimbing_2');
+    }
+
+    public function ruang()
+    {
+        return $this->belongsTo(RuangSidang::class, 'ruang_sidang');
     }
 }
