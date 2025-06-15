@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Skripsi;
+use App\Models\SubjectsSchedule;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
@@ -13,27 +14,49 @@ class SkripsiController extends Controller
     public function store(Request $request)
     {
         // dd($request->all());
-        
+
         $validated = $request->validate([
             'user_id' => 'required|exists:users,id',
             'judul' => 'required|string',
             'dosen_pembimbing_1' => 'required|exists:users,id',
             'dosen_pembimbing_2' => 'required|exists:users,id'
         ]);
-        
-        logger('📤 Request data:', $validated);
 
-        $daysAhead = rand(2, 4); // antara 2 s.d. 4 hari ke depan
-        $startHour = rand(8, 14); // jam antara 08:00 - 14:00
+        // Cek apakah mahasiswa sudah pernah daftar skripsi
+        $existing = Skripsi::where('user_id', $validated['user_id'])->first();
+        if ($existing) {
+            return back()->withErrors(['message' => 'Mahasiswa sudah mendaftarkan sidang sebelumnya.']);
+        }
 
-        $mulai = Carbon::now()->addDays($daysAhead)->setHour($startHour)->setMinute(0)->setSecond(0);
-        $selesai = (clone $mulai)->addHour();
+        $maxAttempts = 10; // Biar gak infinite loop
+        $attempt = 0;
+        $conflict = true;
+        $mulai = $selesai = null;
 
-        if (
-            $this->isTimeConflict($validated['dosen_pembimbing_1'], $mulai, $selesai) ||
-            $this->isTimeConflict($validated['dosen_pembimbing_2'], $mulai, $selesai)
-        ) {
-            return back()->withErrors(['message' => 'Jadwal bentrok dengan jadwal kuliah dosen.']);
+        do {
+            $daysAhead = rand(2, 4);
+            $startHour = rand(8, 14);
+
+            $mulai = Carbon::now()->addDays($daysAhead)->setHour($startHour)->setMinute(0)->setSecond(0);
+            $selesai = (clone $mulai)->addHour();
+
+            $hari = $this->mapHari($mulai);
+            $jamMulai = $mulai->format('H:i:s');
+            $jamSelesai = $selesai->format('H:i:s');
+
+            $isConflict1 = $this->isTimeConflict($validated['dosen_pembimbing_1'], $hari, $jamMulai, $jamSelesai);
+            $isConflict2 = $this->isTimeConflict($validated['dosen_pembimbing_2'], $hari, $jamMulai, $jamSelesai);
+
+            if (!$isConflict1 && !$isConflict2) {
+                $conflict = false;
+                break;
+            }
+
+            $attempt++;
+        } while ($attempt < $maxAttempts);
+
+        if ($conflict) {
+            return back()->withErrors(['message' => 'Tidak dapat menemukan jadwal yang cocok. Coba lagi nanti.']);
         }
 
         $ruangAcak = RuangSidang::inRandomOrder()->first();
@@ -89,18 +112,33 @@ class SkripsiController extends Controller
         return redirect()->route('admin.skripsi.edit', $skripsi->id)->with('success', 'Jadwal berhasil diperbarui.');
     }
 
-    private function isTimeConflict($dosenId, $jadwalMulai, $jadwalSelesai)
+    private function isTimeConflict($dosenId, $hari, $jamMulai, $jamSelesai)
     {
-        return DB::table('subjects_schedules')
-            ->where('dosen', $dosenId)
-            ->where(function ($query) use ($jadwalMulai, $jadwalSelesai) {
-                $query->whereBetween('jadwal_mulai', [$jadwalMulai, $jadwalSelesai])
-                    ->orWhereBetween('jadwal_selesai', [$jadwalMulai, $jadwalSelesai])
-                    ->orWhere(function ($q) use ($jadwalMulai, $jadwalSelesai) {
-                        $q->where('jadwal_mulai', '<=', $jadwalMulai)
-                            ->where('jadwal_selesai', '>=', $jadwalSelesai);
+        return SubjectsSchedule::where('dosen', $dosenId)
+            ->where('hari', $hari)
+            ->where(function ($query) use ($jamMulai, $jamSelesai) {
+                $query->whereBetween('jam_mulai', [$jamMulai, $jamSelesai])
+                    ->orWhereBetween('jam_selesai', [$jamMulai, $jamSelesai])
+                    ->orWhere(function ($query) use ($jamMulai, $jamSelesai) {
+                        $query->where('jam_mulai', '<', $jamMulai)
+                            ->where('jam_selesai', '>', $jamSelesai);
                     });
             })
             ->exists();
+    }
+
+    private function mapHari($carbonDate)
+    {
+        $map = [
+            'Monday' => 'senin',
+            'Tuesday' => 'selasa',
+            'Wednesday' => 'rabu',
+            'Thursday' => 'kamis',
+            'Friday' => 'jumat',
+            'Saturday' => 'sabtu',
+            'Sunday' => 'minggu', // buat jaga-jaga, walau gak dipakai
+        ];
+
+        return $map[$carbonDate->format('l')] ?? null;
     }
 }
