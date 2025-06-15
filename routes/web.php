@@ -67,5 +67,3 @@ Route::get('/login', [AuthController::class, 'showLoginPage'])->name('login');
 Route::post('/login/submit', [AuthController::class, 'handleLogin'])->name('login.submit');
 
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
-
-Route::get('/forgotPassword', [AuthController::class, 'showForgotPassword'])->name('forgotPasswordPage');

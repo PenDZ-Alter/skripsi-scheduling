@@ -12,23 +12,6 @@
         <!-- Filter Section -->
         <div class="sidang-filter">
             <div class="filter-form">
-                <div class="filter-group">
-                    <label>Program Studi</label>
-                    <select>
-                        <option>Semua Prodi</option>
-                        <option>Teknik Informatika</option>
-                        <option>Sistem Informasi</option>
-                        <option>Manajemen</option>
-                        <option>Akuntansi</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label>Tanggal</label>
-                    <input type="date">
-                </div>
-                <button class="btn btn-filter">
-                    <i class="fas fa-filter"></i> Filter
-                </button>
                 <div class="demo-container">
                     <button class="btn-add" onclick="openModal()">
                         <span>📅</span>
@@ -409,7 +392,6 @@
                                 <label for="completed-1" class="status-label">✅ Selesai</label>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </form>
@@ -422,7 +404,7 @@
     </div>
 </div>
 
-<div style="margin-bottom: 10rem;">
+<div style="margin-bottom: 14rem;">
 </div>
 <script>
     function tampilkanID() {

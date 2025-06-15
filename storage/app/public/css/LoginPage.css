@@ -556,22 +556,6 @@ body::before {
     text-decoration: underline;
 }
 
-.forgot-link {
-    text-align: center;
-    font-size: 14px;
-    margin-top: 10px;
-}
-
-.forgot-link a {
-    color: green;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.forgot-link a:hover {
-    text-decoration: underline;
-}
-
 /* Footer */
 footer {
     text-align: center;

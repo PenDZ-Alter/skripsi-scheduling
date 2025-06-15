@@ -11,8 +11,9 @@ class MahasiswaController extends Controller
 {
     public function index() {
         $user = auth()->user();
+        $skripsi = Skripsi::where('user_id', $user->id)->first();
 
-        return view('dashboard.mahasiswa.home', compact('user'));
+        return view('dashboard.mahasiswa.home', compact('user', 'skripsi'));
     }
 
     public function showStudentData()
