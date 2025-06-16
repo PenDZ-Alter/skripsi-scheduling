@@ -86,7 +86,8 @@ class AuthController extends Controller
             'jenis_kelamin' => $request->input('jenis_kelamin'),
             'alamat' => $request->input('alamat'),
             'nama_ortu' => $request->input('nama_ortu'),
-            'domisili_ortu' => $request->input('domisili_ortu')
+            'domisili_ortu' => $request->input('domisili_ortu'),
+            'is_ready' => 0
         ]);
 
         $request->session()->forget('register_data');
