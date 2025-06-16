@@ -1,5 +1,7 @@
 @extends('auth.master')
+
 @section('title', 'Login')
+
 @section('content')
 
     <div class="register-box">
@@ -23,7 +25,6 @@
                 </div>
             </div>
             <button type="submit" class="login-btn">Login</button>
-            <p class="forgot-link">Lupa Password? <a href="{{ route('forgotPasswordPage') }}">Ubah Password</a></p>
             <p class="signup-link">Belum punya akun? <a href="{{ route('registerpage') }}">Daftar Sekarang</a></p>
         </form>
     </div>

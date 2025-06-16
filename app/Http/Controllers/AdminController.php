@@ -2,63 +2,43 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\RuangSidang;
 use App\Models\Skripsi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\User;
 use Carbon\Carbon;
 
 class AdminController extends Controller
 {
-    public function index() {
-        return view("dashboard.admin.home");
+    public function index()
+    {
+        $totalmahasiswa = User::where('role', 'mahasiswa')->count();
+
+        return view("dashboard.admin.home", compact('totalmahasiswa'));
     }
 
-    public function edit($id)
+    public function showDataAdminSidebar()
     {
-        $skripsi = Skripsi::with(['mahasiswa', 'pembimbing1', 'pembimbing2', 'ruang'])->findOrFail($id);
-        return view('admin.skripsi.edit', compact('skripsi'));
+        $adminData1 = auth()->user();
+
+        return view('dashboard.admin.partials.sidebar', compact('adminData'));
     }
 
-    public function update(Request $request, $id)
+    public function showDataAdminHeader()
     {
-        $skripsi = Skripsi::findOrFail($id);
+        $adminData2 = auth()->user();
 
-        $validated = $request->validate([
-            'jadwal_mulai' => 'required|date',
-            'jadwal_selesai' => 'required|date|after:jadwal_mulai',
-        ]);
-
-        $mulai = Carbon::parse($validated['jadwal_mulai']);
-        $selesai = Carbon::parse($validated['jadwal_selesai']);
-
-        if (
-            $this->isTimeConflict($skripsi->dosen_pembimbing_1, $mulai, $selesai) ||
-            $this->isTimeConflict($skripsi->dosen_pembimbing_2, $mulai, $selesai)
-        ) {
-            return back()->withErrors(['jadwal_mulai' => 'Jadwal bentrok dengan jadwal kuliah dosen.']);
-        }
-
-        $skripsi->update([
-            'jadwal_mulai' => $mulai,
-            'jadwal_selesai' => $selesai,
-            'status' => 'belum_sidang' // Admin udah fix-in, berarti oke lanjut sidang
-        ]);
-
-        return redirect()->route('admin.skripsi.edit', $skripsi->id)->with('success', 'Jadwal berhasil diperbarui.');
+        return view('dashboard.admin.partials.header', compact('adminData'));
     }
 
-    private function isTimeConflict($dosenId, $jadwalMulai, $jadwalSelesai)
+    public function ShowJadwal()
     {
-        return DB::table('subjects_schedule')
-            ->where('dosen', $dosenId)
-            ->where(function ($query) use ($jadwalMulai, $jadwalSelesai) {
-                $query->whereBetween('jadwal_mulai', [$jadwalMulai, $jadwalSelesai])
-                    ->orWhereBetween('jadwal_selesai', [$jadwalMulai, $jadwalSelesai])
-                    ->orWhere(function ($q) use ($jadwalMulai, $jadwalSelesai) {
-                        $q->where('jadwal_mulai', '<=', $jadwalMulai)
-                          ->where('jadwal_selesai', '>=', $jadwalSelesai);
-                    });
-            })
-            ->exists();
+        $skripsis = Skripsi::with(['ruang'])->get();
+        $ruangSidangList = RuangSidang::all();
+        $mahasiswa = User::where('role', 'mahasiswa')->get();
+        $dosen = User::where('role', 'dosen')->get();
+
+        return view('dashboard.admin.jadwal', compact('skripsis', 'ruangSidangList', 'mahasiswa','dosen'));
     }
 }

@@ -53,18 +53,18 @@
                             </div>
                             <div class="row-profile mb-2">
                                 <div class="col-3 label-profile"><span>Tempat Lahir</span></div>
-                                <div class="col-9 value-profile border-bottom">MALANG</div>
+                                <div class="col-9 value-profile border-bottom">{{ $user->tempat_lahir }}</div>
                             </div>
                             <div class="row-profile mb-2">
                                 <div class="col-3 label-profile"><span>Tanggal Lahir</span></div>
-                                <div class="col-9 value-profile border-bottom">01 Januari 2007</div>
+                                <div class="col-9 value-profile border-bottom">{{ $user->tanggal_lahir }}</div>
                             </div>
                             <div class="row-profile mb-2">
                                 <div class="col-3 label-profile"><span>Email Pribadi</span></div>
                                 <div class="col-9 value-profile border-bottom">{{ $user->email }}</div>
                             </div>
                             <div class="row-profile mb-2">
-                                <div class="col-3 label-profile"><span>Asal Kota</span></div>
+                                <div class="col-3 label-profile"><span>Alamat</span></div>
                                 <div class="col-9 value-profile border-bottom">{{ $user->alamat }}</div>
                             </div>
                             <div class="row-profile mb-2">
@@ -73,10 +73,6 @@
                             </div>
                             <div class="row-profile mb-2">
                                 <div class="col-3 label-profile"><span>Alamat Orang Tua</span></div>
-                                <div class="col-9 value-profile border-bottom">{{ $user->domisili_ortu }}</div>
-                            </div>
-                            <div class="row-profile mb-2">
-                                <div class="col-3 label-profile"><span>Kota Orang Tua</span></div>
                                 <div class="col-9 value-profile border-bottom">{{ $user->domisili_ortu }}</div>
                             </div>
                         </div>

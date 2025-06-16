@@ -19,6 +19,7 @@
     padding: 20px;
     border-radius: 12px;
     flex: 1;
+    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.15) !important;
 }
 
 /* Dashboard Grid */
@@ -59,7 +60,7 @@
     padding: 20px;
     border-radius: 12px;
     width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px 4px rgba(0, 0, 0, 0.1);
 }
 
 .menu h3 {
@@ -113,22 +114,28 @@
 
 
 /* Quotes */
-.quotes {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    text-align: center;
+.background-quotes {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.15) !important;
+}
+
+.quotes-description {
+    margin-left: 2rem;
+    margin-top: 0.2rem;
     font-style: italic;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    color: rgba(0, 0, 0, 1);
+    font-weight: 500;
+    font-size: 110%;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace !important;
 }
 
-.quotes h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.quotes p {
-    color: #444;
-    font-size: 1.1rem;
+.quotes-end {
+    margin-left: 2rem;
+    margin-top: 1rem !important;
+    font-size: small;
+    color: rgba(108, 117, 125, 1);
+    font-weight: lighter !important;
 }

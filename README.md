@@ -5,7 +5,6 @@
 
 We use some frameworks and libraries to make this project, such as:
 - Laravel (PHP, for backend)
-- Vue.js (JavaScript, for frontend)
 - API Endpoint (for data exchange between backend and frontend)
 - Bootstrap (for UI/UX)
 - Font Awesome (for icons)

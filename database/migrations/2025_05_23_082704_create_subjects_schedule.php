@@ -11,12 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('subjects_schedule', function (Blueprint $table) {
+        Schema::create('subjects_schedules', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('dosen');
             $table->string('nama_matkul');
-            $table->datetime('jadwal_mulai');
-            $table->datetime('jadwal_selesai');
+            $table->enum('hari', ['senin', 'selasa', 'rabu', 'kamis', 'jumat', 'sabtu']);
+            $table->time('jam_mulai');
+            $table->time('jam_selesai');
             $table->string('kelas');
             $table->timestamps();
 
@@ -30,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('subjects_schedule');
+        Schema::dropIfExists('subjects_schedules');
     }
 };

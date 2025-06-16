@@ -2,15 +2,15 @@
     <!-- Bagian Logo atau Profil Sidebar -->
     <div class="flex items-center p-4 bg-gradient-to-r">
         <a href="{{ route('adm.home') }}"><i class="fas fa-laptop icon-left"></i></a>
-        <span class="title-left">Skripsi</span>
+        <span class="title-left title-sidebar">Siakad</span>
         <span class="title-right"><a href="{{ route('adm.home') }}">UINMALANG</a></span>
     </div>
 
     <!-- Informasi Mahasiswa -->
     <span class="profil flex items-center justify-between">
         <div class="flex flex-col">
-            <div class="name-profile">ALFARIZ MUHAN M</div>
-            <div class="iconName-profile">220605110001</div>
+            <div class="name-profile">{{ $adminData->name }}</div>
+            <div class="iconName-profile">{{ $adminData->id }}</div>
         </div>
         <!-- Ikon di sebelah kanan -->
         <a href="{{ route('login') }}">
@@ -41,7 +41,7 @@
                     <a href="">
                         <i class="fa-regular fa-calendar icon-style"></i>
                     </a>
-                    <a href="{{ route('adm.jadwal') }}" class="text-style">Jadwal Sidang</a>
+                    <a href="{{ route('adm.jadwal') }}" class="text-style-sidang">Jadwal Sidang</a>
                 </span>
             </li>
         </ul>
