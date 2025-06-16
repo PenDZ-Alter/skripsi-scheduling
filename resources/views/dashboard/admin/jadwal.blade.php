@@ -78,6 +78,12 @@
                                         data-status="{{ $mhs->status }}">
                                         <i class="fas fa-pencil icon-box"></i>
                                     </button>
+
+                                    <!-- Tombol Delete -->
+    <button type="button" class="icon-button" onclick="confirmDelete({{ $mhs->id }})">
+        <i class="fas fa-trash icon-box"></i>
+    </button>
+
                                     <!-- Modal Edit -->
                                     <div class="modal-edit modal-overlay-skripsi" id="modalOverlayEdit{{ $mhs->id }}">
                                         <div class="modal-container">
@@ -299,6 +305,58 @@
     <div style="margin-bottom: 14rem;">
     </div>
     <script>
+        function confirmDelete(id) {
+    Swal.fire({
+        title: 'Apakah Anda yakin?',
+        text: "Data yang dihapus tidak dapat dikembalikan!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#d33',
+        cancelButtonColor: '#3085d6',
+        confirmButtonText: 'Ya, hapus!',
+        cancelButtonText: 'Batal'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            deleteSchedule(id);
+        }
+    });
+}
+
+function deleteSchedule(id) {
+    // Kirim request DELETE menggunakan fetch API
+    fetch(`/admin/skripsi/${id}`, {
+        method: 'DELETE',
+        headers: {
+            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        Swal.fire(
+            'Terhapus!',
+            'Data jadwal sidang telah dihapus.',
+            'success'
+        ).then(() => {
+            // Refresh halaman setelah penghapusan berhasil
+            window.location.reload();
+        });
+    })
+    .catch(error => {
+        Swal.fire(
+            'Gagal!',
+            'Terjadi kesalahan saat menghapus data.',
+            'error'
+        );
+        console.error('Error:', error);
+    });
+}
         function tampilkanID() {
             const select = document.getElementById('user_id');
             const selectedId = select.value;
