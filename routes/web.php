@@ -8,7 +8,6 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\SkripsiController;
-use App\Models\Skripsi;
 
 // Route antar Page
 Route::middleware(['auth'])->group(function () {
@@ -49,6 +48,18 @@ Route::middleware([AdminMiddleware::class])->prefix('admin')->group(function () 
     // Jadwal
     Route::get('/jadwal', [AdminController::class, 'ShowJadwal'])->name('adm.jadwal');
     Route::post('/jadwal', [SkripsiController::class, 'show'])->name('adm.jadwal');
+
+    // Route untuk verifikasi mahasiswa (AJAX)
+    Route::post('/mahasiswa/{id}/verifikasi', [AdminController::class, 'verifikasiMahasiswa'])
+        ->name('admin.mahasiswa.verifikasi');
+
+    // Route untuk update status mahasiswa via form (opsional)
+    Route::put('/mahasiswa/{id}/status', [AdminController::class, 'updateStatusMahasiswa'])
+        ->name('admin.mahasiswa.updateStatus');
+
+    // Route update untuk mahasiswa
+    Route::put('/mahasiswa/{id}', [MahasiswaController::class, 'update'])
+        ->name('mahasiswa.update');
 });
 
 Route::get('/', function () {
