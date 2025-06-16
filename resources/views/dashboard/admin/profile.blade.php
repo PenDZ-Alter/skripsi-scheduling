@@ -154,7 +154,7 @@
                                         <form action="{{ route('admin.mahasiswa.verifikasi', $mhs->id) }}" method="POST" 
                                               style="display: inline;">
                                             @csrf
-                                            <button type="submit" class="btn-action btn-verify" 
+                                            <button style="cursor: pointer;" type="submit" class="btn-action btn-verify" 
                                                     onclick="return confirm('{{ $mhs->is_ready ? 'Yakin mau batalkan verifikasi ' . $mhs->name . '?' : 'Yakin mau verifikasi ' . $mhs->name . '? Pastikan mahasiswa sudah semhas/sempro!' }}')">
                                                 @if($mhs->is_ready)
                                                     <i class="fas fa-times-circle"></i>
@@ -165,11 +165,6 @@
                                                 @endif
                                             </button>
                                         </form>
-
-                                        <a href="{{ route('mahasiswa.edit', $mhs->id) }}" class="btn-action btn-edit">
-                                            <i class="fas fa-edit"></i>
-                                            Edit
-                                        </a>
 
                                         <form action="{{ route('mahasiswa.destroy', $mhs->id) }}" method="POST"
                                             onsubmit="return confirm('Yakin mau hapus data ini?')" style="display: inline;">
@@ -302,7 +297,7 @@
         /* Untuk Firefox */
         .modal-body {
             scrollbar-width: thin;
-            scrollbar-color: #007bff #f1f1f1;
+            scrollbar-color: orange #f1f1f1;
         }
 
         /* Responsif untuk mobile */
