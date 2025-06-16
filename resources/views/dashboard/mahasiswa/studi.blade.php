@@ -437,23 +437,4 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-    <script>
-        document.querySelectorAll("*").forEach(el => {
-            const style = getComputedStyle(el);
-            if (style.backgroundColor.includes("oklch")) {
-                el.style.backgroundColor = "#007bff"; // ganti ke RGB/HEX yang didukung
-            }
-        });
-
-        function downloadPDF() {
-            const {
-                jsPDF
-            } = window.jspdf;
-            const doc = new jsPDF();
-            doc.autoTable({
-                html: '#khsTable'
-            });
-            doc.save("KHS_Mahasiswa.pdf");
-        }
-    </script>
 @endsection
