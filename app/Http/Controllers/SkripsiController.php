@@ -86,6 +86,37 @@ class SkripsiController extends Controller
         return view('skripsi.edit', compact('skripsi', 'ruang_sidang'));
     }
 
+    public function destroy($id)
+{
+    \Log::info('Attempting to delete skripsi ID: '.$id);
+
+    try {
+        $skripsi = Skripsi::findOrFail($id);
+
+        \Log::info('Data found:', $skripsi->toArray());
+
+        $deleted = $skripsi->delete();
+
+        \Log::info('Delete result:', ['success' => $deleted]);
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Data berhasil dihapus'
+        ]);
+
+    } catch (\Exception $e) {
+        \Log::error('Delete failed:', [
+            'error' => $e->getMessage(),
+            'trace' => $e->getTraceAsString()
+        ]);
+
+        return response()->json([
+            'success' => false,
+            'message' => 'Gagal menghapus data: ' . $e->getMessage()
+        ], 500);
+    }
+}
+
     public function update(Request $request, $id)
     {
         $skripsi = Skripsi::findOrFail($id);

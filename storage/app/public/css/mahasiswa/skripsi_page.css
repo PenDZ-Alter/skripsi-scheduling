@@ -28,6 +28,15 @@
 }
 
 /* Styling untuk tampilan bimbingan info */
+.error-message {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 8px;
+    color: #856404;
+}
+
 .bimbingan-info {
     padding: 1.5rem;
 }
@@ -585,8 +594,21 @@
     padding: 15px;
 }
 
+#cardRiwDone {
+    background-color: #8cf083;
+    /* warna abu-abu terang */
+    border: 1px solid #97e479;
+    /* border abu-abu untuk membuatnya lebih jelas */
+    padding: 15px;
+}
+
 .empty-state {
     color: #999;
+    /* memberi warna teks abu-abu pada status empty */
+}
+
+.done-state {
+    color: #28a745;
     /* memberi warna teks abu-abu pada status empty */
 }
 

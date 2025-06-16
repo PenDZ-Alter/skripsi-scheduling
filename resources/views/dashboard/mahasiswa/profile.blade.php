@@ -77,16 +77,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Bagian Tombol Edit -->
-                    <div class="bg-btn-profile">
-                        <div class="space-y-2">
-                            <a href="{{ url('/profileEdit') }}" class="btn-edit-profile">
-                                <i class="fas fa-pen-to-square" class="btn-pen-edit"></i>
-                                <span class="btn-text-edit">Ubah Profil Saya</span>
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="tab-content-two zoom-in" id="cardRiwayat" style="display: none">
