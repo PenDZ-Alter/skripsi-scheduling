@@ -1,0 +1,59 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    padding: 1rem 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-bottom: 1px solid rgb(207, 199, 199);
+
+    /* Ini yang bikin blur background konten di belakang header */
+    background-color: rgba(209, 191, 163, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.header-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem; 
+}
+
+.greeting {
+    font-size: 1.3rem;
+    color: black;
+    letter-spacing: 2px;
+    margin: 0;
+    font-weight: 400;
+}
+
+.user-name {
+    font-size: 1.2rem;
+    color: black;
+    font-weight: bold;
+    position: relative;
+    top: 2px;
+    left: 3px;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid rgb(207, 199, 199);
+    padding: 0px 20px 5px 20px;      
+    border-radius: 100px;      
+    background-color: white; 
+}

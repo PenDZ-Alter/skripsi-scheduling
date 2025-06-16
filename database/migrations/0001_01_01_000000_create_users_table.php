@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table): void {
             $table->id();
             $table->string('name');
-            $table->enum('role', ['admin','mahasiswa'])->default('mahasiswa');
+            $table->enum('role', ['admin', 'dosen', 'mahasiswa'])->default('mahasiswa');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('no_telp')->nullable();
@@ -23,6 +23,9 @@ return new class extends Migration
             $table->string('password');
             $table->string('nama_ortu')->nullable();
             $table->string('domisili_ortu')->nullable();
+            $table->date('tanggal_lahir')->nullable();
+            $table->string('tempat_lahir')->nullable();
+            $table->boolean('is_ready')->default(true);
             $table->rememberToken();
             $table->timestamps();
         });

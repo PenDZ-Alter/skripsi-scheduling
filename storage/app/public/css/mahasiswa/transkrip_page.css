@@ -1,0 +1,111 @@
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #FFFF;
+    box-shadow: 3px 8px 6px 3px rgba(0, 0, 0, 0.15) !important;
+}
+
+.content-transkrip {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: none;
+    /* Pastikan tabel memiliki latar belakang */
+}
+
+table th {
+    padding-bottom: 10px ;
+}
+
+table th,
+table td {
+    vertical-align: middle;
+    /* Meratakan konten secara vertikal */
+    padding: 11px;
+    border-bottom: 1px solid black;
+}
+
+tfoot th {
+    border-top: 2px solid #111 !important;
+}
+
+tfoot td {
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+tfoot tr:hover {
+    background-image: none !important;
+}
+
+.konten1,
+.konten2 {
+    border-top: 1.5px solid #111;
+    border-bottom: 1.5px solid #111;
+}
+
+.konten1:hover {
+    background-image: none !important;
+}
+
+.footer-konten {
+    text-align: center;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.tabs button {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #007bff;
+}
+
+.tabs button.active {
+    font-weight: bold;
+    border-bottom: 2px solid #007bff;
+}
+
+.tab-content {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+
+.tab-content-two {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transform: scale(0.8);
+    animation: zoomIn 0.6s ease-out forwards;
+}
+
+.tab-content.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.tab-content-two.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+@keyframes zoomIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

@@ -10,6 +10,24 @@ use App\Models\User;
 
 class AuthController extends Controller
 {
+    public function userPageHandler() {
+        $user = auth()->user();
+
+        if (!$user) {
+            return redirect()->route('login'); // fallback klo belum login
+        }
+
+        $role = $user->role;
+
+        if ($role == "admin") {
+            return redirect()->route('adm.home');
+        } else if ($role == "mahasiswa") {
+            return redirect()->route('mhs.home');
+        } else {
+            return abort(403, "Role is unknown!");
+        }
+    }
+
     public function showRegisterPage()
     {
         return view('auth.register');
@@ -68,7 +86,7 @@ class AuthController extends Controller
             'jenis_kelamin' => $request->input('jenis_kelamin'),
             'alamat' => $request->input('alamat'),
             'nama_ortu' => $request->input('nama_ortu'),
-            'domisili_ortu' => $request->input('domisili_ortu'),
+            'domisili_ortu' => $request->input('domisili_ortu')
         ]);
 
         $request->session()->forget('register_data');
@@ -86,10 +104,29 @@ class AuthController extends Controller
         $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
-            return redirect()->route('home');
+            return redirect()->route('auth.home');
         }
 
         return redirect()->back()->with('error', 'Email atau password salah!');
+    }
+
+    public function showForgotPassword()
+    {
+        return view('auth.forgotPassword');
+    }
+
+
+    public function handleForgotPassword(Request  $request)
+    {
+        $credentials = $request->only('email', 'password');
+
+        // Validasi dulu input awal
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|string|min:6',
+        ]);
+
     }
 
     public function logout()
