@@ -27,6 +27,7 @@ class User extends Authenticatable
         'nama_ortu',
         'domisili_ortu',
         'role',
+        'is_ready'
     ];
 
     /**
