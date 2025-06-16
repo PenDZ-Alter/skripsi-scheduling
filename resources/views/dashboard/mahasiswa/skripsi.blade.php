@@ -34,6 +34,7 @@
                         </div>
                     @endif
 
+                    @if(!isset($skripsi) && !$skripsi)
                     <button class="start-btn" onclick="checkReadyStatus()"
                         @if (auth()->user()->is_ready == 0) style="opacity: 0.6; cursor: not-allowed;" 
                                 title="Anda belum memenuhi syarat untuk mengajukan bimbingan" @endif>
@@ -41,13 +42,23 @@
                         Mulai Pengajuan Sidang
                     </button>
                     <br><br>
+                    @endif
 
+                    @if(isset($skripsi) && $skripsi)
+                    <div class="card card-state" id="cardRiwDone">
+                        <div class="done-state">
+                            <i class="fa fa-coffee"></i>
+                            &nbsp;Sudah melakukan pengajuan
+                        </div>
+                    </div>
+                    @else
                     <div class="card card-state" id="cardRiw">
                         <div class="empty-state">
                             <i class="fa fa-coffee"></i>
                             &nbsp;Belum Ada Pengajuan
                         </div>
                     </div>
+                    @endif
                 </div>
 
                 <!-- Card for Proses Bimbingan -->
