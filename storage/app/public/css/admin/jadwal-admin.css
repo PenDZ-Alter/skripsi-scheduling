@@ -293,7 +293,7 @@ table thead th {
     left: -2px;
     right: -2px;
     bottom: -2px;
-    background: linear-gradient(45deg, #667eea,#f4a261, #667eea);
+    background: linear-gradient(45deg, #667eea, #f4a261, #667eea);
     background-size: 400% 400%;
     border-radius: 22px;
     z-index: -1;
@@ -608,6 +608,137 @@ table thead th {
     color: white;
     border-color: #667eea;
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Status Label Styling dengan berbagai warna */
+.status-label-table {
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 9999px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    /* Tambahkan gap antara icon dan text */
+    min-width: 80px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    position: relative;
+    /* Untuk positioning pulse icon */
+}
+
+/* Status Pending - Kuning */
+.status-pending {
+    background-color: #fef3c7;
+    color: #92400e;
+    border-color: #fbbf24;
+}
+
+.status-pending:hover {
+    background-color: #fde68a;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(251, 191, 36, 0.3);
+}
+
+/* Status Terjadwal - Biru */
+.status-terjadwal {
+    background-color: #dbeafe;
+    color: #1e40af;
+    border-color: #3b82f6;
+}
+
+.status-terjadwal:hover {
+    background-color: #bfdbfe;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+}
+
+/* Status Selesai - Hijau */
+.status-selesai {
+    background-color: #d1fae5;
+    color: #065f46;
+    border-color: #10b981;
+}
+
+.status-selesai:hover {
+    background-color: #a7f3d0;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
+}
+
+/* Status Dibatalkan - Merah */
+.status-dibatalkan {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border-color: #ef4444;
+}
+
+.status-dibatalkan:hover {
+    background-color: #fecaca;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(239, 68, 68, 0.3);
+}
+
+/* Status Ditunda - Abu-abu */
+.status-ditunda {
+    background-color: #f3f4f6;
+    color: #374151;
+    border-color: #6b7280;
+}
+
+.status-ditunda:hover {
+    background-color: #e5e7eb;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(107, 114, 128, 0.3);
+}
+
+/* Status Berlangsung - Oranye - UPDATED untuk icon di samping */
+.status-berlangsung {
+    background-color: #fed7aa;
+    color: #c2410c;
+    border-color: #f97316;
+    padding-left: 16px;
+    /* Tambah padding kiri untuk ruang pulse dot */
+}
+
+.status-berlangsung:hover {
+    background-color: #fdba74;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(249, 115, 22, 0.3);
+}
+
+/* Animasi pulse untuk status yang sedang berlangsung - FIXED POSITION */
+.status-berlangsung::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    /* Posisi di kiri dalam label */
+    width: 6px;
+    height: 6px;
+    background-color: #f97316;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translateY(-50%) scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-50%) scale(1.2);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateY(-50%) scale(1);
+        opacity: 1;
+    }
 }
 
 /* Modal Footer */

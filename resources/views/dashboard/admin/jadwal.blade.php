@@ -46,7 +46,21 @@
                                 </td>
                                 <td class="text-center px-4 py-2 border-b">
                                     <span
-                                        class="status-label status-pending px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">{{ $mhs->status }}</span>
+                                        class="status-label-table status-{{ strtolower($mhs->status) }} px-2 inline-flex text-xs leading-5 font-semibold rounded-full">
+                                        @if ($mhs->status == 'pending')
+                                            ⏳ Pending
+                                        @elseif($mhs->status == 'terjadwal')
+                                            📅 Terjadwal
+                                        @elseif($mhs->status == 'selesai')
+                                            ✅ Selesai
+                                        @elseif($mhs->status == 'dibatalkan')
+                                            ❌ Dibatalkan
+                                        @elseif($mhs->status == 'berlangsung')
+                                            🔄 Berlangsung
+                                        @else
+                                            📋 {{ $mhs->status }}
+                                        @endif
+                                    </span>
                                 </td>
                                 <td class="text-left px-4 py-2 border-b whitespace-nowrap">
 

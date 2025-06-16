@@ -14,8 +14,8 @@
                 <!-- Tabs for Riwayat Pengajuan and Proses Bimbingan -->
                 <div class="tabs-skripsi">
                     <button class="active" id="tabRiwayat"><i class="fa fa-address-book"></i>&nbsp;Riwayat Pengajuan
-                        Bimbingan</button>
-                    <button id="tabProses"><i class="fa fa-book"></i>&nbsp;Proses Bimbingan</button>
+                        Sidang</button>
+                    <button id="tabProses"><i class="fa fa-book"></i>&nbsp;Proses Sidang</button>
                 </div>
 
                 <!-- Card for Pengajuan -->
@@ -27,7 +27,7 @@
                                 <i class="fa fa-exclamation-triangle" style="margin-right: 10px; color: #f39c12;"></i>
                                 <div>
                                     <strong style="text-align: center;">Peringatan!</strong>
-                                    <p style="margin: 5px 0 0 0;">Anda belum memenuhi syarat untuk mengajukan bimbingan.
+                                    <p style="margin: 5px 0 0 0;">Anda belum memenuhi syarat untuk mengajukan sidang.
                                         Silakan hubungi admin atau lengkapi persyaratan yang diperlukan terlebih dahulu.</p>
                                 </div>
                             </div>
@@ -38,7 +38,7 @@
                         @if (auth()->user()->is_ready == 0) style="opacity: 0.6; cursor: not-allowed;" 
                                 title="Anda belum memenuhi syarat untuk mengajukan bimbingan" @endif>
                         <i class="fa fa-plus-circle"></i>
-                        Mulai Pengajuan Bimbingan
+                        Mulai Pengajuan Sidang
                     </button>
                     <br><br>
 
