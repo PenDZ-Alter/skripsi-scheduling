@@ -48,6 +48,7 @@ Route::middleware([AdminMiddleware::class])->prefix('admin')->group(function () 
     // Jadwal
     Route::get('/jadwal', [AdminController::class, 'ShowJadwal'])->name('adm.jadwal');
     Route::post('/jadwal', [SkripsiController::class, 'show'])->name('adm.jadwal');
+    Route::delete('/skripsi/{id}', [SkripsiController::class, 'destroy'])->name('skripsi.destroy');
 
     // Route untuk verifikasi mahasiswa (AJAX)
     Route::post('/mahasiswa/{id}/verifikasi', [AdminController::class, 'verifikasiMahasiswa'])
