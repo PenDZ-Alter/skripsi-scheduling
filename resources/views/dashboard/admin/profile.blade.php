@@ -84,7 +84,7 @@
                                     </div>
 
                                     <!-- Verification Status Card -->
-                                    <div class="verification-status-card mb-3">
+                                    <div style="margin-bottom: 1rem;" class="verification-status-card mb-3">
                                         <div class="status-header">
                                             <i class="fas fa-graduation-cap"></i>
                                             <span>Status Kelayakan Sidang</span>
