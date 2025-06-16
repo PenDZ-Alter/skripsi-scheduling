@@ -594,8 +594,21 @@
     padding: 15px;
 }
 
+#cardRiwDone {
+    background-color: #8cf083;
+    /* warna abu-abu terang */
+    border: 1px solid #97e479;
+    /* border abu-abu untuk membuatnya lebih jelas */
+    padding: 15px;
+}
+
 .empty-state {
     color: #999;
+    /* memberi warna teks abu-abu pada status empty */
+}
+
+.done-state {
+    color: #28a745;
     /* memberi warna teks abu-abu pada status empty */
 }
 
